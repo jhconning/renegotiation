@@ -1,2 +1,3 @@
 *.rap
 *.ddf
+**/.ipynb_checkpoints
