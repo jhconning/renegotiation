@@ -72,7 +72,7 @@ assistance.}}
 \maketitle
 
 \begin{abstract}
-Motivated by recent concerns about over-indebtedness and consumer protection
+Motivated by recurrent concerns about over-indebtedness and consumer protection
 in microfinance and mortgage lending, this paper presents a model of lending
 and refinance to hyperbolic discounters. First, we identify a problem of
 consumer protection that survives even when consumers are sophisticated and
@@ -648,7 +648,7 @@ the consumer's instantaneous utility is given by $u\left(  c_{t}\right)  $ for
 $c_{t}\in$ $[0,\infty)$. The utility function is twice differentiable,
 strictly concave, and satisfies $u^{\prime}\left(  0\right)  =\infty$. Given a
 consumption stream $C_{t}=\left(  c_{t},c_{t+1},...,c_{2}\right)  $,
-period-$t$ self's discounted utility in period $t$ is:%
+the consumer period-$t$ self's discounted utility in period $t$ is:%
 \[
 U_{t}\left(  C_{t}\right)  \equiv u\left(  c_{t}\right)  +\beta\sum
 \limits_{i=t+1}^{2}\delta^{i-t}u\left(  c_{i}\right)
@@ -665,82 +665,64 @@ partially naive about the time-inconsistency of his preferences (O'Donoghue \&
 Rabin, 2001). Our analysis will focus on the sophisticated agent, with
 extended discussions to other types.
 
-The period zero consumer starts with claims to an existing income stream
-$Y=\left(  y_{0},y_{1},y_{2}\right)  $ over the three periods but will in
-general want to employ available financial contracting opportunities to raise
-welfare via consumption smoothing. \ Although the analysis can be applied to
-an income stream of any shape, to highlight key mechanisms we will first start
-by limiting attention to streams that take the form $y_{0}>0 $, $y_{1}=y_{2}=$
-$y_{n}>0$, and $\sum_{t=0}^{2}\frac{y_{0}}{(1+r)^{t}}=\bar{y}$. This allows us
-to emphasize banking decisions that are motivate by a period 0 need for either
-credit or savings. By also keeping the present value of income constant, we
-are able to conduct comparative statics exercises across individuals with
-similar incomes but varying period 0 borrowing or saving needs. We denote the
-spread between period zero and later periods' incomes by $\sigma\equiv
-y_{0}-y_{n}$.
-
-In the absence of banking or `own-savings' technology, the consumer's autarky
-consumption stream $C_{0}^{a}(Y)$ will just be the exogenous income stream
-$Y.$ With available own savings strategies the consumer may be able to
-construct a somewhat better smoothed autarky stream on their. \ However, since
-a present-biased consumer cannot trust his later selves to not undo his
-period-zero saving-consumption choices, the stream will be the imperfectly
-smoothed outcome of a strategic game between selves as explained in Basu
-(2014). This generates a demand for commitment services from contracting with
-$\text{}$an outside financial intermediary. \ For the moment we take this
-autarky option $C_{0}^{a}(Y)$ to be given, but later show how the main results
-are modified only slighly when we treat it as endogenous.\footnote{Since a
+The period 0 consumer starts with claims to an existing arbitrary income stream
+$Y_{0}=\left(  y_{0},y_{1},y_{2}\right)  $ over the three periods but will in general be interested in consumption via `own savings' or  financial contracting opportunities with others. In banking or `own-savings' technologies are absent or prohibitively expensive, the consumer's autarky
+consumption stream $C_{0}^{a}(Y)$ is  just be the exogenous income stream
+$Y.$  With available `own savings' strategies the consumer may be able to
+construct a somewhat better smoothed autarky stream. \ However, as
+a consumer with time-inconsistent preferences cannot trust his later selves to not undo his
+preferred consumption choices, the stream will be the imperfectly-smoothed outcome of a strategic game between selves as explained in Basu
+(2014). This creates the demand for commitment services via  contracts an outside financial intermediary, and this is the main focus of our analysis. \ For the present moment we take this
+autarky option $C_{0}^{a}(Y)$ to be fixed and given, but later show how the main results
+are only slightly modified when we treat it as endogenous.\footnote{Since a
 sophisticated hyperbolic discounter is fully aware of his future preferences,
 his autarky consumption stream will be a subgame perfect equilibrium of the
 consumption-savings game played by the series of his time-indexed selves (each
 with a slightly different objective function).}
+\\ In the sections that follow we state our results for quite general assumptions
+about the shape of the the instantaneous utility function $u(c)$ but
+illustrate and provide exact results for the CRRA case $u(c_{t})=\frac
+{c^{1-\rho}}{1-\rho}$ where parameter $\rho$ is closely related to the
+elasticity of intertemporal substitution.\footnote{ \(\)\(\rho \text{ }\)is the elasticity
+of intertemporal substitution when $\beta=1$ [** still same when \(\beta<1\)?**]} \ The appendix contains closed form solutions for the CRRA case and other technical details. 
+
 
 \subsection{Banks}
 
-In period $0$, the consumer has the option of contracting with one or many
+The period 0 consumer has the option of contracting with one or many
 banks, depending on the market structure. Each bank has access to funds that
-can be withdrawn from other investments at opportunity cost $r$. Without loss
-of generality and for expositional simplicity only, we assume $r=0$ and that
-$\delta=\frac{1}{1+r}$ which implies $\delta=1$.\footnote{See the appendix to
-see how most formula results change for arbitrary $\delta$, $r$ combinations.}
+can be withdrawn from other investments at opportunity cost $r$. For expositional simplicity in main text results below we assume $r=0$ and that the consumer's discount factor is
+$\delta=\frac{1}{1+r}$ (which implies $\delta=1)  $ but this is without loss of generality and more formulas for arbitrary $r$ and $\delta$ are in the appendix.
 Any financial contract between the consumer and the bank can be thought of as
-the bank receiving income stream $\emph{y}$ in exchange for a preferred
-consumption path $\emph{c}=\left(  c_{0},c_{1},c_{2}\right)  $. A financial
-loan contract in period 0 is an exchange such that $c_{0}>y_{0}$ and a savings
-contract satisfies $c_{0}<y_{0}$. We assume, for now, that any new contract
+the consumer giving up income stream $Y_{0}  $ in exchange for a preferred
+consumption path $C_{0}=(  c_{0},c_{1},c_{2}) $. A financial
+contract involves a  period 0 loan if the exchange i ssuch that $c_{0}>y_{0}$ and a savings
+contract if c_{0}<y_{0}$. [CUT? For now we also assume that  that any new contract
 must be initiated in period 0.
+] 
 
-We assume the bank can perfectly enforce repayment, so the net present value
+We assume the bank can perfectly enforce feasible repayment plans, so the net present value
 of its remaining profit stream in period $t$ is given by:%
 \[
 \pi_{t}\left(  C_{t};Y_{t}\right)  \equiv\sum\limits_{i=t}^{2}\left(
-c_{t}^{\prime}-y\right)  ,
+y_{t}_{}-c_{t}\right)   
 \]
-where $Y_{t}$ is the consumer's pledgeable income and $C_{t}$ is the new
-consumption contract path by the bank. The bank offers a contract if and only
-if it can earn positive profits.
+The bank offers a contract if and only
+if it can earn non-negative profits.
 
-If the contract were to be renegotiated in period $1$, the bank incurs a
+If the contract were to be renegotiated in period $1$, the bank will incur a
 nonmonetary cost, $\overline{\kappa}\geq0$, which could be interpreted to
 include a concern for reputation or some other impact on the social
 preferences of its owners.\footnote{The bank could incur additional monetary
 costs as well. However, we assume these to be $0$ as they can be netted out
 and do not affect the analysis in any important way.} The bank fully knows the
-borrower's preferences and can tailor the contract by borrower type.
+borrowers' preferences and can tailor the contract by borrower type.
 
 While the primary focus of this paper is on equilibrium contracts, not
-welfare, we do make occasional references to the hyperbolic discounter's
-welfare in the discussion. For our purposes, welfare is defined as the
-discounted utility of the period $0$ self, $U_{0}$ as in O'Donoghue-Rabin (1999??).
+welfare, we will make occasional reference to the hyperbolic discounter's
+welfare  defined as the
+discounted utility of the period $0$ self, $U_{0}$ (for a discussion the choice of welfare measure see O'Donoghue-Rabin, 1999).
 
-In the sections that follow we state our results for quite general assumptions
-about the shape of the the instantaneous utility function $u(c)$ but
-illustrate and provide exact results for the CRRA case $u(c_{t})=\frac
-{c^{1-\rho}}{1-\rho}$ where parameter $\rho$ is closely related to the
-elasticity of intertemporal substitution.\footnote{ \(\)\(\rho \text{ }\)is the elasticity
-of intertemporal substitution when $\beta=1$ [** still same when \(\beta<1\)?**]} \ Derivation of
-closed form solutions for the CRRA case and many other technical details are
-relegated to the appendix .
 
 \section{Monopolist Bank}
 
@@ -763,8 +745,7 @@ problem:
 \text{s.t. (PC) }  &  U_{0}\left(  C_{0}\right)  \geq U_{0}\left(  C_{0}%
 ^{a}(Y)\right)
 \end{align*}
-Let the monopolist's full-commitment contract be denoted $C^{mf}$. The
-solution is characterized by:
+Let the monopolist's full-commitment contract be denoted $C^{mf}$. At an optimum:
 \begin{align}
   u^{\prime}\left(  c_{0}^{mf}\right)  =\beta\ u^{\prime}\left(  c_{1}
 ^{mf}\right)  =\beta\ u^{\prime}\left(  c_{2}^{mf}\right) \label{foc-monop}\\
@@ -773,12 +754,12 @@ solution is characterized by:
 \end{align}
 
 Condition \ref{foc-monop} is the standard first-order necessary conditions
-that marginal utilities of consumption be equalized across periods which, for our simplifying assumptions, imply that  $c_{1}^{mf}=c_{2}^{mf}=\overline{c}^{mf}$
-\   \(\). Condition \ref{BPC-monop} is the consumer participation constraint that they
+that marginal utilities of consumption be equalized across periods which, for our simplifying assumptions, imply that  $c_{1}^{mf}=c_{2}^{mf}=\overline{c}^{mf}$. Condition \ref{BPC-monop} is the consumer participation constraint that they
 be no worse off by accepting the contract than under autarky. \ For the
-CRRA\ instantaneous utility case the FOC  imply $\overline{c}^{mf}=\beta^{\frac
-{1}{\rho}}c_{0}^{mf}$ which, substituted into the participation constraint, allow us to solve for 
- closed form solutions (see appendix).  Figure 1 
+CRRA\ case the FOC  imply $\overline{c}^{mf}=\beta^{\frac
+{1}{\rho}}c_{0}^{mf}$ which, along with the participation constraint, allow for closed form solutions (see appendix). See Figure 1.
+
+The terms of the optimal contract, and hence also the level of bank profits, will  depend on the consumer's starting income stream \(Y_{0}\).   To see this, consider the set of possible initial income streams of constant present value   $\sum_{t=0}^{2}\frac{y_{t}}{(1+r)^{t}}=\bar{y}$. [DISCUSS 3D?]
  
  
 \begin{figure}
@@ -809,42 +790,12 @@ CRRA\ instantaneous utility case the FOC  imply $\overline{c}^{mf}=\beta^{\frac
 \endfigure 
  
  
-
- 
- 
- 
- 
-\subsubsection{Section on borrowing or saving (change/move)}
-
-
-
-As drawn, for this endowment $Y=(y_{0},\overline{y},\overline{y})$ the
-monopolist maximizes period zero profits by offering a full-commitment loan
-contract  
-
-\begin{proposition}
-There is some cut-off level of income spread, $\sigma^{mf}\in\left(  0,\bar
-{y}\right)  $ that satisfies the following:
-
-\begin{enumerate}
-\item If $\sigma<\sigma^{mf}$, a loan contract is offered. If $\sigma
->\sigma^{mf}$, a savings contract is offered. If $\sigma=\sigma^{mf}$, no
-contract is offered.
-
-\item Profits are continuous in $\sigma$, and rising in the distance from
-$\sigma^{mf}$.
-\end{enumerate}
-\end{proposition}
-
-[Prove proposition, discuss comparative statics over $\sigma$ (how commitment
-problems arise in both savings and loan), relate to movement in Figure 1].
-\subsubsection{Renegotiation and $\beta $ (moved)} 
-
-\subsection{The Possibility of Renegotiation}
+\subsection{The Risk of Renegotiation}
 
 
 Bank  profits can be thought of as deriving in part from  satisfying the customer's `demand for commitment.' That is to say, the bank can charge for helping customers  to stick to preferred saving accumulation \textit{cum} loan repayment plans to deliver balanced consumption across periods 1 and  2 if it can credibly promise to not pander to the customers' later self's demands to raid savings and/or take out new loans that would disrupt those plans.
-\\ Figure 1 which is  drawn in $c_{1} -c_{2}$ space  illustrates why the demand for commitment arises, how a monopolist could profit by reneging on such a commitment \textit{ex-post} and therefore why a monopolist might take costly actions to try to make such commitments  more credible \textit{ex-ante}. Point $F$ is the balanced consumption  (\overline{c}^{mf},\overline{c}^{mf} )$ component of the monopolist's optimal contract. At this point period 0 consumption is $c_{0}^{mf}$ and participation constraint (\ref{BPC-monop}) is satisfied.  The flatter indifference curve passing through point \(F\) represents the customers' period-0 self's preference $u(c_{1}) + u(c_{2})$} to give equal weight to period 1 and period 2 consumption (in period 1 utils ) while line $NF$ can be interpreted as the isoprofit line associated with the monopolist's maximum profits from period 1 forward.
+
+Figure 2 which is  drawn in $c_{1} -c_{2}$ space  illustrates why the demand for commitment arises, how a monopolist could profit by reneging on such a commitment \textit{ex-post} and therefore why a monopolist might take costly actions to try to make such commitments  more credible \textit{ex-ante}. Point $F$ is the balanced consumption  (\overline{c}^{mf},\overline{c}^{mf} )$ component of the monopolist's optimal contract. At this point period 0 consumption is $c_{0}^{mf}$ and participation constraint (\ref{BPC-monop}) is satisfied.  The flatter indifference curve passing through point \(F\) represents the customers' period-0 self's preference $u(c_{1}) + u(c_{2})$} to give equal weight to period 1 and period 2 consumption (in period 1 utils ) while line $NF$ can be interpreted as the isoprofit line associated with the monopolist's maximum profits from period 1 forward.
 
 The demand for commitment arises from the fact that the period 0 self understands that as soon as period 1 rolls around his preferences will change and their period 1 self will now accept renegotiated contract offers to raise period 1 consumption even if this comes at the cost of period 2 consumption and period 0's discounted utility.\footnote{Measured in period 1 utils, Period 0 self values consumption bundle $(c_{1},c_{2})$ as $u(c_{1}) + u(c_{2})$ whereas period 1 self values the same bundle as $u(c_{1}) + \beta u(c_{2})$} Period 1 self values any bundle $(c_{1},c_{2})$ as $u(c_{1}) + \beta u(c_{2})$ period 1 utils whereas his earlier period 0 self valued the same bundle as as $u(c_{1}) + u(c_{2})$ period 1 utils.  Hence at contract point $F$ in the figure we have
 \[
@@ -925,7 +876,7 @@ u^{\prime}\left(  c_{1}^{r}\right)  =\beta u^{\prime}\left(  c_{2}^{r}\right)
 $c_{1}^{r}>$ $c_{2}^{r}$ as long as \(\beta<1 \) and exactly $c^{r}_{2}=\beta^{1/\rho} c^{r}_{1}$ in the CRRA case. Figure \ref{renegFig} illustrates the type of renegotiated contract that would be offered in the very special case of a  customer who agreed to a full commitment contract $ C_{1}^{mf}$ in period 0 -- having sincerely believed the bank's promise to not offer to renegotiate in period 1 --   was then genuinely and unexpectedly surprised to find the bank offering a renegotiation in period 1. Although it would break a promise to the consumer's period 0 self, the contract will be  designed to appeal to the customer's period 1. This type of renegotiation/promise-breaking will be profitable for the bank to offer  as long as $\pi_{1}\left(  C_{1}^{r}\left(  C_{1}^{mf}\right)  ;C_{1}^{mf}\right)  \geq\kappa$, where $\kappa$ are the non-monetary renegotiation costs to the bank. As depicted in Figure \ref{renegFig}, the bank will find it profitable to renegotiate from the   continuation of the full commitment  contract depicted by point $F$ to the new contract depicted by $B$ so long as profits gains (equal to the present value difference  between $ C_{1}^{mf}$ and $C_{1}^{r}$) which can be measured as  distance $NQ$ on the diagram is greater than $\kappa$.
  Although the new contract appeals to the period 1 self,  the broken promise  `exploits' the consumer's period 0 self by pushing their welfare below the autarky reservation utility that they thought had been promised by the $C_{1}^{mf}$ contract.  
  
-\subsection{Renegotiation-Proof Contract}
+\subsection{Renegotiation-Proof Contracts}
 
 A sophisticated consumer will, of course, rationally anticipate the bank's temptation to break its commitment promises and for this reason would never   agree to accept contract \(F\)  or any other contract that could make him worse off following  a period-1 renegotiation. Since the bank will want to avoid renegotiation costs $\kappa$ the only contracts that will be offered that satisfy this criterion in period 0 must be renegotiation-proof contracts:\  contracts that the bank will not find profitable to renegotiate.  }   
 
@@ -1174,6 +1125,34 @@ the consumer and equilibrium contracts will satisfy a zero-profit condition
 for the banks. As under monopoly, we first describe equilibrium contracts when
 renegotiation is impossible. We then analyze firms' decisions to operate as
 nonprofits, which will depend on the exclusivity of contracts.
+
+
+
+
+ 
+\subsubsection{MOVED FROM ABOVE Section on borrowing or saving (change/move)}
+
+
+\begin{proposition}
+There is some cut-off level of income spread, $\sigma^{mf}\in\left(  0,\bar
+{y}\right)  $ that satisfies the following:
+
+\begin{enumerate}
+\item If $\sigma<\sigma^{mf}$, a loan contract is offered. If $\sigma
+>\sigma^{mf}$, a savings contract is offered. If $\sigma=\sigma^{mf}$, no
+contract is offered.
+
+\item Profits are continuous in $\sigma$, and rising in the distance from
+$\sigma^{mf}$.
+\end{enumerate}
+\end{proposition}
+
+[Prove proposition, discuss comparative statics over $\sigma$ (how commitment
+problems arise in both savings and loan), relate to movement in Figure 1].
+\subsubsection{Renegotiation and $\beta $ (moved)} 
+
+
+
 
 \subsection{Benchmark Contract}
 
