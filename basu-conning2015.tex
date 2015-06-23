@@ -62,7 +62,7 @@
 \author{Karna Basu \& Jonathan Conning\thanks{Department of Economics, Hunter College,
 City University of New York. Email: kbasu@hunter.cuny.edu,
 jconning@hunter.cuny.edu. We are grateful to the Roosevelt House Public Policy
-Institute and a Small Business Administration research grant for support. For
+Institute and a Small Business Administration for initial research grant support. For
 comments and suggestions, we thank Abhijit Banerjee, Eric Van Tassel, and
 seminar and conference participants at Michigan State University, IIES
 Stockholm, Delhi School of Economics, Queens College, Indian School of
@@ -104,8 +104,7 @@ microfinance. JEL Codes: O16, D03, D18\vfill
 
 \section{Introduction}
 
-This paper analyzes financial equilibrium lending contracts and intermediary
-ownership forms in markets with hyperbolic discounters. We draw attention to
+This paper analyzes the nature of equilibrium   and lending and saving contracts  in markets with hyperbolic discounters. We draw attention to
 the demand for commitment in multi-period lending contracts, demonstrating
 that there are circumstances where non-profit lenders -- or more broadly,
 lenders that have chosen ownership/governance structures that place limits on
@@ -1117,50 +1116,30 @@ In such a case, the consumer has been left no worse off than under a
 for-profit firm, and the firm is made better off. By solving the commitment
 problem, it is able to extract greater surplus from the consumer.
 
-\section{Competition [incorporate new notation; savings]}
+\section{Competition for contracts}
 
-Consider a competitive banking environment where banks must compete to offer
-lending contracts to the consumer. In this setting, all surplus is returned to
-the consumer and equilibrium contracts will satisfy a zero-profit condition
-for the banks. As under monopoly, we first describe equilibrium contracts when
+Consider a competitive banking environment where banks compete to offer
+saving and/or lending contracts to the consumer.  As under monopoly, we first describe equilibrium contracts when
 renegotiation is impossible. We then analyze firms' decisions to operate as
-nonprofits, which will depend on the exclusivity of contracts.
+non-profits, which we shall see will depend on the exclusivity of contracts.
 
 
 
 
  
-\subsubsection{MOVED FROM ABOVE Section on borrowing or saving (change/move)}
-
-
-\begin{proposition}
-There is some cut-off level of income spread, $\sigma^{mf}\in\left(  0,\bar
-{y}\right)  $ that satisfies the following:
-
-\begin{enumerate}
-\item If $\sigma<\sigma^{mf}$, a loan contract is offered. If $\sigma
->\sigma^{mf}$, a savings contract is offered. If $\sigma=\sigma^{mf}$, no
-contract is offered.
-
-\item Profits are continuous in $\sigma$, and rising in the distance from
-$\sigma^{mf}$.
-\end{enumerate}
-\end{proposition}
-
-[Prove proposition, discuss comparative statics over $\sigma$ (how commitment
-problems arise in both savings and loan), relate to movement in Figure 1].
-\subsubsection{Renegotiation and $\beta $ (moved)} 
+ 
 
 
 
 
 \subsection{Benchmark Contract}
 
-Consider a competitive banking environment with zero profits in equilibrium.
-We assume that contracts are exclusive (a consumer can interact with only one
-bank for the life of a loan) and that banks can commit to not renegotiate.
-Firms will return all surplus to the consumer, and the equilibrium contract is
-given by:%
+Consider first a banking environment where banking firms compete with one another to offer contracts to consumers, but where banks can commit to not renegotiate and the financial relationship is exclusive once a contract has been established (a consumer can interact with only one
+bank for the life of a loan). We will later explore the effect of relaxing these last two assumptions. In such a  setting,   ex-ante competition will push banks up against a zero-profit condition
+and all surplus will be returned to
+the sophisticated consumer.
+
+Competition implies that the  offered equilibrium contract will be the most attractive  to the client subject to the bank's participation constraint:%
 \begin{align*}
 &  \max_{c_{0},c_{1},c_{2}}U_{t}\left(  c_{0},c_{1},c_{2}\right) \\
 &  \text{s}\text{.t}\text{.}\text{ }\pi_{0}\left(  c_{0},c_{1},c_{2}\right)
@@ -1168,36 +1147,53 @@ given by:%
 \end{align*}
 
 
-The first-order conditions are same as under monopoly. Combined with the
-zero-profit constraint, yield the equilibrium contract:%
+The first-order tangency conditions are the same as under monopoly. Combined these with the
+zero-profit constraint, yield a full-commitment competitive equilibrium contract:%
 \[
 \hat{c}_{0},\hat{c}_{1},\hat{c}_{2}%
 \]
+As in the monopoly case the period 0 consumer is offered a contract, 
+\(\hat{c}_{0}\leq\hat{c}_{1}=\hat{c}_{2}\equiv\hat{c}_{f}\), that smooths later period consumption and indulges his present bias. 
 
+In the CRRA utility case $u(c)=\frac{c^{1-\rho }}{1-\rho }$ it's relatively easy to find a closed form solution. 
 
-We continue to have $\hat{c}_{1}=\hat{c}_{2}\equiv\hat{c}_{f}$.
-
-This can be compared to the monopolist's contract along two dimensions.
-Observe the following comparison between the monopolist's maximization problem
-and the competitive equilibrium.%
-
-%TCIMACRO{\FRAME{ftbpFU}{5.2425in}{3.6694in}{0pt}{\Qcb{The benchmark contract
-%under competition compared to the benchmark contract under monopoly.}}%
-%{}{nkfvlg02.wmf}{\special{ language "Scientific Word";  type "GRAPHIC";
-%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "F";
-%width 5.2425in;  height 3.6694in;  depth 0pt;  original-width 5.1863in;
-%original-height 3.6218in;  cropleft "0";  croptop "1";  cropright "1";
-%cropbottom "0";  filename 'NKFVLG02.wmf';file-properties "XNPEU";}} }%
-%BeginExpansion
-\begin{figure}[ptb]%
+To compare the competitive and  monopoly equilibrium contract's it's useful to visualize the solution.  In $c_{0}-c_{1}-c_{2}$ space  the consumer's preferences \(U_{0}(c_{0},c_{1},c_{2})\)  are represented by a family of iso-utility surfaces
+that increase in value as they get further from the origin and the risk-neutral bank's preferences by a family of iso-profit planes that increase in value as they get closer to the origin. The competitive contract is at the (tangency)\ point that places  the consumer on the highest possible iso-utility surface that still touches the bank's zero-profit plane (which passes through  endowment point \(y)\), whereas the monopoly contract will be  at the (tangency) point that puts the bank on the highest iso-profit plane that still touches the client's participation utility surface (which passes through endowment point. \begin{figure}[ptb]
 \centering
-\includegraphics[
-natheight=3.621800in,
-natwidth=5.186300in,
-height=3.6694in,
-width=5.2425in
-]%
-{NKFVLG02.wmf}%
+\newrgbcolor{qqqqcc}{0. 0. 0.8}
+\newrgbcolor{ffqqtt}{1. 0. 0.2}
+\psset{xunit=0.2cm,yunit=0.2cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.5pt,arrowsize=3pt 2,arrowinset=0.25}
+
+\begin{pspicture*}(-3.,-3.)(70.,40.)
+\multips(0,0)(0,5.0){9}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,0)(70.,0)}
+\multips(0,0)(5.0,0){15}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,0)(0,40.)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=5.,Dy=5.,ticksize=-2pt 0,subticks=2]{->}(0,0)(0.,0.)(70.,40.)
+\psplot[linewidth=1.2pt,linecolor=qqqqcc,plotpoints=200]{0}{70.0}{((18.32-1.0/(1.0-0.7)*x^(1.0-0.7))*(1.0-0.7))^(1.0/(1.0-0.7))}
+\psplot[plotpoints=200]{0}{70.0}{x*0.5^(1.0/0.7)}
+\psplot[linewidth=1.2pt,linecolor=ffqqtt,plotpoints=200]{0}{70.0}{((13.74-1.0/(1.0-0.7)*x^(1.0-0.7))*(1.0-0.7)/0.5)^(1.0/(1.0-0.7))}
+\psplot{-2.}{70.}{(--58-x)}    %FN line
+\psplot{-2.}{70.}{(--53.7-x)}  %BQ line 
+\psplot{-2.}{70.}{(--63-x)}    %RP line
+\psplot[linestyle=dashed,dash=6pt 6pt,plotpoints=200]{0.0}{70.0}{x}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=darkgray](39.2,14.5)
+\rput[bl](39.4,14.9){\darkgray{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](38,38)
+\rput[bl](39,37.5){\darkgray{$\bar y$}}
+\psdots[dotstyle=*,linecolor=blue](58.1,0.)
+\psdots[dotstyle=*,linecolor=blue](46,17.1)
+\rput[bl](46,18){\darkgray{$R$}}
+\rput[bl](40,24){\darkgray{$this PIC notYETright$}}
+\rput[bl](58.4,0.39){\blue{$N$}}
+\psdots[dotstyle=*,linecolor=blue](53.7,0.)
+\rput[bl](53.9,0.4){\blue{$Q$}}
+\psdots[dotstyle=*,linecolor=darkgray](29.0,29.0)
+\rput[bl](29.7,29.3){\darkgray{$F$}}
+\rput[bl](63,0.39){\blue{$P$}}
+\psdots[dotstyle=*,linecolor=blue](63,0.)
+\end{scriptsize}
+\end{pspicture*}
+
 \caption{The benchmark contract under competition compared to the benchmark
 contract under monopoly.}%
 \end{figure}
@@ -1310,6 +1306,29 @@ switch to for-profit status, and make profits in period 1. Therefore, there
 must be for-profits in equilibrium, and equilibrium contracts will be
 constrained by their presence.
 \end{proof}
+
+
+
+\subsubsection{MOVED FROM ABOVE Section on borrowing or saving (change/move)}
+
+
+\begin{proposition}
+There is some cut-off level of income spread, $\sigma^{mf}\in\left(  0,\bar
+{y}\right)  $ that satisfies the following:
+
+\begin{enumerate}
+\item If $\sigma<\sigma^{mf}$, a loan contract is offered. If $\sigma
+>\sigma^{mf}$, a savings contract is offered. If $\sigma=\sigma^{mf}$, no
+contract is offered.
+
+\item Profits are continuous in $\sigma$, and rising in the distance from
+$\sigma^{mf}$.
+\end{enumerate}
+\end{proposition}
+
+[Prove proposition, discuss comparative statics over $\sigma$ (how commitment
+problems arise in both savings and loan), relate to movement in Figure 1].
+\subsubsection{Renegotiation and $\beta $ (moved)}?
 
 \section{Discussion and Extensions}
 
@@ -1444,7 +1463,7 @@ default. These will be addressed in future work.
 
 \subsection{Stuff moved from earlier in the text}
 
-[**** FROM\ BANKS section:\ A short note on the other assumptions is in order.
+[**** FROM\ BANKS section:\footnote{A short note on the other assumptions is in order.
 While we explicitly set up our problem as one of borrowing/saving and
 re-financing, the analysis and insights apply more broadly to questions about
 the role of firm ownership and governance structure choices in any setting
@@ -1453,7 +1472,7 @@ renegotiation problem. We choose to embed this problem in a borrowing
 framework for two reasons: first, we believe this model can shed light on some
 "real-world" stylized facts related to household debt; and second, we derive
 some interesting implications for the specific shapes of equilibrium loan
-contracts which would have remained hidden in a more general analysis. ****]
+contracts which would have remained hidden in a more general analysis. ****]}
 
 \section{Appendix: Closed forms forms for CRRA Utility}
 
@@ -1462,51 +1481,34 @@ contracts which would have remained hidden in a more general analysis. ****]
 
 \paragraph{Monopoly full commitment}
 
-A monopolist chooses $c_{0},c_{1}...c_{T}$ to maximize (\ref{PVm}) subject to
-borrower's participation constraint%
+A monopolist chooses $c_{0},c_{1}, c_{2}$ to maximize the present value of profits subject to
+borrower's participation constraint \footnote{Where \(\overline{u}(y)
+=u(y_{0})+\beta
+[\delta^{}u\left(  y_{1})+\delta^{2}^{}u(y_{2})\right]\) }
 
 \begin{equation}
-u(c_{0})+\beta%
-%TCIMACRO{\dsum \limits_{t=1}^{T}}%
-%BeginExpansion
-{\displaystyle\sum\limits_{t=1}^{T}}
-%EndExpansion
-\delta^{t}u\left(  c_{t}\right)  \geq\overline{u}(y)=u(y_{0})+\beta%
-%TCIMACRO{\dsum \limits_{t=1}^{T}}%
-%BeginExpansion
-{\displaystyle\sum\limits_{t=1}^{T}}
-%EndExpansion
-\delta^{t}u\left(  y_{t}\right)  \label{BPC0}%
-\end{equation}
-First order necessary conditions
-\[
-1/\lambda=u^{\prime}(c_{o})=\beta\delta(1+r)u^{\prime}(c_{1})=...=\beta
-\delta^{T}(1+r)^{T}u^{\prime}(c_{T})
+u(c_{0})+\beta
+[\delta^{}u\left(  c_{1})+\delta^{2}^{}u(c_{2})\right]  \geq\overline{u}(y)\\ \end{equation}
+The first order necessary conditions are\[
+1/\lambda=u^{\prime}(c_{o})=\beta\delta(1+r)u^{\prime}(c_{1})=\beta
+\delta^{2}(1+r)^{2}u^{\prime}(c_{2})
 \]
-which if \frame{$\delta=1/(1+r)$} implies that at an optimum $c_{0}%
-=c_{1}=...=c_{T}=\overline{c}.$ \ For CRRA utility $u(c)=\frac{c^{1-\rho}%
+which if \frame{$\delta=1/(1+r)$} implies that at an optimum c_{1}=c_{2}=\overline{c}.$ \ For the case of CRRA utility $u(c)=\frac{c^{1-\rho}%
 }{1-\rho}$ \ we have $u^{\prime}(c)=c^{-\rho}$ and hence $c_{0}^{-\rho}%
-=\beta\delta(1+r)\overline{c}^{-\rho}$ so
+=\beta\delta(1+r)\overline{c}^{-\rho}$ or
+
+\(u(c_{0})+\beta(\delta+\delta^{2})u(\overline{c})  =\overline{u}\)
+
+
 \[
 \overline{c}=\beta^{\frac{1}{\rho}}c_{0}%
 \]
 
 
-The borrowers participation constraint (\ref{BPC0}) can then be rewritten to
-find:%
-\begin{align*}
-u(c_{0})+\beta\Lambda(T)u(\overline{c})  &  =\overline{u}\text{
-\ \ \ \ \ where \ \ }\Lambda(T)=\left(  \frac{\delta-\delta^{T+1}}{1-\delta
-}\right) \\
-\text{from \ }\Lambda(T)  &  =(\delta+\delta^{2}+...+\delta^{T})=\left(
-\frac{1-\delta^{T+1}}{1-\delta}-1\right) \\
-u(c_{0})+\beta\Lambda(T)u(\overline{c})  &  =\overline{u}\\
-u(c_{0})+\beta\Lambda(T)\beta^{\frac{1-\rho}{\rho}}u(c_{0})  &  =\overline
-{u}\\
-&  \frame{$c_0=\overline{u}(1-\rho)^\frac{1}{1-\rho}\cdot\frac{1}{\left(
-1+\beta^\frac{1}{\rho}\left(  \frac{\delta-\delta^T+1}{1-\delta}\right)
-\right)  ^\frac{1}{1-\rho}}$}\text{ }%
-\end{align*}
+Substituting this back into the borrower's participation constraint:
+
+
+
 In the three period ($T=2)$ case
 \[
 c_{0}=\left[  \overline{u}(1-\rho)\right]  ^{\frac{1}{1-\rho}}\cdot\frac
