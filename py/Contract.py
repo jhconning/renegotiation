@@ -13,7 +13,7 @@ class Contract(object):
     def __init__(self,beta,y=None):         # constructor method to set default params. 
         self.beta  = beta                   # present bias in β-δ framework
         self.rho   = 0.95                   # 1/rho = elasticity of substitution
-        if y is None:                       # default y array if none specified
+        if y is None:                     
             self.y = np.array([100,100,100])
         else:
             self.y = y     
@@ -65,9 +65,9 @@ class Contract(object):
         
 class Monopoly(Contract):                    # build on contract class
     """ Class for solving Monopoly equilibrium contracts  """                                                                                                        
-    def __init__(self,beta):
+    def __init__(self,beta, y=None):
         super(Monopoly,self).__init__(beta)    # make sure inherits parent class properties
-        self.kappa  = 0                                # cost of renegotiation        
+        self.kappa  = 0                                # cost of renegotiation    
         self.guess  = self.y                           # initial guess for solver
         
     def fcommit(self):                                
@@ -115,9 +115,9 @@ class Monopoly(Contract):                    # build on contract class
 
 class Competitive(Contract):                    # build on contract class
     """ Class for solving competitive equilibrium contracts  """                                                    
-    def __init__(self,beta):
+    def __init__(self, beta):
         super(Competitive,self).__init__(beta)    # make sure inherits parent class properties
-        self.kappa  = 0                                # cost of renegotiation        
+        self.kappa  = 0                                # cost of renegotiation  
         self.guess  = self.y                           # initial guess for solver
         
     def fcommit(self):                                
@@ -166,13 +166,15 @@ class Competitive(Contract):                    # build on contract class
 if __name__ == "__main__":
     print("Base contract")
     c = Contract(beta = 0.7)
+    c.y = [60, 120, 120]
     c.print_params()
     
     print("Monopoly contract")
     cM = Monopoly(beta = 0.7)
+    cM.y = [60, 120, 120]
     cM.print_params()
     
     print("Competitive contract")
-    cC = Monopoly(beta = 0.7)
+    cC = Competitive(beta = 0.7)
     cC.print_params()
     

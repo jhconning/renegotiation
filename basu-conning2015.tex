@@ -1155,7 +1155,11 @@ zero-profit constraint, yield a full-commitment competitive equilibrium contract
 As in the monopoly case the period 0 consumer is offered a contract, 
 \(\hat{c}_{0}\leq\hat{c}_{1}=\hat{c}_{2}\equiv\hat{c}_{f}\), that smooths later period consumption and indulges his present bias. 
 
-In the CRRA utility case $u(c)=\frac{c^{1-\rho }}{1-\rho }$ it's relatively easy to find a closed form solution. 
+In the CRRA utility case $u(c)=\frac{c^{1-\rho }}{1-\rho }$ a closed form solution can be found quite simply.  From the first order conditions  \(\hat{c}_{1}=\hat{c}_{2}\equiv\hat{c}_{f}= \hat{c}_{0}\beta^{1/\rho}\)    substitute into the binding zero profit condition to find
+ \begin{displaymath}
+\hat{c}_{0} =\frac{\sum y_{i}}{1+2\beta^{1/\rho}}
+\end{displaymath}
+ 
 
 To compare the competitive and  monopoly equilibrium contract's it's useful to visualize the solution.  In $c_{0}-c_{1}-c_{2}$ space  the consumer's preferences \(U_{0}(c_{0},c_{1},c_{2})\)  are represented by a family of iso-utility surfaces
 that increase in value as they get further from the origin and the risk-neutral bank's preferences by a family of iso-profit planes that increase in value as they get closer to the origin. The competitive contract is at the (tangency)\ point that places  the consumer on the highest possible iso-utility surface that still touches the bank's zero-profit plane (which passes through  endowment point \(y)\), whereas the monopoly contract will be  at the (tangency) point that puts the bank on the highest iso-profit plane that still touches the client's participation utility surface (which passes through endowment point. \begin{figure}[ptb]
@@ -1224,8 +1228,8 @@ Now we consider competitive markets where contracts are exclusive, but firms
 cannot commit to not renegotiate. For for-profit firms, the problem becomes:%
 
 \begin{align*}
-&  \max_{l,m_{1},m_{2}}u\left(  l\right)  +\beta\delta u\left(  y-m_{1}%
-\right)  +\beta\delta^{2}u\left(  y-m_{2}\right) \\
+&  \max_{c_{0},c_{1},c_{2}}u\left(  c_{0}\right)  +\beta[\delta u\left (c_{1}%
+\right)  +\delta^{2}u\left(  c_{2}\right]) \\
 &  \text{s}\text{.t}\text{.}\text{ }\pi\left(  l,m_{1},m_{2}\right)  \geq0\\
 &  g\left(  \beta;m_{1},m_{2}\right)  \leq c
 \end{align*}
@@ -1474,7 +1478,7 @@ framework for two reasons: first, we believe this model can shed light on some
 some interesting implications for the specific shapes of equilibrium loan
 contracts which would have remained hidden in a more general analysis. ****]}
 
-\section{Appendix: Closed forms forms for CRRA Utility}
+\section{Appendix: Closed forms solutions for CRRA Utility case}
 
 \appendix
 
@@ -1493,37 +1497,54 @@ The first order necessary conditions are\[
 1/\lambda=u^{\prime}(c_{o})=\beta\delta(1+r)u^{\prime}(c_{1})=\beta
 \delta^{2}(1+r)^{2}u^{\prime}(c_{2})
 \]
-which if \frame{$\delta=1/(1+r)$} implies that at an optimum c_{1}=c_{2}=\overline{c}.$ \ For the case of CRRA utility $u(c)=\frac{c^{1-\rho}%
-}{1-\rho}$ \ we have $u^{\prime}(c)=c^{-\rho}$ and hence $c_{0}^{-\rho}%
-=\beta\delta(1+r)\overline{c}^{-\rho}$ or
+If we simplify by assuming $\delta=1/(1+r)$ then  at an optimum $c_{1}=c_{2}=\overline{c}$. For  CRRA utility $u(c)=\frac{c^{1-\rho}}{1-\rho}$ 
+we have $u^{\prime}(c)=c^{-\rho}$ and hence 
+$\overline{c}=\beta^{\frac{1}{\rho}}c_{0}$. Substituting into the participation constraint
 
-\(u(c_{0})+\beta(\delta+\delta^{2})u(\overline{c})  =\overline{u}\)
+\begin{align*}
+u(c_{0})+2\beta u(\overline{c})  =\overline{u} \\
+u(c_{0})+2\beta u(\beta^{\frac{1}{\rho}}c_{0}\overline{})  =\overline{u}\\
+c_{0}^{1-\rho }[1+2\beta^{\frac{1}{\rho}}]=\overline{u}(1-\rho)
+\end{align*}
 
+which allows us to solve
+\begin{align*}
+c^{mf}_{0}= \left[\frac{\overline{u}(1-\rho)}{[1+2\beta^{\frac{1}{\rho}}]}\right]^{\frac{1}{1-\rho}}
+\end{align*}
+In the competitive scenario the math is simpler. As  the objective and participation constraints are reversed, we substitute \(\overline{c}=\beta^{\frac{1}{\rho}}c_{0}\) into a binding zero profit condition to find:
+\begin{align*}
+c_{0}+2\beta^{\frac{1}{\rho}}  c_0  =\overline y_ \\
+c^{cf}_{0}= \frac{\overline{y}}{[1+2\beta^{\frac{1}{\rho}} ]}
+\end{align*}
+  
+\subsubsection{Renegotiation proof contracts}
 
-\[
-\overline{c}=\beta^{\frac{1}{\rho}}c_{0}%
-\]
+To solve for renegotiation-proof contracts we need to solve by backward induction. Having agreed to  contract \(\widehat{c}^{}\) in period zero, a client enters period 1 with promised claims \((\widehat{c}_{1},\widehat{c}_{2}).\) Let's work with the competitive scenario first.
 
+The period one self maximizes present-biased utility subject to the  constraint that the terms of the renegotiated contract just allow the bank to cover their costs of renegotiation \(\(\kappa:\) \)
+\begin{align*}
+\max_{c_{1}, c_{2}} u(c_{1})+\beta u(c_{2})\\
+c_{1}+ c_{2}   -\kappa\geq \widehat{c}_{1}+\widehat{c}_{2}
+\end{align*}
 
-Substituting this back into the borrower's participation constraint:
+ The monopolist gains to renegotiating with period-one present biased consumer are:
+\begin{align*}
+\max_{c_{0}, c_{1}} c_{0}+c_{1}-\widehat{c}_{1}-\widehat{c}_{2}-\kappa\\
+u(c_{1})+\beta u(c_{2})  \geq u(c^{f}_{1})+\beta u(c^{f}_{2})
+\end{align*}
+The first order conditions imply \(c_2=\beta^{\frac{1}{\rho}}c_1\) which can be substituted into a binding participation constraint to give
+\begin{align*}
+u(c_{1})+\beta u(\(\beta^{1/\rho }c_1\) ) 
+ \geq u(\widehat{c}^{}_{1})+\beta u(\widehat{c}_{2})\\
+ c_{1}^{1-\rho }[1+\beta^{1/\rho}]=\widehat{u}(1-\rho)\\
+ c_{1}=\left[ \frac{\widehat{u}(1-\rho)}{[1+\beta^{1/\rho}]}\right]^\frac{1}{1-\rho}
+\end{align*}
 
-
-
-In the three period ($T=2)$ case
-\[
-c_{0}=\left[  \overline{u}(1-\rho)\right]  ^{\frac{1}{1-\rho}}\cdot\frac
-{1}{(1+\beta^{\frac{1}{\rho}}\left(  \delta+\delta^{2}\right)  )^{\frac
-{1}{1-\rho}}}%
-\]
-
-
-NOTE that non-monotonic in $\beta$
-
+From the standpoint 
 
 \subsubsection{The Role of $\beta$}
 
-As an interesting relevant aside note that there is no clearly monotonic
-relationship between loan size and the consumer's measure of present bias
+As an aside note that with the expression above it is easy to demonstrate that (since \(\beta\) enters the definition of \overline{ u}\)  ) period zero consumption and hence also the size of period zero borrowing-cum-saving\ will generally be a non-monotonic function of the consumer's measure of present bias
 $\beta$. As $\beta$ drops from 1, two things happen: the consumer becomes
 willing to accept a smaller loan for any given repayment (participation
 constraint shifts down) but also becomes willing to pay more for larger loans
@@ -1550,32 +1571,10 @@ amounts. When facing a monopolist, hyperbolic discounters don't "over-borrow"
 in the obvious sense.
 
 \begin{figure}
-        \caption{A simple EMA plot.\label{fig:ema1}}
-        \centering
-        \input{ema.pgf}
-    \end{figure}
 
-CRRA example:%
+\end{figure}
 
-%TCIMACRO{\FRAME{dtbpFU}{2.543in}{1.6897in}{0pt}{\Qcb{Plotted: $l$ as a
-%function of $\beta\,$. Dotted line: $\delta=.9$. Solid line: $\delta=.5$. In
-%both cases, as $\beta$ gets very small, bank can take from the future without
-%giving much to the present. But for high $\delta$, initially $l$ rises as
-%$\beta$ drops.}}{}{Figure}{\special{ language "Scientific Word";
-%type "GRAPHIC";  maintain-aspect-ratio TRUE;  display "USEDEF";
-%valid_file "T";  width 2.543in;  height 1.6897in;  depth 0pt;
-%original-width 4.478in;  original-height 2.968in;  cropleft "0";
-%croptop "1";  cropright "1";  cropbottom "0";
-%tempfilename 'NKR6MI01.wmf';tempfile-properties "XNPEUR";}} }%
-%BeginExpansion
-\begin{center}
-\includegraphics[
-natheight=2.968000in,
-natwidth=4.478000in,
-height=1.6897in,
-width=2.543in
-]%
-{NKR6MI01.wmf}%
+CRRA example:
 \\
 Plotted: $l$ as a function of $\beta\,$. Dotted line: $\delta=.9$. Solid line:
 $\delta=.5$. In both cases, as $\beta$ gets very small, bank can take from the
