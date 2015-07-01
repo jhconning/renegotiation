@@ -9,6 +9,8 @@
 \usepackage{pstricks-add}
 \usepackage{graphicx}
 \usepackage{pgf}
+\usepackage[pdftex]{graphicx}
+\usepackage[nomarkers]{endfloat}
 
 \setcounter{MaxMatrixCols}{30}
 
@@ -354,15 +356,13 @@ odds with same individual's future motives to undo commitment. For a consumer
 to pay for commitment, firm must credibly commit to not undo it.
 \end{itemize}
 
-\bigskip%
+\bigskip
 
-\frametitle{Motivation 1--The Commitment Problem}
-
-
+\begin{description}
+\item Motivation 1 -- The Commitment Problem
 
 \begin{itemize}
-\item \textit{Commitment device}: contract that alters future action sets or
-payoffs associated with future actions.
+\item \textit{Commitment device}: contract that alters future action sets or payoffs associated with future actions.
 
 \begin{itemize}
 \item Make savings illiquid (fixed deposits)
@@ -396,8 +396,10 @@ the bank's ex-post considerations.
 \end{itemize}
 
 \bigskip
+\end{description}
 
-\frametitle{Motivation 2--Market Structure \& Governance}%
+\begin{description}
+\item Motivation 2--Market Structure \& Governance
 
 
 \begin{itemize}
@@ -416,10 +418,10 @@ in competitive markets.
 
 \item Monopoly should be taken seriously too, especially for development.
 \end{itemize}
+\end{description}
 
-\frametitle{Motivation 2a--Governance}%
-
-
+\begin{description}
+\item Motivation 2a--Governance
 
 \begin{itemize}
 \item Hansmann (Yale Law Journal, 1980, 1987):
@@ -457,8 +459,10 @@ optimizing consumers.
 considerations for nonprofits--Besley \& Ghatak (AER, 2005), McIntosh \&
 Wydick (2005).]
 \end{itemize}
+\end{description}
 
-\frametitle{Motivation 2b--Market Structure}
+\begin{description}
+\item Motivation 2b--Market Structure
 
 
 \begin{itemize}
@@ -487,6 +491,7 @@ salience because they are\textit{\ less} strict, not more).
 
 \item 1998-2006: Majority of subprime loans came from renegotiation (LA Times, 2008)
 \end{itemize}
+\end{description}
 
 \subsection{Main Arguments}
 
@@ -665,31 +670,27 @@ Any financial contract between the consumer and the bank can be thought of as
 the consumer giving up income stream $Y_{0}  $ in exchange for a preferred
 consumption path $C_{0}=(  c_{0},c_{1},c_{2}) $. A financial
 contract involves a  period 0 loan if the exchange i such that $c_{0}>y_{0}$ and a savings
-contract if c_{0}<y_{0}$. [CUT? For now we also assume that  that any new contract
+contract if $c_{0}<y_{0}$. [CUT? For now we also assume that  that any new contract
 must be initiated in period 0.
 ] 
 
 We assume the bank can perfectly enforce feasible repayment plans, so the net present value
 of its remaining profit stream in period $t$ is given by:
 \[
-\pi_{t}\left(  C_{t};Y_{t}\right)  \equiv\sum\limits_{i=t}^{2}\left(
-y_{t}_{}-c_{t}\right)   
+\pi_{t}\left(  C_{t};Y_{t}\right)  \equiv\sum\limits_{i=t}^{2}
+\left(y_{t}-c_{t}\right)   
 \]
-The bank offers a contract if and only
-if it can earn non-negative profits.
+The bank offers a contract if and only if it can earn non-negative profits.
 
-If the contract were to be renegotiated in period $1$, the bank will incur a
-nonmonetary cost, $\overline{\kappa}\geq0$, which could be interpreted to
-include a concern for reputation or some other impact on the social
+If the contract were to be renegotiated in period $1$, the bank will incur a nonmonetary cost, $\overline{\kappa}\geq0$, which could be interpreted to include a concern for reputation or some other impact on the social
 preferences of its owners.\footnote{The bank could incur additional monetary
 costs as well. However, we assume these to be $0$ as they can be netted out
-and do not affect the analysis in any important way.} The bank fully knows the
-borrowers' preferences and can tailor the contract by borrower type.
+and do not affect the analysis in any important way.} The bank fully knows the borrowers preferences and can tailor the contract by borrower type.
 
 While the primary focus of this paper is on equilibrium contracts, not
 welfare, we will make occasional reference to the hyperbolic discounter's
 welfare  defined as the
-discounted utility of the period $0$ self, $U_{0}$ (for a discussion the choice of welfare measure see O'Donoghue-Rabin, 1999).
+discounted utility of the period 0 self, $U_{0}$ (for a discussion the choice of welfare measure see O'Donoghue-Rabin, 1999).
 
 
 \section{Monopolist Bank}
@@ -727,37 +728,15 @@ be no worse off by accepting the contract than under autarky. \ For the
 CRRA\ case the FOC  imply $\overline{c}^{mf}=\beta^{\frac
 {1}{\rho}}c_{0}^{mf}$ which, along with the participation constraint, allow for closed form solutions (see appendix). See Figure 1.
 
-The terms of the optimal contract, and hence also the level of bank profits, will  depend on the consumer's starting income stream \(Y_{0}\).   To see this, consider the set of possible initial income streams of constant present value   $\sum_{t=0}^{2}\frac{y_{t}}{(1+r)^{t}}=\bar{y}$. [DISCUSS 3D?]
- 
- 
-\begin{figure}
-\centering
-\newrgbcolor{qqqqcc}{0. 0. 0.8}
-\newrgbcolor{ffqqtt}{1. 0. 0.2}
-\psset{xunit=0.2cm,yunit=0.2cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.5pt,arrowsize=3pt 2,arrowinset=0.25}
+The terms of the optimal contract, and hence also the level of bank profits, will  depend on the consumer's starting income stream \(Y_{0}\).   To see this, consider the set of possible initial income streams of constant present value   $\sum_{t=0}^{2}\frac{y_{t}}{(1+r)^{t}}=\bar{y}$. 
 
-\begin{pspicture*}(-3.,-2.)(70.,40.)
-\multips(0,0)(0,5.0){9}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,0)(70.,0)}
-\multips(0,0)(5.0,0){15}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,0)(0,40.)}
-\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=5.,Dy=5.,ticksize=-2pt 0,subticks=2]{->}(0,0)(0.,0.)(70.,40.)
-\psline[linewidth=4.pt](60.15210393330712,51.95537449737128)(81.43113942777349,51.95537449737128)
-\psline[linewidth=4.pt](68.08570875583479,49.09832731212262)(81.36474425030116,49.09832731212262)
-\psplot[plotpoints=200]{0}{70.0}{x*0.5^(1.0/0.7)}
-\psplot[linewidth=1.2pt,linecolor=ffqqtt,plotpoints=200]{0}{70.0}{((13.74-1.0/(1.0-0.7)*x^(1.0-0.7))*(1.0-0.7)/0.5)^(1.0/(1.0-0.7))}
-\psplot{-2.}{70.}{(--1835-29.06*x)/29.06}
-\psplot{-2.}{70.}{(--781.28-14.55*x)/14.55}
-\begin{scriptsize}
-\psdots[dotstyle=*,linecolor=darkgray](39.2,14.5)
-\rput[bl](39.40299208778742,14.949810955102965){\darkgray{$A$}}
-\psdots[dotstyle=*,linecolor=darkgray](25.2,38)
-\rput[bl](256,37.5){\darkgray{$\bar y$}}
-\psdots[dotstyle=*,linecolor=darkgray](145.,145.)
-\end{scriptsize}
-\end{pspicture*}
+\begin{figure}[p]
+\centering 
+\includegraphics[scale=0.60]{MonopolyFig.pdf} 
 \caption{Monopoly full-commitment contract in \(c_{0}\)\(-c_{1}\) space.}
-\endfigure 
+\end{figure}
  
- 
+
 \subsection{The Risk of Renegotiation}
 
 
@@ -772,47 +751,9 @@ u^{\prime}\left(  c_{1}^{mf}\right)  \geq\beta u^{\prime}\left(  c_{2}
 \]
 
 If he is a hyperbolic discounter with $\beta<1$, he wishes to increase present
-consumption. As the figure illustrates, a monopolist can opportunistically `exploit' a customer who had agreed to $F$ by offering consumption stream $R$ in exchange for $F$\( \). This would raise period 1 consumption by 'raiding savings' (taking out new loans), for a customer who had saved (borrowed) in period 0 by with the effect of lowering (increasing) the net savings (debt) passed into period 2.
+consumption. As the figure illustrates, a monopolist can opportunistically `exploit' a customer who had agreed to $F$ by offering consumption stream $R$ in exchange for $F$. This would raise period 1 consumption by 'raiding savings' (taking out new loans), for a customer who had saved (borrowed) in period 0 by with the effect of lowering (increasing) the net savings (debt) passed into period 2.
 
-\begin{figure}[ptb]
-\centering
-\newrgbcolor{qqqqcc}{0. 0. 0.8}
-\newrgbcolor{ffqqtt}{1. 0. 0.2}
-\psset{xunit=0.2cm,yunit=0.2cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.5pt,arrowsize=3pt 2,arrowinset=0.25}
-
-\begin{pspicture*}(-3.,-3.)(70.,40.)
-\multips(0,0)(0,5.0){9}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,0)(70.,0)}
-\multips(0,0)(5.0,0){15}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,0)(0,40.)}
-\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=5.,Dy=5.,ticksize=-2pt 0,subticks=2]{->}(0,0)(0.,0.)(70.,40.)
-\psplot[linewidth=1.2pt,linecolor=qqqqcc,plotpoints=200]{0}{70.0}{((18.32-1.0/(1.0-0.7)*x^(1.0-0.7))*(1.0-0.7))^(1.0/(1.0-0.7))}
-\psplot[plotpoints=200]{0}{70.0}{x*0.5^(1.0/0.7)}
-\psplot[linewidth=1.2pt,linecolor=ffqqtt,plotpoints=200]{0}{70.0}{((13.74-1.0/(1.0-0.7)*x^(1.0-0.7))*(1.0-0.7)/0.5)^(1.0/(1.0-0.7))}
-\psplot{-2.}{70.}{(--58-x)}    %FN line
-\psplot{-2.}{70.}{(--53.7-x)}  %BQ line 
-\psplot{-2.}{70.}{(--63-x)}    %RP line
-\psplot[linestyle=dashed,dash=6pt 6pt,plotpoints=200]{0.0}{70.0}{x}
-\begin{scriptsize}
-\psdots[dotstyle=*,linecolor=darkgray](39.2,14.5)
-\rput[bl](39.4,14.9){\darkgray{$B$}}
-\psdots[dotstyle=*,linecolor=darkgray](38,38)
-\rput[bl](39,37.5){\darkgray{$\bar y$}}
-\psdots[dotstyle=*,linecolor=blue](58.1,0.)
-\psdots[dotstyle=*,linecolor=blue](46,17.1)
-\rput[bl](46,18){\darkgray{$R$}}
-\rput[bl](60,24){\darkgray{$FOC$}}
-\rput[bl](58.4,0.39){\blue{$N$}}
-\psdots[dotstyle=*,linecolor=blue](53.7,0.)
-\rput[bl](53.9,0.4){\blue{$Q$}}
-\psdots[dotstyle=*,linecolor=darkgray](29.0,29.0)
-\rput[bl](29.7,29.3){\darkgray{$F$}}
-\rput[bl](63,0.39){\blue{$P$}}
-\psdots[dotstyle=*,linecolor=blue](63,0.)
-\end{scriptsize}
-\end{pspicture*}
-
-\caption{\label {renegFig}Monopoly full-commitment contract in \(c_{1}\)\(-c_{2}\) space.}
-\end{figure}
-
+FIGURE: Monopoly full-commitment contract in \(c_{1}\)\(-c_{2}\) space.}
 
 Such a contract would be designed to raise period 1 self's utility ever so slightly while raising the monopolist to the higher value isoprofit line $QN$.  
 
@@ -841,14 +782,14 @@ $(y_{1}-c^{r}_{1},y_{2}-c^{r}_{2}).$} the contractually agreed $(\hat c_{1},\hat
 \[
 u^{\prime}\left(  c_{1}^{r}\right)  =\beta u^{\prime}\left(  c_{2}^{r}\right)
 \]the contract will set 
-$c_{1}^{r}>$ $c_{2}^{r}$ as long as \(\beta<1 \) and exactly $c^{r}_{2}=\beta^{1/\rho} c^{r}_{1}$ in the CRRA case. Figure \ref{renegFig} illustrates the type of renegotiated contract that would be offered in the very special case of a  customer who agreed to a full commitment contract $ C_{1}^{mf}$ in period 0 -- having sincerely believed the bank's promise to not offer to renegotiate in period 1 --   was then genuinely and unexpectedly surprised to find the bank offering a renegotiation in period 1. Although it would break a promise to the consumer's period 0 self, the contract will be  designed to appeal to the customer's period 1. This type of renegotiation/promise-breaking will be profitable for the bank to offer  as long as $\pi_{1}\left(  C_{1}^{r}\left(  C_{1}^{mf}\right)  ;C_{1}^{mf}\right)  \geq\kappa$, where $\kappa$ are the non-monetary renegotiation costs to the bank. As depicted in Figure \ref{renegFig}, the bank will find it profitable to renegotiate from the   continuation of the full commitment  contract depicted by point $F$ to the new contract depicted by $B$ so long as profits gains (equal to the present value difference  between $ C_{1}^{mf}$ and $C_{1}^{r}$) which can be measured as  distance $NQ$ on the diagram is greater than $\kappa$.
+$c_{1}^{r}>$ $c_{2}^{r}$ as long as \(\beta<1 \) and exactly $c^{r}_{2}=\beta^{1/\rho} c^{r}_{1}$ in the CRRA case. Figure \FIGURE illustrates the type of renegotiated contract that would be offered in the very special case of a  customer who agreed to a full commitment contract $ C_{1}^{mf}$ in period 0 -- having sincerely believed the bank's promise to not offer to renegotiate in period 
+
+1 --   was then genuinely and unexpectedly surprised to find the bank offering a renegotiation in period 1. Although it would break a promise to the consumer's period 0 self, the contract will be  designed to appeal to the customer's period 1. This type of renegotiation/promise-breaking will be profitable for the bank to offer  as long as $\pi_{1}\left(  C_{1}^{r}\left(  C_{1}^{mf}\right)  ;C_{1}^{mf}\right)  \geq\kappa$, where $\kappa$ are the non-monetary renegotiation costs to the bank. As depicted in Figure FIGURE, the bank will find it profitable to renegotiate from the   continuation of the full commitment  contract depicted by point $F$ to the new contract depicted by $B$ so long as profits gains (equal to the present value difference  between $ C_{1}^{mf}$ and $C_{1}^{r}$) which can be measured as  distance $NQ$ on the diagram is greater than $\kappa$.
  Although the new contract appeals to the period 1 self,  the broken promise  `exploits' the consumer's period 0 self by pushing their welfare below the autarky reservation utility that they thought had been promised by the $C_{1}^{mf}$ contract.  
  
 \subsection{Renegotiation-Proof Contracts}
 
 A sophisticated consumer will, of course, rationally anticipate the bank's temptation to break its commitment promises and for this reason would never   agree to accept contract \(F\)  or any other contract that could make him worse off following  a period-1 renegotiation. Since the bank will want to avoid renegotiation costs $\kappa$ the only contracts that will be offered that satisfy this criterion in period 0 must be renegotiation-proof contracts:\  contracts that the bank will not find profitable to renegotiate.     
-
-
 
 The bank must therefore offer a contract that satisfies
 period 0's participation constraint and now also meets an additional renegotiation-proofness constraint. The resulting
@@ -857,13 +798,9 @@ gains from renegotiation. It does this by increasing $c_{1}$\ by just enough
 relative to $c_{2}$\ as to lower what period 1 self is willing to pay for a
 renegotiation to fall  just below the bank's cost $\kappa$, as to keep
 renegotiation credibly unprofitable to the bank. \ This must lower bank profits relative to the costless full-commitment case because
-the monopolist  must now compensate the consumer for a contract that delivers less
-consumption smoothing across period 1 and 2 than under full commitment.
+the monopolist  must now compensate the consumer for a contract that delivers less consumption smoothing across period 1 and 2 than under full commitment.   
 
-    
-
-The now solves a maximization
-problem with two constraints. 
+The now solves a maximization problem with two constraints. 
  
 
 \begin{align*}
@@ -882,10 +819,8 @@ imbalanced (in period 1's favor) so that period 0's beliefs about the
 potential gains to period 1 from renegotiating the contract are just smaller
 than the costs the bank incurs from renegotiating. 
 
-A slight re-interpretation of Figure  \ref{renegFig}
-illustrates the properties of a renegotiation-proof contract in the special case of a monopolist with zero renegotiation cost ($\kappa=0$). In this special case the only contract that satisfies the period 0 self's participation constraint (interpreted here as indifference curve $FR$ where \(F\text{ is no longer the full-commitment contract }\)since period 0 consumption )
-
-must lie along the first-order condition line $c_{2} =\beta ^{(1/{\rho)}$$c_{1}$ (which line in the here for the CRRA case)\ 
+A slight re-interpretation of FIGURE
+illustrates the properties of a renegotiation-proof contract in the special case of a monopolist with zero renegotiation cost ($\kappa=0$). In this special case the only contract that satisfies the period 0 self's participation constraint (interpreted here as indifference curve $FR$ where \(F\text{ is no longer the full-commitment contract }\)since period 0 consumption must lie along the first-order condition line $c_{2} =\beta ^{(1/{\rho)}$$c_{1}$ (which line in the here for the CRRA case)\ 
 
 [Remove this para? or modify notation. or simplify to make the basic point.]
 The first-order conditions are:
@@ -906,16 +841,9 @@ $c_{1}^{s}$ and $c_{2}^{s}$ must be. [end of para to be removed]
 This yields an equilibrium which satisfies the borrower's participation
 constraint. For the sophisticated hyperbolic discounter, since $c_{1}^{mp}%
 $\ and $c_{2}^{mp}$\ deliver a (weakly) less smoothed profile than the
-commitment contract, the bank has to give up some of its surplus to have the
-client continue to participate. Bank profits must be lower when the bank faces
-a new constraint on its surplus extraction problem: the bank wishes it could
-promise to not renegotiate but it simply cannot make such a promise credible
-without giving up some profits. The problem here is not one of cheating or
-contract failure [AS examined for example by], it is the possibility of a
-legitimate renegotiation (a voluntary agreement to tear up the old contract)
-between the consumer and the firm.
+commitment contract, the bank has to give up some of its surplus to have the client continue to participate. Bank profits must be lower when the bank faces a new constraint on its surplus extraction problem: the bank wishes it could promise to not renegotiate but it simply cannot make such a promise credible without giving up some profits. The problem here is not one of cheating or contract failure [AS examined for example by], it is the possibility of a legitimate renegotiation (a voluntary agreement to tear up the old contract) between the consumer and the firm.
 
-[[Point $R$ in Figure \ref{renegFig} provides an illustration of the  approximate renegotiation-proof contract that a sophisticated consumer would agree to with a \(\kappa=0\) bank. It's only approximate because The only renegotiation-proof con he bank faces zero renegotiation cost they will offer to renegotiate ]]
+[[Point $R$ in FIGURE provides an illustration of the  approximate renegotiation-proof contract that a sophisticated consumer would agree to with a \(\kappa=0\) bank. It's only approximate because The only renegotiation-proof con he bank faces zero renegotiation cost they will offer to renegotiate ]]
 
 \begin{proposition}
 If $\kappa$ is sufficiently small:
@@ -1111,7 +1039,8 @@ In the CRRA utility case $u(c)=\frac{c^{1-\rho }}{1-\rho }$ the first order cond
  
 
 To compare the competitive and  monopoly equilibrium contract's it's useful to visualize the problem.  In $c_{0}-c_{1}-c_{2}$ space  the consumer's preferences \(U_{0}(c_{0},c_{1},c_{2})\)  are represented by a family of iso-utility surfaces
-that increase in value as we get farther from the origin while the risk-neutral bank's preferences is represented by a family of iso-profit planes that increase in value as they get closer to the origin. The competitive contract will be found at the tangency point   that places  the consumer on the highest possible iso-utility surface that still touches the bank's zero-profit plane that  passes through  endowment point \(y. \) The monopoly contract on the other hand will at the tangency point that puts the bank on the highest iso-profit plane it can reach that  still touches the client's participation iso-utility surface which also passes through the endowment point. 
+that increase in value as we get farther from the origin while the risk
+-neutral bank's preferences is represented by a family of iso-profit planes that increase in value as they get closer to the origin. The competitive contract will be found at the tangency point   that places  the consumer on the highest possible iso-utility surface that still touches the bank's zero-profit plane that  passes through  endowment point \(y. \) The monopoly contract on the other hand will at the tangency point that puts the bank on the highest iso-profit plane it can reach that  still touches the client's participation iso-utility surface which also passes through the endowment point. 
 
 
 
@@ -1119,46 +1048,8 @@ When preferences are homothetic (the CRRA case)
 all points of tangency between iso-utility surfaces and parallel planes must (by definition)\ pass through a ray from the origin \((1,\beta^{\frac{1}{\rho}}\),\(\beta^{\frac{1}{\rho}}\)). The monopoly and the competitive full-commitment contracts must lie along one such shared ray and this in turn implies that \(c^{mf}_{t} \leq c^{cf}_{t}\) for \(t=0,1,2  \). The shift of surplus from bank to consumer leads to more borrowing  (or less saving)
 on lower repayment (higher return on savings) terms.
 
-\begin{figure}[ptb]
-\centering
-\newrgbcolor{qqqqcc}{0. 0. 0.8}
-\newrgbcolor{ffqqtt}{1. 0. 0.2}
-\psset{xunit=0.2cm,yunit=0.2cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.5pt,arrowsize=3pt 2,arrowinset=0.25}
-
-\begin{pspicture*}(-3.,-3.)(70.,40.)
-\multips(0,0)(0,5.0){9}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,0)(70.,0)}
-\multips(0,0)(5.0,0){15}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,0)(0,40.)}
-\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=5.,Dy=5.,ticksize=-2pt 0,subticks=2]{->}(0,0)(0.,0.)(70.,40.)
-\psplot[linewidth=1.2pt,linecolor=qqqqcc,plotpoints=200]{0}{70.0}{((18.32-1.0/(1.0-0.7)*x^(1.0-0.7))*(1.0-0.7))^(1.0/(1.0-0.7))}
-\psplot[plotpoints=200]{0}{70.0}{x*0.5^(1.0/0.7)}
-\psplot[linewidth=1.2pt,linecolor=ffqqtt,plotpoints=200]{0}{70.0}{((13.74-1.0/(1.0-0.7)*x^(1.0-0.7))*(1.0-0.7)/0.5)^(1.0/(1.0-0.7))}
-\psplot{-2.}{70.}{(--58-x)}    %FN line
-\psplot{-2.}{70.}{(--53.7-x)}  %BQ line 
-\psplot{-2.}{70.}{(--63-x)}    %RP line
-\psplot[linestyle=dashed,dash=6pt 6pt,plotpoints=200]{0.0}{70.0}{x}
-\begin{scriptsize}
-\psdots[dotstyle=*,linecolor=darkgray](39.2,14.5)
-\rput[bl](39.4,14.9){\darkgray{$B$}}
-\psdots[dotstyle=*,linecolor=darkgray](38,38)
-\rput[bl](39,37.5){\darkgray{$\bar y$}}
-\psdots[dotstyle=*,linecolor=blue](58.1,0.)
-\psdots[dotstyle=*,linecolor=blue](46,17.1)
-\rput[bl](46,18){\darkgray{$R$}}
-\rput[bl](40,24){\darkgray{$this PIC notYETright$}}
-\rput[bl](58.4,0.39){\blue{$N$}}
-\psdots[dotstyle=*,linecolor=blue](53.7,0.)
-\rput[bl](53.9,0.4){\blue{$Q$}}
-\psdots[dotstyle=*,linecolor=darkgray](29.0,29.0)
-\rput[bl](29.7,29.3){\darkgray{$F$}}
-\rput[bl](63,0.39){\blue{$P$}}
-\psdots[dotstyle=*,linecolor=blue](63,0.)
-\end{scriptsize}
-\end{pspicture*}
-
-\caption{The benchmark contract under competition compared to the benchmark
-contract under monopoly.}%
-\end{figure}
-%EndExpansion
+FIGURE: The benchmark contract under competition compared to the benchmark
+contract under monopoly.
 
 
 The competitive contract must satisfy the zero-profit constraint and the
@@ -1166,7 +1057,7 @@ first-order conditions, while the monopolist's contract must satisfy the
 borrower's participation constraint and the first-order condition. Since the
 curve associated with the first-order condition is downward sloping, the
 competitive contract has a higher loan size and smaller repayment. The arrow
-in Figure 5 indicates the direction in which the first-order condition moves
+in FIGURE indicates the direction in which the first-order condition moves
 as $\beta$ drops. This will result in a new contract at a higher point of
 intersection with the zero-profit constraint, which implies a larger loan size
 and higher repayment. This gives us the following proposition.
@@ -1536,9 +1427,7 @@ higher profits by lowering the loan size while continuing to raise repayment
 amounts. When facing a monopolist, hyperbolic discounters don't "over-borrow"
 in the obvious sense.
 
-\begin{figure}
-
-\end{figure}
+FIGURE
 
 CRRA example:
 \\
@@ -1641,8 +1530,7 @@ Enterprise.\textquotedblright\ \textit{Yale Law Journal}, 89(5), 835-901.
 Market.\textquotedblright\ \textit{American Economic Review}, 100(5), 2279-303.
 
 \bibitem {Laibson97}Laibson, David. 1997. \textquotedblleft Golden Eggs and
-Hyperbolic Discounting.\textquotedblright\ \textit{The Quarterly Journal of
-Economics}, 112(2): 443-477.
+Hyperbolic Discounting.\textquotedblright\ \textit{The Quarterly Journal of Economics}, 112(2): 443-477.
 
 \bibitem {Mcintosh&Wydick05}Mcintosh, Craig and Bruce Wydick. 2005.
 \textquotedblleft Competition and Microfinance.\textquotedblright%

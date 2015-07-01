@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Jun 28 15:26:19 2015
-@author: Jonathan
+Python module to solve for and analyze full commitment and renegotiation-proof 
+contracts.  See https://github.com/jhconning/renegotiation
+
+For a paper by Karna Basu and Jonathan Conning
+
+@author: Jonathan Conning
 """
 import numpy as np
 from scipy.optimize import minimize
@@ -68,9 +72,9 @@ class Contract(object):
         
 class Monopoly(Contract):                    # build on contract class
     """ Class for solving Monopoly equilibrium contracts  """                                                                                                        
-    def __init__(self,beta, y=None):
+    def __init__(self,beta):
         super(Monopoly,self).__init__(beta)    # make sure inherits parent class properties
-        self.kappa  = 0                                # cost of renegotiation    
+        self.kappa  = 0                                # cost of renegotiation        
         self.guess  = self.y                           # initial guess for solver
         
     def fcommit(self):                                
@@ -172,7 +176,7 @@ if __name__ == "__main__":
     c = Contract(beta = 0.75)
     c.y = [60, 120, 120]
     c.print_params()
-    
+        
     print("Monopoly contract")
     cM = Monopoly(beta = 0.75)
     cM.y = [60, 120, 120]
@@ -189,3 +193,16 @@ if __name__ == "__main__":
     print(cCRP)
     print("the competitive renegotiation proof is not working")
     
+    cMF = cM.fcommit()
+    cMr = cM.reneg(cCF)
+    cM.guess = cMr
+    cMRP = cM.reneg_proof().x
+
+import matplotlib.pyplot as plt
+ 
+y=cM.y   
+c1 = np.arange(0,240)
+isoprofline = cM.isoprofit(20, y)
+y =isoprofline(c1)
+plt.plot(c1,y)
+#plt.plot(c1,  isoprofline(c1) )

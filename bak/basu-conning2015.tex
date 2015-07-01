@@ -1,0 +1,2989 @@
+%2multibyte Version: 5.50.0.2960 CodePage: 1251
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL D:\jpapers\renegotiation\paper\2015 outline\basu-conning 2015-03-06k.tex   Thu Mar 19 16:06:32 2015
+%DIF ADD D:\jpapers\renegotiation\vc\basu-conning2015.tex                           Wed May 20 14:39:00 2015
+%DIF 2-4c2
+%DIF < 
+%DIF < \documentclass[11pt]{article}
+%DIF < %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%DIF -------
+\documentclass[11pt]{article}% %DIF > 
+%DIF -------
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{harvard}
+\usepackage[mag=1000]{geometry}
+\usepackage[doublespacing]{setspace}
+%DIF 10-12c8-14
+%DIF < 
+%DIF < \setcounter{MaxMatrixCols}{10}
+%DIF < %TCIDATA{OutputFilter=LATEX.DLL}
+%DIF -------
+\usepackage{amsfonts} %DIF > 
+\usepackage{pstricks-add} %DIF > 
+\usepackage{graphicx} %DIF > 
+\usepackage{pgf} %DIF > 
+% %DIF > 
+\setcounter{MaxMatrixCols}{30} %DIF > 
+%TCIDATA{OutputFilter=latex2.dll} %DIF > 
+%DIF -------
+%TCIDATA{Version=5.50.0.2960}
+%TCIDATA{Codepage=1251}
+%DIF 15-16c17
+%DIF < %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%DIF < %TCIDATA{BibliographyScheme=Manual}
+%DIF -------
+%TCIDATA{CSTFile=LaTeX article (bright).cst} %DIF > 
+%DIF -------
+%TCIDATA{Created=Sunday, September 12, 2004 15:39:20}
+%DIF 18c19
+%DIF < %TCIDATA{LastRevised=Thursday, March 19, 2015 16:06:32}
+%DIF -------
+%TCIDATA{LastRevised=Saturday, April 04, 2015 13:06:02} %DIF > 
+%DIF -------
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%DIF 20a21-22
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">} %DIF > 
+%TCIDATA{BibliographyScheme=Manual} %DIF > 
+%DIF -------
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Articles\SW\Standard LaTeX Article (Harvard)">}
+%TCIDATA{Language=American English}
+%DIF 22d25
+%DIF < %TCIDATA{CSTFile=LaTeX article (bright).cst}
+%DIF -------
+%TCIDATA{PageSetup=72,72,72,72,0}
+%TCIDATA{Counters=arabic,1}
+%TCIDATA{AllPages=
+%H=36
+%F=36
+%}
+%DIF 29-30c31-33
+%DIF < 
+%DIF < 
+%DIF -------
+%BeginMSIPreambleData %DIF > 
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}} %DIF > 
+%EndMSIPreambleData %DIF > 
+%DIF -------
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+%DIF 53d56
+%DIF < \input{tcilatex}
+%DIF -------
+\geometry{left=1.1in,right=1.1in,top=0.75in,bottom=0.75in}
+\usepackage{varioref} %DIF > 
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF CFONT PREAMBLE %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue} \sf #1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red} \scriptsize #1}} %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+
+\title{Sticking to the Contract: \\Non-Profit vs For-Profit Banks and Hyperbolic Discounters\\(preliminary)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\author{Karna Basu \& Jonathan Conning\DIFdelbegin %DIFDELCMD < \thanks{%
+%DIFDELCMD < Department of Economics, Hunter College, City University of New York. Email:
+%DIFDELCMD < kbasu@hunter.cuny.edu, jconning@hunter.cuny.edu. We are grateful to the
+%DIFDELCMD < Roosevelt House Public Policy Institute and a Small Business Administration
+%DIFDELCMD < research grant for support. For comments and suggestions, we thank Abhijit
+%DIFDELCMD < Banerjee, Eric Van Tassel, and seminar and conference participants at
+%DIFDELCMD < Michigan State University, IIES Stockholm, Delhi School of Economics, Queens
+%DIFDELCMD < College, Indian School of Business, Hunter College, Florida Atlantic
+%DIFDELCMD < University, CIDE-ThReD Conference on Development Theory, and NEUDC. Kwabena
+%DIFDELCMD < Donkor provided excellent research assistance.}%%%
+\DIFdelend \DIFaddbegin \thanks{Department of Economics, Hunter College,
+City University of New York. Email: kbasu@hunter.cuny.edu,
+jconning@hunter.cuny.edu. We are grateful to the Roosevelt House Public Policy
+Institute and a Small Business Administration research grant for support. For
+comments and suggestions, we thank Abhijit Banerjee, Eric Van Tassel, and
+seminar and conference participants at Michigan State University, IIES
+Stockholm, Delhi School of Economics, Queens College, Indian School of
+Business, Hunter College, Florida Atlantic University, CIDE-ThReD Conference
+on Development Theory, and NEUDC. Kwabena Donkor provided excellent research
+assistance.}\DIFaddend }
+\maketitle
+
+\begin{abstract}
+Motivated by recent concerns about over-indebtedness and consumer protection
+in microfinance and mortgage lending, this paper presents a model of lending
+and refinance to hyperbolic discounters. First, we identify a problem of
+consumer protection that survives even when consumers are sophisticated and
+fully informed: a borrower would like to commit her future selves to a pattern
+of repayments, but her future selves can be tempted to pay to defer debt
+obligations via subsequent loan or refinancing offers. Investor-led banks may
+find it costlier to credibly promise to enforce the commitment contract as has
+an ex-post profit incentive to renegotiate its terms, limiting the amount of
+commitment that can be offered in equilibrium. Second, we show how non-profit
+and hybrid ownership (e.g. client or social investor-dominated)\ banks may
+offer improved commitment. As organizations that face legal or governance
+constraints that limit or bar these banks from distributing profits to outside
+investors, they have a weaker incentive to renegotiate contracts, allowing
+them to offer stronger commitment, ex-ante. Third, we show how a bank's
+strategic choice to adopt non-profit or hybrid status depends on market
+structure. A monopolist faces a trade-off: as a non-profit, it may earn higher
+profits by providing superior commitment, but its ability to enjoy these
+profits is restricted. Under competition, the trade-off disappears. If
+contracts are exclusive, competition drives banks to adopt non-distribution
+constraints. If contracts are not exclusive, for-profit banks will exist in
+equilibrium and make superior commitment infeasible. The model helps explain
+some stylized historical facts in consumer banking and recent developments in
+microfinance. JEL Codes: O16, D03, D18\vfill
+\DIFaddbegin 
+
+
+\DIFaddend \end{abstract}
+
+\qquad\newpage
+
+\section{Introduction}
+
+This paper analyzes financial equilibrium lending contracts and intermediary
+ownership forms in markets with hyperbolic discounters. We draw attention to
+the demand for commitment in multi-period lending contracts, demonstrating
+that there are circumstances where non-profit lenders -- or more broadly,
+lenders that have chosen ownership/governance structures that place limits on
+profit distribution -- can offer more effective and credible commitment
+contracts than investor-led for-profit banks. A financial intermediary's
+strategic choice to operate as a commercial non-profit or transform itself
+into an investor-led for-profit firm depends on several factors, including the
+extent of market competition, its ability to enforce exclusive contracts, and
+the legal framework governing non-profits.
+
+The model helps frame explanations for some important stylized facts about the
+the operation of credit markets, including broad trends in the evolution of
+ownership forms and issues of consumer protection in microfinance today, the
+historical transformation of consumer finance in developed countries, and
+consumer protection issues in mortgage refinance lending. \ In particular, the
+model suggests a way to reconcile the following phenomena: the ubiquity and
+persistence of non-profit and social-investor led firms in microfinance, and
+the more recent growth of for-profit microfinance and its apparent association
+with rising borrower `over-indebtedness' in some countries.
+
+In recent years, especially in light of crises in consumer credit markets,
+there has been renewed emphasis on consumer protection and better governance
+and regulation in banking.\footnote{%DIF < 
+In the US, the Consumer Financial
+Protection Bureau was set up in 2011 under the Dodd--Frank Wall Street Reform
+and Consumer Protection Act. In India, the far-reaching Micro Finance
+Institutions (Development and Regulation) Bill of 2012 was designed to
+increase government oversight of MFIs in response to the credit crisis in the
+state of Andhra Pradesh, and the perception that lax consumer protection and
+agressive lending practices had led to rising over-indebtedness and stress.}
+One particular area of concern has been borrower over-indebtedness, an issue
+that has been at the center of recent microfinance repayment crises in places
+as far-flung as Morrocco, Bosnia, Nicaragua and India. Commenting upon the
+largest of these crises in the state of Andhra Pradesh in India, veteran
+microfiance analyst Elizabeth Rhyne (2010) describes the build up of "rising
+debt stress among possibly tens of thousands of clients, brought on by
+explosive growth of microfinance organizations...\textquotedblright\ fueled by
+the rapid inflow of directed private lending and new equity investors who,
+because they \textquotedblleft paid dearly for shares in [newly privatized]
+MFIs...\ needed fast growth to make their investments pay
+off.\textquotedblright\ \ Her analysis, like that of many others ultimately
+lays the blame on \textquotedblleft poor governance
+structures.\textquotedblright\ \ Not too dissimilar descriptions have been
+given to describe the build up to the 2008 mortgage lending crisis in the
+United\ States. \ In each of these cases the issue of refinancings and/or the
+taking of loans from multiple lenders emerges. For example, by value, more
+than two-thirds of the subprime mortgage loans outstanding in 2008 were made
+up of refinanced loans (Demyank and Van Hemert, 2009).
+
+Journalistic and scholarly analyses of such situations, including the recent
+mortgage crisis in the United States, have often framed the issues as problems
+of consumer protection, suggesting that many lenders designed products to
+purposefully take advantage of borrowers who have limited financial literacy
+skills and are naive about their self-control problems. Informed by such
+interpretations, new regulations introduced in the wake of these crises have
+swung toward restricting the terms of allowable contracts, for example by
+setting maximum interest rates, and the use of `coercive' loan recovery methods.
+
+We place consumers' struggles with intertemporal self-control issues at the
+center of the analysis but argue that borrowers are often more sophisticated
+in their understanding of their own time-inconsistency than is often assumed.
+From this perspective, `predatory lending' is not primarily about tricking
+naive borrowers into paying more than they signed up for with hidden penalties
+or misleading interest rates quotes, but about offering excessive flexibility
+and refinancing of financial contracts in ways that limit or undermine the
+commitments to long term consumption and debt management paths that borrowers
+themselves may be attempting to put in place. \ A sophisticated hyperbolic
+discounter understands that his `future selves' will attempt to take out new
+loans on top of old ones, or renegotiate the terms of existing loans to
+further defer debt repayment. That such borrowers should be and are willing to
+pay for commitment has been demonstrated in several theoretical and empirical
+papers.\footnote{%DIF < 
+A `sophisticated' hyperbolic discounter is one who is fully
+aware of her time-inconsistency. See, for example, Ashraf, Karlan, and Yin
+(2006), Carrillo and Dewatripont (2008), Bryan, Karlan, and Nelson (2010),
+Fischer and Ghatak (2010), Basu (2011), and Basu (2012).} By entering into a
+loan contract that commits them to a specific time-path of repayments, the
+consumer atempts to ensure that future selves will not skew consumption
+patterns to privilege instant gratification in the following periods. Viewed
+this light, fees and punishments for failing to adhere to a repayment schedule
+are not inherently undesirable to the consumer--for sophisticated hyperbolic
+discounters, threats of punishment can indeed serve as useful commitment devices.
+
+Nevertheless, the fact that consumers value commitment does not automatically
+imply that firms will provide it in equilibrium. In fact, there remains an
+open question about whether markets can be relied upon to supply commitment.
+The key consideration is the following: if a hyperbolic discounter is willing
+to pay to commit her future selves, her future selves are willing to pay to
+undo this commitment. Here, a lender that promises to be rigid and is then
+flexible could be seen as hurting, rather than helping, the
+consumer.\footnote{%DIF < 
+Some recent papers demonstrate how commitment can be undone
+in related settings. Gottlieb (2008) shows how competition leads to
+inefficient outcomes in immediate rewards goods. Heidhues \& Koszegi (2010)
+study the mistakes of partially naive borrowers in competitive credit markets.
+Mendez (2013) analyzes predatory lending with naive consumers. We extend our
+focus to monopoly, which is a particularly relevant market structure for
+informal banking in developing economies, and study how the firm's governance
+interacts with the renegotiation problem.}
+
+Perspicacious readers will recognize that the idea that firm ownership might
+be strategically chosen to solve or ameliorate `contract failure' problems
+dates back at least to Arrow (1963)\ and one that has been articulated most
+clearly in the work of Henry Hansmann (1980, 1996). \ Hansmann argued that in
+markets where the quality of a product or service might be difficult to verify
+clients may rationally fear that investor-led firms may be tempted to
+opportunistically skimp on the quality of a promised product or service or
+reveal a hidden fee, and this can greatly reduce or even eliminate
+contracting. \ In such circumstances becoming a `commercial non-profit' may be
+a costly but necesary way to commit the firm not act opportunistically, hence
+enabling trade. \ Hansmann gives as a primary historical example the
+development of consumer saving, lending and insurance products in the United
+States and Europe. \ Life insurance in the United States for example has until
+quite recently always been dominated by mutuals. \ Rate payers could not trust
+investor-led firms to not act opportunistically for example, by increasing
+premiums or by skimping or reneging on death benefit payouts. \ Mutuals on the
+other hand had little incentive to cheat clients to increase shareholder
+dividends as the clients themselves are the only shareholders. Mutuals
+therefore enjoyed a distinct competitive advantage until sufficient state
+regulatory capacity developed.
+
+In the present analysis we begin by following Hansmann in defining non-profits
+by the legal restrictions faced by them, setting aside other ways (such as
+motivation) in which they might be different from for-profit
+firms.\footnote{%DIF < 
+Hence we abstract away from other considerations for
+nonprofits, as in Besley \& Ghatak (2005) and McIntosh \& Wydick (2005).
+Nonetheless our modeling framework can be adapted to include these
+considerations and is the focus of related work.} In this view "[a] nonprofit
+organization is, in essence, an organization that is barred from distributing
+its net earnings, if any, to individuals who exercise control over it, such as
+members, officers, directors, or trustees. By `net earnings' I mean here pure
+profits--that is, earnings in excess of the amount needed to pay for services
+rendered to the organization.\textquotedblright\ Glaeser and Shleifer (2000)
+and others have formalized Hansmann's central argument to show that when a
+firm cannot commit to maintaining high quality, it might choose to operate as
+a commercial nonprofit rather than as an investor-led for-profit in order to
+credibly signal that it has weaker incentives to cheat the consumer on aspects
+of unobserved product quality. As Hansmann describes it, firm ownership form
+adapts endogenously as a `crude form of consumer protection' in unregulated
+emerging markets where asymmetric information problems are rife. Bubb and
+Kaufman (2011) modify this model so that the non-contractible quality issue is
+on hidden penalties, which are incurred with certainty by some borrowers.
+\ All of these models are built rely on some form of asymmetric information or
+contract verification problem.
+
+An important contribution of our paper is to argue that a theory of ownership
+form can be built on behavioral microfoundations even in environments with no
+asymmetric information and with sophisticated forward-looking agents. \ We
+believe this is an important element for understanding the development of
+consumer finance in developed countries historically as well as the current
+shape of microfinance today where non-profit and `hybrid' forms still dominate
+the sector in most developing countries (Cull and Morduch, 2009; Conning and
+Morduch, 2011). \ `Hybrid' ownership forms include the many microfinance firms
+that though technically incorporated as for-profit financial service providers
+are in fact dominated by boards where, by design, social investors\ and/or
+client representatives exert substantial governance control. \ Hybrid forms
+such as these would appear to confer many of the benefits of non-profit status
+(specifically, credible commitment to consumer protection) with fewer of the
+costs (in particular, unlike a pure non-profit they can and do issue stock to
+outside investors although usually in a manner that does not lead to challenge
+control).\footnote{%DIF < 
+She goes on to argue that but for bad regulatory law
+design, Indian MFIs might have avoided their problems and followed the model
+of leading microfinance organizations in other countries like Mibanco and
+Bancosol (Bolivia) which "were commercialized with a mix of owners including
+the original non-governmental organization (NGO), international social
+investors (including development banks), and some local shareholders. The NGOs
+kept the focus on the mission, while the international social investors
+contributed a commercial orientation, also tempered by social mission. In
+Indian microfinance, NGOs are prohibited from becoming shareholders... [and
+while clients may be given] a monetary stake in the company .. voting rights
+[remain with] the founder/managers. At the same time, foreign investment rules
+have made it hard for international social investors to participate in
+ownership and governance. The results: founder domination, a pattern that
+affects each of the big three MFIs in Andhra Pradesh and leads to a lack of
+checks on decisions by managers..." \ Given that and "the entrance of pure
+commercial players like Sequoia Capital India" \ it is not surprising to see
+an "over-emphasis on fast growth" and a rise in consumer protection
+complaints.}
+
+In our earlier mention of the recent crisis of Andhra Pradesh which quoted
+Elizabeth Rhyne at length because the rest of her analysis, which ties the
+issue of financial intermediary ownership form and their lending pracices,
+fits nicely into the framework of our model. \ In her view Indian MFIs might
+have avoided their problems and followed the model of leading microfinance
+organizations in other countries like Mibanco and Bancosol (Bolivia) which
+\textquotedblleft were commercialized with a mix of owners including the
+original non-governmental organization (NGO), international social investors
+(including development banks), and some local shareholders. The NGOs kept the
+focus on the mission, while the international social investors contributed a
+commercial orientation, also tempered by social mission.\textquotedblright%DIF > 
+\ These are the types of hybrid ownership forms that we shall argue provide
+the types of surplus building consumer protection that earlier theory argued
+would be supplied primarily by non-profit forms. \ According to Rhyne,Indian
+regulatory frameworks and policy decisions made it difficult for effective
+hybrid ownership/governance structures to emerge
+organically:\ \textquotedblleft In Indian microfinance, NGOs are prohibited
+from becoming shareholders... [and while clients may be given] a monetary
+stake in the company .. voting rights [remain with] the founder/managers. At
+the same time, foreign investment rules have made it hard for international
+social investors to participate in ownership and governance. The results:
+founder domination, a pattern that affects each of the big three MFIs in
+Andhra Pradesh and leads to a lack of checks on decisions by
+managers...\textquotedblright\ \ With a flood of easy debt funding and
+\textquotedblleft the entrance of pure commercial players like Sequoia Capital
+India\textquotedblright\ the \textquotedblleft over-emphasis on fast
+growth\textquotedblright\ and rising borower indebtedness and consumer
+protection complaints becomes easier to explain.
+
+As we explain below, non-profit or hybrid status firms can serve a useful
+purpose even in the absence of contract failure -- the non-profit status
+allows them to credibly promise to not renegotiate the terms of a commitment
+contract. While the lessons in our paper apply to a wide range of contracts,
+our focus is on lending. This modeling approach has the advantage of
+generating a number of potentially interesting insights about the shapes of
+equilibrium lending contracts.
+
+\bigskip
+
+[cite mendez predatory lending paper]
+
+[Broad tables to show nonprofit/for-profit competition/monopoly around the world?]
+
+[other reasons for nonprofit: http://www.nytimes.com/2015/03/03/business/some-private-colleges-turn-a-tidy-profit-by-going-nonprofit.html]
+
+\bigskip
+
+bullet points from slides:
+
+\begin{itemize}
+\item This is a paper about consumer protection in banking:
+
+\begin{itemize}
+\item How does a bank endogenously choose governance structure in response to
+a consumer protection problem?
+
+\item How does market structure affect bank's choice?
+\end{itemize}
+
+\item Standard concerns in consumer protection: hidden fees, bank's moral hazard.
+
+\item We focus on a relatively under-studied problem: the provision of
+commitment to time-inconsistent agents.
+
+\item What kind of ownership and market structure helps banks offer credible commitment?
+
+\item Motivating stories:
+
+\begin{itemize}
+\item Mortgage crisis
+
+\item Microfinance: MFI explosion, apparent over-indebtedness, switch to
+for-profit status
+\end{itemize}
+
+\item Two-part motivation:
+
+\begin{enumerate}
+\item For a time-inconsistent borrower, what matters in a loan contract?
+Broader notion of consumer protection to include a dynamic commitment problem.
+How does a bank commit to not renegotiate the terms of the contract?
+
+\item How does the ability to commit vary based on governance and degree of competition?
+\end{enumerate}
+
+\item Key ingredient: Time-inconsistent individual's commitment motives are at
+odds with same individual's future motives to undo commitment. For a consumer
+to pay for commitment, firm must credibly commit to not undo it.
+\end{itemize}
+
+\bigskip%DIF > 
+
+\DIFdelbegin %DIFDELCMD < \QTR{frametitle}{Motivation 1--The Commitment Problem}
+%DIFDELCMD < %%%
+\DIFdelend %DIF > TCIMACRO{\QTR{frametitle}{Motivation 1--The Commitment Problem}}%
+%DIF > BeginExpansion
+\DIFaddbegin \frametitle{Motivation 1--The Commitment Problem}%DIF > 
+%DIF > EndExpansion
+\DIFaddend 
+
+
+\begin{itemize}
+\item \textit{Commitment device}: contract that alters future action sets or
+payoffs associated with future actions.
+
+\begin{itemize}
+\item Make savings illiquid (fixed deposits)
+
+\item Carrillo \& Dewatripont (EJ, 2008) -- promises that are costly to break,
+asymmetric information
+
+\item Fischer \& Ghatak (2010) - frequent repayment raises maximum
+incentive-compatible loan size
+
+\item Threaten punishment for non-repayment of debt
+(microfinance--Banerjee--consumption transformation; Roscas--Basu, AEJ:Micro, 2011)
+\end{itemize}
+
+\item Growing literature that argues that time-inconsistency and commitment
+matter, particularly in banking.
+
+\item We will study this through the lens of loan contracts. Repayment embeds commitment.
+
+\item Common focus of consumer protection/exploitation: (a) fees \&
+punishments/naivete (Armstrong \& Vickers, JEL, 2012; Gabaix \& Laibson, QJE,
+2006); (b) bank's moral hazard (Dewatripont \& Tirole, 1994; Oak \& Swamy)
+
+\item But: sometimes consumers want punishments. Inability of bank to provide
+\textit{credible} punishments should also fall under this umbrella. The
+problem survives in the absence of naivete and asymmetric information.
+
+\item The self being committed is willing to pay to rewrite the commitment
+contract. Under what conditions would a bank renegotiate? We take seriously
+the bank's ex-post considerations.
+\end{itemize}
+
+\bigskip%DIF > 
+
+\DIFdelbegin %DIFDELCMD < \QTR{frametitle}{Motivation 2--Market Structure \& Governance}
+%DIFDELCMD < %%%
+\DIFdelend %DIF > TCIMACRO{\QTR{frametitle}{Motivation 2--Market Structure \& Governance}}%
+%DIF > BeginExpansion
+\DIFaddbegin \frametitle{Motivation 2--Market Structure \& Governance}%DIF > 
+%DIF > EndExpansion
+\DIFaddend 
+
+
+\begin{itemize}
+\item Ashraf, Karlan, \& Yin (QJE, 2006): "A natural question arises why, if
+commitment products appear to be demanded by consumers, the market does not
+already provide them."
+
+\item We would like to see how market structure and governance interact with
+the renegotiation problem.
+
+\item Gottlieb (JPubET, 2008)--competition leads to inefficient outcomes in
+immediate rewards goods.
+
+\item Heidhues \& Koszegi (AER, 2010)--mistakes of partially naive borrowers
+in competitive markets.
+
+\item Monopoly should be taken seriously too, especially for development.
+\end{itemize}
+
+\DIFdelbegin %DIFDELCMD < \QTR{frametitle}{Motivation 2a--Governance}
+%DIFDELCMD < %%%
+\DIFdelend %DIF > 
+
+%DIF > TCIMACRO{\QTR{frametitle}{Motivation 2a--Governance}}%
+%DIF > BeginExpansion
+\DIFaddbegin \frametitle{Motivation 2a--Governance}%DIF > 
+%DIF > EndExpansion
+
+
+\DIFaddend \begin{itemize}
+\item Hansmann (Yale Law Journal, 1980, 1987):
+
+\begin{itemize}
+\item "A nonprofit organization is, in essence, an organization that is barred
+from distributing its net earnings, if any, to individuals who exercise
+control over it, such as members, officers, directors, or trustees. By "net
+earnings" I mean here pure profits--that is, earnings in excess of the amount
+needed to pay for services rendered to the organization..."
+
+\item "There is general scholarly consensus that the most convincing
+efficiency rationale for employing the nonprofit form, as well as the apparent
+reason why nonprofit firms in fact originally arose in most industries in
+which they are found, is that the nonprofit firm serves as a crude but
+effective consumer protection device in severe situations of asymmetric information."
+\end{itemize}
+
+\item Glaeser and Shleifer (JPubE, 2000): when a firm cannot commit to
+maintaining high quality, it might choose to operate as a nonprofit rather
+than a for-profit to credibly signal that it has weaker incentives to cheat
+the consumer.
+
+\item Bubb and Kaufman (2011): the non-contractibility is on hidden penalties,
+which are incurred with certainty by some consumers, rather than quality.
+
+\item We argue: similar analysis can be conducted in the absence of contract
+failure or naivete. Instead: a renegotiation problem with fully informed and
+optimizing consumers.
+
+\item Analysis also sheds light on other structures, like social investors
+(Conning \& Morduch, 2011).
+
+\item \lbrack To focus on this problem, we abstract away from other
+considerations for nonprofits--Besley \& Ghatak (AER, 2005), McIntosh \&
+Wydick (2005).]
+\end{itemize}
+
+\DIFdelbegin %DIFDELCMD < \QTR{frametitle}{Motivation 2b--Market Structure}
+%DIFDELCMD < %%%
+\DIFdelend %DIF > 
+
+%DIF > TCIMACRO{\QTR{frametitle}{Motivation 2b--Market Structure}}%
+%DIF > BeginExpansion
+\DIFaddbegin \frametitle{Motivation 2b--Market Structure}%DIF > 
+%DIF > EndExpansion
+
+
+\DIFaddend \begin{itemize}
+\item Rhyne (Huffington Post, 2010):
+
+\begin{itemize}
+\item ".. rising debt stress among possibly tens of thousands of clients,
+brought on by explosive growth of microfinance organizations in southern
+India. In the quest to meet their growth targets, loan officers often sell
+loans to clients already indebted to other organizations."
+
+\item "In many countries, leading microfinance organizations . . . were
+commercialized with a mix of owners including the original NGO, international
+social investors (including development banks), and some local shareholders.
+The NGOs kept the focus on the mission, while the international social
+investors contributed a commercial orientation, also tempered by social mission."
+\end{itemize}
+
+\item Broader notion of consumer protection: part of the "mission" is to limit renegotiation.
+
+\begin{itemize}
+\item Rigidity in traditional microfinance; refinancing flexibility with
+credit cards and mortgage loans (credit card and mortage punishments gain
+salience because they are\textit{\ less} strict, not more).
+\end{itemize}
+
+\item 1998-2006: Majority of subprime loans came from renegotiation (LA Times, 2008)
+\end{itemize}
+
+\subsection{Main Arguments}
+
+In our model, there is no asymmetric information, so there is no uncertainty
+of outcome or concern about deception via hidden actions or hidden information
+in a contract. Instead, there is a renegotiation problem between fully
+informed and optimizing agents. The issue is that after a loan contract is
+signed and in effect, a present-biased borrower would, in a later period,
+become interested in discarding the contract his period zero self had agreed
+to and replace it with a new one that increases present consumption and pushes
+repayment further into the future. Since at his later date the client will be
+willing to pay to undo her earlier commitment, the bank (or perhaps one of is
+competitors)\ might opportunisically pander to its clients impulses and
+rewrite the existing contract to raise its profits. A sophisticated
+consumeranticipate this potential renegotiation in the initial period. In the
+absence of an outside commitment technology the sophisticated bank and the
+bank will search for second-best alternatives in renegotiation-proof loan
+contracts, but this implies a reduction in the feasible contract space and
+therefore in the total surplus or gains to trade that can be extracted. \ 
+
+The bank's inability to commit to not panderint to (i.e. not wanting to profit
+from) the client's later selves' temptation to recontract can therefore be
+costly to the bank and this may lead it to explore commercial non-profit
+status as a mechanism to more credibly commit to not opportunistically
+exploiting the weaknesses of its time-inconsistent clients in that way. \ By
+operating as a non-profit\ (or more broadly as a `hybrid' bank), the bank
+agrees to face legal and/or governance restrictions on how any profits
+generated from any such opportunistic renegotiation can be distributed and enjoyed
+
+can more credibly convince the sophisticated consumer that it will be less
+likely to renegotiate the contract in the future since the bank's managers and
+outside investors now
+
+. \ This allows the bank offer the consumer an initial contract that maintains
+the restrictions on future consumption patterns that the consumer demands,
+raising the contracting surplus and therefore how much can be ultimately
+extracted by the bank's stakeholders. \ 
+
+This argument is very similar in spirit to Henry Hansmann's (XXXX) explanation
+for the existence of commercial non-profit firms. \ Note however that his
+argument and later formalizations are built on the idea of consumers rational
+fear that firms would try to deceive or otherwise opportunistically exploit
+the environment of asymmetric information and/or costly enforcement. \ As
+Hansmann himself `crude consumer protection'
+
+A firm's decision about whether to adopt non-profit status rests on a
+trade-off. As a non-profit, the firm has an opportunity to extract greater
+surplus from the consumer (by providing commitment), but now faces
+restrictions on the ability of managers and shareholders to enjoy this
+surplus. This trade-off is sensitive to market structure. In the case of
+monopoly, the bank will adopt nonprofit status if the following is true:
+non-profit restrictions should be sufficiently severe that the bank is able to
+extract more surplus from the consumer, but should not be so severe that it is
+unable to enjoy the surplus.
+
+Under competition, a lender's ability to provide effective commitment through
+non-profit status depends on the exclusivity of contracts. When long-term
+contracts can be made exclusive, the trade-off disappears and all active firms
+function as non-profits. This is because of the zero-profit condition--since
+firms do not make profits anyway, there is nothing to lose from switching to
+non-profit status. On the other hand, there are profits to be gained--if all
+other firms are for-profit, a firm could make positive profits by offering
+superior commitment as a non-profit (this is valuable even if its enjoyment of
+these profits is limited).
+
+When contracts are not exclusive, commitment generated through non-profit
+status becomes impossible to achieve. Since non-profit firms would make zero
+profits anyway, each firm has an incentive to switch to for-profit status so
+it can take advantage of the opportunity to re-finance \textit{other} banks'
+loans. As a result, for-profit firms must be active in equilibrium, and their
+presence will eliminate the possibility of non-profit commitment.
+
+This can partly explain a key difference between traditional non-profit
+microfinance, which is rigid, and say commercial credit card lending which
+offers refinancing flexibility (credit card punishments gain salience because
+they are\textit{\ less} strict, not more).
+
+In addition, our model provides a partial (though obviously incomplete)
+explanation of trends in global microfinance: the proliferation of lenders
+erodes the monopoly advantages (through commitment) gained by non-profit
+status, which results in a competitive equilibrium where firms switch to
+for-profits and commitment properties of contracts are weakened, resulting in
+an apparent over-indebtedness.
+
+The problem of consumer protection in banking has been primarily analyzed
+through two channels: naive or uneducated consumers and their failure to
+correctly anticipate fees and punishments (Armstrong \& Vickers, JEL, 2012;
+Gabaix \& Laibson, QJE, 2006), and bank's moral hazard (Dewatripont \& Tirole,
+1994). We argue that, given the growing evidence of time-inconsistent
+preferences, a bank's ability to provide credible commitment should also fall
+under this umbrella. Through this lens, the model can shed some light on
+ongoing debates and stylized facts in both formal and informal credit markets.
+
+\bigskip
+
+bullet points from slides:
+
+\begin{itemize}
+\item Focus on the following problem of consumer protection -- consumers want
+commitment -- firms want to provide commitment, but are constrained by
+governance and market structure. Our question: how?
+
+\item Map out equilibrium loan contracts under monopoly and competition (quite different).
+
+\item Formalize the renegotiation problem.
+
+\item We show how, when there are strategically behaving time-inconsistent
+agents and profit-minded lenders, lenders might choose nonprofit status even
+if there is no incomplete contracts problem.
+
+\item Here, there is a renegotiation problem instead, and nonprofit lenders
+might be able to credibly signal that they will not renegotiate (even if both
+both the borrower and lender would like to) when for-profit lenders cannot.
+(But: tradeoff)
+
+\item Ability of firms to commit through nonprofit status depends on
+exclusivity of contracts and degree of competition (perfect competition can be
+good or bad, depending on exclusivity.)
+\end{itemize}
+
+\section{The Model: Assumptions}
+
+\subsection{Consumers}
+
+There are three periods, \DIFdelbegin \DIFdel{$t\in \left\{ 0,1,2\right\} $}\DIFdelend \DIFaddbegin \DIFadd{$t\in\left\{  0,1,2\right\}  $}\DIFaddend . In any period $t$,
+the consumer's instantaneous utility is given by $u\left(  c_{t}\right)  $ for
+\DIFdelbegin \DIFdel{$c_{t}\in $ $[0,\infty )$}\DIFdelend \DIFaddbegin \DIFadd{$c_{t}\in$ $[0,\infty)$}\DIFaddend . The utility function is twice differentiable,
+strictly concave, and satisfies \DIFdelbegin \DIFdel{$u^{\prime }\left( 0\right) =\infty $}\DIFdelend \DIFaddbegin \DIFadd{$u^{\prime}\left(  0\right)  =\infty$}\DIFaddend . Given a
+consumption stream $C_{t}=\left(  c_{t},c_{t+1},...,c_{2}\right)  $,
+\DIFdelbegin \DIFdel{his
+}\DIFdelend \DIFaddbegin \DIFadd{period-$t$ self's }\DIFaddend discounted utility in period $t$ is:%
+\DIFdelbegin \begin{displaymath}\DIFdel{
+U_{t}\left( C_{t}\right) \equiv u\left( c_{t}\right) +\beta
+\sum\limits_{i=t+1}^{2}\delta ^{i-t}u\left( c_{i}\right)
+}\end{displaymath}%DIFAUXCMD
+%DIF < 
+\DIFdelend \DIFaddbegin \[\DIFadd{
+U_{t}\left(  C_{t}\right)  \equiv u\left(  c_{t}\right)  +\beta\sum
+\limits_{i=t+1}^{2}\delta^{i-t}u\left(  c_{i}\right)
+}\]
+\DIFaddend This describes quasi-hyperbolic preferences, with a hyperbolic discount factor
+\DIFdelbegin \DIFdel{$\beta \in (0,1]$.}\DIFdelend \DIFaddbegin \DIFadd{$\beta\in(0,1]$.}\DIFaddend \footnote{%DIF < 
+More generally, utility would also be discounted by
+an exponential discount factor \DIFdelbegin \DIFdel{$\delta $}\DIFdelend \DIFaddbegin \DIFadd{$\delta$}\DIFaddend , so that \DIFdelbegin \DIFdel{$U_{t}\left( C_{t}\right) \equiv u\left(
+c_{t}\right) +\beta \sum\limits_{i=t+1}^{2}\delta ^{i-t}u\left( c_{i}\right) 
+$}\DIFdelend \DIFaddbegin \DIFadd{$U_{t}\left(  C_{t}\right)
+\equiv u\left(  c_{t}\right)  +\beta\sum\limits_{i=t+1}^{2}\delta
+^{i-t}u\left(  c_{i}\right)  $}\DIFaddend . To streamline the analysis without loss of
+generality, we assume \DIFdelbegin \DIFdel{$\delta
+=1$.}\DIFdelend \DIFaddbegin \DIFadd{$\delta=\frac{1}{1+r}=1$}\DIFaddend } In any period, the individual
+places greater relative weight on immediate \DIFaddbegin \DIFadd{present-period }\DIFaddend gratification than
+his earlier selves \DIFdelbegin \DIFdel{would like}\DIFdelend \DIFaddbegin \DIFadd{did}\DIFaddend . The consumer could be sophisticated, naive, or
+partially naive about the time-inconsistency of his preferences (O'Donoghue \&
+Rabin, 2001). Our analysis will focus on the sophisticated agent, with
+extended discussions \DIFdelbegin \DIFdel{of
+}\DIFdelend \DIFaddbegin \DIFadd{to }\DIFaddend other types.
+
+The \DIFdelbegin \DIFdel{consumer enjoys }\DIFdelend \DIFaddbegin \DIFadd{period 0 consumer starts with }\DIFaddend claims to an existing \DIFdelbegin \DIFdel{income stream $Y=\left(
+y_{0},y_{1},y_{2}\right) $ }\DIFdelend \DIFaddbegin \DIFadd{arbitrary income stream
+$Y_{0}=\left(  y_{0},y_{1},y_{2}\right)  $ }\DIFaddend over the three periods but will in general \DIFdelbegin \DIFdel{want
+to use available }\DIFdelend \DIFaddbegin \DIFadd{be interested in consumption via `own savings' or  }\DIFaddend financial contracting opportunities \DIFdelbegin \DIFdel{to smooth consumption. }%DIFDELCMD < \ %%%
+\DIFdel{Although the analysis can be applied to any shaped income stream, to
+highlight ideas we shall start out by analyzing one that they take the form $%
+y_{0}>0$, $y_{1}=y_{2}=$ $y_{n}>0$, and $\sum_{t=0}^{2}y_{0}=\bar{y}$. This
+allows us to emphasize banking decisions that are motivate by a period 0
+need for either credit or savings. Furthermore, by keeping the total income
+constant, we are able to conduct comparative statics exercises across
+individuals with roughly similar incomes but varying needs. We denote the
+income spread $\sigma \equiv y_{0}-y_{n}$.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{In the absence of banking access, the consumerwill select an optimized
+}\DIFdelend \DIFaddbegin \DIFadd{with others. In banking or `own-savings' technologies are absent or prohibitively expensive, the consumer's }\DIFaddend autarky
+consumption stream \DIFdelbegin \DIFdel{. This could simply be the consumer's }\DIFdelend \DIFaddbegin \DIFadd{$C_{0}^{a}(Y)$ is  just be the }\DIFaddend exogenous income stream
+\DIFdelbegin \DIFdel{$y$ if `under-the-mattress' home savingstechnologies are bad
+or non-existent or, more generally, the consumption-savings stream the
+consumer could construct on his own via home saving strategies. As a sophisticated hyperbolic discounter is fully aware of his future
+preferences , his autarky consumption }\DIFdelend \DIFaddbegin \DIFadd{$Y.$  With available `own savings' strategies the consumer may be able to
+construct a somewhat better smoothed autarky stream. }\ \DIFadd{However, as
+a consumer with time-inconsistent preferences cannot trust his later selves to not undo his
+preferred consumption choices, the }\DIFaddend stream will be \DIFdelbegin \DIFdel{a subgame perfect
+equilibrium of the consumption-savings game played by the series of his
+time-indexed selves (each with a slightly different objective). }\DIFdelend \DIFaddbegin \DIFadd{the imperfectly-smoothed outcome of a strategic game between selves as explained in }\DIFaddend Basu
+(2014)\DIFdelbegin \DIFdel{shows how such a contract is solved via  backward induction}\DIFdelend \DIFaddbegin \DIFadd{. This creates the demand for commitment services via  contracts an outside financial intermediary, and this is the main focus of our analysis}\DIFaddend . \ \DIFdelbegin \DIFdel{In either case
+we label this stream $C_{0}^{a}$ which we take }\DIFdelend \DIFaddbegin \DIFadd{For the present moment we take this
+autarky option $C_{0}^{a}(Y)$ }\DIFaddend to be fixed and given\DIFdelbegin \DIFdel{.%DIF < 
+}\DIFdelend \DIFaddbegin \DIFadd{, but later show how the main results
+are only slightly modified when we treat it as endogenous.}\DIFaddend \footnote{%DIF < 
+\DIFdelbegin \DIFdel{We postpone }\DIFdelend \DIFaddbegin \DIFadd{Since }\DIFaddend a
+\DIFdelbegin \DIFdel{more in-depth discussion }\DIFdelend \DIFaddbegin \DIFadd{sophisticated hyperbolic discounter is fully aware }\DIFaddend of \DIFdelbegin \DIFdel{this point until later}\DIFdelend \DIFaddbegin \DIFadd{his future preferences,
+his autarky consumption stream will be a subgame perfect equilibrium of the
+consumption-savings game played by the series of his time-indexed selves (each
+with a slightly different objective function)}\DIFaddend .}
+\DIFaddbegin \\ \DIFadd{In the sections that follow we state our results for quite general assumptions
+about the shape of the the instantaneous utility function $u(c)$ but
+illustrate and provide exact results for the CRRA case $u(c_{t})=\frac
+{c^{1-\rho}}{1-\rho}$ where parameter $\rho$ is closely related to the
+elasticity of intertemporal substitution.}\footnote{\DIFadd{ \(\)\(\rho \text{ }\)is the elasticity
+of intertemporal substitution when $\beta=1$ }[\DIFadd{** still same when \(\beta<1\)?**}]} \DIFaddend \ \DIFaddbegin \DIFadd{The appendix contains closed form solutions for the CRRA case and other technical details. 
+}\DIFaddend 
+
+
+\subsection{Banks}
+
+\DIFdelbegin \DIFdel{In the initial period $0$, the }\DIFdelend \DIFaddbegin \DIFadd{The period 0 }\DIFaddend consumer has the option of contracting with one or many
+banks, depending on the market structure. Each bank has access to funds that
+can be withdrawn from other investments at opportunity \DIFaddbegin \DIFadd{cost }\DIFaddend $r$. \DIFdelbegin %DIFDELCMD < \
+%DIFDELCMD < %%%
+\DIFdel{To focus ideas and simplify expressions and graphs }\DIFdelend \DIFaddbegin \DIFadd{For expositional simplicity in main text results }\DIFaddend below we assume \DIFdelbegin \DIFdel{$\delta =%
+\frac{1}{1+r}$ $\ $and }\DIFdelend $r=0$ \DIFdelbegin \DIFdel{.}\footnote{%DIF < 
+\DIFdel{This is without loss of generality and formulas and results are worked out
+for the more general case in the appendix materials.}}  %DIFAUXCMD
+\addtocounter{footnote}{-1}%DIFAUXCMD
+\DIFdelend \DIFaddbegin \DIFadd{and that the consumer's discount factor is
+$\delta=\frac{1}{1+r}$ (which implies $\delta=1)  $ but this is without loss of generality and more formulas for arbitrary \(r\text{ and \(\)}}\)\DIFadd{\(\delta \text{ are in the appendix} \).
+}\DIFaddend Any financial contract between the consumer and the bank can be thought of \DIFdelbegin \DIFdel{the exchange of
+an initial income /consumption stream $\emph{y}$ }\DIFdelend \DIFaddbegin \DIFadd{as
+the consumer giving up income stream $Y_{0}  $ in exchange }\DIFaddend for a preferred
+consumption path \DIFdelbegin \DIFdel{$\emph{c}=\left( c_{0},c_{1},c_{2}\right) $. A loan contract in }\DIFdelend \DIFaddbegin \DIFadd{$\emph{\(C_{0}\)}=\left(  c_{0},c_{1},c_{2}\right)  $. A financial
+contract involves a  }\DIFaddend period 0 \DIFdelbegin \DIFdel{would be an exchange where }\DIFdelend \DIFaddbegin \DIFadd{loan if the exchange i ssuch that }\DIFaddend $c_{0}>y_{0}$ and a savings
+contract \DIFdelbegin \DIFdel{one where $%
+c_{0}<y_{0}$. 
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{We assume the bank can perfectly enforce repayment, so the net present value
+of its profits starting from period $t$ is given by:%DIF < 
+}\begin{displaymath}\DIFdel{
+\pi _{t}\left( C_{t};C_{t}^{\prime }\right) \equiv
+\sum\limits_{i=t}^{2}\left( c_{t}^{\prime }-c_{t}\right) ,
+}\end{displaymath}%DIFAUXCMD
+%DIF < 
+\DIFdel{where $C_{t}^{\prime }$ is the existing consumption stream exchanged for the
+new consumption path $C_{t}$ offered by the bank. The bank offers a contract
+if and only if it can earn non-negative profits.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{If a contract agreed to in period $0$ is renegotiated in period $1$, the
+bank will incur a nonmonetary cost, $\overline{\kappa }\geq 0$, which could
+be interpreted to include a concern for reputation or some other impact on
+the social preferences of its owners.}\footnote{%DIF < 
+\DIFdel{The bank could incur additional monetary costs as well. However, we assume
+these to be $0$ as they can be netted out and do not affect the analysis in
+any important way.}} %DIFAUXCMD
+\addtocounter{footnote}{-1}%DIFAUXCMD
+\DIFdel{The bank has full knowledge of the borrower's
+preferences and can tailor the contract by borrower type.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{While the primary focus of this paper is on equilibrium contracts,we do make
+occasional references to the hyperbolic discounter's welfare in the
+discussion. For our purposes, welfare is defined as the discounted utility
+of the period $0$ self, $U_{0}$. }%DIFDELCMD < [%%%
+\DIFdel{Cite O'Donoghue-Rabin}%DIFDELCMD < ]
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Ashort note on the other assumptions is in order. While we explicitly set
+up our problem as one of borrowing/saving and re-financing, the analysis and
+insights apply more broadly to questions about the role of firm ownership
+and governance structure choices in any setting where dynamically
+inconsistent preferences may lead to a contract renegotiation problem. We
+choose to embed this problem in a saving-cum-borrowing framework for two
+reasons: first, we believe this model can shed light on some "real-world"
+stylized facts related to household debt; and second, we derive some
+interesting implications for the specific shapes of equilibrium loan
+contracts which would have remained hidden in a more general analysis. 
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{In the appendix, we derive explicit solutions and additional results for a
+CRRA instantaneous utility function.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\section{\DIFdel{Monopolist Bank}}
+%DIFAUXCMD
+\addtocounter{section}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{In this section, we analyze the renegotiation problem when a consumer faces
+a monopolistlender. We first derive properties of the benchmark equilibrium
+`full-commitment'contract in the absence of any renegotiation
+possibilities. We then describe how the contract would change when
+sophisticated agents understand renegotiation is possible. Finally, we
+describe conditions under which a lender will choose to operate as a
+commercial non-profit.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsection{\DIFdel{Full-Commitment Contract}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The monopolist who can offer a full-commitment contract solves the following
+problem:%DIF < 
+}\begin{align*}\DIFdel{
+&}&\DIFdel{\max_{C_{0}}\pi _{0}\left( C_{0};C_{0}^{a}\right)  }\\
+\DIFdel{\text{s.t. (PC) } }&&\DIFdel{U_{0}\left( C_{0}\right) \geq U_{0}\left(
+C_{0}^{a}\right) 
+}\end{align*}%DIFAUXCMD
+%DIF < 
+\DIFdel{Let the monopolist's full-commitment contractat perio }\DIFdelend \DIFaddbegin \DIFadd{if c_{0}<y_{0}$. [CUT? For now we also assume that  that any new contract
+must be initiated in period 0.
+] 
+
+We assume the bank can perfectly enforce feasible repayment plans, so the net present value
+of its remaining profit stream in period $t$ is given by:%
+\[
+\pi_{t}\left(  C_{t};Y_{t}\right)  \equiv\sum\limits_{i=t}^{2}\left(
+y_{t}_{}-c_{t}\right)   
+\]
+The bank offers a contract if and only
+if it can earn non-negative profits.
+
+If the contract were to be renegotiated in period $1$, the bank will incur a
+nonmonetary cost, $}\overline{\kappa}\geq0\DIFadd{$, which could be interpreted to
+include a concern for reputation or some other impact on the social
+preferences of its owners.\footnote{The bank could incur additional monetary
+costs as well. However, we assume these to be $}\DIFaddend 0\DIFdelbegin \DIFdel{be denoted $C^{mf}$%DIF < 
+. }%DIFDELCMD < \ %%%
+\DIFdel{At this optimum:%DIF < 
+}\begin{align*}\DIFdel{
+&}&\DIFdel{u^{\prime }\left( c_{0}^{mf}\right) =\beta \ u^{\prime }\left(
+c_{1}^{mf}\right) =\beta \ u^{\prime }\left( c_{2}^{mf}\right) 
+\label{foc-monop} }\\
+&&\DIFdel{U_{0}\left( C_{0}^{mf}\right) =U_{0}\left( C_{0}^{a}\right) 
+\label{BPC-monop}
+}\end{align*}
+%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Condition \ref{BPC-monop} is the consumer participation constraint that they
+should be no worse off by accepting the contract than under
+autarky.Condition \ref{foc-monop} is the standard first-order necessary
+condition that at an optimum the contract should equalize marginal utilities
+of consumption across periods.  The lowest cost way to satisfy the participation constraint is with a contract  $%
+c_{0}^{mf}>c_{1}^{mf}=c_{2}^{mf}$  efficiently smooths the consumers' consumption while pandering to their period }\DIFdelend \DIFaddbegin \DIFadd{$ as they can be netted out
+and do not affect the analysis in any important way.} The bank fully knows the
+borrowers' preferences and can tailor the contract by borrower type.
+
+While the primary focus of this paper is on equilibrium contracts, not
+welfare, we will make occasional reference to the hyperbolic discounter's
+welfare  defined as the
+discounted utility of the period $}\DIFaddend 0\DIFdelbegin \DIFdel{present bias ($\beta <1).$
+Figure 1 illustrates how the two constraints determine the contract.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \FRAME{ftbpFU}{3.4335in}{2.7417in}{0pt}{\Qcb{The benchmark monopoly contract
+%DIFDELCMD < is given by the intersection of the two constraints.}}{}{nkfvlg00.wmf}{%
+%DIFDELCMD < \special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+%DIFDELCMD < TRUE;display "USEDEF";valid_file "F";width 3.4335in;height 2.7417in;depth
+%DIFDELCMD < 0pt;original-width 4.7504in;original-height 3.7861in;cropleft "0";croptop
+%DIFDELCMD < "1";cropright "1";cropbottom "0";filename 'NKFVLG00.wmf';file-properties
+%DIFDELCMD < "XNPEU";}}
+%DIFDELCMD < 
+
+%DIFDELCMD < \begin{proposition}
+%DIFDELCMD < %%%
+\DIFdel{There exists a cut-off level of income spread, $\sigma ^{mf}\in \left( 0,%
+\bar{y}\right) $ that satisfies the following:
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{enumerate}
+%DIFDELCMD < \item %%%
+\DIFdel{If $\sigma <\sigma ^{mf}$, a loan contract is offered. If $\sigma
+>\sigma ^{mf}$, a savings contract is offered. If $\sigma =\sigma ^{mf}$, no
+contract is offered.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \item %%%
+\DIFdel{Profits are continuous in $\sigma $, and rising in the distance from $%
+\sigma ^{mf}$}\DIFdelend \DIFaddbegin \DIFadd{$ self, $U_{0}$ (for a discussion the choice of welfare measure see O'Donoghue-Rabin, 1999).
+
+
+\section{Monopolist Bank}
+
+In this section, we analyze the renegotiation problem when a sophisticated
+present-biased consumer faces a monopolist lender. We first derive properties
+of the benchmark equilibrium `full-commitment contract' in the absence of any
+renegotiation possibilities. We then describe how the contract would change
+when the consumer understands and anticipates the possibility of contract
+renegotiation between his later-period self and the bank. Finally, we describe
+conditions under which a lender might strategically choose to operate as a
+commercial non-profit.
+
+\subsection{Full-Commitment Contract}
+
+
+The monopolist who can offer a full-commitment contract solves the following
+problem:
+\begin{align*}
+&  \max_{C_{0}}\pi_{0}\left(  C_{0};Y\right) \\
+\text{s.t. (PC) }  &  U_{0}\left(  C_{0}\right)  \geq U_{0}\left(  C_{0}%
+^{a}(Y)\right)
+\end{align*}
+Let the monopolist's full-commitment contract be denoted $C^{mf}$. At an optimum:
+\begin{align}
+  u^{\prime}\left(  c_{0}^{mf}\right)  =\beta\ u^{\prime}\left(  c_{1}
+^{mf}\right)  =\beta\ u^{\prime}\left(  c_{2}^{mf}\right) \label{foc-monop}\\
+  U_{0}\left(  C_{0}^{mf}\right)  =U_{0}\left(  C_{0}^{a}(Y)\right)
+\label{BPC-monop}
+\end{align}
+
+Condition \ref{foc-monop} is the standard first-order necessary conditions
+that marginal utilities of consumption be equalized across periods which, for our simplifying assumptions, imply that  $c_{1}^{mf}=c_{2}^{mf}=}\overline{c}\DIFadd{^{mf}$. Condition \ref{BPC-monop} is the consumer participation constraint that they
+be no worse off by accepting the contract than under autarky. \ For the
+CRRA\ case the FOC  imply $}\overline{c}\DIFadd{^{mf}=\beta^{\frac
+{1}{\rho}}c_{0}^{mf}$ which, along with the participation constraint, allow for closed form solutions (see appendix). See Figure 1.
+
+The terms of the optimal contract, and hence also the level of bank profits, will  depend on the consumer's starting income stream \(Y_{0}\).   To see this, consider the set of possible initial income streams of constant present value   $\sum_{t=0}^{2}\frac{y_{t}}{(1+r)^{t}}=}\bar{y}\DIFadd{$. [DISCUSS 3D?]
+
+ 
+\begin{figure}
+\centering
+\newrgbcolor{qqqqcc}{0. 0. 0.8}
+\newrgbcolor{ffqqtt}{1. 0. 0.2}
+\psset{xunit=0.2cm,yunit=0.2cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.5pt,arrowsize=3pt 2,arrowinset=0.25}
+
+\begin{pspicture*}(-3.,-2.)(70.,40.)
+\multips(0,0)(0,5.0){9}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,0)(70.,0)}
+\multips(0,0)(5.0,0){15}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,0)(0,40.)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=5.,Dy=5.,ticksize=-2pt 0,subticks=2]{->}(0,0)(0.,0.)(70.,40.)
+\psline[linewidth=4.pt](60.15210393330712,51.95537449737128)(81.43113942777349,51.95537449737128)
+\psline[linewidth=4.pt](68.08570875583479,49.09832731212262)(81.36474425030116,49.09832731212262)
+\psplot[plotpoints=200]{0}{70.0}{x*0.5^(1.0/0.7)}
+\psplot[linewidth=1.2pt,linecolor=ffqqtt,plotpoints=200]{0}{70.0}{((13.74-1.0/(1.0-0.7)*x^(1.0-0.7))*(1.0-0.7)/0.5)^(1.0/(1.0-0.7))}
+\psplot{-2.}{70.}{(--1835-29.06*x)/29.06}
+\psplot{-2.}{70.}{(--781.28-14.55*x)/14.55}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=darkgray](39.2,14.5)
+\rput[bl](39.40299208778742,14.949810955102965){\darkgray{$A$}}
+\psdots[dotstyle=*,linecolor=darkgray](25.2,38)
+\rput[bl](256,37.5){\darkgray{$}\bar \DIFaddFL{y$}}
+\psdots[dotstyle=*,linecolor=darkgray](145.,145.)
+\end{scriptsize}
+\end{pspicture*}
+\caption{Monopoly full-commitment contract in \(c_{0}\)\(-c_{1}\) space.}
+\endfigure 
+
+ 
+\subsection{The Risk of Renegotiation}
+
+
+Bank  profits can be thought of as deriving in part from  satisfying the customer's `demand for commitment.' That is to say, the bank can charge for helping customers  to stick to preferred saving accumulation \textit{cum} loan repayment plans to deliver balanced consumption across periods 1 and  2 if it can credibly promise to not pander to the customers' later self's demands to raid savings and/or take out new loans that would disrupt those plans.
+
+Figure 2 which is  drawn in $c_{1} -c_{2}$ space  illustrates why the demand for commitment arises, how a monopolist could profit by reneging on such a commitment \textit{ex-post} and therefore why a monopolist might take costly actions to try to make such commitments  more credible \textit{ex-ante}. Point $F$ is the balanced consumption  (\overline{c}^{mf},\overline{c}^{mf} )$ component of the monopolist's optimal contract}\DIFaddendFL . \DIFdelbeginFL %DIFDELCMD < \end{enumerate}
+%DIFDELCMD < \end{proposition}
+%DIFDELCMD < 
+
+%DIFDELCMD < [%%%
+\DIFdelFL{Prove proposition, discuss comparative statics over $\sigma $ (how
+commitment problems arise in both savings and loan), relate to movement in
+Figure 1}%DIFDELCMD < ]%%%
+\DIFdelFL{.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsection{\DIFdelFL{The Possibility of Renegotiation}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelFL{First, take a look at some properties of the full-commitment contract. The
+bank was offering two services: (1) Explicit: transfer wealth from future to
+present. (2) Implicit: maintain optimal consumption path across future
+periods (commitment). In a lending contract, the consumer gets high period }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{At this point period }\DIFaddendFL 0 \DIFdelbeginFL \DIFdelFL{consumption (instant gratification), and repayment terms ensure balanced
+consumption in periods }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{consumption is $c_{0}^{mf}$ and participation constraint (\ref{BPC-monop}) is satisfied.  The flatter indifference curve passing through point \(F\) represents the customers' period-0 self's preference $u(c_{1}) + u(c_{2})$}} \DIFaddFL{to give equal weight to period }\DIFaddendFL 1 and \DIFaddbeginFL \DIFaddFL{period }\DIFaddendFL 2 \DIFdelbeginFL \DIFdelFL{(commitment) . In a savings contract, surplus
+is generated purely from commitment--the ability to balance future
+consumption. This surplus was then extracted by the bank.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelFL{This leads to the renegotiation problem.
+The fact that }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{consumption (in }\DIFaddendFL period \DIFaddbeginFL \DIFaddFL{1 utils ) while line $NF$ can be interpreted as the isoprofit line associated with the monopolist's maximum profits from period 1 forward.
+}
+
+\DIFaddFL{The demand for commitment arises from the fact that the period }\DIFaddendFL 0 \DIFdelbeginFL \DIFdelFL{values
+commitment means that the self being committed (}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{self understands that as soon as }\DIFaddendFL period 1 \DIFdelbeginFL \DIFdelFL{) wants to undo it.
+In }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{rolls around his preferences will change and their }\DIFaddendFL period 1 \DIFdelbeginFL \DIFdelFL{, both the consumer and the bank might voluntarily renegotiate
+the contract . Bank can offer }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{self will now accept renegotiated contract offers to raise }\DIFaddendFL period 1 \DIFdelbeginFL \DIFdelFL{a contract that pushes debt into the future, and again extract surplus from him. The }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{consumption even if this comes at the cost of period 2 consumption and }\DIFaddendFL period 0\DIFdelbeginFL \DIFdelFL{self, if
+sophisticated, anticipates this.}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelFL{When }\DIFdelendFL \DIFaddbeginFL \DIFaddFL{'s discounted utility.}\footnote{\DIFaddFL{Measured in period 1 utils, Period 0 self values consumption bundle $(c_{1},c_{2})$ as $u(c_{1}) + u(c_{2})$ whereas period 1 self values the same bundle as $u(c_{1}) + \beta u(c_{2})$}} \DIFaddFL{Period 1 self values any bundle $(c_{1},c_{2})$ as $u(c_{1}) + \beta u(c_{2})$ }\DIFaddendFL period 1 \DIFdelbeginFL \DIFdelFL{arrives the consumer's preferences change and, under the
+full-commitment contract he now observes:%DIF < 
+}\begin{displaymath}\DIFdelFL{
+u^{\prime }\left( c_{1}^{mf}\right) \geq \beta u^{\prime }\left(
+c_{2}^{mf}\right)
+}\end{displaymath}
+%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \DIFaddFL{utils whereas his earlier period 0 self valued the same bundle as as $u(c_{1}) + u(c_{2})$ period 1 utils.  Hence at contract point $F$ in the figure we have
+}\[\DIFaddFL{
+u^{\prime}\left(  c_{1}^{mf}\right)  \geq\beta u^{\prime}\left(  c_{2}%DIF > 
+^{mf}\right)
+}\]
+\DIFaddendFL 
+
+If he is a hyperbolic discounter with \DIFdelbeginFL \DIFdelFL{$\beta <1$}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{$\beta<1$}\DIFaddendFL , he wishes to increase present
+consumption. As \DIFdelbeginFL \DIFdelFL{this creates an opportunity for the bank to generate
+additional surplus, the bank might be willing to offer such a refinance, in
+effect, offering a new loan on top of the existing contract. In such cases,
+both parties voluntarily agree to renegotiate the original contract.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelFL{First, define profits from renegotiation in period 1. Start with the outside
+option consumption stream $C_{1}^{mf}$. This determines the new reservation
+utility. If profitable to the bank, the renegotiated contract will be given
+by:%DIF < 
+}\begin{align*}\DIFdelFL{
+&}&\DIFdelFL{\max_{C_{1}}\pi _{1}\left( C_{1};C_{1}^{mf}\right) }\\
+\DIFdelFL{\text{s.t. }\text{(PC) } }&&\DIFdelFL{U_{1}\left( C_{1}\right) \geq U_{1}\left(
+C_{1}^{mf}\right)
+}\end{align*}
+%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelFL{This gives a renegotiated contract $C_{1}^{r}\left( C_{1}^{mf}\right) $,
+where $c_{1}^{r}>$ $c_{2}^{r}$. In effect the bank offers $\left(
+c_{1}^{r},c_{2}^{r}\right) $ to replace}\footnote{%DIF < 
+\DIFdelFL{By renegotiating the bank swaps net income stream ($y_{1}-\overline{c}%
+_{1},y_{2}-\overline{c}_{2})$ for $(y_{1}-c_{1},y_{2}-c_{2}).$}} %DIFAUXCMD
+\addtocounter{footnote}{-1}%DIFAUXCMD
+\DIFdelFL{the
+contractually agreed $(c_{1}^{mf},c_{2}^{mf}).$ }%DIFDELCMD < \ %%%
+\DIFdelFL{The first-order conditions
+imply:%DIF < 
+}\begin{displaymath}\DIFdelFL{
+u^{\prime }\left( c_{1}^{r}\right) =\beta u^{\prime }\left( c_{2}^{r}\right)
+}\end{displaymath}
+%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelFL{The renegotiated contract is depicted in Figure 3. The bank and consumer
+will therefore voluntarily renegotiate the contract if $\pi _{1}\left(
+C_{1}^{r}\left( C_{1}^{mf}\right) ;C_{1}^{mf}\right) \geq \kappa $, where $%
+\kappa $ is the non-monetary renegotiation costs to the bank.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \FRAME{ftbpFU}{3.8692in}{3.1237in}{0pt}{\Qcb{The dashed curve is the
+%DIFDELCMD < consumer's indifference curve across $c_{1}$ and $c_{2}$ from the period 0
+%DIFDELCMD < perspective. It is tangent to the bank's isoprofit line at $c_{1}=c_{2}$.
+%DIFDELCMD < The solid indifference curve is the indifference curve from the period 1
+%DIFDELCMD < perspective. In period 1, the bank can move to a higher isoprofit line by
+%DIFDELCMD < shifting the debt burden to period 2, from point A to B.}}{}{nkfvlg01.wmf}{%
+%DIFDELCMD < \special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+%DIFDELCMD < TRUE;display "USEDEF";valid_file "F";width 3.8692in;height 3.1237in;depth
+%DIFDELCMD < 0pt;original-width 3.8207in;original-height 3.0796in;cropleft "0";croptop
+%DIFDELCMD < "1";cropright "1";cropbottom "0";filename 'NKFVLG01.wmf';file-properties
+%DIFDELCMD < "XNPEU";}}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsubsection{\DIFdelFL{Renegotiation and $\protect\beta $}}
+%DIFAUXCMD
+\addtocounter{subsubsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelFL{Renegotiation will not be profitable for the bank if $\beta $ is very high
+or very low. If $\beta $ is high, the consumer has little interest in
+renegotiation. If $\beta $ is low, repayment $(y-\overline{c}_{f})$ is
+already large enough that there is little left to renegotiate (even though
+the consumer is more interested in renegotiation as $\beta $ drops, there is
+less to be gained for the bank since his utility function is very steep, so
+}\DIFdelendFL \DIFaddbeginFL \DIFaddFL{the figure illustrates, a monopolist can opportunistically `exploit' a customer who had agreed to $F$ by offering consumption stream $R$ in exchange for $F$\( \). This would raise }\DIFaddendFL period 1 \DIFdelbeginFL \DIFdelFL{cannot push period 2's consumption down indefinitely).}%DIFDELCMD < [%%%
+\DIFdelFL{REWRITE FOR
+CLARITY}%DIFDELCMD < ]
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \DIFaddFL{consumption by 'raiding savings' (taking out new loans), for a customer who had saved (borrowed) in period 0 by with the effect of lowering (increasing) the net savings (debt) passed into period 2.
+}\DIFaddendFL 
+
+\DIFdelbeginFL \DIFdelFL{$\pi _{1}\left( C_{1}^{r}\left( C_{1}^{mf}\right) ;C_{1}^{mf}\right) $ for
+CRRA, as a function of $\beta $:}%DIFDELCMD < \FRAME{dtbpF}{1.7962in}{1.196in}{0pt}{}{}{%
+%DIFDELCMD < Figure}{\special{language "Scientific Word";type
+%DIFDELCMD < "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "T";width
+%DIFDELCMD < 1.7962in;height 1.196in;depth 0pt;original-width 4.4702in;original-height
+%DIFDELCMD < 2.968in;cropleft "0";croptop "1";cropright "1";cropbottom "0";tempfilename
+%DIFDELCMD < 'NKR75402.wmf';tempfile-properties "XNPEUR";}}
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \begin{figure}[ptb]
+\centering
+\newrgbcolor{qqqqcc}{0. 0. 0.8}
+\newrgbcolor{ffqqtt}{1. 0. 0.2}
+\psset{xunit=0.2cm,yunit=0.2cm,algebraic=true,dimen=middle,dotstyle=o,dotsize=3pt 0,linewidth=0.5pt,arrowsize=3pt 2,arrowinset=0.25}
+\DIFaddendFL 
+
+\DIFdelbeginFL %DIFDELCMD < [%%%
+\DIFdelFL{JHC Would be useful to compare not-renegotiation proof to a series of short
+contracts}%DIFDELCMD < ]
+%DIFDELCMD < %%%
+\DIFdelendFL \DIFaddbeginFL \begin{pspicture*}(-3.,-3.)(70.,40.)
+\multips(0,0)(0,5.0){9}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,0)(70.,0)}
+\multips(0,0)(5.0,0){15}{\psline[linestyle=dashed,linecap=1,dash=1.5pt 1.5pt,linewidth=0.4pt,linecolor=lightgray]{c-c}(0,0)(0,40.)}
+\psaxes[labelFontSize=\scriptstyle,xAxis=true,yAxis=true,Dx=5.,Dy=5.,ticksize=-2pt 0,subticks=2]{->}(0,0)(0.,0.)(70.,40.)
+\psplot[linewidth=1.2pt,linecolor=qqqqcc,plotpoints=200]{0}{70.0}{((18.32-1.0/(1.0-0.7)*x^(1.0-0.7))*(1.0-0.7))^(1.0/(1.0-0.7))}
+\psplot[plotpoints=200]{0}{70.0}{x*0.5^(1.0/0.7)}
+\psplot[linewidth=1.2pt,linecolor=ffqqtt,plotpoints=200]{0}{70.0}{((13.74-1.0/(1.0-0.7)*x^(1.0-0.7))*(1.0-0.7)/0.5)^(1.0/(1.0-0.7))}
+\psplot{-2.}{70.}{(--58-x)}    %DIF > FN line
+\psplot{-2.}{70.}{(--53.7-x)}  %DIF > BQ line 
+\psplot{-2.}{70.}{(--63-x)}    %DIF > RP line
+\psplot[linestyle=dashed,dash=6pt 6pt,plotpoints=200]{0.0}{70.0}{x}
+\begin{scriptsize}
+\psdots[dotstyle=*,linecolor=darkgray](39.2,14.5)
+\rput[bl](39.4,14.9){\darkgray{$B$}}
+\psdots[dotstyle=*,linecolor=darkgray](38,38)
+\rput[bl](39,37.5){\darkgray{$\bar y$}}
+\psdots[dotstyle=*,linecolor=blue](58.1,0.)
+\psdots[dotstyle=*,linecolor=blue](46,17.1)
+\rput[bl](46,18){\darkgray{$R$}}
+\rput[bl](60,24){\darkgray{$FOC$}}
+\rput[bl](58.4,0.39){\blue{$N$}}
+\psdots[dotstyle=*,linecolor=blue](53.7,0.)
+\rput[bl](53.9,0.4){\blue{$Q$}}
+\psdots[dotstyle=*,linecolor=darkgray](29.0,29.0)
+\rput[bl](29.7,29.3){\darkgray{$F$}}
+\rput[bl](63,0.39){\blue{$P$}}
+\psdots[dotstyle=*,linecolor=blue](63,0.)
+\end{scriptsize}
+\end{pspicture*}
+\DIFaddendFL 
+
+\DIFdelbeginFL \subsection{\DIFdelFL{Renegotiation-Proof Contract}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+\DIFdelendFL \DIFaddbeginFL \caption{\label {\DIFaddFL{renegFig}}\DIFaddFL{Monopoly full-commitment contract in \(c_{1}\)\(-c_{2}\) space.}}
+\end{figure}
+\DIFaddend 
+
+
+\DIFdelbegin \DIFdel{The sophisticated agent anticipates that the firm will offer to renegotiate
+with his future self. So he will not accept the previously described full
+commitment contract in the first place. Since that contract was designed to
+meet his participation constraint, he understands that a renegotiated
+outcome would fall below this reservation utility.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The bank must therefore offer a renegotiation-proof contract that satisfies
+period 0's participation constraint}\footnote{%DIF < 
+\DIFdel{Any contract that would be renegotiated upon can be rewritten as an up-front
+contract that is preferable to the bank since it avoids the cost of
+renegotiation $\kappa $}}%DIFAUXCMD
+\addtocounter{footnote}{-1}%DIFAUXCMD
+\DIFdel{. The resulting contract must limit period 1 self' s
+(and hence also the bank's)potential gains from renegotiation. It does this
+by increasing $c_{1}$}%DIFDELCMD < \ %%%
+\DIFdel{by just enough relative to $c_{2}$}%DIFDELCMD < \ %%%
+\DIFdel{so as to lower
+what period 1 self is willing to pay for a renegotiation to be below the
+bank's cost $\overline{\kappa }$, so as to keep renegotiation unprofitable
+to the bank. }%DIFDELCMD < \ %%%
+\DIFdel{This must lower bank profits because the monopoly lender must
+now compensate the borrower for a contract with less consumption smoothing
+than under full commitment.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{To offer a renegotiation-proof contract the bank must now solve a
+maximization problem with two constraints--the borrower's participation
+constraint, and a constraint that credibly commits it to not renegotiate.
+The new contract will have the following property: the repayment patterns
+will be kept sufficiently imbalanced (in }\DIFdelend \DIFaddbegin \DIFadd{Such a contract would be designed to raise }\DIFaddend period 1 \DIFdelbegin \DIFdel{'s favor) so that period
+0's beliefs about the potential gains to period 1 from renegotiating the contract are just smaller than the costs the bank incurs from renegotiating.
+}\DIFdelend \DIFaddbegin \DIFadd{self's utility ever so slightly while raising the monopolist to the higher value isoprofit line $QN$.  
+}\DIFaddend 
+
+\DIFdelbegin \begin{align*}\DIFdel{
+&}&\DIFdel{\max_{C_{0}}\pi _{0}\left( C_{0};C_{0}^{a}\right) }\\
+\DIFdel{\text{s.t. (PC) } }&&\DIFdel{U_{0}\left( C_{0}\right) \geq U_{0}\left(
+C_{0}^{a}\right) }\\
+\DIFdel{\text{(RP) } }&&\DIFdel{\pi _{1}\left( C_{1}^{r}\left( C_{1}\right) ;C_{1}\right)
+\leq \kappa
+}\end{align*}
+%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The first restriction is the same participation constraint as before. The
+second is a restriction placed by the fact that marginal utilities in
+periods 1 }\DIFdelend \DIFaddbegin \DIFadd{This creates an opportunity for the bank to generate additional surplus. The bank might be willing to offer such a refinance, in
+effect offering new loan }\DIFaddend and\DIFdelbegin \DIFdel{2 cannot be too far apart from period }\DIFdelend \DIFaddbegin \DIFadd{/or postponing repayments on  existing obligations or -- if the customer had carried savings into period }\DIFaddend 1 \DIFdelbegin \DIFdel{'s perspective. This
+gives the following monopolist renegotiation-proof contract: $C_{0}^{mp}$}\DIFdelend \DIFaddbegin \DIFadd{--  helping the customer `raid' savings for a fee. In such cases,
+both parties voluntarily agree to renegotiate the original contract}\DIFaddend . 
+\DIFdelbegin %DIFDELCMD < [%%%
+\DIFdel{Figures showing the additional constraint and the renegotiation problem.}%DIFDELCMD < ]
+%DIFDELCMD < %%%
+\DIFdelend 
+
+\DIFdelbegin %DIFDELCMD < [%%%
+\DIFdel{Remove this para? or modify notation. or simplify to make the basic point.  
+}%DIFDELCMD < ]
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \DIFadd{A  sophisticated present-biased customer   anticipates such  potential renegotiations and will therefore only agree to renegotiation-proof contracts.   Since making contracts renegotiation proof only adds constraints to the contract design problem the monopolists' profits can only fall relative to the benchmark where it can costlessly commit itself to no renegotiations. }\DIFaddend The \DIFdelbegin \DIFdel{first-order conditions are:%DIF < 
+}\begin{align*}\DIFdel{
+-1 }&\DIFdel{=}&\DIFdel{\lambda _{1}u^{\prime }\left( l\right) }\\
+\DIFdel{-1 }&\DIFdel{=}&\DIFdel{\lambda _{1}\beta u^{\prime }\left( 1-m_{1}\right) +\lambda _{2}\frac{%
+\partial g}{\partial m_{1}}\left( 1+r\right) }\\
+\DIFdel{-1 }&\DIFdel{=}&\DIFdel{\lambda _{1}\beta u^{\prime }\left( 1-m_{2}\right) +\lambda _{2}\frac{%
+\partial g}{\partial m_{2}}\left( 1+r\right) ^{2}
+}\end{align*}
+%DIFAUXCMD
+\DIFdelend \DIFaddbegin \DIFadd{customer who was  already pushed against their autarky reservation utility is no worse off.  
+}\DIFaddend 
+
+
+\DIFdelbegin \DIFdel{At the solution, $\frac{\partial g}{\partial m_{1}}>0$ and $\frac{\partial g%
+}{\partial m_{2}}<0$. If the renegotiation-proofness constraint binds, the
+smaller $\kappa $ is, holding $c_{0}^{s}$ fixed, the further away from
+equality $c_{1}^{s}$ and $c_{2}^{s}$ must be. }%DIFDELCMD < [%%%
+\DIFdel{end of para to be removed}%DIFDELCMD < ]
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{This yields an equilibrium which satisfies the borrower's participation
+constraint. For the sophisticated hyperbolic discounter, since $c_{1}^{mp}$}%DIFDELCMD < \
+%DIFDELCMD < %%%
+\DIFdel{and $c_{2}^{mp}$}%DIFDELCMD < \ %%%
+\DIFdel{deliver a (weakly) less smoothed profile than the
+commitment contract, the bank has to give up some of its surplusto have the
+client continue to participate. Bank profits must be lower when the bank faces a new constraint on its surplus extraction problem: the bank wishes it
+could promise to not renegotiate but it simply cannot make such a promise
+credible without giving up some profits. The problem here is not one of
+cheating or contract failure }%DIFDELCMD < [%%%
+\DIFdel{AS examined for example by}%DIFDELCMD < ]%%%
+\DIFdel{, it is the
+possibility of a legitimate renegotiation (a voluntary agreement to tear up
+the old contract) between the consumer and the firm.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{proposition}
+%DIFDELCMD < %%%
+\DIFdel{If $\kappa $ is sufficiently small:
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{enumerate}
+%DIFDELCMD < \item %%%
+\DIFdel{There are some $\sigma ^{mp-l}$ and $\sigma ^{mp-s}$, such that $%
+\sigma ^{mp-l}<\sigma ^{mf}<\sigma ^{mp-s}$, and a loan is offered if $%
+\sigma <\sigma ^{mp-l}$, savings is offered if $\sigma >\sigma ^{mp-s}$, and
+no contract is offered otherwise.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \item %%%
+\DIFdel{Profits are continuous in
+$\sigma $, and rising in the distance from $%
+\sigma ^{mf}$. Except at $\sigma ^{mf}$, where profits are always zero, the
+bank's profits are strictly lower when it cannot commit to not renegotiate.
+}%DIFDELCMD < \end{enumerate}
+%DIFDELCMD < \end{proposition}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The loan contract creates a commitment problem. If $y_{0}$ is high enough, a
+rise in period 0 consumption comes with an induced imbalance across periods
+1 and2. So, very close to $\bar{y}_{0}^{o}$, it's impossible to write a
+contract that satisfies both the PC and the no-renegotiation constraint. By
+a similar argument, there is some $\bar{y}_{0}^{\prime \prime }>\bar{y}_{0}$
+above which commitment will be offered. }%DIFDELCMD < [%%%
+\DIFdel{Discontinuous welfare implications?}%DIFDELCMD < ]
+%DIFDELCMD < 
+
+%DIFDELCMD < \FRAME{ftbpF}{4.0811in}{3.013in}{0pt}{}{}{income cutoffs.jpg}{\special%
+%DIFDELCMD < {language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+%DIFDELCMD < TRUE;display "USEDEF";valid_file "F";width 4.0811in;height 3.013in;depth
+%DIFDELCMD < 0pt;original-width 4.0309in;original-height 2.9689in;cropleft "0";croptop
+%DIFDELCMD < "1";cropright "1";cropbottom "0";filename 'income cutoffs.jpg';file-properties "XNPEU";}}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsection{\DIFdel{Monopolist as Non-Profit}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Suppose a firm has the possibility of operating as a nonprofit. Speaking in
+strictly legal terms the surpluses of a non-profit firm cannot be
+distributed as profits. It is however customary and more realistic to model
+this restriction more loosely, by assuming that a non-profit can distribute
+only a portion $f\left( \pi \right) $ of profits or surplus $\pi $ to its
+owners or insiders, where $f\left( 0\right) =0$, $0<f^{\prime }\left( \pi
+\right) <1$. The firm will choose nonprofit status if the best
+renegotiation-proof contract is sufficiently improved for the sophisticated
+hyperbolic discounter that, despite lower enjoyment of profits, the firm is
+better off.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The nonprofit' s contract:%DIF < 
+}\begin{align*}\DIFdel{
+&}&\DIFdel{\max_{C_{0}}f\left( \pi _{0}\left( C_{0};C_{0}^{a}\right) \right) }\\
+\DIFdel{\text{s.t. (PC) } }&&\DIFdel{U_{0}\left( C_{0}\right) \geq U_{0}\left(
+C_{0}^{a}\right) }\\
+\DIFdel{\text{(RP) } }&&\DIFdel{f\left( \pi _{1}\left( C_{1}^{r}\left( C_{1}\right)
+;C_{1}\right) +\pi _{0}\left( C_{0};C_{0}^{a}\right) \right) -f\left( \pi
+_{0}\left( C_{0};C_{0}^{a}\right) \right) \leq \kappa
+}\end{align*}
+%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{This gives a }\DIFdelend \DIFaddbegin \DIFadd{More formally, consider the renegotiation problem that arises in period 1. A customer who has agreed to }\DIFaddend contract \DIFdelbegin \DIFdel{$C_{0}^{mn}$. No-renegotiation constraint weaker than
+before. The renegotiation-proof constraint has weakened,
+so $\pi _{0}\left(
+C_{0}^{n};C_{0}^{a}\right) >\pi _{0}\left( C_{0}^{s};C_{0}^{a}\right) $. To
+determine whether a bank will switch status, we need to know if $f\left( \pi
+_{0}\left( C_{0}^{n};C_{0}^{a}\right) \right) \geq f\left( \pi _{0}\left(
+C_{0}^{s};C_{0}^{a}\right) \right) $. Monopolist faces tradeoff from
+nonprofit: higher raw profits (commitment problem partly solved) but lower
+enjoyment of them.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{It is instructive to discuss when a firm will encounter conditions conducive
+to adopting non-profit status. Administrative costs ($\kappa $) should not
+be so high that even for-profits wouldn't renegotiate . The consumer should
+be sufficiently hyperbolic ($\beta $ should be low enough) that
+renegotiation is a tempting possibility. On the other hand, the consumer
+should not be so hyperbolic that even a nonprofit would like to renegotiate.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The difference between effective profits as a non-profit and actual profits
+as a for-profit can be written as the following: 
+}\begin{displaymath}\DIFdel{
+n\left[ \pi _{0}\left( c_{o}^{non},c_{1}^{non},c_{2}^{non}\right) -\pi
+_{0}\left( c_{0}^{rp},c_{1}^{rp},c_{2}^{rp}\right) \right] -\left(
+1-n\right) \left[ \pi _{0}\left( c_{0}^{rp},c_{1}^{rp},c_{2}^{rp}\right) %DIF < 
+\right]
+}\end{displaymath}%DIFAUXCMD
+\DIFdelend \DIFaddbegin \DIFadd{\(\hat C\)_{0}$\(  \) in period 0 enters period 1 with claims to remaining consumption stream $}\hat \DIFadd{C_{1}$. This determines the new reservation
+utility. If profitable to  
+the bank, the optimal renegotiated contract it offers will be given
+by:%
+\begin{align*}
+&  \max_{C_{1}}\pi_{1}\left(  C_{1};\hat C_{1}\right) \\
+\text{s.t. }\text{}  &  U_{1}\left(  C_{1}\right)  \geq U_{1}\left(
+\hat C\label{PCR}_{1}\right)
+\end{align*}
+
+
+The bank offers $C_{1}^{r}}\left(\hat \DIFadd{C_{1}}\right)\DIFadd{=}\left(  \DIFadd{c_{1}}\DIFaddend %
+\DIFdelbegin \DIFdel{The first term represents the gain from higher raw profits and the second
+term represents the loss from discounting the original , for-profit, firm's
+profits. In this case, the first term dominates if the potential gain in raw
+profits is high, or if the for-profit firm's contractyielded low profits in
+the first place}\DIFdelend \DIFaddbegin \DIFadd{^{r},c_{2}^{r}}\right)  \DIFadd{$ to replace\footnote{The bank swaps
+net income stream ($y_{1}-}\hat \DIFadd{c_{1},y_{2}-}\overline{}\hat \DIFadd{c_{2})$ for
+$(y_{1}-c^{r}_{1},y_{2}-c^{r}_{2}).$} the contractually agreed $(}\hat \DIFadd{c_{1},}\hat \DIFadd{c_{2})}\DIFaddend . \DIFdelbegin %DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{And finally, the nonprofit discount function $f$ should be severe enough to
+deter a nonprofit from renegotiating, but not so severe that it deters a
+firm from becoming a nonprofit. We are agnostic about the specific
+functional form of $f$. However, we can consider two possible cases. First,
+suppose $f$ is strictly concave--only mildly restrictive at low levels of
+profits and increasingly restrictive as profits grow. Such functions serve
+as a plausible description of the legal restrictions faced by non-profits.
+In such  a case, we can clearly see how non-profit status could be attractive
+to the firm: the legal restrictions leave the enjoyment of profits from the
+contract relatively unaffected while significantly loosening the
+no-renegotiation constraint (since renegotiation would raise profits
+further, and since $f$ is concave, these additional profits would count for
+little).
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsubsection{\DIFdel{Linear Restriction on Nonprofits}}
+%DIFAUXCMD
+\addtocounter{subsubsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{To derive explicit conditions under which a firm will choose to operate as a
+nonprofit, let's consider a formulation similar to Glaeser and Shleifer
+(2001). Suppose $f\left( \pi _{0}\right) =\alpha \pi _{0}$, where $0<\alpha
+<1$. Glaeser and Shleifer (2001) adopt this approach suggesting that it
+captures the idea that though legally barred from paying themselves cash
+profits, the principals of a non-profit can capture profits but only imperfectly via the consumption of perquisites}%DIFDELCMD < \ %%%
+\DIFdel{(or `dividends in kind')
+valued as $\alpha \pi .$ We will interpret $\alpha $ as an index of
+`non-profitness.' }%DIFDELCMD < \ %%%
+\DIFdel{A lower $\alpha $ indicates a more strictly regulated
+non-profit and/or a firm that because of its ownership/governance structure
+places the welfare of its clients ahead of that of its `owners.'
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{When $\alpha =1$ the problem the firm is a pure for-profit firm as
+previously analyzed. }%DIFDELCMD < \ %%%
+\DIFdel{The only change to contracts for a non-profit of type 
+$\alpha <1$ comes from the relaxation of the no-renegotiation constraint
+which by assumption occurs whenever $\kappa (\alpha )>\overline{\kappa }$
+when.   Because the non-profit can more credibly commit to not renegotiate
+contracts that offer greater consumption smoothing in periods }\DIFdelend \DIFaddbegin \DIFadd{$  Since the first-order conditions imply:
+\[
+u^{\prime}\left(  c_{1}^{r}\right)  =\beta u^{\prime}\left(  c_{2}^{r}\right)
+\]the contract will set 
+$c_{1}^{r}>$ $c_{2}^{r}$ as long as \(\beta<1 \) and exactly $c^{r}_{2}=\beta^{1/\rho} c^{r}_{1}$ in the CRRA case. Figure \ref{renegFig} illustrates the type of renegotiated contract that would be offered in the very special case of a  customer who agreed to a full commitment contract $ C_{1}^{mf}$ in period 0 -- having sincerely believed the bank's promise to not offer to renegotiate in period 1 --   was then genuinely and unexpectedly surprised to find the bank offering a renegotiation in period 1. Although it would break a promise to the consumer's period 0 self, the contract will be  designed to appeal to the customer's period 1. This type of renegotiation/promise-breaking will be profitable for the bank to offer  as long as $\pi_{1}}\left(  \DIFadd{C_{1}^{r}}\left(  \DIFadd{C_{1}^{mf}}\right)  \DIFadd{;C_{1}^{mf}}\right)  \DIFadd{\geq\kappa$, where $\kappa$ are the non-monetary renegotiation costs to the bank. As depicted in Figure \ref{renegFig}, the bank will find it profitable to renegotiate from the   continuation of the full commitment  contract depicted by point $F$ to the new contract depicted by $B$ so long as profits gains (equal to the present value difference  between $ C_{1}^{mf}$ and $C_{1}^{r}$) which can be measured as  distance $NQ$ on the diagram is greater than $\kappa$.
+ Although the new contract appeals to the period 1 self,  the broken promise  `exploits' the consumer's period 0 self by pushing their welfare below the autarky reservation utility that they thought had been promised by the $C_{1}^{mf}$ contract.  
+
+\subsection{Renegotiation-Proof Contract}
+
+A sophisticated consumer will, of course, rationally anticipate the bank's temptation to break its commitment promises and for this reason would never   agree to accept contract \(F\)  or any other contract that could make him worse off following  a period-1 renegotiation. Since the bank will want to avoid renegotiation costs $\kappa$ the only contracts that will be offered that satisfy this criterion in period 0 must be renegotiation-proof contracts:\  contracts that the bank will not find profitable to renegotiate.  }   
+
+
+
+The bank must therefore offer a contract that satisfies
+period 0's participation constraint and now also meets an additional renegotiation-proofness constraint. The resulting
+contract must limit period 1 self's (and hence also the bank's) potential
+gains from renegotiation. It does this by increasing $c_{1}$\ by just enough
+relative to $c_{2}$\ as to lower what period 1 self is willing to pay for a
+renegotiation to fall  just below the bank's cost $\kappa$, as to keep
+renegotiation credibly unprofitable to the bank. \ This must lower bank profits relative to the costless full-commitment case because
+the monopolist  must now compensate the consumer for a contract that delivers less
+consumption smoothing across period 1 and 2 than under full commitment.
+
+    
+
+The now solves a maximization
+problem with two constraints. 
+
+
+\begin{align*}
+&  \max_{C_{0}}\pi_{0}\left(  C_{0};C_{0}^{a}\right) \\
+\text{s.t. (PC) }  &  U_{0}\left(  C_{0}\right)  \geq U_{0}\left(  C_{0}%
+^{a}\right) \\
+\text{(RP) }  &  \pi_{1}\left(  C_{1}^{r}\left(  C_{1}\right)  ;C_{1}\right)
+\leq\kappa
+\end{align*}
+
+
+The first restriction is the same participation constraint as before. The
+second is a restriction placed by the fact that marginal utilities in periods
+1 and 2 cannot be too far apart from period 1's perspective. The new monopolist renegotiation-proof contract $C_{0}^{mp}$ will keep consumption sufficiently
+imbalanced (in period 1's favor) so that period 0's beliefs about the
+potential gains to period 1 from renegotiating the contract are just smaller
+than the costs the bank incurs from renegotiating. 
+
+A slight re-interpretation of Figure  \ref{renegFig}
+illustrates the properties of a renegotiation-proof contract in the special case of a monopolist with zero renegotiation cost ($\kappa=0$). In this special case the only contract that satisfies the period 0 self's participation constraint (interpreted here as indifference curve $FR$ where \(F\text{ is no longer the full-commitment contract }\)since period 0 consumption )
+
+must lie along the first-order condition line $c_{2} =\beta ^}{\DIFadd{(}\DIFaddend 1\DIFdelbegin \DIFdel{and 2,
+period }\DIFdelend \DIFaddbegin \DIFadd{/}{\DIFadd{\rho)}}\DIFadd{$$c_{1}$ (which line in the here for the CRRA case)\ 
+
+[Remove this para? or modify notation. or simplify to make the basic point.]
+The first-order conditions are:%
+\begin{align*}
+-1  &  =\lambda_{1}u^{\prime}\left(  l\right) \\
+-1  &  =\lambda_{1}\beta u^{\prime}\left(  1-m_{1}\right)  +\lambda_{2}%
+\frac{\partial g}{\partial m_{1}}\left(  1+r\right) \\
+-1  &  =\lambda_{1}\beta u^{\prime}\left(  1-m_{2}\right)  +\lambda_{2}%
+\frac{\partial g}{\partial m_{2}}\left(  1+r\right)  ^{2}%
+\end{align*}
+
+
+At the solution, $\frac{\partial g}{\partial m_{1}}>}\DIFaddend 0\DIFdelbegin \DIFdel{becomes more willing to transfer surplus to the firm. }%DIFDELCMD < \ %%%
+\DIFdel{Let the
+resulting contract offered by a non-profit of type $\alpha $ be denoted $%
+\left( c_{o}^{\alpha },c_{1}^{\alpha },c_{2}^{\alpha }\right) $ and the
+firm's realized net profits or benefits $\Pi (\alpha )=$ $\alpha \cdot \pi
+_{0}\left( c_{o}^{\alpha },c_{1}^{\alpha },c_{2}^{\alpha }\right) .$
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Whether a firm would choose to convert to non-profit status of type $\alpha $
+will depend on whether the residual surplus (perquisites)}%DIFDELCMD < \ %%%
+\DIFdel{that its
+principals can capture from greater commitment possibilities match or exceed
+what it could earn offering renegotiation proof contracts as a pure
+for-profit.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{proposition}
+%DIFDELCMD < %%%
+\DIFdel{A bank will operate as a nonprofit if the consumer's income spread, $\sigma $}\DIFdelend \DIFaddbegin \DIFadd{$ and $\frac{\partial
+g}{\partial m_{2}}<0$. If the renegotiation-proofness constraint binds, the
+smaller $\kappa$ is, holding $c_{0}^{s}$ fixed, the further away from equality
+$c_{1}^{s}$ and $c_{2}^{s}$ must be. [end of para to be removed]
+
+This yields an equilibrium which satisfies the borrower's participation
+constraint. For the sophisticated hyperbolic discounter, since $c_{1}^{mp}}\DIFaddend %
+\DIFdelbegin \DIFdel{, is sufficiently close to $\sigma ^{mp-l}$ or $\sigma ^{mp-s}$.
+}%DIFDELCMD < \end{proposition}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{At $\sigma =\sigma ^{mp-l}$ or $\sigma =\sigma ^{mp-s}\,$, the for-profit
+bank makes zero profits. But the nonprofit makes positive profits. So the
+bank will operate as a nonprofit. Using continuity of profits in $y_{0}$, we
+know that the bank will choose to operate as a nonprofit for a window around
+both $\bar{y}_{0}^{\prime }$ and $\bar{y}_{0}^{\prime \prime }$.
+}%DIFDELCMD < 
+
+%DIFDELCMD < [%%%
+\DIFdel{CRRA simulations.}%DIFDELCMD < ]
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{In such a case, the consumer has been left no worse off than under a
+for-profit firm, and the firm is made better off. By solving the commitment
+problem , it is able to extract greater surplus from the consumer.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\section{\DIFdel{Competition }%DIFDELCMD < [%%%
+\DIFdel{incorporate new notation; savings}%DIFDELCMD < ]%%%
+}
+%DIFAUXCMD
+\addtocounter{section}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Consider a competitive banking environment where banks must compete to offer
+lending contracts to the consumer. In this setting, all surplus is returned
+to the consumer and equilibrium contracts will satisfy a zero-profit
+condition for the banks. As under monopoly, we first describe equilibrium
+contracts when renegotiation is impossible. We then analyze firms' decisions
+to operate as nonprofits, which will depend on the exclusivity of contracts.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsection{\DIFdel{Benchmark Contract}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Consider a competitive banking environment with zero profits in equilibrium.
+We assume that contracts are exclusive (a consumer can interact with only one bank for the life of a loan) and that banks can commit to not
+renegotiate. Firms will return all surplus to the consumer, and the
+equilibrium contract is given by:%DIF < 
+}\begin{align*}\DIFdel{
+&}&\DIFdel{\max_{c_{0},c_{1},c_{2}}U_{t}\left( c_{0},c_{1},c_{2}\right) }\\
+&\DIFdel{\text{s}\text{.t}\text{.}}&\DIFdel{\text{ }\pi _{0}\left( c_{0},c_{1},c_{2}\right)
+\geq 0
+}\end{align*}
+%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The first-order conditions are same as under monopoly. Combined with the
+zero-profit constraint, yield the equilibrium contract:%DIF < 
+}\begin{displaymath}\DIFdel{
+\hat{c}_{0},\hat{c}_{1},\hat{c}_{2}
+}\end{displaymath}
+%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{We continue to have $\hat{c}_{1}=\hat{c}_{2}\equiv \hat{c}_{f}$.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{This can be compared to the monopolist's contract along two dimensions.
+Observe the following comparison between the monopolist's maximization
+problem and the competitive equilibrium.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \FRAME{ftbpFU}{5.2425in}{3.6694in}{0pt}{\Qcb{The benchmark contract under
+%DIFDELCMD < competition compared to the benchmark contract under monopoly.}}{}{%
+%DIFDELCMD < nkfvlg02.wmf}{\special{language "Scientific Word";type
+%DIFDELCMD < "GRAPHIC";maintain-aspect-ratio TRUE;display "USEDEF";valid_file "F";width
+%DIFDELCMD < 5.2425in;height 3.6694in;depth 0pt;original-width 5.1863in;original-height
+%DIFDELCMD < 3.6218in;cropleft "0";croptop "1";cropright "1";cropbottom "0";filename
+%DIFDELCMD < 'NKFVLG02.wmf';file-properties "XNPEU";}}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The competitive contract must satisfy the zero-profit constraint and the
+first-order conditions, while the monopolist's contract must satisfy the
+borrower's participation constraint and the first-order condition. Since the
+curve associated with the first-order condition is downward sloping, the
+competitive contract has a higher loan size and smaller repayment.  
+The arrow
+in Figure 5 indicates the direction in which the first-order condition moves
+as $\beta $ drops. This will result in a new contract at a higher point of
+intersection with the zero-profit constraint, which implies a larger loan
+size and higher repayment. This gives us the following proposition.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{proposition}
+%DIFDELCMD < %%%
+\DIFdel{(a)Relative to the profit-maximizing monopolist, the competitive equilibrium
+contract will have a larger loan size and smaller repayment. (b) As $\beta $
+drops, loan size and repayments will rise.
+}%DIFDELCMD < \end{proposition}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsection{\DIFdel{Firms as Non-Profit}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsubsection{\DIFdel{Exclusive Contracts}}
+%DIFAUXCMD
+\addtocounter{subsubsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Now we consider competitive markets where contracts are exclusive, but firms
+cannot commit to not renegotiate. For for-profit firms, the problem becomes:
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\begin{align*}\DIFdel{
+&}&\DIFdel{\max_{l,m_{1},m_{2}}u\left( l\right) +\beta \delta u\left( y-m_{1}\right)
++\beta \delta ^{2}u\left( y-m_{2}\right) }\\
+&\DIFdel{\text{s}\text{.t}\text{.}}&\DIFdel{\text{ }\pi \left( l,m_{1},m_{2}\right) \geq 0 }\\
+&&\DIFdel{g\left( \beta ;m_{1},m_{2}\right) \leq c
+}\end{align*}
+%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Let the resulting contract be denoted $\left( \tilde{c}_{0},\tilde{c}_{1},%
+\tilde{c}_{2}\right) $.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{If the no-renegotiation constraint is binding, consumer welfare must be
+lower than when the firms can commit to not renegotiate. Now, firms face a
+potential incentive to switch to non-profit status. By loosening the second
+constraint, one firm deviating into nonprofit status can make positive
+profits. So, if the borrowers are sophisticated hyperbolics, in equilibrium
+all firms become nonprofit even if the borrowers are \textit{nearly}
+exponential.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{proposition}
+%DIFDELCMD < %%%
+\DIFdel{In a competitive banking market with exclusive contracts, if consumers are
+sophisticated hyperbolic discounters and $\kappa $ is small enough, all
+active firms will be nonprofits.
+}%DIFDELCMD < \end{proposition}
+%DIFDELCMD < 
+
+%DIFDELCMD < \begin{proof}
+%DIFDELCMD < \lbrack %%%
+\DIFdel{switch notation in proof}%DIFDELCMD < ] %%%
+\DIFdel{Assume $\kappa $ is small enought that the
+no-renegotiation constraint binds for the for-profit renegotiation-proof
+contract, $\left( \tilde{l},\tilde{m}_{1},\tilde{m}_{2}\right) $. Suppose
+all firms are for-profit. There is some $\varepsilon _{1}$ and $\varepsilon
+_{2}$ satisfying $0<\varepsilon _{2}<\varepsilon _{1}$ such that $u\left( 
+\tilde{l}\right) +\beta \delta u\left( \tilde{m}_{1}-\varepsilon _{1}\right)
++\beta \delta u\left( \tilde{m}_{2}+\varepsilon _{2}\right) =$ $u\left( 
+\tilde{l}\right) +\beta \delta u\left( \tilde{m}_{1}\right) +\beta \delta
+u\left( \tilde{m}_{2}\right) $ and $f\left( \pi \left( \tilde{l},\tilde{m}%
+_{1}-\varepsilon _{1},\tilde{m}_{2}-\varepsilon _{2}\right) +g\left( \beta ;%
+\tilde{m}_{1}-\varepsilon _{1},\tilde{m}_{2}+\varepsilon _{2}\right) \right)
+-f\left( \pi \left( \tilde{l},\tilde{m}_{1},\tilde{m}_{2}\right) \right)
+\leq c$. So, any firm can make positive profits by operating as a
+non-profit. Therefore, in equilibrium, consumers will borrow only from
+non-profit firms.
+}%DIFDELCMD < \end{proof}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{In this case, the specific form of $f\left( \pi \right) $ does not matter
+because firms are making zero profits in equilibrium anyway.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsubsection{\DIFdel{Non-Exclusive Contracts}}
+%DIFAUXCMD
+\addtocounter{subsubsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{In the previous section, we had a setting with competition in period }\DIFdelend \DIFaddbegin \DIFadd{$\ and $c_{2}^{mp}$\ deliver a (weakly) less smoothed profile than the
+commitment contract, the bank has to give up some of its surplus to have the
+client continue to participate. Bank profits must be lower when the bank faces
+a new constraint on its surplus extraction problem: the bank wishes it could
+promise to not renegotiate but it simply cannot make such a promise credible
+without giving up some profits. The problem here is not one of cheating or
+contract failure [AS examined for example by], it is the possibility of a
+legitimate renegotiation (a voluntary agreement to tear up the old contract)
+between the consumer and the firm.
+
+[[Point $R$ in Figure \ref{renegFig} provides an illustration of the  approximate renegotiation-proof contract that a sophisticated consumer would agree to with a \(\kappa=0\) bank. It's only approximate because The only renegotiation-proof con he bank faces zero renegotiation cost they will offer to renegotiate ]]
+
+\begin{proposition}
+If $\kappa$ is sufficiently small:
+
+\begin{enumerate}
+\item There are some $\sigma^{mp-l}$ and $\sigma^{mp-s}$, such that
+$\sigma^{mp-l}<\sigma^{mf}<\sigma^{mp-s}$, and a loan is offered if
+$\sigma<\sigma^{mp-l}$, savings is offered if $\sigma>\sigma^{mp-s}$, and no
+contract is offered otherwise.
+
+\item Profits are continuous in $\sigma$, and rising in the distance from
+$\sigma^{mf}$. Except at $\sigma^{mf}$, where profits are always zero, the
+bank's profits are strictly lower when it cannot commit to not renegotiate.
+\end{enumerate}
+\end{proposition}
+
+The loan contract creates a commitment problem. If $y_{0}$ is high enough, a
+rise in period 0 consumption comes with an induced imbalance across periods 1
+and 2. So, very close to $}\bar{y}\DIFadd{_{0}^{o}$, it's impossible to write a
+contract that satisfies both the PC and the no-renegotiation constraint. By a
+similar argument, there is some $}\bar{y}\DIFadd{_{0}^{\prime\prime}>}\bar{y}\DIFadd{_{0}$ above
+which commitment will be offered. [Discontinuous welfare implications?]
+
+(MOVED\ FROM\ EARLIER) Renegotiation will not be profitable for the bank if $\beta$ is very high or
+very low. If $\beta$ is high, the consumer has little interest in
+renegotiation. If $\beta$ is low, repayment $(y-}\overline{c}\DIFadd{_{f})$ is already
+large enough that there is little left to renegotiate (even though the
+consumer is more interested in renegotiation as $\beta$ drops, there is less
+to be gained for the bank since his utility function is very steep, so period
+1 cannot push period 2's consumption down indefinitely).[REWRITE FOR CLARITY]
+
+$\pi_{1}}\left(  \DIFadd{C_{1}^{r}}\left(  \DIFadd{C_{1}^{mf}}\right)  \DIFadd{;C_{1}^{mf}}\right)  \DIFadd{$ for
+CRRA, as a function of $\beta$:
+
+%
+
+%TCIMACRO{\FRAME{ftbpF}{4.0811in}{3.013in}{0pt}{}{}{income cutoffs.jpg}%
+%{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "F";
+%width 4.0811in;  height 3.013in;  depth 0pt;  original-width 4.0309in;
+%original-height 2.9689in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  filename 'income cutoffs.jpg';file-properties "XNPEU";}} }%
+%BeginExpansion
+\begin{figure}[ptb]%
+\centering
+\includegraphics[
+natheight=2.968900in,
+natwidth=4.030900in,
+height=3.013in,
+width=4.0811in
+]%
+{income cutoffs.jpg}%
+\end{figure}
+%EndExpansion
+
+
+\subsection{Monopolist as Non-Profit}
+
+Suppose a firm has the possibility of operating as a nonprofit. Speaking in
+strictly legal terms the surpluses of a non-profit firm cannot be distributed
+as profits. It is however customary and more realistic to model this
+restriction more loosely, by assuming that a non-profit can distribute only a
+portion $f}\left(  \DIFadd{\pi}\right)  \DIFadd{$ of profits or surplus $\pi$ to its owners or
+insiders, where $f}\left(  \DIFaddend 0\DIFdelbegin \DIFdel{but
+monopoly power in period 1. Now, assume period }\DIFdelend \DIFaddbegin \right)  \DIFadd{=0$, $0<f^{\prime}}\left(  \DIFadd{\pi}\right)  \DIFadd{<}\DIFaddend 1\DIFdelbegin \DIFdel{monopoly power disappears.
+Firms can undercut each other in period 1. To analyze the case with
+sophisticated hyperbolic discounters, we first ask whether the renegotiation
+cost, $\kappa $, applies when a firm undercuts \textit{another} firm's
+contract. Suppose not. Then, we can see right away that it's impossible to sustain nonprofits. If there were nonprofits in equilibrium, any one firm
+could make positive profits by switching to for-profit status and undoing a
+rival bank's contract in period 1. Alternatively,assume that $c$ applies in
+the same way to undercutting as it does to renegotiation. Consider
+sophisticated hyperbolics. As each firm's market share goes down,it is more
+incentivized to be for-profit since the advantages of undercutting the other
+firm's contracts outweigh the benefits of promising one's own clients it
+will not renegotiate. As a result, equilibrium contracts will be determined
+by for-profit firms, and consumers will be offered lower commitment than
+from non-profit firms alone.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{proposition}
+%DIFDELCMD < %%%
+\DIFdel{In a competitive banking market with exclusive contracts, if consumers are
+sophisticated hyperbolic discounters, for-profits must exist in equilibrium.
+}%DIFDELCMD < \end{proposition}
+%DIFDELCMD < 
+
+%DIFDELCMD < \begin{proof}
+%DIFDELCMD < \lbrack %%%
+\DIFdel{switch notation in proof}%DIFDELCMD < ] %%%
+\DIFdel{(a)Suppose the renegotiation cost,$c$,
+does not apply when a bank offers a period 1 loan on another bank's
+contract.Firms will compete in period $1$ to satisfy $u^{\prime }\left(
+1-n_{1}\right) =\beta u^{\prime }\left( 1-n_{2}\right) $. Commitment that
+comes through nonprofit status becomes worthless. In equilibrium, nonprofits
+and for-profits will offer identical contracts.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{(b) Suppose $c$ does apply,and is small (no-renegotiation constraint
+binds): If all firms are nonprofit, an individual firm has a strict
+incentive to switch to for-profit status, and make profits in period 1.
+Therefore, there must be for-profits in equilibrium, and equilibrium
+contracts will be constrained by their presence. }%DIFDELCMD < \end{proof}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\section{\DIFdel{Discussion and Extensions}}
+%DIFAUXCMD
+\addtocounter{section}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsection{\DIFdel{Naivete and Private Information}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The problem of potential renegotiation applies to all hyperbolic
+discounters, but only the sophisticated fully anticipates it in period 0.
+The partially naive consumer underestimates the extent of the renegotiation,
+and the naif believes he will not give into the temptation to renegotiate.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{For exponential discounters and naifs, the bank is not hurt by an inability
+to commit to not renegotiate. In the case of the exponential discounter,
+this is because there is never an opportunity to renegotiate in a mutually
+beneficial manner. In the case of the naif, he \textit{believes} his future
+self will not have a future incentive to renegotiate. If $c$ is sufficiently
+small, he will be mistaken in this belief, and the bank will offer
+renegotiation. So, for a naive consumer, the bank is making additional
+profits on two margins: since there is no perceived renegotiation problem,
+he is willing to accept a contract that is more profitable for the bank
+up-front;subsequently, renegotiation generates additional profits for the
+bank.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Finally, consider the partially naive agent with beliefs $\tilde{\beta}%
+>\beta $: she will take insufficient precautions to prevent getting into
+situations where the bank will offer to renegotiate. As she gets more naive,
+her miscalculation worsens: (a)she gets more optimistic in period }\DIFdelend \DIFaddbegin \DIFadd{$.
+The firm will choose nonprofit status if the best renegotiation-proof contract
+is sufficiently improved for the sophisticated hyperbolic discounter that,
+despite lower enjoyment of profits, the firm is better off.
+
+The nonprofit's contract:%
+\begin{align*}
+&  \max_{C_{0}}f\left(  \pi_{0}\left(  C_{0};C_{0}^{a}\right)  \right) \\
+\text{s.t. (PC) }  &  U_{0}\left(  C_{0}\right)  \geq U_{0}\left(  C_{0}%
+^{a}\right) \\
+\text{(RP) }  &  f\left(  \pi_{1}\left(  C_{1}^{r}\left(  C_{1}\right)
+;C_{1}\right)  +\pi_{0}\left(  C_{0};C_{0}^{a}\right)  \right)  -f\left(
+\pi_{0}\left(  C_{0};C_{0}^{a}\right)  \right)  \leq\kappa
+\end{align*}
+
+
+This gives a contract $C_{0}^{mn}$. No-renegotiation constraint weaker than
+before. The renegotiation-proof constraint has weakened, so $\pi_{0}}\left(
+\DIFadd{C_{0}^{n};C_{0}^{a}}\right)  \DIFadd{>\pi_{0}}\left(  \DIFadd{C_{0}^{s};C_{0}^{a}}\right)  \DIFadd{$. To
+determine whether a bank will switch status, we need to know if $f}\left(
+\DIFadd{\pi_{0}}\left(  \DIFadd{C_{0}^{n};C_{0}^{a}}\right)  \right)  \DIFadd{\geq f}\left(  \DIFadd{\pi
+_{0}}\left(  \DIFadd{C_{0}^{s};C_{0}^{a}}\right)  \right)  \DIFadd{$. Monopolist faces tradeoff
+from nonprofit: higher raw profits (commitment problem partly solved) but
+lower enjoyment of them.
+
+It is instructive to discuss when a firm will encounter conditions conducive
+to adopting non-profit status. Administrative costs ($\kappa$) should not be
+so high that even for-profits wouldn't renegotiate. The consumer should be
+sufficiently hyperbolic ($\beta$ should be low enough) that renegotiation is a
+tempting possibility. On the other hand, the consumer should not be so
+hyperbolic that even a nonprofit would like to renegotiate.
+
+The difference between effective profits as a non-profit and actual profits as
+a for-profit can be written as the following:
+\[
+n\left[  \pi_{0}\left(  c_{o}^{non},c_{1}^{non},c_{2}^{non}\right)  -\pi
+_{0}\left(  c_{0}^{rp},c_{1}^{rp},c_{2}^{rp}\right)  \right]  -\left(
+1-n\right)  \left[  \pi_{0}\left(  c_{0}^{rp},c_{1}^{rp},c_{2}^{rp}\right)
+\right]
+\]
+The first term represents the gain from higher raw profits and the second term
+represents the loss from discounting the original, for-profit, firm's profits.
+In this case, the first term dominates if the potential gain in raw profits is
+high, or if the for-profit firm's contract yielded low profits in the first place.
+
+And finally, the nonprofit discount function $f$ should be severe enough to
+deter a nonprofit from renegotiating, but not so severe that it deters a firm
+from becoming a nonprofit. We are agnostic about the specific functional form
+of $f$. However, we can consider two possible cases. First, suppose $f$ is
+strictly concave--only mildly restrictive at low levels of profits and
+increasingly restrictive as profits grow. Such functions serve as a plausible
+description of the legal restrictions faced by non-profits. In such a case, we
+can clearly see how non-profit status could be attractive to the firm: the
+legal restrictions leave the enjoyment of profits from the contract relatively
+unaffected while significantly loosening the no-renegotiation constraint
+(since renegotiation would raise profits further, and since $f$ is concave,
+these additional profits would count for little).
+
+\subsubsection{Linear Restriction on Nonprofits}
+
+To derive explicit conditions under which a firm will choose to operate as a
+nonprofit, let's consider a formulation similar to Glaeser and Shleifer
+(2001). Suppose $f}\left(  \DIFadd{\pi_{0}}\right)  \DIFadd{=\alpha\pi_{0}$, where $}\DIFaddend 0\DIFdelbegin \DIFdel{, so is
+willing to accept a less advantageous loan; (b)in period }\DIFdelend \DIFaddbegin \DIFadd{<\alpha<}\DIFaddend 1\DIFdelbegin \DIFdel{, if the contract
+was written to satisfy $g\left( \tilde{\beta};m_{1},m_{2}\right) =c$ (which
+would be the case if $c$ was sufficiently small), the bank will renegotiate
+the contract. The relationship between sophistication and outcome is not
+continuous: under certain conditions, the moment there is the slightest
+naivete, we observe renegotiation, resulting in a discrete drop in welfare.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsection{\DIFdel{Period 1 Contracts}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Suppose that the threat of signing a contract with the same bank in period }\DIFdelend \DIFaddbegin \DIFadd{$.
+Glaeser and Shleifer (2001) adopt this approach suggesting that it captures
+the idea that though legally barred from paying themselves cash profits, the
+principals of a non-profit can capture profits but only imperfectly via the
+consumption of perquisites\ (or `dividends in kind') valued as $\alpha\pi.$ We
+will interpret $\alpha$ as an index of `non-profitness.' \ A lower $\alpha$
+indicates a more strictly regulated non-profit and/or a firm that because of
+its ownership/governance structure places the welfare of its clients ahead of
+that of its `owners.'
+
+When $\alpha=}\DIFaddend 1\DIFdelbegin \DIFdel{remains. So, if you don't sign a contract in period 0, you might end up
+signing one in period }\DIFdelend \DIFaddbegin \DIFadd{$ the problem the firm is a pure for-profit firm as previously
+analyzed. \ The only change to contracts for a non-profit of type $\alpha<}\DIFaddend 1\DIFdelbegin \DIFdel{just to tilt consumption.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{This changes the participation constraint--it gets looser. This loosening of
+the PC does not depend on $y_{0}$. The bank's profits get bigger.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{But this also changes the bank's considerations about whether to turn
+nonprofit. If it were to not offer a contract today, it could offer one the
+next period and make profits. So, in period }\DIFdelend \DIFaddbegin \DIFadd{$
+comes from the relaxation of the no-renegotiation constraint which by
+assumption occurs whenever $\kappa(\alpha)>}\overline{\kappa}\DIFadd{$ when. Because
+the non-profit can more credibly commit to not renegotiate contracts that
+offer greater consumption smoothing in periods 1 and 2, period 0 becomes more
+willing to transfer surplus to the firm. \ Let the resulting contract offered
+by a non-profit of type $\alpha$ be denoted $}\left(  \DIFadd{c_{o}^{\alpha}%DIF > 
+,c_{1}^{\alpha},c_{2}^{\alpha}}\right)  \DIFadd{$ and the firm's realized net profits
+or benefits $\Pi(\alpha)=$ $\alpha\cdot\pi_{0}}\left(  \DIFadd{c_{o}^{\alpha}%DIF > 
+,c_{1}^{\alpha},c_{2}^{\alpha}}\right)  \DIFadd{.$
+
+Whether a firm would choose to convert to non-profit status of type $\alpha$
+will depend on whether the residual surplus (perquisites)\ that its principals
+can capture from greater commitment possibilities match or exceed what it
+could earn offering renegotiation proof contracts as a pure for-profit.
+
+\begin{proposition}
+A bank will operate as a nonprofit if the consumer's income spread, $\sigma$,
+is sufficiently close to $\sigma^{mp-l}$ or $\sigma^{mp-s}$.
+\end{proposition}
+
+At $\sigma=\sigma^{mp-l}$ or $\sigma=\sigma^{mp-s}}\,\DIFadd{$, the for-profit bank
+makes zero profits. But the nonprofit makes positive profits. So the bank will
+operate as a nonprofit. Using continuity of profits in $y_{0}$, we know that
+the bank will choose to operate as a nonprofit for a window around both
+$}\bar{y}\DIFadd{_{0}^{\prime}$ and $}\bar{y}\DIFadd{_{0}^{\prime\prime}$.
+
+[CRRA simulations.]
+
+In such a case, the consumer has been left no worse off than under a
+for-profit firm, and the firm is made better off. By solving the commitment
+problem, it is able to extract greater surplus from the consumer.
+
+\section{Competition [incorporate new notation; savings]}
+
+Consider a competitive banking environment where banks must compete to offer
+lending contracts to the consumer. In this setting, all surplus is returned to
+the consumer and equilibrium contracts will satisfy a zero-profit condition
+for the banks. As under monopoly, we first describe equilibrium contracts when
+renegotiation is impossible. We then analyze firms' decisions to operate as
+nonprofits, which will depend on the exclusivity of contracts.
+
+
+
+
+ 
+\subsubsection{MOVED FROM ABOVE Section on borrowing or saving (change/move)}
+
+
+\begin{proposition}
+There is some cut-off level of income spread, $\sigma^{mf}\in}\left(  \DIFadd{0,}\bar
+{\DIFadd{y}}\right)  \DIFadd{$ that satisfies the following:
+
+\begin{enumerate}
+\item If $\sigma<\sigma^{mf}$, a loan contract is offered. If $\sigma
+>\sigma^{mf}$, a savings contract is offered. If $\sigma=\sigma^{mf}$, no
+contract is offered.
+
+\item Profits are continuous in $\sigma$, and rising in the distance from
+$\sigma^{mf}$.
+\end{enumerate}
+\end{proposition}
+
+[Prove proposition, discuss comparative statics over $\sigma$ (how commitment
+problems arise in both savings and loan), relate to movement in Figure 1].
+\subsubsection{Renegotiation and $\beta $ (moved)} 
+
+
+
+
+\subsection{Benchmark Contract}
+
+Consider a competitive banking environment with zero profits in equilibrium.
+We assume that contracts are exclusive (a consumer can interact with only one
+bank for the life of a loan) and that banks can commit to not renegotiate.
+Firms will return all surplus to the consumer, and the equilibrium contract is
+given by:%
+\begin{align*}
+&  \max_{c_{0},c_{1},c_{2}}U_{t}\left(  c_{0},c_{1},c_{2}\right) \\
+&  \text{s}\text{.t}\text{.}\text{ }\pi_{0}\left(  c_{0},c_{1},c_{2}\right)
+\geq0
+\end{align*}
+
+
+The first-order conditions are same as under monopoly. Combined with the
+zero-profit constraint, yield the equilibrium contract:%
+\[
+\hat{c}_{0},\hat{c}_{1},\hat{c}_{2}%
+\]
+
+
+We continue to have $}\hat{c}\DIFadd{_{1}=}\hat{c}\DIFadd{_{2}\equiv}\hat{c}\DIFadd{_{f}$.
+
+This can be compared to the monopolist's contract along two dimensions.
+Observe the following comparison between the monopolist's maximization problem
+and the competitive equilibrium.%
+
+%TCIMACRO{\FRAME{ftbpFU}{5.2425in}{3.6694in}{0pt}{\Qcb{The benchmark contract
+%under competition compared to the benchmark contract under monopoly.}}%
+%{}{nkfvlg02.wmf}{\special{ language "Scientific Word";  type "GRAPHIC";
+%maintain-aspect-ratio TRUE;  display "USEDEF";  valid_file "F";
+%width 5.2425in;  height 3.6694in;  depth 0pt;  original-width 5.1863in;
+%original-height 3.6218in;  cropleft "0";  croptop "1";  cropright "1";
+%cropbottom "0";  filename 'NKFVLG02.wmf';file-properties "XNPEU";}} }%
+%BeginExpansion
+\begin{figure}[ptb]%
+\centering
+\includegraphics[
+natheight=3.621800in,
+natwidth=5.186300in,
+height=3.6694in,
+width=5.2425in
+]%
+{NKFVLG02.wmf}%
+\caption{The benchmark contract under competition compared to the benchmark
+contract under monopoly.}%
+\end{figure}
+%EndExpansion
+
+
+The competitive contract must satisfy the zero-profit constraint and the
+first-order conditions, while the monopolist's contract must satisfy the
+borrower's participation constraint and the first-order condition. Since the
+curve associated with the first-order condition is downward sloping, the
+competitive contract has a higher loan size and smaller repayment. The arrow
+in Figure 5 indicates the direction in which the first-order condition moves
+as $\beta$ drops. This will result in a new contract at a higher point of
+intersection with the zero-profit constraint, which implies a larger loan size
+and higher repayment. This gives us the following proposition.
+
+\begin{proposition}
+(a)Relative to the profit-maximizing monopolist, the competitive equilibrium
+contract will have a larger loan size and smaller repayment. (b) As $\beta$
+drops, loan size and repayments will rise.
+\end{proposition}
+
+\subsection{Firms as Non-Profit}
+
+\subsubsection{Exclusive Contracts}
+
+Now we consider competitive markets where contracts are exclusive, but firms
+cannot commit to not renegotiate. For for-profit firms, the problem becomes:%
+
+\begin{align*}
+&  \max_{l,m_{1},m_{2}}u\left(  l\right)  +\beta\delta u\left(  y-m_{1}%
+\right)  +\beta\delta^{2}u\left(  y-m_{2}\right) \\
+&  \text{s}\text{.t}\text{.}\text{ }\pi\left(  l,m_{1},m_{2}\right)  \geq0\\
+&  g\left(  \beta;m_{1},m_{2}\right)  \leq c
+\end{align*}
+
+
+Let the resulting contract be denoted $}\left(  \tilde{c}\DIFadd{_{0},}\tilde{c}%DIF > 
+\DIFadd{_{1},}\tilde{c}\DIFadd{_{2}}\right)  \DIFadd{$.
+
+If the no-renegotiation constraint is binding, consumer welfare must be lower
+than when the firms can commit to not renegotiate. Now, firms face a potential
+incentive to switch to non-profit status. By loosening the second constraint,
+one firm deviating into nonprofit status can make positive profits. So, if the
+borrowers are sophisticated hyperbolics, in equilibrium all firms become
+nonprofit even if the borrowers are \textit{nearly} exponential.
+
+\begin{proposition}
+In a competitive banking market with exclusive contracts, if consumers are
+sophisticated hyperbolic discounters and $\kappa$ is small enough, all active
+firms will be nonprofits.
+\end{proposition}
+
+\begin{proof}
+\lbrack switch notation in proof] Assume $\kappa$ is small enought that the
+no-renegotiation constraint binds for the for-profit renegotiation-proof
+contract, $}\left(  \tilde{l}\DIFadd{,}\tilde{m}\DIFadd{_{1},}\tilde{m}\DIFadd{_{2}}\right)  \DIFadd{$. Suppose
+all firms are for-profit. There is some $\varepsilon_{1}$ and $\varepsilon
+_{2}$ satisfying $}\DIFaddend 0\DIFdelbegin \DIFdel{it offers a contract as long
+as the profits are higher than if it simply offered a period }\DIFdelend \DIFaddbegin \DIFadd{<\varepsilon_{2}<\varepsilon_{1}$ such that $u}\left(
+\tilde{l}\right)  \DIFadd{+\beta\delta u}\left(  \tilde{m}\DIFadd{_{1}-\varepsilon_{1}}\right)
+\DIFadd{+\beta\delta u}\left(  \tilde{m}\DIFadd{_{2}+\varepsilon_{2}}\right)  \DIFadd{=$ $u}\left(
+\tilde{l}\right)  \DIFadd{+\beta\delta u}\left(  \tilde{m}\DIFadd{_{1}}\right)  \DIFadd{+\beta\delta
+u}\left(  \tilde{m}\DIFadd{_{2}}\right)  \DIFadd{$ and $f}\left(  \DIFadd{\pi}\left(  \tilde{l}\DIFadd{,}\tilde
+{\DIFadd{m}}\DIFadd{_{1}-\varepsilon_{1},}\tilde{m}\DIFadd{_{2}-\varepsilon_{2}}\right)  \DIFadd{+g}\left(
+\DIFadd{\beta;}\tilde{m}\DIFadd{_{1}-\varepsilon_{1},}\tilde{m}\DIFadd{_{2}+\varepsilon_{2}}\right)
+\right)  \DIFadd{-f}\left(  \DIFadd{\pi}\left(  \tilde{l}\DIFadd{,}\tilde{m}\DIFadd{_{1},}\tilde{m}\DIFadd{_{2}}\right)
+\right)  \DIFadd{\leq c$. So, any firm can make positive profits by operating as a
+non-profit. Therefore, in equilibrium, consumers will borrow only from
+non-profit firms.
+\end{proof}
+
+In this case, the specific form of $f}\left(  \DIFadd{\pi}\right)  \DIFadd{$ does not matter
+because firms are making zero profits in equilibrium anyway.
+
+\subsubsection{Non-Exclusive Contracts}
+
+In the previous section, we had a setting with competition in period 0 but
+monopoly power in period 1. Now, assume period 1 monopoly power disappears.
+Firms can undercut each other in period 1. To analyze the case with
+sophisticated hyperbolic discounters, we first ask whether the renegotiation
+cost, $\kappa$, applies when a firm undercuts \textit{another} firm's
+contract. Suppose not. Then, we can see right away that it's impossible to
+sustain nonprofits. If there were nonprofits in equilibrium, any one firm
+could make positive profits by switching to for-profit status and undoing a
+rival bank's contract in period 1. Alternatively, assume that $c$ applies in
+the same way to undercutting as it does to renegotiation. Consider
+sophisticated hyperbolics. As each firm's market share goes down, it is more
+incentivized to be for-profit since the advantages of undercutting the other
+firm's contracts outweigh the benefits of promising one's own clients it will
+not renegotiate. As a result, equilibrium contracts will be determined by
+for-profit firms, and consumers will be offered lower commitment than from
+non-profit firms alone.
+
+\begin{proposition}
+In a competitive banking market with exclusive contracts, if consumers are
+sophisticated hyperbolic discounters, for-profits must exist in equilibrium.
+\end{proposition}
+
+\begin{proof}
+\lbrack switch notation in proof] (a) Suppose the renegotiation cost, $c$,
+does not apply when a bank offers a period 1 loan on another bank's contract.
+Firms will compete in period $}\DIFaddend 1\DIFdelbegin \DIFdel{contract.This means that the window where banks turn nonprofit in our model (the
+region where the for-profit's profits are near 0)gets smaller.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsection{\DIFdel{Other Forms of Governance}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{In addition it is also reasonable to imagine that a nonprofit firm might
+face greater pressure and scrutiny,internal or external,to consider the
+consumer's welfare cost of renegotiation. }%DIFDELCMD < \ %%%
+\DIFdel{The cost of renegotiation
+becomes $\kappa (\alpha )$ which we expect to be non-increasing in $\alpha $
+falling to $\kappa (\alpha )=\overline{\kappa }$ as $\alpha $ approaches 1.
+There are two implications of adopting nonprofit status then: lower
+enjoyment of profits and a lower incentive to renegotiate in period 1.
+}%DIFDELCMD < 
+
+%DIFDELCMD < [%%%
+\DIFdel{Objective function as weighted sum of welfare }%DIFDELCMD < \& %%%
+\DIFdel{profits}%DIFDELCMD < ]
+%DIFDELCMD < 
+
+%DIFDELCMD < [%%%
+\DIFdel{Social investors}%DIFDELCMD < ]
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsection{\DIFdel{Additional Considerations }%DIFDELCMD < [%%%
+\DIFdel{leave in or out}%DIFDELCMD < ]%%%
+}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < \begin{itemize}
+%DIFDELCMD < \item %%%
+\DIFdel{$\delta ,r$ play no role in the analysis. Easily discussed.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \item %%%
+\DIFdel{Extending the game to multiple periods: interesting,worth mentioning,but probably a difficult problem to solve out.}%DIFDELCMD < 
+
+%DIFDELCMD < \item %%%
+\DIFdel{General income streams: doesn't cause any problems. In fact,we could
+easily incorporate these into our general framework,but without much to be
+gained.
+}%DIFDELCMD < \end{itemize}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\section{\DIFdel{Conclusion}}
+%DIFAUXCMD
+\addtocounter{section}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < \begin{itemize}
+%DIFDELCMD < \item %%%
+\DIFdel{Formalized renegotiation problem (no naivete or asymmetric
+information) -- showed how the problem is addressed by lenders:
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{itemize}
+%DIFDELCMD < \item %%%
+\DIFdel{Monopoly: if nonprofit status is sufficiently but not too restrictive,firm will operate as nonprofit and provide better commitment.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \item %%%
+\DIFdel{Competition: As firms begin to compete,nonprofit survival (and,by
+extension,commitment) is robust if contracts are exclusive,but fragile if
+contracts are non-exclusive}\DIFdelend \DIFaddbegin \DIFadd{$ to satisfy $u^{\prime}}\left(  \DIFadd{1-n_{1}}\right)
+\DIFadd{=\beta u^{\prime}}\left(  \DIFadd{1-n_{2}}\right)  \DIFadd{$. Commitment that comes through
+nonprofit status becomes worthless. In equilibrium, nonprofits and for-profits
+will offer identical contracts.
+
+(b) Suppose $c$ does apply, and is small (no-renegotiation constraint binds):
+If all firms are nonprofit, an individual firm has a strict incentive to
+switch to for-profit status, and make profits in period 1. Therefore, there
+must be for-profits in equilibrium, and equilibrium contracts will be
+constrained by their presence.
+\end{proof}
+
+\section{Discussion and Extensions}
+
+\subsection{Naivete and Private Information}
+
+The problem of potential renegotiation applies to all hyperbolic discounters,
+but only the sophisticated fully anticipates it in period 0. The partially
+naive consumer underestimates the extent of the renegotiation, and the naif
+believes he will not give into the temptation to renegotiate.
+
+For exponential discounters and naifs, the bank is not hurt by an inability to
+commit to not renegotiate. In the case of the exponential discounter, this is
+because there is never an opportunity to renegotiate in a mutually beneficial
+manner. In the case of the naif, he \textit{believes} his future self will not
+have a future incentive to renegotiate. If $c$ is sufficiently small, he will
+be mistaken in this belief, and the bank will offer renegotiation. So, for a
+naive consumer, the bank is making additional profits on two margins: since
+there is no perceived renegotiation problem, he is willing to accept a
+contract that is more profitable for the bank up-front; subsequently,
+renegotiation generates additional profits for the bank.
+
+Finally, consider the partially naive agent with beliefs $}\tilde{\beta}\DIFadd{>\beta
+$: she will take insufficient precautions to prevent getting into situations
+where the bank will offer to renegotiate. As she gets more naive, her
+miscalculation worsens: (a) she gets more optimistic in period 0, so is
+willing to accept a less advantageous loan; (b) in period 1, if the contract
+was written to satisfy $g}\left(  \tilde{\beta}\DIFadd{;m_{1},m_{2}}\right)  \DIFadd{=c$ (which
+would be the case if $c$ was sufficiently small), the bank will renegotiate
+the contract. The relationship between sophistication and outcome is not
+continuous: under certain conditions, the moment there is the slightest
+naivete, we observe renegotiation, resulting in a discrete drop in welfare.
+
+\subsection{Period 1 Contracts}
+
+Suppose that the threat of signing a contract with the same bank in period 1
+remains. So, if you don't sign a contract in period 0, you might end up
+signing one in period 1 just to tilt consumption.
+
+This changes the participation constraint--it gets looser. This loosening of
+the PC does not depend on $y_{0}$. The bank's profits get bigger.
+
+But this also changes the bank's considerations about whether to turn
+nonprofit. If it were to not offer a contract today, it could offer one the
+next period and make profits. So, in period 0 it offers a contract as long as
+the profits are higher than if it simply offered a period 1 contract. This
+means that the window where banks turn nonprofit in our model (the region
+where the for-profit's profits are near 0) gets smaller.
+
+\subsection{Other Forms of Governance}
+
+In addition it is also reasonable to imagine that a nonprofit firm might face
+greater pressure and scrutiny, internal or external, to consider the
+consumer's welfare cost of renegotiation. \ The cost of renegotiation becomes
+$\kappa(\alpha)$ which we expect to be non-increasing in $\alpha$ falling to
+$\kappa(\alpha)=}\overline{\kappa}\DIFadd{$ as $\alpha$ approaches 1. There are two
+implications of adopting nonprofit status then: lower enjoyment of profits and
+a lower incentive to renegotiate in period 1.
+
+[Objective function as weighted sum of welfare \& profits]
+
+[Social investors]
+
+\subsection{Additional Considerations [leave in or out]}
+
+\begin{itemize}
+\item $\delta,r$ play no role in the analysis. Easily discussed.
+
+\item Extending the game to multiple periods: interesting, worth mentioning,
+but probably a difficult problem to solve out.
+
+\item General income streams: doesn't cause any problems. In fact, we could
+easily incorporate these into our general framework, but without much to be gained.
+\end{itemize}
+
+\section{Conclusion}
+
+\begin{itemize}
+\item Formalized renegotiation problem (no naivete or asymmetric information)
+-- showed how the problem is addressed by lenders:
+
+\begin{itemize}
+\item Monopoly: if nonprofit status is sufficiently but not too restrictive,
+firm will operate as nonprofit and provide better commitment.
+
+\item Competition: As firms begin to compete, nonprofit survival (and, by
+extension, commitment) is robust if contracts are exclusive, but fragile if
+contracts are non-exclusive.
+\end{itemize}
+
+\item Tying microfinance trends together: Initially nonprofit, more firms
+enter, switch to for-profits, consumer welfare drops.
+
+\item Extensions:
+
+\begin{itemize}
+\item Endogenize market structure (Eric's suggestion): Nonprofit monopolist
+leaves many unsatisfied consumers in period 1. This triggers for-profit entry.
+Under what conditions will this happen?
+
+\item Relate to savings and overdraft fees
+
+\item US mortgage crisis: collateral, risk, strategic default in this framework
+
+\item Heterogeneous types --%
+%TCIMACRO{\TEXTsymbol{>} }%
+%BeginExpansion
+$>$
+%EndExpansion
+separating equilibrium?
+
+\item Role of time horizon
+\end{itemize}
+\end{itemize}
+
+\bigskip
+
+The model presented above formalizes the renegotiation problem in the context
+of lending to sophisticated hyperbolic discounters. We show how non-profit
+banks can play a key role in alleviating the problem. For a monopolist, if
+nonprofit status is sufficiently but not too restrictive, the firm will
+operate as nonprofit. As firms begin to compete, nonprofit survival is robust
+if contracts are exclusive, but fragile if contracts are non-exclusive. This
+suggests that, in banking markets that were once served by monopolists, entry
+of additional banks will serve to both erode commitment and encourage the
+growth of for-profits.
+
+While the restrictive assumptions of the model serve to illuminate a number of
+points, they also suggest some natural extensions. In particular, it would be
+instructive to solve for equilibrium under heterogeneous borrowers with
+private information, and in richer environments with uncertainty and strategic
+default. These will be addressed in future work.
+
+\subsection{Stuff moved from earlier in the text}
+
+[**** FROM\ BANKS section:\ A short note on the other assumptions is in order.
+While we explicitly set up our problem as one of borrowing/saving and
+re-financing, the analysis and insights apply more broadly to questions about
+the role of firm ownership and governance structure choices in any setting
+where dynamically inconsistent preferences could lead to a contract
+renegotiation problem. We choose to embed this problem in a borrowing
+framework for two reasons: first, we believe this model can shed light on some
+"real-world" stylized facts related to household debt; and second, we derive
+some interesting implications for the specific shapes of equilibrium loan
+contracts which would have remained hidden in a more general analysis. ****]
+
+\section{Appendix: Closed forms forms for CRRA Utility}
+
+\appendix
+
+
+\paragraph{Monopoly full commitment}
+
+A monopolist chooses $c_{0},c_{1}.}\DIFaddend .\DIFdelbegin %DIFDELCMD < \end{itemize}
+%DIFDELCMD < 
+
+%DIFDELCMD < \item %%%
+\DIFdel{Tying microfinance trends together: Initially nonprofit,more firms
+enter,switch to for-profits,consumer welfare drops.
+}%DIFDELCMD < 
+
+%DIFDELCMD < \item %%%
+\DIFdel{Extensions:
+}%DIFDELCMD < 
+
+%DIFDELCMD < \begin{itemize}
+%DIFDELCMD < \item %%%
+\DIFdel{Endogenize market structure (Eric's suggestion): Nonprofit monopolist
+leaves many unsatisfied consumers in period 1. This triggers for-profit
+entry. Under what conditions will this happen?
+}%DIFDELCMD < 
+
+%DIFDELCMD < \item %%%
+\DIFdel{Relate to savings and overdraft fees
+}%DIFDELCMD < 
+
+%DIFDELCMD < \item %%%
+\DIFdel{US mortgage crisis: collateral,risk,strategic default in this
+framework
+}%DIFDELCMD < 
+
+%DIFDELCMD < \item %%%
+\DIFdel{Heterogeneous types --}%DIFDELCMD < \TEXTsymbol{>} %%%
+\DIFdel{separating equilibrium?
+}%DIFDELCMD < 
+
+%DIFDELCMD < \item %%%
+\DIFdel{Role of time horizon
+}%DIFDELCMD < \end{itemize}
+%DIFDELCMD < \end{itemize}
+%DIFDELCMD < 
+
+%DIFDELCMD < \bigskip
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The model presented above formalizes the renegotiation problem in the
+context of lending to sophisticated hyperbolic discounters.We show how
+non-profit banks can play a key role in alleviating the problem.For a
+monopolist, if nonprofit status is sufficiently but not too restrictive, the
+firm will operate as nonprofit.As firms begin to compete, nonprofit
+survival is robust if contracts are exclusive, but fragile if contracts are
+non-exclusive.This suggests that, in banking markets that were once served
+by monopolists, entry of additional banks will serve to both erode
+commitment and encourage the growth of for-profits.}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{While the restrictive assumptions of the model serve to illuminate a number
+of points, they also suggest some natural extensions.In particular, it
+would be instructive to solve for equilibrium under heterogeneous borrowers
+with private information, and in richer environments with uncertainty and
+strategic default.These will be addressed in future work.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\section{\DIFdel{Appendix: Closed forms forms for CRRA Utility}}
+%DIFAUXCMD
+\addtocounter{section}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < \appendix
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\paragraph{\DIFdel{Monopoly full commitment}}
+%DIFAUXCMD
+\addtocounter{paragraph}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{A monopolist chooses $c_{0},c_{1}...c_{T}$ to maximize (\ref{PVm})subject
+to borrower's participation constraint
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\begin{displaymath}\DIFdel{
+u(c_{0})+\beta \dsum\limits_{t=1}^{T}\delta ^{t}u\left( c_{t}\right) \geq 
+\overline{u}(y)=u(y_{0})+\beta \dsum\limits_{t=1}^{T}\delta ^{t}u\left(
+y_{t}\right)  \label{BPC0}
+}\end{displaymath}%DIFAUXCMD
+\DIFdelend \DIFaddbegin \DIFadd{.c_{T}$ to maximize (\ref{PVm}) subject to
+borrower's participation constraint%
+
+\begin{equation}
+u(c_{0})+\beta%
+%TCIMACRO{\dsum \limits_{t=1}^{T}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{t=1}^{T}}
+%EndExpansion
+\delta^{t}u\left(  c_{t}\right)  \geq\overline{u}(y)=u(y_{0})+\beta%
+%TCIMACRO{\dsum \limits_{t=1}^{T}}%
+%BeginExpansion
+{\displaystyle\sum\limits_{t=1}^{T}}
+%EndExpansion
+\delta^{t}u\left(  y_{t}\right)  \label{BPC0}%
+\end{equation}
+First order necessary conditions
+\[
+1/\lambda=u^{\prime}(c_{o})=\beta\delta(1+r)u^{\prime}(c_{1})=...=\beta
+\delta^{T}(1+r)^{T}u^{\prime}(c_{T})
+\]
+which if \frame{$\delta=1/(1+r)$} implies that at an optimum $c_{0}}\DIFaddend %
+\DIFdelbegin \DIFdel{First order necessary conditions 
+}\begin{displaymath}\DIFdel{
+1/\lambda =u^{\prime }(c_{o})=\beta \delta (1+r)u^{\prime }(c_{1})=...=\beta
+\delta ^{T}(1+r)^{T}u^{\prime }(c_{T})
+}\end{displaymath}%DIFAUXCMD
+\DIFdelend \DIFaddbegin \DIFadd{=c_{1}=...=c_{T}=}\overline{c}\DIFadd{.$ \ For CRRA utility $u(c)=\frac{c^{1-\rho}%
+}{1-\rho}$ \ we have $u^{\prime}(c)=c^{-\rho}$ and hence $c_{0}^{-\rho}}\DIFaddend %
+\DIFdelbegin \DIFdel{which if }%DIFDELCMD < \frame{$\delta =1/(1+r)$} %%%
+\DIFdel{implies that at an optimum $%
+c_{0}=c_{1}=...=c_{T}=\overline{c}.$ }%DIFDELCMD < \ %%%
+\DIFdel{For CRRA utility $u(c)=\frac{%
+c^{1-\rho }}{1-\rho }$ }%DIFDELCMD < \ %%%
+\DIFdel{we have $u^{\prime }(c)=c^{-\rho }$ and hence $%
+c_{0}^{-\rho }=\beta \delta (1+r)\overline{c}^{-\rho }$ so 
+}\begin{displaymath}\DIFdel{
+\overline{c}=\beta ^{\frac{1}{\rho }}c_{0}
+}\end{displaymath}
+%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{The borrowers participation constraint (\ref{BPC0})can then be rewritten to
+find:%DIF < 
+}\begin{align*}\DIFdel{
+u(c_{0})+\beta \Lambda (T)u(\overline{c}) }&\DIFdel{=}&\DIFdel{\overline{u}\text{ \ \ \ \ \
+where \ \ }\Lambda (T)=\left( \frac{\delta -\delta ^{T+1}}{1-\delta }\right)
+}\\
+\DIFdel{\text{from \ }\Lambda (T) }&\DIFdel{=}&\DIFdel{(\delta +\delta ^{2}+...+\delta ^{T})=\left( 
+\frac{1-\delta ^{T+1}}{1-\delta }-1\right) }\\
+\DIFdel{u(c_{0})+\beta \Lambda (T)u(\overline{c}) }&\DIFdel{=}&\DIFdel{\overline{u} }\\
+\DIFdel{u(c_{0})+\beta \Lambda (T)\beta ^{\frac{1-\rho }{\rho }}u(c_{0}) }&\DIFdel{=}&%DIF < 
+\DIFdel{\overline{u} }\\
+&&\DIFdel{\frame{$c_{0}=\overline{u}(1-\rho )^{\frac{1}{1-\rho }}\cdot \frac{1}{%
+\left( 1+\beta ^{\frac{1}{\rho }}\left( \frac{\delta -\delta ^{T+1}}{%
+1-\delta }\right) \right) ^{\frac{1}{1-\rho }}}$}\text{ }
+}\end{align*}%DIFAUXCMD
+%DIF < 
+\DIFdel{In the three period ($T=2)$ case 
+}\begin{displaymath}\DIFdel{
+c_{0}=\left[ \overline{u}(1-\rho )\right] ^{\frac{1}{1-\rho }}\cdot \frac{1}{%
+(1+\beta ^{\frac{1}{\rho }}\left( \delta +\delta ^{2}\right) )^{\frac{1}{%
+1-\rho }}}
+}\end{displaymath}
+%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{NOTE that non-monotonic in $\beta $
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsection{\DIFdel{Apendix: additional results}}
+%DIFAUXCMD
+\addtocounter{subsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\subsubsection{\DIFdel{The Role of $\protect\beta $ }%DIFDELCMD < [%%%
+\DIFdel{JHC: move to later}%DIFDELCMD < ]%%%
+}
+%DIFAUXCMD
+\addtocounter{subsubsection}{-1}%DIFAUXCMD
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{As an interesting relevant side note that there is no clearly monotonic
+relationship between loan size and the consumer's measure of present bias $%
+\beta $. As $\beta $ drops from }\DIFdelend \DIFaddbegin \DIFadd{=\beta\delta(}\DIFaddend 1\DIFdelbegin \DIFdel{, two things happen: the consumer becomes
+willing to accept a smaller loan for any given repayment (participation
+constraint shifts down)but also becomes willing to pay more for larger
+loans than before (first-order condition rotates down)}\DIFdelend \DIFaddbegin \DIFadd{+r)}\overline{c}\DIFadd{^{-\rho}$ so
+\[
+\overline{c}=\beta^{\frac{1}{\rho}}c_{0}%
+\]
+
+
+The borrowers participation constraint (\ref{BPC0}) can then be rewritten to
+find:%
+\begin{align*}
+u(c_{0})+\beta\Lambda(T)u(\overline{c})  &  =\overline{u}\text{
+\ \ \ \ \ where \ \ }\Lambda(T)=\left(  \frac{\delta-\delta^{T+1}}{1-\delta
+}\right) \\
+\text{from \ }\Lambda(T)  &  =(\delta+\delta^{2}+...+\delta^{T})=\left(
+\frac{1-\delta^{T+1}}{1-\delta}-1\right) \\
+u(c_{0})+\beta\Lambda(T)u(\overline{c})  &  =\overline{u}\\
+u(c_{0})+\beta\Lambda(T)\beta^{\frac{1-\rho}{\rho}}u(c_{0})  &  =\overline
+{u}\\
+&  \frame{$c_0=}\overline{u}\DIFadd{(1-\rho)^\frac{1}{1-\rho}\cdot\frac{1}{\left(
+1+\beta^\frac{1}{\rho}\left(  \frac{\delta-\delta^T+1}{1-\delta}\right)
+\right)  ^\frac{1}{1-\rho}}$}\text{ }%
+\end{align*}
+In the three period ($T=2)$ case
+\[
+c_{0}=\left[  \overline{u}(1-\rho)\right]  ^{\frac{1}{1-\rho}}\cdot\frac
+{1}{(1+\beta^{\frac{1}{\rho}}\left(  \delta+\delta^{2}\right)  )^{\frac
+{1}{1-\rho}}}%
+\]
+
+
+NOTE that non-monotonic in $\beta$
+
+
+\subsubsection{The Role of $\beta$}
+
+As an interesting relevant aside note that there is no clearly monotonic
+relationship between loan size and the consumer's measure of present bias
+$\beta$. As $\beta$ drops from 1, two things happen: the consumer becomes
+willing to accept a smaller loan for any given repayment (participation
+constraint shifts down) but also becomes willing to pay more for larger loans
+than before (first-order condition rotates down).
+
+Figure 1 plots a representative equilibrium solution (intersection of the
+first-order condition and participation constraint) for $\beta=1$. The arrows
+indicate how the constraints would shift as $\beta$ drops, or the consumer
+becomes more present-biased. The borrower's participation constraint shifts
+down--as the consumer cares less about the future, he is willing to sacrifice
+more future consumption for a given loan today. The first-order condition
+rotates counterclockwise--for any consumption in the future, the consumer must
+receive a greater loan today to equalize discounted marginal utilities as
+$\beta$ drops.
+
+Since both constraints shift down relative to the initial equilibrium with
+$\beta=1$, $c_{1}^{mf}$ and $c_{2}^{mf}$ must unambiguously fall at a the new
+intersection as $\beta$ drops. On the other hand, $}\bar{c}\DIFadd{_{0}$ is not
+necessarily monotonic in $\beta$. As $\beta$ drops, the consumer is initially
+willing to pay substantially for slight increases in the loan size. As $\beta$
+continues to drop, repayment becomes less salient, so the bank can generate
+higher profits by lowering the loan size while continuing to raise repayment
+amounts. When facing a monopolist, hyperbolic discounters don't "over-borrow"
+in the obvious sense.
+
+\begin{figure}
+        \caption{A simple EMA plot.\label{fig:ema1}}
+        \centering
+        \input{ema.pgf}
+    \end{figure}
+
+CRRA example:%
+
+%TCIMACRO{\FRAME{dtbpFU}{2.543in}{1.6897in}{0pt}{\Qcb{Plotted: $l$ as a
+%function of $\beta}\,\DIFadd{$. Dotted line: $\delta=.9$. Solid line: $\delta=.5$. In
+%both cases, as $\beta$ gets very small, bank can take from the future without
+%giving much to the present. But for high $\delta$, initially $l$ rises as
+%$\beta$ drops.}}{}{Figure}{\special{ language "Scientific Word";
+%type "GRAPHIC";  maintain-aspect-ratio TRUE;  display "USEDEF";
+%valid_file "T";  width 2.543in;  height 1.6897in;  depth 0pt;
+%original-width 4.478in;  original-height 2.968in;  cropleft "0";
+%croptop "1";  cropright "1";  cropbottom "0";
+%tempfilename 'NKR6MI01.wmf';tempfile-properties "XNPEUR";}} }%
+%BeginExpansion
+\begin{center}
+\includegraphics[
+natheight=2.968000in,
+natwidth=4.478000in,
+height=1.6897in,
+width=2.543in
+]%
+{NKR6MI01.wmf}%
+\\
+Plotted: $l$ as a function of $\beta}\,\DIFadd{$. Dotted line: $\delta=.9$. Solid line:
+$\delta=.5$. In both cases, as $\beta$ gets very small, bank can take from the
+future without giving much to the present. But for high $\delta$, initially
+$l$ rises as $\beta$ drops}\DIFaddend .
+\DIFaddbegin \end{center}
+%DIF > EndExpansion
+\DIFaddend 
+
+
+\DIFdelbegin \DIFdel{Figure 1 plots a representative equilibrium solution (intersection of the
+first-order condition and participation constraint)for $\beta =1$. The
+arrows indicate how the constraints would shift as $\beta $ drops, or the
+consumer becomes more present-biased.
+The borrower's participation
+constraint shifts down--as the consumer cares less about the future, he is
+willing to sacrifice more future consumption for a given loan today. The
+first-order condition rotates counterclockwise--for any consumption in the
+future, the consumer must receive a greater loan today to equalize
+discounted marginal utilities as $\beta $ drops.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{Since both constraints shift down relative to the initial equilibrium with $%
+\beta =1$, $c_{1}^{mf}$ and $c_{2}^{mf}$ must unambiguously fall at a the
+new intersection as $\beta $ drops. On the other hand, $\bar{c}_{0}$ is not
+necessarily monotonic in $\beta $. As $\beta $ drops, the consumer is
+initially willing to pay substantially for slight increases in the loan
+size. As $\beta $ continues to drop, repayment becomes less salient, so the
+bank can generate higher profits by lowering the loan size while continuing
+to raise repayment amounts. When facing a monopolist, hyperbolic discounters
+don't "over-borrow" in the obvious sense.
+}%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdel{CRRA example:
+}%DIFDELCMD < 
+
+%DIFDELCMD < \FRAME{dtbpFU}{2.543in}{1.6897in}{0pt}{\Qcb{Plotted: $l$ as a function of $%
+%DIFDELCMD < \protect\beta \,$. Dotted line: $\protect\delta =.9$. Solid line: $\protect%
+%DIFDELCMD < \delta =.5$. In both cases, as $\protect\beta $ gets very small, bank can
+%DIFDELCMD < take from the future without giving much to the present. But for high $%
+%DIFDELCMD < \protect\delta $, initially $l$ rises as $\protect\beta $ drops.}}{}{Figure}{%
+%DIFDELCMD < \special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+%DIFDELCMD < TRUE;display "USEDEF";valid_file "T";width 2.543in;height 1.6897in;depth
+%DIFDELCMD < 0pt;original-width 4.478in;original-height 2.968in;cropleft "0";croptop
+%DIFDELCMD < "1";cropright "1";cropbottom "0";tempfilename
+%DIFDELCMD < 'NKR6MI01.wmf';tempfile-properties "XNPEUR";}}
+%DIFDELCMD < 
+
+%DIFDELCMD < %%%
+\DIFdelend \section{Bibliography}
+
+\begin{thebibliography}{99}                                                                                               \DIFdelbegin %DIFDELCMD < \bibitem{Armstrong12} %%%
+\DIFdelend %DIF > 
+\DIFaddbegin 
+
+
+\bibitem {\DIFadd{Armstrong12}}\DIFaddend Armstrong, Mark and John Vickers. 2012.
+\textquotedblleft Consumer Protection and Contingent
+Charges.\textquotedblright\ \textit{Journal of Economic Literature}, 50(2), 477-93.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{Ashraf&etal97} %%%
+\DIFdel{Ashraf}\DIFdelend \DIFaddbegin \bibitem {\DIFadd{Ashraf}&\DIFadd{etal97}}\DIFadd{Ashraf}\DIFaddend , Nava, Dean S. Karlan, and Wesley Yin. 2006.
+\textquotedblleft Tying Odysseus to the Mast: Evidence from a Commitment
+Savings Product in the Philippines.\textquotedblright\ \textit{Quarterly
+Journal of Economics,} 121(2): 635-672.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{Banerjee&Duflo11} %%%
+\DIFdel{Banerjee}\DIFdelend \DIFaddbegin \bibitem {\DIFadd{Banerjee}&\DIFadd{Duflo11}}\DIFadd{Banerjee}\DIFaddend , Abhijit and Esther Duflo. 2011.
+\emph{%DIF < 
+Poor Economics}. New York: PublicAffairs.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{Basu11} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{Basu11}}\DIFaddend Basu, Karna. 2011. \textquotedblleft Hyperbolic Discounting
+and the Sustainability of Rotational Savings Arrangements.\textquotedblright%DIF > 
+\ \textit{American Economic Journal: Microeconomics}, 3(4), 143-71.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{} %%%
+\DIFdelend \DIFaddbegin \bibitem {}\DIFaddend Basu, Karna. 2012. \textquotedblleft Commitment Savings in Informal
+Banking Markets.\textquotedblright\ Working Paper.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{BesleyG05} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{BesleyG05}}\DIFaddend Besley, Timothy and Maitreesh Ghatak. 2005.
+\textquotedblleft Competition and Incentives with Motivated
+Agents.\textquotedblright\ \textit{American Economic Review}, 95(3), 616-36.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{} %%%
+\DIFdelend \DIFaddbegin \bibitem {}\DIFaddend Bond, Philip; David K Musto and Bilge Yilmaz. 2009.
+\textquotedblleft Predatory Mortgage Lending.\textquotedblright%DIF > 
+\ \textit{%DIF < 
+Journal of Financial Economics}, 94(3), 412-27.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{Bryan&Karlan10} %%%
+\DIFdel{Bryan}\DIFdelend \DIFaddbegin \bibitem {\DIFadd{Bryan}&\DIFadd{Karlan10}}\DIFadd{Bryan}\DIFaddend , Gharad, Dean S. Karlan, and Scott Nelson.
+2010. \textquotedblleft Commitment Devices.\textquotedblright\ \textit{%DIF < 
+Annual
+Review of Economics}, 2, 671-698.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{Bubb12} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{Bubb12}}\DIFaddend Bubb, Ryan and Alex Kaufman. 2013. \textquotedblleft Consumer
+Biases and Firm Ownership.\textquotedblright\ \textit{Journal of Public
+Economics}, 105, 39-57.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{CarrilloD08} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{CarrilloD08}}\DIFaddend Carrillo, Juan D. and Mathias Dewatripont. 2008.
+\textquotedblleft Promises, Promises.\textquotedblright\ \textit{Economic
+Journal}, 118(531), 1453-73.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{ConningM11} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{ConningM11}}\DIFaddend Conning, Jonathan and Jonathan Morduch. 2011.
+\textquotedblleft Microfinance and Social Investment.\textquotedblright%DIF > 
+\ \textit{Annual Review of Financial Economics}, 3(1), forthcoming.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{} %%%
+\DIFdelend \DIFaddbegin \bibitem {}\DIFaddend Dellavigna, S. and U. Malmendier. 2004. \textquotedblleft Contract
+Design and Self-Control: Theory and Evidence." \textit{Quarterly Journal of
+Economics}, 119(2), 353.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{} %%%
+\DIFdelend \DIFaddbegin \bibitem {}\DIFaddend Demyanyk, Y. and O. Van Hemert. 2009. \textquotedblleft
+Understanding the Subprime Mortgage Crisis.\textquotedblright\ \textit{%DIF < 
+Review
+of Financial Studies}, 24(6), 1848-80.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{DewatripontT94} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{DewatripontT94}}\DIFaddend Dewatripont, M. and Jean Tirole. 1994. \textit{The
+Prudential Regulation of Banks}. Cambridge, Mass.: MIT Press.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{FischerG10} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{FischerG10}}\DIFaddend Fischer, Greg and Maitreesh Ghatak. 2010.
+\textquotedblleft Repayment Frequency in Microfinance Contracts with
+Present-Biased Borrowers.\textquotedblright\ Economic Organisation and Public
+Policy Discussion Papers Series, 21.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{GabaixL06} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{GabaixL06}}\DIFaddend Gabaix, X. and D. Laibson. 2006. \textquotedblleft
+Shrouded Attributes, Consumer Myopia, and Information Suppression in
+Competitive Markets.\textquotedblright\ \textit{Quarterly Journal of
+Economics}, 121(2), 505-40.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{GlaeserS01} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{GlaeserS01}}\DIFaddend Glaeser, Edward L. and Andrei Shleifer. 2001.
+\textquotedblleft Not-for-Profit Entrepreneurs,\textquotedblright%DIF > 
+\ \textit{%DIF < 
+Journal of Public Economics}, 99-115.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{Gottlieb08} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{Gottlieb08}}\DIFaddend Gottlieb, Daniel. 2008. \textquotedblleft Competition
+over Time-Inconsistent Consumers.\textquotedblright\ \textit{Journal of Public
+Economic Theory}, 10(4), 673-84.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{} %%%
+\DIFdelend \DIFaddbegin \bibitem {}\DIFaddend Gul, Faruk and Wolfgang Pesendorfer. 2001. \textquotedblleft
+Temptation and Self-Control.\textquotedblright\ \textit{Econometrica}, 69(6), 1403-35.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{} %%%
+\DIFdelend \DIFaddbegin \bibitem {}\DIFaddend Hansmann, Henry. 1996. \emph{The Ownership of Enterprise}.
+Cambridge and London: Harvard University Press, Belknap Press.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{} %%%
+\DIFdelend \DIFaddbegin \bibitem {}\DIFaddend Hansmann, Henry B. 1980. \textquotedblleft The Role of Nonprofit
+Enterprise.\textquotedblright\ \textit{Yale Law Journal}, 89(5), 835-901.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{Heidues&Koszegi10} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{Heidues}&\DIFadd{Koszegi10}}\DIFaddend Heidhues, Paul and Botond K\H{o}szegi. 2010.
+\textquotedblleft Exploiting Na\"{\i}vete About Self-Control in the Credit
+Market.\textquotedblright\ \textit{American Economic Review}, 100(5), 2279-303.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{Laibson97} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{Laibson97}}\DIFaddend Laibson, David. 1997. \textquotedblleft Golden Eggs and
+Hyperbolic Discounting.\textquotedblright\ \textit{The Quarterly Journal of
+Economics}, 112(2): 443-477.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{Mcintosh&Wydick05} %%%
+\DIFdel{Mcintosh}\DIFdelend \DIFaddbegin \bibitem {\DIFadd{Mcintosh}&\DIFadd{Wydick05}}\DIFadd{Mcintosh}\DIFaddend , Craig and Bruce Wydick. 2005.
+\textquotedblleft Competition and Microfinance.\textquotedblright%DIF > 
+\ \textit{%DIF < 
+Journal of Development Economics}, 78(2), 271-98.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{Mendez97} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{Mendez97}}\DIFaddend Mendez, Rodrigue. 2012. \textquotedblleft Predatory
+Lending: A Model of Behavioral Pricing.\textquotedblright\ Paris School of
+Economics working paper.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{Nakajima11} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{Nakajima11}}\DIFaddend Nakajima, Makoto. 2011. \textquotedblleft Rising
+Indebtedness and Temptation: A Welfare Analysis," Federal Reserve Bank of Philadelphia.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{PDRabin99a} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{PDRabin99a}}\DIFaddend O'donoghue, Ted and Matthew Rabin. 1999.
+\textquotedblleft Doing It Now or Later.\textquotedblright\ \textit{American
+Economic Review}, 103-24.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{ODRabin99} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{ODRabin99}}\DIFaddend O'donoghue and Matthew Rabin. 1999. \textquotedblleft
+Incentives for Procrastinators.\textquotedblright\ \textit{Quarterly Journal
+of Economics}, 114(3), 796-816.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{ODRabin01} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{ODRabin01}}\DIFaddend O'donoghue, Ted and Matthew Rabin. 2001. \textquotedblleft
+Choice and Procrastination.\textquotedblright\ \textit{%DIF < 
+Quarterly Journal of
+Economics}, 116(1), 121-60.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{} %%%
+\DIFdelend \DIFaddbegin \bibitem {}\DIFaddend Rasmusen, Eric. 1988. \textquotedblleft Mutual Banks and Stock
+Banks.\textquotedblright\ \textit{Journal of Law and Economics}, 31(2), 395-421.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{} %%%
+\DIFdelend \DIFaddbegin \bibitem {}\DIFaddend Rhyne. 2010. \textquotedblleft On Microfinance: Who's to Blame for
+the Crisis in Andhra Pradesh?\textquotedblright\ \textit{The Huffington Post}.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{Spiegler11} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{Spiegler11}}\DIFaddend Spiegler, R. 2011. \emph{Bounded Rationality and
+Industrial Organization}. Oxford University Press.
+
+\DIFdelbegin %DIFDELCMD < \bibitem{Willis08} %%%
+\DIFdelend \DIFaddbegin \bibitem {\DIFadd{DewatripontTirole94}}\DIFadd{Dewatripont, M. and J. Tirole (1994). \emph{The
+prudential regulation of banks}. Cambridge, Mass., MIT Press.
+}
+
+\bibitem {\DIFadd{Willis08}}\DIFaddend Willis, Lauren E. 2008. \textquotedblleft Against Financial
+Literacy Education,\textquotedblright\ Paper 208, University of Pennsylvania
+Law School.
+\end{thebibliography}
+
+
+\end{document}
