@@ -1432,12 +1432,12 @@ framework for two reasons: first, we believe this model can shed light on some
 some interesting implications for the specific shapes of equilibrium loan
 contracts which would have remained hidden in a more general analysis. ****]}
 
-\section{Appendix: Closed forms solutions for CRRA Utility case}
+\section{Appendix}
 
 \appendix
 
-
-\paragraph{Monopoly full commitment}
+This appendix shows the work behind some of the derivations in the paper including finding closed form solutions for the CRRA utility case.
+\paragraph{\\ Monopoly full commitment}
 
 A monopolist chooses $c_{0},c_{1}, c_{2}$ to maximize the present value of profits subject to
 borrower's participation constraint \footnote{Where \(\overline{u}(y)
@@ -1465,7 +1465,7 @@ which allows us to solve
 \begin{align*}
 c^{mf}_{0}= \left[\frac{\overline{u}(1-\rho)}{[1+2\beta^{\frac{1}{\rho}}]}\right]^{\frac{1}{1-\rho}}
 \end{align*}
-In the competitive scenario the math is simpler. As  the objective and participation constraints are reversed, we substitute \(\overline{c}=\beta^{\frac{1}{\rho}}c_{0}\) into a binding zero profit condition to find:
+In the competitive scenario the objective and participation constraints are reversed, so we substitute \(\overline{c}=\beta^{\frac{1}{\rho}}c_{0}\) into a binding zero profit condition to find:
 \begin{align*}
 c_{0}+2\beta^{\frac{1}{\rho}}  c_0  =\overline y_ \\
 c^{cf}_{0}= \frac{\overline{y}}{[1+2\beta^{\frac{1}{\rho}} ]}
@@ -1473,9 +1473,9 @@ c^{cf}_{0}= \frac{\overline{y}}{[1+2\beta^{\frac{1}{\rho}} ]}
   
 \subsubsection{Renegotiation proof contracts}
 
-To solve for renegotiation-proof contracts we need to solve by backward induction. Having agreed to  contract \(\widehat{c}^{}\) in period zero, a client enters period 1 subgame with claims \((\widehat{c}_{1},\widehat{c}_{2}).\) Let's work with the competitive scenario first.
+Renegotiation-proof contracts are solved by backward induction. Consider first the competitive scenario. Having agreed to  contract \(\widehat{c}^{}\) in period zero, the customer and bank enter the period 1 sub-game. The contract calls for the bank to deliver remaining consumption claims \((\widehat{c}_{1},\widehat{c}_{2})\) in exchange for \((y_{1},y_2)\). Let's analyze how they would renegotiate the terms.
 
-The period one self maximizes their utility subject only to the  constraint that the terms of the renegotiated contract must be enough to allow the bank to cover their costs of renegotiation cost  \(\kappa\):  
+The period one self whose preferences now differ from his earlier period 0 self wants to maximize their present biased  utility subject to the  constraint that the terms of the renegotiated contract must be enough to allow the bank to cover their costs of renegotiation cost  \(\kappa.\) To fix ideas let's assume the customer retains the bargaining power -- perhaps because he can threaten to go to another firm if the bank does not offer his most preferred contract). The contract solves:  
 \begin{align*}
 \max_{c_{1}, c_{2}} u(c_{1})+\beta u(c_{2})\\
 c_{1}+ c_{2}   -\kappa\geq \widehat{c}_{1}+\widehat{c}_{2}
@@ -1486,21 +1486,27 @@ c_{1}+ c_2 = \widehat{c}_{1}+\widehat{c}_{2}-\kappa \\
  c^{r}_{1}=\left[ \frac{ \widehat{c}_{1}+\widehat{c_{2}}-\kappa}{1+\beta^{\frac{1}{\rho}}}\right]
 \end{align*}
 
-The sophisticated consumer anticipates this behavior between their future self and the bank and will adjust their initial contact choices in period zero to limit its possibility and impact.  The problem is like a Stackelberg leader problem where the period zero chooses contract terms anticipating  optimal reactions from a partnership between their later self and the bank.  The period zero consumer's strategy is to choose contract terms that keep that partnership from happening.
+The sophisticated consumer anticipates the renegotiation that could take place between the bank and his  future self and will adjust their contract choices  to limit its possibility and impact.  The problem is much like a Stackelberg-leader or mechanism design problem.  Since  renegotiation can only undo  choices period 0 self made (and also adds renegotiation costs) they will insist on a no-renegotiation constraint to keep any such renegotiation from happening.  The contract solves 
 \begin{align*}
 \max_{c_{0}, c_{1}, c_{2}} u(c_0)+\beta u(c_{1})+\beta u(c_{2})\\
 c_0+c_1+ c_2 \leq y_0+y_1+ y_2\\
-c_{1}+ c_{2}      +\kappa\leq \widehat{c}_{1}+\widehat{c}_{2}
+c^{r}_{1}+ c^{r}_{2}      +\kappa\leq c_{1}+c_{2}
 \end{align*}
-The consumer wants to place themselves on the highest possible iso-utility surface consistent with the constraints. The first constraint is the zero profit condition. If this were the only constrain to bind then the consumer could find a tangency with the bank's iso-profit plane and achieve the full-commitment contract.  The problem here is that that the sophisticate consumer can anticipate that such a contract would be undone by a deal between the period 1 self and the bank to renegotiate to a contract period 0 self would not have chosen.    To avoid this happening the period 0 self will choose a contract that satisfies a second  no-renegotiation constraint to limit the extra earnings  that the bank stands to gain from a renegotiation to something less than the bank's cost of renegotiating, so that the bank does not become a partner to any such deal. An equivalent way of stating this constraint is that the cost to the bank of the new contract
+The consumer wants to place themselves on the highest possible iso-utility surface consistent with the constraints. The first constraint is the zero profit condition. If this were the only constraint the consumer could choose the full-commitment contract at a tangency with the bank's zero profit plane.   But (for low \(\kappa\)) such a contract such as this would be renegotiated in period 1, lowering period 0's present discounted utility below plan. The optimal contract must  satisfy a  no-renegotiation constraint by making sure that any  earnings   the bank stands to gain from an offer of renegotiation fall below the bank's cost of renegotiating. This will make sure the bank will not become  partner to any such deal with his future self. This is the same as saying that  the cost to the bank of paying out any renegotiated contract
 plus renegotiation costs must exceed the costs of sticking to the period 0 contract. 
-  
 
-From the zero profit condition we can write \(c_{1 }+c_2=Ey-c_0\).  From before we also know the period 1 self will always be interested in renegotiating  contract
+Consider the simplest case where the renegotiation costs is \(\kappa=0. \) From the zero profit condition we can write \(c_{1 }+c_2=Ey-c_0\).  From before we also know the period 1 self will always be interested in renegotiating  contract
  \((\widehat{c}_1,\widehat{c}_2) \) to
 \((c^{r}_1(\widehat{c}_1,\widehat{c}),c^{r}_2(\widehat{c}_1,\widehat{c}_{2})) \) which for the CRRA case implies \(c^{r}_1 +c^{r}_2=(1+\beta^\frac{1}{\rho})c^{r}_1 \). Substituting this into
+\textbraceleft TO\ BE\ CONTINUED TO\ DERIVE\textbraceright
 
-As is clear from the expressions above the period 1 self's best response depends only on the present value of consumption   \(\widehat{c}_{1}+\widehat{c}_{2}\) that period 0 self sends forward, not its division. We
+\begin{align*}
+c^{cp}_{0}= \frac{\overline{y}}{[1+\beta^{\frac{1}{\rho}} (1+\beta^{\frac{1}{\rho}} )]}
+\end{align*}
+
+\textbraceleft NOTE  SIMILARITY\ TO\ full commitment contract... can show that will always consume more in period zero when renegotiation proof \textbraceright
+
+ As is clear from the expressions above the period 1 self's best response depends only on the present value of consumption   \(\widehat{c}_{1}+\widehat{c}_{2}\) that period 0 self sends forward, not its division. We
 can think of this in either one of two ways.  In one interpretation period zero self sends forward a flat consumption \(\widehat{c}_{1}=\widehat{c}_{2}\) profile knowing full well that that his later self will renegotiate with the bank to c^{r}_{1}(\widehat{c}_1,\widehat{c}_2),  c^{r}_{2}(\widehat{c}_1,\widehat{c}_2)\), understanding also that his period 1 self will have to compensate the bank for its renegotiation cost. Alternatively, we can think of the sophisticated period 0 consumer straight away offering a contract 
 \subsubsection{The Role of $\beta$}
 

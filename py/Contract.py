@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Jun 28 15:26:19 2015
-
 @author: Jonathan
 """
 import numpy as np
@@ -37,7 +36,11 @@ class Contract(object):
     def PVU(self,c,beta):         
         """discounted present utility value of any stream c"""        
         return  self.u(c[0]) + beta * sum((self.u(c[t])*self.delta**t  for t in range(1,len(c))) )
-           
+        
+    def negPVU(self,c):         
+        """negative present utility value of any stream c for minimization call"""        
+        return  -self.PVU(c, self.beta)
+        
     def profit(self,c,y):   
         """ present value of lender profits when exchanges c for y""" 
         return  self.PV(y)-self.PV(c)
@@ -134,47 +137,55 @@ class Competitive(Contract):                    # build on contract class
     def reneg(self,c):                 
         """ Renegotiated contract offered to period-1-self   
         c_0 is past but (c_1,c_2) now replaced by (cr_1, cr_2)"""
-        PV =  c[1] + c[2]
-        A  =  self.beta**(1/self.rho) 
+        PV =  c[1] + c[2] - self.kappa
+        A  =  self.beta**(1/self.rho)
         cr0 = c[0]
         cr1 = PV/(1+A)
-        cr2 = A*cr1
+        cr2 = A*cr1  
         return np.array([cr0,cr1,cr2])
     
     def reneg_proof_cons(self,c):                 
         """ the renegotiation-proof constraint gain from renegotiation 
         cannot exceed its cost kappa"""                                           
-        return  -(self.profit(self.reneg(c),self.y) 
-                  - self.profit(c,self.y) - self.kappa)     
+        return - (self.profit(self.reneg(c),self.y)
+                  -  self.profit(c,self.y) - self.kappa)     
     
     def participation_cons(self,c):
-        return self.PVU(c,self.beta)  - self.PVU(self.y,self.beta)
+        return self.PV(self.y)-self.PV(c)
         
     def reneg_proof(self):                           
-        """calculate renegotiation-proof contract 
+        """calculate renegotiation-proof contract that maxes 0-self's utility.
         supplies constraints to solver that bank can't profit too much
-        and period 0 borrower participation"""
-        
+        and period 0 borrower participation"""        
         cons = ({'type': 'ineq',                          
                  'fun' : self.reneg_proof_cons },    
                 {'type': 'ineq', 
                  'fun' : self.participation_cons })      
-        res=minimize(self.negprofit, self.guess, method='COBYLA',                     constraints = cons)
-        
+
+        res=minimize(self.negPVU, self.guess, method='COBYLA', 
+                     constraints = cons)       
+        print("WARNING: competitive reneg_proof not working yet")
         return res
 
 if __name__ == "__main__":
     print("Base contract")
-    c = Contract(beta = 0.7)
+    c = Contract(beta = 0.75)
     c.y = [60, 120, 120]
     c.print_params()
     
     print("Monopoly contract")
-    cM = Monopoly(beta = 0.7)
+    cM = Monopoly(beta = 0.75)
     cM.y = [60, 120, 120]
     cM.print_params()
     
     print("Competitive contract")
-    cC = Competitive(beta = 0.7)
+    cC = Competitive(beta = 0.75)
     cC.print_params()
+    
+    cCF = cC.fcommit()
+    cCr = cC.reneg(cCF)
+    cC.guess = cCr
+    cCRP = cC.reneg_proof().x
+    print(cCRP)
+    print("the competitive renegotiation proof is not working")
     

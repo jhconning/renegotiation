@@ -1,3 +1,7 @@
 *.rap
 *.ddf
 **/.ipynb_checkpoints
+*.log
+*.spyderworkspace
+*.spyderproject
+*.pyc
