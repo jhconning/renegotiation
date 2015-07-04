@@ -130,7 +130,7 @@ class Competitive(Contract):                    # build on contract class
         from closed form solution for CRRA"""
         B = self.beta**(1/self.rho)
         D = self.PV(self.y)
-        C = (1 + 2*A)
+        C = (1 + 2*B)
         c0 = D/C
         c1 = B * c0
         c2 = B * c0
@@ -139,7 +139,7 @@ class Competitive(Contract):                    # build on contract class
     def negPVU(self,c):
         """0 self negative present utility value of 
         any stream c for minimization call"""
-        return  - self.PVU(c, 1)
+        return  - self.PVU(c, self.beta)
 
     def reneg(self, c):
         """ Renegotiated contract offered to period-1-self
@@ -160,10 +160,12 @@ class Competitive(Contract):                    # build on contract class
         # return  -(self.profit(self.reneg(c),self.y)
         #           -  self.profit(c,self.y) - self.kappa)
         cr = self.reneg(c)[1:]   #last two periods
+       # print("opt {} r{:4.5f} o{:4.5f} PU:{:4.6f}"
+       #     .format(c, self.PVU(cr,self.beta),
+       #                self.PVU(c[1:],self.beta),-self.PVU(c,cC.beta)) )
         return  -(self.PVU(cr,self.beta)
                   -  self.PVU(c[1:],self.beta))
 
-        
 
     def participation_cons(self,c):
         return (self.PV(self.y) - self.PV(c))
@@ -221,7 +223,8 @@ if __name__ == "__main__":
     print("testing cCRP")
     print(cCRP.sum())
     print("reneg(cCRP):",cC.reneg(cCRP))
-    print("PVU(cCRP,1) :",cC.PVU(cCRP,1))
-    print("PVU(cC.cCRP,cC.beta) :",cC.PVU(cCRP,cC.beta))
-    print("PVU(cC.reneg(cCRP),cC.beta) :",cC.PVU(cC.reneg(cCRP),cC.beta))
-    print("PVU(cCRPa),1) :",cC.PVU(cCRPa,1))
+    print("PVU(cCRP) :",cC.PVU(cCRP,cC.beta))
+    
+    print("PVU(cCRPa) :",cC.PVU(cCRPa,cC.beta))
+    print("PVU(cCF) :",cC.PVU(cCF,cC.beta))
+    
