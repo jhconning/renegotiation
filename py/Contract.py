@@ -180,7 +180,6 @@ class Competitive(Contract):                    # build on contract class
                  'fun' : self.participation_cons })
         res=minimize(self.negPVU, self.guess, method='COBYLA',
                      constraints = cons)
-        print("WARNING: competitive reneg_proof not working yet")
         return res
 
 if __name__ == "__main__":
@@ -208,7 +207,7 @@ if __name__ == "__main__":
     cC.guess = cCr
     cCRP = cC.reneg_proof().x
     print(cCRP)
-    print("the competitive renegotiation proof is not working")
+     
 
     cMF = cM.fcommit()
     cMr = cM.reneg(cCF)

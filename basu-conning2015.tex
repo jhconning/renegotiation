@@ -1383,21 +1383,48 @@ The sophisticated consumer anticipates the renegotiation that could take place b
 c_0+c_1+ c_2 \leq y_0+y_1+ y_2\\
 c^{r}_{1}+ c^{r}_{2}      +\kappa\leq c_{1}+c_{2}
 \end{align*}
-The consumer wants to place themselves on the highest possible iso-utility surface consistent with the constraints. The first constraint is the zero profit condition. If this were the only constraint the consumer could choose the full-commitment contract at a tangency with the bank's zero profit plane.   But (for low \(\kappa\)) such a contract such as this would be renegotiated in period 1, lowering period 0's present discounted utility below plan. The optimal contract must  satisfy a  no-renegotiation constraint by making sure that any  earnings   the bank stands to gain from an offer of renegotiation fall below the bank's cost of renegotiating. This will make sure the bank will not become  partner to any such deal with his future self. This is the same as saying that  the cost to the bank of paying out any renegotiated contract
-plus renegotiation costs must exceed the costs of sticking to the period 0 contract. 
-
-Consider the simplest case where the renegotiation costs is \(\kappa=0. \) From the zero profit condition we can write \(c_{1 }+c_2=Ey-c_0\).  From before we also know the period 1 self will always be interested in renegotiating  contract
- \((\widehat{c}_1,\widehat{c}_2) \) to
-\((c^{r}_1(\widehat{c}_1,\widehat{c}),c^{r}_2(\widehat{c}_1,\widehat{c}_{2})) \) which for the CRRA case implies \(c^{r}_1 +c^{r}_2=(1+\beta^\frac{1}{\rho})c^{r}_1 \). Substituting this into
-\textbraceleft TO\ BE\ CONTINUED TO\ DERIVE\textbraceright
-
+The consumer wants to reach the highest iso-utility surface subject to the bank's  participation or zero profit constraint and a no-renegotiation constraint. A binding zero profit and no-renegotiation constraint implies
 \begin{align*}
-c^{cp}_{0}= \frac{\overline{y}}{[1+\beta^{\frac{1}{\rho}} (1+\beta^{\frac{1}{\rho}} )]}
+c^{r}_{1}+ c^{r}_{2}      +\kappa =c_1+ c_2 = E[y]-c_{0}\\
+c^{r}_{1} \cdot(1+ \beta^{1/\rho})\  =E[y]-c_{0}-\kappa\\ 
+c^{r}_{1}=\frac{E[y]-c_{0}-\kappa}{(1+\beta^{\frac{1}{\rho}})}
 \end{align*}
 
-\textbraceleft NOTE  SIMILARITY\ TO\ full commitment contract... can show that will always consume more in period zero when renegotiation proof \textbraceright
+In the special case where \(\kappa=0\) we will have \(c_{1}=c^r_{1}\) and \(c_{2}=c^r_{2}=\beta^\frac{1}{\rho}c^r_{1}\). Then the period 0 self's objective can be written:
+\begin{align*}
+\max_{c_{0}} u(c_0)+\beta u(c^{r}_{1})+\beta^{\frac{1}{\rho}} u(c^{r}_{1})\\
+u(c_0)+ (\beta+\beta^{\frac{1}{\rho}})
+u\left( c_{1}^{r}\right)
+\end{align*}
+where we have made use of the fact that for this CRRA utility 
+\(u(ac)=\frac{(ac)^{(1-\rho)}}{1-\rho}=a^{1-\rho}u(c)\). Using the expression for \(c_{1}^r\) above and the fact  that 
+\(\frac{dc_{1}^r}{dc_0}=-\frac{1}{(1+\beta^{1/\rho})}\)  the first order conditions for an optimal \(c_{0}\) are:
+\begin{align*}
+ u'(c_{0})+(\beta+\beta^{\frac{1}{\rho}})u'\left( c_{1}^{r}\right) \frac{dc_{1}^r}{dc_0}=0\\
+u'(c_0)= \frac{(\beta+\beta^{\frac{1}{\rho}})}{(1+\beta^{\frac{1}{\rho}})^{}}
+u'\left(\frac{E[y]-c_{0}}{(1+\beta^{\frac{1}{\rho}})}\right) \\ 
+\left(\frac{E[y]-c_{0}}{(1+\beta^{\frac{1}{\rho}})}\right)^{\rho}=c^{\rho}_0 \left[\frac{(\beta+\beta^{\frac{1}{\rho}})}{(1+\beta^{\frac{1}{\rho}})^{}}\right]\\
+\frac{E[y]-c_{0}}{(1+\beta^{\frac{1}{\rho}})}\right)=c_0 
+\left[\frac{(\beta+\beta^{\frac{1}{\rho}})}
+{(1+\beta^{\frac{1}{\rho}})}\right]^\frac{1}{\rho}\\
+\end{align*}
+Re-arranging to solve for \(c_0\):
 
- As is clear from the expressions above the period 1 self's best response depends only on the present value of consumption   \(\widehat{c}_{1}+\widehat{c}_{2}\) that period 0 self sends forward, not its division. We
+\begin{align*}
+c_{0}^{cp}=\frac{E[y]}{\Phi}\\
+\end{align*}
+where
+
+\begin{align*}
+\Phi=\left[1+(1+\beta^{\frac{1}{\rho}})
+\left[\frac{(\beta+\beta^{\frac{1}{\rho}})}{(1+\beta^\frac{1}{\rho})}\right]^{\frac{1}{\rho}}
+\right]\\
+\end{align*}
+This is certainly a complicated expression but we can see that when \(\beta=1\) the expression does yield the consumption smoothing optimum as we should expect.
+NOTE  SIMILARITY\ TO\ full commitment contract... can show that will always consume more in period zero when renegotiation proof \textbraceright
+
+ As is clear from the expressions above the period 1 self's best response depends only on the present value of consumption  
+\(\widehat{c}_{1}+\widehat{c}_{2}\) that period 0 self sends forward, not its division. We
 can think of this in either one of two ways.  In one interpretation period zero self sends forward a flat consumption \(\widehat{c}_{1}=\widehat{c}_{2}\) profile knowing full well that that his later self will renegotiate with the bank to c^{r}_{1}(\widehat{c}_1,\widehat{c}_2),  c^{r}_{2}(\widehat{c}_1,\widehat{c}_2)\), understanding also that his period 1 self will have to compensate the bank for its renegotiation cost. Alternatively, we can think of the sophisticated period 0 consumer straight away offering a contract 
 \subsubsection{The Role of $\beta$}
 
