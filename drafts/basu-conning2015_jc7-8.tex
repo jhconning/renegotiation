@@ -1,0 +1,443 @@
+%% LyX 2.1.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{graphicx}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+  \theoremstyle{plain}
+  \newtheorem{lem}{\protect\lemmaname}
+  \theoremstyle{plain}
+  \newtheorem{prop}{\protect\propositionname}
+
+\makeatother
+
+\usepackage{babel}
+  \providecommand{\lemmaname}{Lemma}
+  \providecommand{\propositionname}{Proposition}
+
+\begin{document}
+
+\section{Introduction}
+
+{[}Placeholder{]}
+
+
+\section{The Model: Assumptions}
+
+
+\subsection{Consumers}
+
+There are three periods, $t\in\left\{ 0,1,2\right\} $. In any period
+$t$, the consumer's instantaneous utility is given by $u\left(c_{t}\right)$
+for $c_{t}\in$ $[0,\infty)$. The utility function is twice differentiable,
+strictly concave, and satisfies $u^{\prime}\left(0\right)=\infty$.
+Given a consumption stream $C_{t}=\left(c_{t},c_{t+1},...,c_{2}\right)$,
+the period-$t$ self's discounted utility is: 
+\[
+U_{t}\left(C_{t}\right)\equiv u\left(c_{t}\right)+\beta\sum\limits _{i=t+1}^{2}\delta^{i-t}u\left(c_{i}\right)
+\]
+This describes quasi-hyperbolic preferences, with a hyperbolic discount
+factor $\beta\in(0,1]$.\footnote{More generally, utility would also be discounted by an exponential
+discount factor $\delta$, so that $U_{t}\left(C_{t}\right)\equiv u\left(c_{t}\right)+\beta\sum\limits _{i=t+1}^{2}\delta^{i-t}u\left(c_{i}\right)$.
+To streamline the analysis without loss of generality, we assume $\delta=1$} In any period, the individual places greater relative weight on present-period
+gratification than his earlier selves did. The consumer could be sophisticated,
+naive, or partially naive about the time-inconsistency of his preferences
+(O'Donoghue \& Rabin, 2001). Our analysis will focus on the sophisticated
+agent, with extended discussions to other types.
+
+The period-0 consumer starts with claims to an existing arbitrary
+income stream $Y_{0}=\left(y_{0},y_{1},y_{2}\right)$ over the three
+periods, but will in general be interested in consumption via 'own-savings'
+or financial contracting opportunities with others. If banking or
+own-savings technologies are absent or prohibitively expensive, the
+consumer's autarky consumption stream $C_{0}^{a}(Y)=\left(c_{0}^{a},c_{1}^{a},c_{2}^{a},\right)$
+is just the exogenous income stream $Y.$ 
+
+Depending on the initial income stream, with available own-savings
+strategies the consumer may be able to construct a somewhat better
+smoothed autarky stream. However, as a consumer with time-inconsistent
+preferences cannot trust his later selves to not undo his preferred
+consumption choices, the stream will be the imperfectly-smoothed outcome
+of a strategic game between selves as explained in Basu (2014). This
+creates the demand for commitment services via contracts with an outside
+financial intermediary, and this is the main focus of our analysis.
+\ For the present moment we take this autarky option $C_{0}^{a}(Y)$
+to be fixed and given, but later show how the main results are only
+slightly modified when we treat it as endogenous.\footnote{Since a sophisticated hyperbolic discounter is fully aware of his
+future preferences, his autarky consumption stream will be a subgame
+perfect equilibrium of the consumption-savings game played by the
+series of his time-indexed selves (each with a slightly different
+objective function).} 
+
+In the sections that follow we state our results for quite general
+assumptions about the shape of the the instantaneous utility function
+$u(c)$ but illustrate and provide exact results for the CRRA case
+$u(c_{t})=\frac{c^{1-\rho}}{1-\rho}$ where parameter $\rho$ is closely
+related to the elasticity of intertemporal substitution. The appendix
+contains closed form solutions for the CRRA case and other technical
+details.
+
+
+\subsection{Banks}
+
+The period-0 consumer has the option of contracting with one or many
+banks, depending on the market structure. Each bank has access to
+funds that can be withdrawn from other investments at opportunity
+cost $r$. For expositional simplicity in main text results below
+we assume $r=0$ and that the consumer's discount factor is $\delta=\frac{1}{1+r}$
+(which implies $\delta=1)$ but this is without loss of generality
+and more formulas for arbitrary $r$ and $\delta$ are in the appendix.
+Any financial contract between the consumer and the bank can be thought
+of as the consumer giving up income stream $Y_{0}$ in exchange for
+a weakly preferred consumption path $C_{0}=(c_{0},c_{1},c_{2})$.
+A financial contract involves a period 0 loan if the exchange is such
+that $c_{0}>y_{0}$ and a savings contract if $c_{0}<y_{0}$. For
+analytical convenience, we initially assume that any new contract
+must be initiated in period 0. 
+
+The bank can perfectly enforce feasible repayment plans, so the net
+present value of its remaining profit stream in period t is given
+by:
+\[
+\pi_{t}\left(C_{t};Y_{t}\right)=\sum\limits _{i=t}^{2}\left(y_{t}-c_{t}\right)
+\]
+
+
+The bank offers a contract if and only if it can earn non-negative
+profits.
+
+If the contract were to be renegotiated in period 1, the bank will
+incur a non-monetary cost, $\bar{\kappa}$, which could be interpreted
+to include a concern for reputation or some other impact on the social
+preferences of its owners.\footnote{The bank could incur additional monetary costs as well. However, we
+assume these to be 0 as they can be netted out and do not affect the
+analysis in any important way.} The bank fully knows the borrowers preferences and can tailor the
+contract by borrower type.
+
+While the primary focus of this paper is on equilibrium contracts,
+not welfare, we will make occasional reference to the hyperbolic discounter's
+welfare defined as the discounted utility of the period 0 self, $U_{0}$
+(for a discussion the choice of welfare measure see O'Donoghue-Rabin,
+1999).
+
+
+\section{Monopolist Bank}
+
+In this section, we analyze the renegotiation problem when a sophisticated
+present-biased consumer faces a monopolist lender. We first derive
+properties of the benchmark equilibrium 'full-commitment contract'
+in the absence of any renegotiation possibilities. We then describe
+how the contract would change when the consumer understands and anticipates
+the possibility of contract renegotiation between his later-period
+self and the bank. Finally, we describe conditions under which a lender
+might strategically choose to operate as a commercial non-profit.
+
+
+\subsection{Full-Commitment Contract}
+
+The monopolist who can offer a full-commitment contract solves the
+following problem:
+
+\[
+\max_{C_{0}}\pi_{0}\left(C_{0};Y_{0}\right)
+\]
+
+
+\[
+\text{s.t. (PC) }U_{0}\left(C_{0}\right)\geq U_{0}\left(C_{0}^{a}(Y_{0})\right)
+\]
+
+
+Let the monopolist's full-commitment contract be denoted $C^{mf}$.
+At an optimum: 
+\begin{align}
+u^{\prime}\left(c_{0}^{mf}\right)=\beta u^{\prime}\left(c_{1}^{mf}\right)=\beta u^{\prime}\left(c_{2}^{mf}\right)\label{foc-monop}\\
+U_{0}\left(C_{0}^{mf}\right)=U_{0}\left(C_{0}^{a}(Y_{0})\right)\label{BPC-monop}
+\end{align}
+
+
+Condition \ref{foc-monop} is the standard first-order necessary condition
+that marginal utilities of consumption be equalized across periods
+which, for our simplifying assumptions, imply that $c_{1}^{mf}=c_{2}^{mf}=\overline{c}^{mf}$.
+Condition \ref{BPC-monop} is the consumer participation constraint
+that they be no worse off by accepting the contract than under autarky.
+
+For the CRRA\ case the FOC imply $\overline{c}^{mf}=\beta^{\frac{1}{\rho}}c_{0}^{mf}$
+which, along with the participation constraint, allow for closed form
+solutions (see appendix). See Figure 1.
+
+The terms of the optimal contract, and hence also the level of bank
+profits, will depend on the consumer's starting income stream $Y_{0}$.
+To see this, consider the set of possible initial income streams of
+constant present value $\sum_{t=0}^{2}y_{t}=\bar{y}$. We denote the
+set of possible autarky income streams $\varOmega$. This allows us
+to consider a range of cases where the consumer has a constant lifetime
+wealth that is possibly sub-optimally distributed. The banking problem
+therefore becomes a consumption-smoothing problem for indivuals of
+varying distributions of wealth.
+
+In Figure 1, the 3-dimensional grey triangle describes the set of
+possible autarky consumption bundles. The bank's objective is to replace
+the autarky consumption bundle with one that is on the lowest possible
+isoprofit plane (which denotes the highest possible profits) while
+being acceptable to the consumer. To make positive profits, it must
+be able to offer a consumption bundle that lies closer to the origin
+than the autarky bundle. Of the autarky bundles, $C_{0}^{a*}$is already
+optimal in the sense that it already satisfies $u^{\prime}\left(c_{0}^{a}\right)=\beta u^{\prime}\left(c_{1}^{a}\right)=\beta u^{\prime}\left(c_{2}^{a}\right)$.
+However, any other autarky consumption bundle is associated with a
+curved 'indifference surface' that dips below the grey triangle. So,
+the bank can offer a consumption bundle that brings discounted marginal
+utilities closer together, earning positive profits in the process.
+Whether the new bundle constitutes a loan or savings contract depends
+on the position of the consumer's autarky bundle.
+
+\includegraphics[scale=0.5]{fig1}
+
+
+\subsection{The Renegotiation Problem}
+
+Bank profits can be thought of as deriving in part from satisfying
+the customer's demand for commitment. That is to say, the bank can
+charge for helping customers to stick to preferred saving accumulation
+\textit{cum} loan repayment plans, that in turn deliver balanced consumption
+across periods 1 and 2. However, this is conditional on its ability
+to credibly promise to not pander to the customers' later self's demands
+to raid savings and/or take out new loans that would disrupt those
+plans.
+
+Figure 2 which is drawn in $c_{1}-c_{2}$ space illustrates why the
+demand for commitment arises, how a monopolist could profit by reneging
+on such a commitment \textit{ex-post} and therefore why a monopolist
+might take costly actions to try to make such commitments more credible
+\textit{ex-ante}. Point $F$ is the balanced consumption $\left(\bar{c}^{mf},\mbox{\ensuremath{\overline{c}}}^{mf}\right)$
+component of the monopolist's optimal contract. At this point period
+0 consumption is $c_{0}^{mf}$ and the participation constraint (\ref{BPC-monop})
+is satisfied. The flatter indifference curve passing through point
+$F$ represents the consumer's period 0 self's preference, $u\left(c_{1}\right)+u\left(c_{2}\right)$,
+which gives equal weight to period 1 and period 2 consumption (in
+period 1 utils) while line NF can be interpreted as the isoprofit
+line associated with the monsopolist's maximum profits from period
+1 forward.
+
+The demand for commitment arises from the fact that the period 0 self
+understands that as soon as period 1 rolls around his preferences
+will change and the period 1 self will now accept renegotiated contract
+offers to raise period 1 consumption even if this comes at the cost
+of period 2 consumption and period 0's discounted utility.\footnote{Measured in period 1 utils, the period 0 self values consumption bundle
+$(c_{1},c_{2})$ as $u(c_{1})+u(c_{2})$ whereas period 1 self values
+the same bundle as $u(c_{1})+\beta u(c_{2})$.}. Hence at contract point $F$ in the figure we have 
+\[
+u^{\prime}\left(c_{1}^{mf}\right)\geq\beta u^{\prime}\left(c_{2}^{mf}\right)
+\]
+
+
+If he is a hyperbolic discounter with $\beta<1$, he wishes to increase
+present consumption. As the figure illustrates, a monopolist can opportunistically
+'exploit' a consumer who had agreed to $F$ by offering consumption
+stream $R$ in exchange for $F$. This would raise period 1 consumption
+by 'raiding savings' (taking out new loans), for a customer who had
+saved (borrowed) in period 0 by with the effect of lowering (increasing)
+the net savings (debt) passed into period 2.
+
+FIGURE: Monopoly full-commitment contract in $c_{1}$$-c_{2}$ space.
+
+Such a contract would be designed to raise period 1 self's utility
+ever so slightly while raising the monopolist to the higher value
+isoprofit line $QN$.
+
+This creates an opportunity for the bank to generate additional surplus.
+The bank might be willing to offer such a refinance, in effect offering
+a new loan and/or postponing repayments on existing obligations or
+-- if the customer had carried savings into period 1 -- helping the
+customer 'raid' savings for a fee. In such cases, both parties voluntarily
+agree to renegotiate the original contract.
+
+A sophisticated present-biased customer anticipates such potential
+renegotiations and will therefore only agree to renegotiation-proof
+contracts. Since making contracts renegotiation proof only adds constraints
+to the contract design problem the monopolists' profits can only fall
+relative to the benchmark where it can costlessly commit itself to
+no renegotiations. The customer who was already pushed against their
+autarky reservation utility is no worse off.
+
+More formally, consider the renegotiation problem that arises in period
+1. A customer who has agreed to contract $\hat{C}\left(0\right)$
+in period 0 enters period 1 with claims to remaining consumption stream
+$\hat{C}\left(1\right)$. This determines the new reservation utility.
+If profitable to the bank, the optimal renegotiated contract it offers
+will be given by:
+
+\[
+\max\pi_{1}\left(C_{1};\hat{C}_{1}\right)
+\]
+
+
+\[
+\text{s.t. }\text{}U_{1}\left(C_{1}\right)\geq U_{1}\left(\hat{C}_{1}\right)
+\]
+
+
+The bank offers $C_{1}^{r}\left(C_{1}\right)=\left(c_{1}^{r},c_{1}^{r}\right)$
+to replace\footnote{The bank swaps net income stream $\left(y_{1}-\hat{c}_{1},y_{2}-\hat{c}_{2}\right)$
+for $(y_{1}-c_{1}^{r},y_{2}-c_{2}^{r})$.} the contractually agreed $(\hat{c}_{1},\hat{c}_{2}).$ Since the
+first-order conditions imply: 
+\[
+u^{\prime}\left(c_{1}^{r}\right)=\beta u^{\prime}\left(c_{2}^{r}\right)
+\]
+the contract will set $c_{1}^{r}>$ $c_{2}^{r}$ as long as $\beta<1$
+and exactly $c_{2}^{r}=\beta^{1/\rho}c_{1}^{r}$ in the CRRA case.
+FIGURE illustrates the type of renegotiated contract that would be
+offered in the very special case of a customer who agreed to a full
+commitment contract $C_{1}^{mf}$ in period 0 -- having sincerely
+believed the bank's promise to not offer to renegotiate in period
+1 -- and was then genuinely and unexpectedly surprised to find the
+bank offering a renegotiation in period 1. Although it would break
+a promise to the consumer's period 0 self, the contract will be designed
+to appeal to the customer's period 1. This type of renegotiation/promise-breaking
+will be profitable for the bank to offer as long as $\pi_{1}\left(C_{1}^{r}\left(C_{1}^{mf}\right);C_{1}^{mf}\right)\geq\kappa$,
+where $\kappa$ are the non-monetary renegotiation costs to the bank.
+As depicted in Figure FIGURE, the bank will find it profitable to
+renegotiate from the continuation of the full commitment contract
+depicted by point $F$ to the new contract depicted by $B$ so long
+as profits gains (equal to the present value difference between $C_{1}^{mf}$
+and $C_{1}^{r}$) which can be measured as distance $NQ$ on the diagram
+is greater than $\kappa$. Although the new contract appeals to the
+period 1 self, the broken promise 'exploits' the consumer's period
+0 self by pushing their welfare below the autarky reservation utility
+that they thought had been promised by the $C_{1}^{mf}$ contract.
+
+
+\subsection{Renegotiation-Proof Contracts}
+
+A sophisticated consumer will, of course, rationally anticipate the
+bank's temptation to break its commitment promises and for this reason
+would never agree to accept contract $F$ or any other contract that
+could make him worse off following a period-1 renegotiation. Since
+the bank will want to avoid renegotiation costs $\kappa$ the only
+contracts that will be offered that satisfy this criterion in period
+0 must be renegotiation-proof contracts: contracts that the bank will
+not find profitable to renegotiate.
+
+The bank must therefore offer a contract that satisfies period 0's
+participation constraint and now also meets an additional renegotiation-proofness
+constraint. The resulting contract must limit period 1 self's (and
+hence also the bank's) potential gains from renegotiation. It does
+this by increasing $c_{1}$by just enough relative to $c_{2}$as to
+lower what the period 1 self is willing to pay for a renegotiation
+to fall just below the bank's cost $\kappa$, as to keep renegotiation
+credibly unprofitable to the bank. If $\kappa$ is small enough, this
+must lower bank profits relative to the costless full-commitment case
+because the monopolist must now compensate the consumer for a contract
+that delivers less consumption smoothing across period 1 and 2 than
+under full commitment.
+
+The now solves a maximization problem with two constraints.
+
+\begin{align*}
+ & \max_{C_{0}}\pi_{0}\left(C_{0};Y_{0}\right)\\
+\text{s.t. (PC) } & U_{0}\left(C_{0}\right)\geq U_{0}\left(C_{0}^{a}(Y_{0})\right)\\
+\text{(RP) } & \pi_{1}\left(C_{1}^{r}\left(C_{1}\right);C_{1}\right)\leq\kappa
+\end{align*}
+
+
+The first restriction is the same participation constraint as before.
+The second is a restriction placed by the fact that marginal utilities
+in periods 1 and 2 cannot be too far apart from period 1's perspective.
+The new monopolist renegotiation-proof contract $C_{0}^{mp}$ will
+keep consumption sufficiently imbalanced (in period 1's favor) so
+that period 0's beliefs about the potential gains to period 1 from
+renegotiating the contract are just smaller than the costs the bank
+incurs from renegotiating.
+
+A slight re-interpretation of FIGURE illustrates the properties of
+a renegotiation-proof contract in the special case of a monopolist
+with zero renegotiation cost ($\kappa=0$). In this special case the
+only contract that satisfies the period 0 self's participation constraint
+(interpreted here as indifference curve $FR$ where $F$ is no longer
+the full-commitment contract since period 0 consumption must lie along
+the first-order condition line $c_{2}=\beta^{(1/{\rho)}}c_{1}$ (which
+line in the here for the CRRA case ).--JONATHAN to modify once figures
+come in.
+
+------
+
+This yields an equilibrium which satisfies the borrower's participation
+constraint. For the sophisticated hyperbolic discounter, since $c_{1}^{mp}$
+and $c_{2}^{mp}$ deliver a (weakly) less smoothed profile than the
+commitment contract, the bank has to give up some of its surplus to
+have the client continue to participate. Bank profits must be lower
+when the bank faces a new constraint on its surplus extraction problem:
+the bank wishes it could promise to not renegotiate but it simply
+cannot make such a promise credible without giving up some profits.
+The problem here is not one of cheating or contract failure {[}AS
+examined for example by Hansmann, Glaeser-Shleifer{]}, it is the possibility
+of a legitimate renegotiation (a voluntary agreement to tear up the
+old contract) between the consumer and the firm. 
+
+{[}Point $R$ in FIGURE provides an illustration of the approximate
+renegotiation-proof contract that a sophisticated consumer would agree
+to with a $\ensuremath{\kappa=0}$ bank. It's only approximate because
+the only renegotiation-proof con he bank faces zero renegotiation
+cost they will offer to renegotiate.{]}--JONATHAN to modify once figures
+come in.
+
+The following lemma and proposition formalize the characteristics
+of the renegotiation-proof contract.
+\begin{lem}
+(i) Profits are continuous over $\Omega$. (ii) On any line segment
+that connects $Y_{0}^{\ast}$ to the boundary of $\Omega$, profits
+are strictly increasing in distance from $Y_{0}^{\ast}$.\end{lem}
+\begin{proof}
+(i) For any amount allocated to periods $1$ and $2$, denoted $c_{f}$,
+let $v\left(c_{f}\right)=\beta U_{1}\left(C_{1}\left(c_{f}\right)\right)$
+be the maximized discounted utility from an allocation, $C_{1}\left(c_{f}\right)$,
+that satisfies the renegotiation-proofness constraint. $v\left(c_{f}\right)$
+is continuously rising in $c_{f}$. {[}prove rigorously: For any $C_{1}$,
+let $\hat{C}_{1}\left(C_{1}\right)$ be the profit-maximizing renegotiated
+contract. Since utility is continuous, for any $c_{f}^{\prime}$ that
+approaches a given $c_{f}$, $\hat{C}_{1}\left(C_{1}\left(c_{f}^{\prime}\right)\right)$
+must approach $\hat{C}_{1}\left(C_{1}\left(c_{f}\right)\right)$,
+so $C_{1}\left(c_{f}^{\prime}\right)$ must approach $C_{1}\left(c_{f}\right)$.{]}
+In period $0$, the bank must find the smallest $c_{1}+c_{f}$ such
+that $u\left(c_{1}\right)+v\left(c_{f}\right)=U_{0}\left(Y_{0}\right)$.
+Since $u$ and $v$ are continuously rising, $U_{0}$ is continuous
+in $Y_{0}$, and profits are continuous in $C_{0}$ ($\bar{y}-\left(c_{1}+c_{f}\right)$),
+profits must be continuous in $Y_{0}$. (ii) Consider two points,
+$Y^{1}$ and $Y^{2}$, such that they lie on a line segment connecting
+$Y_{0}^{\ast}$ to the boundary of $\Omega$, and $Y^{2}$ is closer
+to $Y_{0}^{\ast}$ than is $Y^{2}$. Then, $U_{0}\left(Y^{1}\right)>U_{0}\left(Y^{2}\right)$.
+So the contract that is optimal at $Y^{1}$ must satisfy both constraints
+at $Y^{2}$. Furthermore, at $Y^{2}$, the participation constraint
+will be slack, so the bank could raise profits by lowering $c_{0}$.
+Therefore, $\pi\left(C_{0}^{mp};Y^{1}\right)<\pi\left(C_{0}^{mp};Y^{2}\right)$.\end{proof}
+\begin{prop}
+If $\kappa$ is sufficiently small: (i) Profits are strictly lower
+than under the full-commitment contract. (ii) There is a simple closed
+curve containing $Y_{0}^{\ast}$ such that a contract is offered if
+and only if $Y_{0}$ lies outside the curve.\end{prop}
+\begin{proof}
+(i) Suppose $\kappa$ is sufficiently small that the renegotiation-proofness
+constraint binds at a given $Y_{0}$. Then, profits must be strictly
+lower than when the constraint does not exist. (ii) Firs t, since
+$u^{\prime}\left(0\right)=\infty$, the bank can earn positive profits
+at the boundary of $\Omega$ for any $\kappa$, however small. Suppose
+$\kappa$ is sufficiently small that the renegotiation-proofness constraint
+binds at $Y_{0}^{\ast}$. Then, profits at $Y_{0}^{\ast}$ are less
+than zero. Since profits are decreasing along any line segment from
+$Y_{0}^{\ast}$ to the boundary, and since profits are continuous
+over $\Omega$, there must be a closed curve containing $Y_{0}^{\ast}$
+along which profits are $0$. Therefore, the bank will not offer a
+contract at any point inside the curve.
+\end{proof}
+The intuition behind this result if the following: if the initial
+income/consumption stream is sufficiently close to the optimal, the
+bank's contract, by opening up the possibility of renegotiation, cannot
+do better. As a result, the bank will be unable to offer renegotiation-proof
+contracts to those individuals whose autarky consumption streams are
+sufficiently close to optimal.
+\end{document}
