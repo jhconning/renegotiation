@@ -24,7 +24,7 @@
 
 \section{Introduction}
 
-{[}Placeholder{]}
+{[}Placeholder{]Last edit 7/7 by jc}
 
 
 \section{The Model: Assumptions}
@@ -161,7 +161,7 @@ U_{0}\left(C_{0}^{mf}\right)=U_{0}\left(C_{0}^{a}(Y_{0})\right)\label{BPC-monop}
 \end{align}
 
 
-Condition \ref{foc-monop} is the standard first-order necessary condition
+Condition [\ref{foc-monop}] is the standard first-order necessary condition
 that marginal utilities of consumption be equalized across periods
 which, for our simplifying assumptions, imply that $c_{1}^{mf}=c_{2}^{mf}=\overline{c}^{mf}$.
 Condition \ref{BPC-monop} is the consumer participation constraint
@@ -341,18 +341,25 @@ The now solves a maximization problem with two constraints.
 \begin{align*}
  & \max_{C_{0}}\pi_{0}\left(C_{0};Y_{0}\right)\\
 \text{s.t. (PC) } & U_{0}\left(C_{0}\right)\geq U_{0}\left(C_{0}^{a}(Y_{0})\right)\\
-\text{(RP) } & \pi_{1}\left(C_{1}^{r}\left(C_{1}\right);C_{1}\right)\leq\kappa
+\text{(RP) } & \Pi_{1}(C_{1}^{r}(C_{1});C_{1})\leq\kappa
 \end{align*}
 
 
 The first restriction is the same participation constraint as before.
-The second is a restriction placed by the fact that marginal utilities
-in periods 1 and 2 cannot be too far apart from period 1's perspective.
-The new monopolist renegotiation-proof contract $C_{0}^{mp}$ will
-keep consumption sufficiently imbalanced (in period 1's favor) so
-that period 0's beliefs about the potential gains to period 1 from
-renegotiating the contract are just smaller than the costs the bank
-incurs from renegotiating.
+The second is a no-renegotiation constraint that states that in order to be credibly committed to not renegotiate the contract it must be the case that any increase in profits to the bank from renegotiating the continuation contract from $C_{1}$ to  $C_{1}^{r}(C_{1})$ be less than the cost of renegotiation $\kappa.$ 
+Note that the renegotiation constraint can also be rewritten as
+\begin{align}
+\Pi_{1}(C_{1}^{r}(C_{1});Y_{1})- \Pi_{1}(C_{1};Y_{1}) \leq\kappa \label{RPM}
+\end{align}
+which states that to be credibly committed to not renegotiate contract $C$, the increase in profits  from renegotiating the contract in period 1 must stay less than the cost of renegotiation. This in turn can be rewritten yet again (when $r=0$ as 
+\begin{align}
+c_{1}^{r}(C_{1})+c_{2}^{r}(C_{1})+\kappa \geq c_{1}+c_{2}\label{RP_costs}
+\end{align}
+which states that the costs to the bank from a renegotiated contract (including renegotiation costs) must be higher than the costs of a non-renegotiated contract.  
+
+The monopolist's renegotiation-proof contract $C_{0}^{mp}$ that solves this program will
+keep consumption sufficiently imbalanced (in period 1's favor) so that that any premium the monopolist can extract from
+renegotiating the contract remains not large enough to cover the bank's cost of renegotiation.
 
 A slight re-interpretation of FIGURE illustrates the properties of
 a renegotiation-proof contract in the special case of a monopolist
@@ -423,7 +430,7 @@ and only if $Y_{0}$ lies outside the curve.\end{prop}
 \begin{proof}
 (i) Suppose $\kappa$ is sufficiently small that the renegotiation-proofness
 constraint binds at a given $Y_{0}$. Then, profits must be strictly
-lower than when the constraint does not exist. (ii) Firs t, since
+lower than when the constraint does not exist. (ii) First, since
 $u^{\prime}\left(0\right)=\infty$, the bank can earn positive profits
 at the boundary of $\Omega$ for any $\kappa$, however small. Suppose
 $\kappa$ is sufficiently small that the renegotiation-proofness constraint
@@ -440,4 +447,138 @@ bank's contract, by opening up the possibility of renegotiation, cannot
 do better. As a result, the bank will be unable to offer renegotiation-proof
 contracts to those individuals whose autarky consumption streams are
 sufficiently close to optimal.
+
+
+
+\subsection{The monopoly non-profit}
+
+Suppose a firm has the possibility of operating as a non-profit. Narrowly stated non-profit status means that the firm cannot tie managers' compensation or outside shareholders dividends to firm profits because technically speaking a non-profit  firm has no shareholders. As described in the introduction we prefer a more elastic and encompassing definition of the non-profit term to include firms that may have shareholders but who have adopted ownership and/or governance structures that place credible and visible constraints on the distribution   of profits that can be made to managers and/or investor shareholders. The principals of such firms may also care about social objectives such as caring about the welfare of their customers directly, and not just about profits. This broader interpretation allows the non-profit firm category to include cooperatives as well as social enterprises and `hybrid' firms which might be incorporated as for-profit firms but are owned and controlled by social investors.\footnote{  However we extend the non-profit label  to include cooperatives and many other `hybrid' corporate forms. These firms may have shareholders but their ownership structure and/or governance rules put in place effective limits on how profit (and control) can be distributed to outside shareholders.   For example, most of the commercial firms that one finds in modern microfinance (including poster-child firms of he `commercialization' revolution in microfinance including Bancosol of Bolivia or Compartamos of Mexico)\ are incorporated as for-profit corporations but on close inspection turn out to be majority-owned and controlled by `social investors' that are themselves non-profit foundations.}  
+  
+To model these  ideas in a simple yet still rich manner  assume that we can classify a firms' nonprofit orientation by a simple parameter $\alpha$ . To fix ideas assume parameter $\alpha$ tells us both the fraction of `raw profits' $\Pi$ that the firm's principals are able to  capture (following Glaeser and Schleifer, 2001) and may be proportional to the non-pecuniary renegotiation costs that the firm will incur when it breaks its promises to customers (e.g. shame, regret, loss of social reputation).
+
+The firm establishes its type $\alpha$ by credibly committing itself to its status via the adoption of legal non-profit status and/or by  choosing credible and stable ownership and governance structures that commit it to those limitations.
+A monopoly firm of type $\alpha $  designs a renegotiation proof contract to maximize 
+
+\begin{align*}
+ & \max_{C_{0}}\alpha\Pi_0(C_{0};Y_{0})_\\
+\text{s.t. (PC) } & U_{0}\left(C_{0}\right)\geq U_{0}\left(C_{0}^{a}(Y_{0})\right)\\
+\text{(RP) } & \alpha[\Pi_{1}(C_{1}^{r}(C_{1});Y)-\Pi_{1}(C_{1},Y)]\leq\eta(\alpha)
+\end{align*}
+
+
+The first constraint is the customer participation constraint as before while the second constraint is a modified renegotiation-proof constraint which states that the value of captured profits from not renegotiating the contract should exceed  captured profits from renegotiation  net of renegotiation costs where the latter are now written as term $ \eta(\alpha)$ which may include pecuniary and non-pecuniary renegotiation costs.  Notice that we can rewrite the no-renegotiation constraint as 
+\begin{align*}
+\alpha[\Pi_{1}(C_{1}^{r}(C_{1});Y)-\Pi_{1}(C_{1},Y)]\leq\eta(\alpha)
+\end{align}
+\begin{align}
+\Pi_{1}(C_{1}^{r}(C_{1});Y)-\Pi_{1}(C_{1},Y)\leq\kappa(\alpha)
+\end{align}
+\begin{align*}
+\text{where }\kappa(\alpha)=\frac{\eta(\alpha)}{\alpha}
+\end{align*}
+which makes the no-renegotiation constraint look just like the earlier constraint (\ref{RPM}) except that $\kappa$ is now a function of $\alpha$.  Indeed the earlier pure for-profit monopoly renegotiation problem is just a special case of the above program with $\alpha=1$. 
+
+The (captured) profit maximizing solution gives a contract $C_{0}^{mn}$. The no-renegotiation constraint is now relaxed compared to the earlier pure for-profit case.  
+With a relaxed renegotiation-proof constraint  $\Pi_{0}(C_{0}^{mn};Y)  >\Pi_{0}(  C_{0}^{mp};Y) $ but whether or not it will be in the bank principals' best interest to strategically convert to non-profit status depends on whether the captured profits under non-profit status exceed the profits they could earn as a pure for-profit, in other words on whether  
+$\alpha\Pi_{0}( C_{0}^{mn};Y) \geq   \Pi_{0}(  C_{0}^{mp};Y)}$. The monopolist faces a tradeoff
+in considering  non-profit status: higher raw profits (as the commitment problem is partly solved) but
+a diminished capture of those raw profits.  In the analysis that follows we will allow firms to choose not just whether they will be pure for-profits ($\alpha=1$) or not but also the extent of the degree of their non-profitness, via a choice of  $\alpha$.
+
+What conditions are conducive
+to adopting non-profit status? Administrative costs ($\kappa$) should not be
+so high that even for-profits wouldn't renegotiate. The consumer should be
+sufficiently hyperbolic ($\beta$ should be low enough) that renegotiation is a
+tempting possibility. On the other hand, the consumer should not be so
+hyperbolic that even a nonprofit would like to renegotiate with them.
+
+[KARNA I\ STOPPED\ HERE] The difference between effective profits as a non-profit and actual profits as
+a for-profit can be written as the following:
+\[
+n\left[  \pi_{0}\left(  c_{o}^{non},c_{1}^{non},c_{2}^{non}\right)  -\pi
+_{0}\left(  c_{0}^{rp},c_{1}^{rp},c_{2}^{rp}\right)  \right]  -\left(
+1-n\right)  \left[  \pi_{0}\left(  c_{0}^{rp},c_{1}^{rp},c_{2}^{rp}\right)
+\right]
+\]
+The first term represents the gain from higher raw profits and the second term
+represents the loss from discounting the original, for-profit, firm's profits.
+In this case, the first term dominates if the potential gain in raw profits is
+high, or if the for-profit firm's contract yielded low profits in the first place.
+
+And finally, the nonprofit discount function $f$ should be severe enough to
+deter a nonprofit from renegotiating, but not so severe that it deters a firm
+from becoming a nonprofit. We are agnostic about the specific functional form
+of $f$. However, we can consider two possible cases. First, suppose $f$ is
+strictly concave--only mildly restrictive at low levels of profits and
+increasingly restrictive as profits grow. Such functions serve as a plausible
+description of the legal restrictions faced by non-profits. In such a case, we
+can clearly see how non-profit status could be attractive to the firm: the
+legal restrictions leave the enjoyment of profits from the contract relatively
+unaffected while significantly loosening the no-renegotiation constraint
+(since renegotiation would raise profits further, and since $f$ is concave,
+these additional profits would count for little).
+
+\subsubsection{A simple example}
+
+Consider a simple linear formulation of the form $f\left(  \pi_{0}\right)  =\alpha\pi_{0}$, where $0<\alpha<1$.
+Glaeser and Shleifer (2001) adopt this approach suggesting that it captures
+the idea of how the principals of a nonprofit, though legally barred from paying themselves cash profits, might capture profits  imperfectly via the
+consumption of perquisites\ or `dividends in kind.'  We
+will interpret the parameter $\alpha$ as an index of `non-profitness.' \ A lower $\alpha$
+indicates a firm that because of
+its ownership and governance structure places the welfare of its clients ahead of
+that of its `owners' and makes the capture of profits by principals (managers, outside investors) more difficult. 
+
+When $\alpha=1$ the problem the firm is a pure for-profit firm as previously
+analyzed. \ The only change to contracts for a non-profit of type $\alpha<1$
+comes from the relaxation of the no-renegotiation constraint which by
+assumption occurs whenever $\kappa(\alpha)>\overline{\kappa}$ when. Because
+the non-profit can more credibly commit to not renegotiate contracts that
+offer greater consumption smoothing in periods 1 and 2, period 0 becomes more
+willing to transfer surplus to the firm. \ Let the resulting contract offered
+by a non-profit of type $\alpha$ be denoted $\left(  c_{o}^{\alpha}%
+,c_{1}^{\alpha},c_{2}^{\alpha}\right)  $ and the firm's realized net profits
+or benefits $\Pi(\alpha)=$ $\alpha\cdot\pi_{0}\left(  c_{o}^{\alpha}%
+,c_{1}^{\alpha},c_{2}^{\alpha}\right)  .$
+
+Whether a firm would choose to convert to non-profit status of type $\alpha$
+will depend on whether the residual surplus (perquisites)\ that its principals
+can capture from greater commitment possibilities match or exceed what it
+could earn offering renegotiation proof contracts as a pure for-profit.
+
+\begin{proposition}
+A bank will operate as a nonprofit if the consumer's income spread, $\sigma$,
+is sufficiently close to $\sigma^{mp-l}$ or $\sigma^{mp-s}$.
+\end{proposition}
+
+At $\sigma=\sigma^{mp-l}$ or $\sigma=\sigma^{mp-s}\,$, the for-profit bank
+makes zero profits. But the nonprofit makes positive profits. So the bank will
+operate as a nonprofit. Using continuity of profits in $y_{0}$, we know that
+the bank will choose to operate as a nonprofit for a window around both
+$\bar{y}_{0}^{\prime}$ and $\bar{y}_{0}^{\prime\prime}$.
+
+[CRRA simulations.]
+
+In such a case, the consumer has been left no worse off than under a
+for-profit firm, and the firm is made better off. By solving the commitment
+problem, it is able to extract greater surplus from the consumer.
+
+\section{Competition for contracts}
+
+Now we turn to banking environments that are competitive rather than  monopolic. It will be useful and instructive to   first study the market for\emph{exclusive} financial contracts by which we mean  contracts where the bank that establishes the  contract with the period 0 consumer can keep other banks from contracting with their client in later periods.  In the next section we will see what happens when we relax this exclusivity assumption. 
+
+In this  setting,   ex-ante competition means banks will be pushed up against a zero-profit condition
+and all surplus will be returned to
+the sophisticated consumer.
+
+, just prior to period 0, multiple banks compete to offer
+financial contracts to the consumer.  For the moment we
+
+We begin by describing the full-commitment competitive equilibrium contract  where
+renegotiation is impossible. We then analyze the cost of renegotiation-proof contracts and firms' strategic decisions to operate as
+non-profits. As we shall see this last choice will depend in part on the exclusivity of contracts.
+
+
+
+
+
 \end{document}
