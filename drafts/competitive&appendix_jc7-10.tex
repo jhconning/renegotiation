@@ -1,0 +1,523 @@
+%2multibyte Version: 5.50.0.2960 CodePage: 1251
+\documentclass[11pt]{article}%
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{harvard}
+\usepackage[mag=1000]{geometry}
+\usepackage[doublespacing]{setspace}
+\usepackage{amsfonts}
+\usepackage{pstricks-add}
+\usepackage{graphicx}
+\usepackage{pgf}
+\usepackage[pdftex]{graphicx}
+\usepackage[nomarkers]{endfloat}
+
+\setcounter{MaxMatrixCols}{30}
+
+\providecommand{\U}[1]{\protect\rule{.1in}{.1in}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\geometry{left=1.1in,right=1.1in,top=0.75in,bottom=0.75in}
+\usepackage{varioref}
+
+\begin{document}
+
+\section{Competition for contracts}
+
+Consider next the opposite of a monopoly market: a situation where banks compete to offer the consumer multi-period lending-cum-saving contracts.  As we did for the monopoly  case, we first describe full-commitment contracts (when renegotiation is impossible) before turning to analyze renegotiation-proof contracts and firms' strategic choice on whether to operate as non-profits. As we shall discover this last choice will depend importantly on elements in the legal environment, in particular on whether exclusive  contracts can be enforced.
+
+\subsection{A benchmark competitive contract}
+
+Consider first the competitive market for \emph{exclusive} full-commitment  consumer contracts, which is to say a market where banks compete to offer multi-period contracts that cannot be renegotiated by the bank and where the contract is exclusive in the sense that the bank can also (via costless legal or other mechanisms)\ keep other  banks from offering to refinance the contract with the consumer in later periods.  We later relax these assumptions. 
+
+Competition for the customer means that banks can expect to earn zero-profits and all the capturable gains-to-trade surplus will be returned to
+the sophisticated consumer.
+The  offered equilibrium contract will be chosen to be the most attractive  to the customer subject to the bank's participation constraint:%
+\begin{align*}
+ \max_{c_{0},c_{1},c_{2}}U_{t}(  C_{0}) \\
+ \text{s.t.}\text{ }\Pi_{0}(  C_{0})
+\geq0
+\end{align*}
+
+
+The first-order tangency conditions are just as under the monopoly case. Substituting these into
+zero-profit constraint allows us to easily solve for the full-commitment competitive equilibrium contract $\hat{C}$.  As in the monopoly case the contract  tilts toward Zero's present bias but smooths later period consumption, 
+\(\hat{c}_{0}\leq\hat{c}_{1}=\hat{c}_{2}\equiv\hat{c}_{f}\). 
+In the CRRA utility case    $\hat{c}_{1}=\hat{c}_{2}{}= \hat{c}_{0}\beta^{1/\rho}$, and (substituting into the binding zero profit condition and solving) we find: \begin{displaymath}
+\hat{c}_{0} =\frac{\sum y_{i}}{1+2\beta^{1/\rho}}
+\end{displaymath}
+ 
+
+
+ \begin{itemize}
+\item 
+FILL\ IN:\ COMPARE TO MONOPOLY
+\end{itemize}
+
+\subsubsection{Exclusive Contracts}
+
+Consider now what would happen in this competitive markets when contracts remain exclusivebut firms
+can no longer costlessly commit to not renegotiate in period 1. Since we More specifically As we did before let us again differentiate firms by a parameter $\alpha$ which indicates the extent of their non-profit orientation.
+\begin{align*}
+ & \max_{C_{0}}\ U(  C_{0})  _\\
+\text{s.t. (PC) } & \alpha\Pi_{0}(C_{0};Y)\geq 0\\
+\text{(RP) } & \alpha[\Pi_{1}(C_{1}^{r}(C_{1});Y)-\Pi_{1}(C_{1},Y)]\leq\eta(\alpha)
+\end{align*}
+
+\begin{align}
+\Pi_{1}(C_{1}^{r}(C_{1});Y)-\Pi_{1}(C_{1},Y)\leq\kappa(\alpha)
+\end{align}
+
+\begin{align*}
+&  \max_{c_{0},c_{1},c_{2}}u\left(  c_{0}\right)  +\beta[\delta u\left (c_{1}%
+\right)  +\delta^{2}u\left(  c_{2}\right]) \\
+&  \text{s}\text{.t}\text{.}\text{ }\pi\left(  l,m_{1},m_{2}\right)  \geq0\\
+&  g\left(  \beta;m_{1},m_{2}\right)  \leq c
+\end{align*}
+
+
+Let the resulting contract be denoted $\left(  \tilde{c}_{0},\tilde{c}%
+_{1},\tilde{c}_{2}\right)  $.
+
+If the no-renegotiation constraint is binding, consumer welfare must be lower
+than when the firms can commit to not renegotiate. Now, firms face a potential
+incentive to switch to non-profit status. By loosening the second constraint,
+one firm deviating into nonprofit status can make positive profits. So, if the
+borrowers are sophisticated hyperbolics, in equilibrium all firms become
+nonprofit even if the borrowers are \textit{nearly} exponential.
+
+\begin{proposition}
+In a competitive banking market with exclusive contracts, if consumers are
+sophisticated hyperbolic discounters and $\kappa$ is small enough, all active
+firms will be nonprofits.
+\end{proposition}
+
+\begin{proof}
+\lbrack switch notation in proof] Assume $\kappa$ is small enought that the
+no-renegotiation constraint binds for the for-profit renegotiation-proof
+contract, $\left(  \tilde{l},\tilde{m}_{1},\tilde{m}_{2}\right)  $. Suppose
+all firms are for-profit. There is some $\varepsilon_{1}$ and $\varepsilon
+_{2}$ satisfying $0<\varepsilon_{2}<\varepsilon_{1}$ such that $u\left(
+\tilde{l}\right)  +\beta\delta u\left(  \tilde{m}_{1}-\varepsilon_{1}\right)
++\beta\delta u\left(  \tilde{m}_{2}+\varepsilon_{2}\right)  =$ $u\left(
+\tilde{l}\right)  +\beta\delta u\left(  \tilde{m}_{1}\right)  +\beta\delta
+u\left(  \tilde{m}_{2}\right)  $ and $f\left(  \pi\left(  \tilde{l},\tilde
+{m}_{1}-\varepsilon_{1},\tilde{m}_{2}-\varepsilon_{2}\right)  +g\left(
+\beta;\tilde{m}_{1}-\varepsilon_{1},\tilde{m}_{2}+\varepsilon_{2}\right)
+\right)  -f\left(  \pi\left(  \tilde{l},\tilde{m}_{1},\tilde{m}_{2}\right)
+\right)  \leq c$. So, any firm can make positive profits by operating as a
+non-profit. Therefore, in equilibrium, consumers will borrow only from
+non-profit firms.
+\end{proof}
+
+In this case, the specific form of $f\left(  \pi\right)  $ does not matter
+because firms are making zero profits in equilibrium anyway.
+
+\subsubsection{Non-Exclusive Contracts}
+
+In the previous section, we had a setting with competition in period 0 but
+monopoly power in period 1. Now, assume period 1 monopoly power disappears.
+Firms can undercut each other in period 1. To analyze the case with
+sophisticated hyperbolic discounters, we first ask whether the renegotiation
+cost, $\kappa$, applies when a firm undercuts \textit{another} firm's
+contract. Suppose not. Then, we can see right away that it's impossible to
+sustain nonprofits. If there were nonprofits in equilibrium, any one firm
+could make positive profits by switching to for-profit status and undoing a
+rival bank's contract in period 1. Alternatively, assume that $c$ applies in
+the same way to undercutting as it does to renegotiation. Consider
+sophisticated hyperbolics. As each firm's market share goes down, it is more
+incentivized to be for-profit since the advantages of undercutting the other
+firm's contracts outweigh the benefits of promising one's own clients it will
+not renegotiate. As a result, equilibrium contracts will be determined by
+for-profit firms, and consumers will be offered lower commitment than from
+non-profit firms alone.
+
+\begin{proposition}
+In a competitive banking market with exclusive contracts, if consumers are
+sophisticated hyperbolic discounters, for-profits must exist in equilibrium.
+\end{proposition}
+
+\begin{proof}
+\lbrack switch notation in proof] (a) Suppose the renegotiation cost, $c$,
+does not apply when a bank offers a period 1 loan on another bank's contract.
+Firms will compete in period $1$ to satisfy $u^{\prime}\left(  1-n_{1}\right)
+=\beta u^{\prime}\left(  1-n_{2}\right)  $. Commitment that comes through
+nonprofit status becomes worthless. In equilibrium, nonprofits and for-profits
+will offer identical contracts.
+
+(b) Suppose $c$ does apply, and is small (no-renegotiation constraint binds):
+If all firms are nonprofit, an individual firm has a strict incentive to
+switch to for-profit status, and make profits in period 1. Therefore, there
+must be for-profits in equilibrium, and equilibrium contracts will be
+constrained by their presence.
+\end{proof}
+
+
+
+In $c_{0}-c_{1}-c_{2}$ space  the consumer's preferences \(U_{0}(C_{0})\)  are represented by a family of iso-utility surfaces
+that increase in value as we get farther from the origin while the risk
+-neutral bank's preferences is represented by a family of iso-profit planes that increase in value as they get closer to the origin. The competitive contract will be found at the tangency point   that places  the consumer on the highest possible iso-utility surface that still touches the bank's zero-profit plane that  passes through  endowment point \(y. \) The monopoly contract on the other hand will at the tangency point that puts the bank on the highest iso-profit plane it can reach that  still touches the client's participation iso-utility surface which also passes through the endowment point. 
+
+
+
+When preferences are homothetic (the CRRA case)
+all points of tangency between iso-utility surfaces and parallel planes must (by definition)\ pass through a ray from the origin \((1,\beta^{\frac{1}{\rho}}\),\(\beta^{\frac{1}{\rho}}\)). The monopoly and the competitive full-commitment contracts must lie along one such shared ray and this in turn implies that \(c^{mf}_{t} \leq c^{cf}_{t}\) for \(t=0,1,2  \). The shift of surplus from bank to consumer leads to more borrowing  (or less saving)
+on lower repayment (higher return on savings) terms.
+
+FIGURE: The benchmark contract under competition compared to the benchmark
+contract under monopoly.
+
+
+The competitive contract must satisfy the zero-profit constraint and the
+first-order conditions, while the monopolist's contract must satisfy the
+borrower's participation constraint and the first-order condition. Since the
+curve associated with the first-order condition is downward sloping, the
+competitive contract has a higher loan size and smaller repayment. The arrow
+in FIGURE indicates the direction in which the first-order condition moves
+as $\beta$ drops. This will result in a new contract at a higher point of
+intersection with the zero-profit constraint, which implies a larger loan size
+and higher repayment. This gives us the following proposition.
+
+\begin{proposition}
+(a)Relative to the profit-maximizing monopolist, the competitive equilibrium
+contract will have a larger loan size and smaller repayment. (b) As $\beta$
+drops, loan size and repayments will rise.
+\end{proposition}
+
+
+\subsubsection{MOVED FROM ABOVE Section on borrowing or saving (change/move)}
+
+
+\begin{proposition}
+There is some cut-off level of income spread, $\sigma^{mf}\in\left(  0,\bar
+{y}\right)  $ that satisfies the following:
+
+\begin{enumerate}
+\item If $\sigma<\sigma^{mf}$, a loan contract is offered. If $\sigma
+>\sigma^{mf}$, a savings contract is offered. If $\sigma=\sigma^{mf}$, no
+contract is offered.
+
+\item Profits are continuous in $\sigma$, and rising in the distance from
+$\sigma^{mf}$.
+\end{enumerate}
+\end{proposition}
+
+[Prove proposition, discuss comparative statics over $\sigma$ (how commitment
+problems arise in both savings and loan), relate to movement in Figure 1].
+\subsubsection{Renegotiation and $\beta $ (moved)}?
+
+\section{Discussion and Extensions}
+
+\subsection{Naivete and Private Information}
+
+The problem of potential renegotiation applies to all hyperbolic discounters,
+but only the sophisticated fully anticipates it in period 0. The partially
+naive consumer underestimates the extent of the renegotiation, and the naif
+believes he will not give into the temptation to renegotiate.
+
+For exponential discounters and naifs, the bank is not hurt by an inability to
+commit to not renegotiate. In the case of the exponential discounter, this is
+because there is never an opportunity to renegotiate in a mutually beneficial
+manner. In the case of the naif, he \textit{believes} his future self will not
+have a future incentive to renegotiate. If $c$ is sufficiently small, he will
+be mistaken in this belief, and the bank will offer renegotiation. So, for a
+naive consumer, the bank is making additional profits on two margins: since
+there is no perceived renegotiation problem, he is willing to accept a
+contract that is more profitable for the bank up-front; subsequently,
+renegotiation generates additional profits for the bank.
+
+Finally, consider the partially naive agent with beliefs $\tilde{\beta}>\beta
+$: she will take insufficient precautions to prevent getting into situations
+where the bank will offer to renegotiate. As she gets more naive, her
+miscalculation worsens: (a) she gets more optimistic in period 0, so is
+willing to accept a less advantageous loan; (b) in period 1, if the contract
+was written to satisfy $g\left(  \tilde{\beta};m_{1},m_{2}\right)  =c$ (which
+would be the case if $c$ was sufficiently small), the bank will renegotiate
+the contract. The relationship between sophistication and outcome is not
+continuous: under certain conditions, the moment there is the slightest
+naivete, we observe renegotiation, resulting in a discrete drop in welfare.
+
+\subsection{Period 1 Contracts}
+
+Suppose that the threat of signing a contract with the same bank in period 1
+remains. So, if you don't sign a contract in period 0, you might end up
+signing one in period 1 just to tilt consumption.
+
+This changes the participation constraint--it gets looser. This loosening of
+the PC does not depend on $y_{0}$. The bank's profits get bigger.
+
+But this also changes the bank's considerations about whether to turn
+nonprofit. If it were to not offer a contract today, it could offer one the
+next period and make profits. So, in period 0 it offers a contract as long as
+the profits are higher than if it simply offered a period 1 contract. This
+means that the window where banks turn nonprofit in our model (the region
+where the for-profit's profits are near 0) gets smaller.
+
+\subsection{Other Forms of Governance}
+
+In addition it is also reasonable to imagine that a nonprofit firm might face
+greater pressure and scrutiny, internal or external, to consider the
+consumer's welfare cost of renegotiation. \ The cost of renegotiation becomes
+$\kappa(\alpha)$ which we expect to be non-increasing in $\alpha$ falling to
+$\kappa(\alpha)=\overline{\kappa}$ as $\alpha$ approaches 1. There are two
+implications of adopting nonprofit status then: lower enjoyment of profits and
+a lower incentive to renegotiate in period 1.
+
+[Objective function as weighted sum of welfare \& profits]
+
+[Social investors]
+
+\subsection{Additional Considerations [leave in or out]}
+
+\begin{itemize}
+\item $\delta,r$ play no role in the analysis. Easily discussed.
+
+\item Extending the game to multiple periods: interesting, worth mentioning,
+but probably a difficult problem to solve out.
+
+\item General income streams: doesn't cause any problems. In fact, we could
+easily incorporate these into our general framework, but without much to be gained.
+\end{itemize}
+
+\section{Conclusion}
+
+\begin{itemize}
+\item Formalized renegotiation problem (no naivete or asymmetric information)
+-- showed how the problem is addressed by lenders:
+
+\begin{itemize}
+\item Monopoly: if nonprofit status is sufficiently but not too restrictive,
+firm will operate as nonprofit and provide better commitment.
+
+\item Competition: As firms begin to compete, nonprofit survival (and, by
+extension, commitment) is robust if contracts are exclusive, but fragile if
+contracts are non-exclusive.
+\end{itemize}
+
+\item Tying microfinance trends together: Initially nonprofit, more firms
+enter, switch to for-profits, consumer welfare drops.
+
+\item Extensions:
+
+\begin{itemize}
+\item Endogenize market structure (Eric's suggestion): Nonprofit monopolist
+leaves many unsatisfied consumers in period 1. This triggers for-profit entry.
+Under what conditions will this happen?
+
+\item Relate to savings and overdraft fees
+
+\item US mortgage crisis: collateral, risk, strategic default in this framework
+
+\item Heterogeneous types --%
+
+separating equilibrium?
+
+\item Role of time horizon
+\end{itemize}
+\end{itemize}
+
+\bigskip
+
+The model presented above formalizes the renegotiation problem in the context
+of lending to sophisticated hyperbolic discounters. We show how non-profit
+banks can play a key role in alleviating the problem. For a monopolist, if
+nonprofit status is sufficiently but not too restrictive, the firm will
+operate as nonprofit. As firms begin to compete, nonprofit survival is robust
+if contracts are exclusive, but fragile if contracts are non-exclusive. This
+suggests that, in banking markets that were once served by monopolists, entry
+of additional banks will serve to both erode commitment and encourage the
+growth of for-profits.
+
+While the restrictive assumptions of the model serve to illuminate a number of
+points, they also suggest some natural extensions. In particular, it would be
+instructive to solve for equilibrium under heterogeneous borrowers with
+private information, and in richer environments with uncertainty and strategic
+default. These will be addressed in future work.
+
+\subsection{Stuff moved from earlier in the text}
+
+[**** FROM\ BANKS section:\footnote{A short note on the other assumptions is in order.
+While we explicitly set up our problem as one of borrowing/saving and
+re-financing, the analysis and insights apply more broadly to questions about
+the role of firm ownership and governance structure choices in any setting
+where dynamically inconsistent preferences could lead to a contract
+renegotiation problem. We choose to embed this problem in a borrowing
+framework for two reasons: first, we believe this model can shed light on some
+"real-world" stylized facts related to household debt; and second, we derive
+some interesting implications for the specific shapes of equilibrium loan
+contracts which would have remained hidden in a more general analysis. ****]}
+
+\section{Appendix}
+
+\appendix
+
+This appendix shows the work behind some of the derivations in the paper including finding closed form solutions for the CRRA utility case.
+\paragraph{\\ Monopoly full commitment}
+
+A monopolist chooses $c_{0},c_{1}, c_{2}$ to maximize the present value of profits subject to
+borrower's participation constraint \footnote{Where \(\overline{u}(y)
+=u(y_{0})+\beta
+[\delta^{}u\left(  y_{1})+\delta^{2}^{}u(y_{2})\right]\) }
+
+\begin{equation}
+u(c_{0})+\beta
+[\delta^{}u\left(  c_{1})+\delta^{2}^{}u(c_{2})\right]  \geq\overline{u}(y)\\ \end{equation}
+The first order necessary conditions are\[
+1/\lambda=u^{\prime}(c_{o})=\beta\delta(1+r)u^{\prime}(c_{1})=\beta
+\delta^{2}(1+r)^{2}u^{\prime}(c_{2})
+\]
+If we simplify by assuming $\delta=1/(1+r)$ then  at an optimum $c_{1}=c_{2}=\overline{c}$. For  CRRA utility $u(c)=\frac{c^{1-\rho}}{1-\rho}$ 
+we have $u^{\prime}(c)=c^{-\rho}$ and hence 
+$\overline{c}=\beta^{\frac{1}{\rho}}c_{0}$. Substituting into the participation constraint
+
+\begin{align*}
+u(c_{0})+2\beta u(\overline{c})  =\overline{u} \\
+u(c_{0})+2\beta u(\beta^{\frac{1}{\rho}}c_{0}\overline{})  =\overline{u}\\
+c_{0}^{1-\rho }[1+2\beta^{\frac{1}{\rho}}]=\overline{u}(1-\rho)
+\end{align*}
+
+which allows us to solve
+\begin{align*}
+c^{mf}_{0}= \left[\frac{\overline{u}(1-\rho)}{[1+2\beta^{\frac{1}{\rho}}]}\right]^{\frac{1}{1-\rho}}
+\end{align*}
+In the competitive scenario the objective and participation constraints are reversed, so we substitute \(\overline{c}=\beta^{\frac{1}{\rho}}c_{0}\) into a binding zero profit condition to find:
+\begin{align*}
+c_{0}+2\beta^{\frac{1}{\rho}}  c_0  =\overline y_ \\
+c^{cf}_{0}= \frac{\overline{y}}{[1+2\beta^{\frac{1}{\rho}} ]}
+\end{align*}
+  
+\subsubsection{Renegotiation proof contracts}
+
+Renegotiation-proof contracts are solved by backward induction. Consider first the competitive scenario. Having agreed to  contract \(\widehat{c}^{}\) in period zero, the customer and bank enter the period 1 sub-game. The contract calls for the bank to deliver remaining consumption claims \((\widehat{c}_{1},\widehat{c}_{2})\) in exchange for \((y_{1},y_2)\). Let's analyze how they would renegotiate the terms.
+
+The period one self whose preferences now differ from his earlier period 0 self wants to maximize their present biased  utility subject to the  constraint that the terms of the renegotiated contract must be enough to allow the bank to cover their costs of renegotiation cost  \(\kappa.\) To fix ideas let's assume the customer retains the bargaining power -- perhaps because he can threaten to go to another firm if the bank does not offer his most preferred contract). The contract solves:  
+\begin{align*}
+\max_{c_{1}, c_{2}} u(c_{1})+\beta u(c_{2})\\
+c_{1}+ c_{2}   -\kappa\geq \widehat{c}_{1}+\widehat{c}_{2}
+\end{align*}
+The first order conditions imply \(c_2=\beta^{\frac{1}{\rho}}c_1\) which can be substituted into a binding zero profit constraint to yield.
+\begin{align*}
+c_{1}+ c_2 = \widehat{c}_{1}+\widehat{c}_{2}-\kappa \\
+ c^{r}_{1}=\left[ \frac{ \widehat{c}_{1}+\widehat{c_{2}}-\kappa}{1+\beta^{\frac{1}{\rho}}}\right]
+\end{align*}
+
+The sophisticated consumer anticipates the renegotiation that could take place between the bank and his  future self and will adjust their contract choices  to limit its possibility and impact.  The problem is much like a Stackelberg-leader or mechanism design problem.  Since  renegotiation can only undo  choices period 0 self made (and also adds renegotiation costs) they will insist on a no-renegotiation constraint to keep any such renegotiation from happening.  The contract solves 
+\begin{align*}
+\max_{c_{0}, c_{1}, c_{2}} u(c_0)+\beta u(c_{1})+\beta u(c_{2})\\
+c_0+c_1+ c_2 \leq y_0+y_1+ y_2\\
+c^{r}_{1}+ c^{r}_{2}      +\kappa\leq c_{1}+c_{2}
+\end{align*}
+The consumer wants to reach the highest iso-utility surface subject to the bank's  participation or zero profit constraint and a no-renegotiation constraint. A binding zero profit and no-renegotiation constraint implies
+\begin{align*}
+c^{r}_{1}+ c^{r}_{2}      +\kappa =c_1+ c_2 = E[y]-c_{0}\\
+c^{r}_{1} \cdot(1+ \beta^{1/\rho})\  =E[y]-c_{0}-\kappa\\ 
+c^{r}_{1}=\frac{E[y]-c_{0}-\kappa}{(1+\beta^{\frac{1}{\rho}})}
+\end{align*}
+
+In the special case where \(\kappa=0\) we will have \(c_{1}=c^r_{1}\) and \(c_{2}=c^r_{2}=\beta^\frac{1}{\rho}c^r_{1}\). Then the period 0 self's objective can be written:
+\begin{align*}
+\max_{c_{0}} u(c_0)+\beta u(c^{r}_{1})+\beta^{\frac{1}{\rho}} u(c^{r}_{1})\\
+u(c_0)+ (\beta+\beta^{\frac{1}{\rho}})
+u\left( c_{1}^{r}\right)
+\end{align*}
+where we have made use of the fact that for this CRRA utility 
+\(u(ac)=\frac{(ac)^{(1-\rho)}}{1-\rho}=a^{1-\rho}u(c)\). Using the expression for \(c_{1}^r\) above and the fact  that 
+\(\frac{dc_{1}^r}{dc_0}=-\frac{1}{(1+\beta^{1/\rho})}\)  the first order conditions for an optimal \(c_{0}\) are:
+\begin{align*}
+ u'(c_{0})+(\beta+\beta^{\frac{1}{\rho}})u'\left( c_{1}^{r}\right) \frac{dc_{1}^r}{dc_0}=0\\
+u'(c_0)= \frac{(\beta+\beta^{\frac{1}{\rho}})}{(1+\beta^{\frac{1}{\rho}})^{}}
+u'\left(\frac{E[y]-c_{0}}{(1+\beta^{\frac{1}{\rho}})}\right) \\ 
+\left(\frac{E[y]-c_{0}}{(1+\beta^{\frac{1}{\rho}})}\right)^{\rho}=c^{\rho}_0 \left[\frac{(\beta+\beta^{\frac{1}{\rho}})}{(1+\beta^{\frac{1}{\rho}})^{}}\right]\\
+\frac{E[y]-c_{0}}{(1+\beta^{\frac{1}{\rho}})}\right)=c_0 
+\left[\frac{(\beta+\beta^{\frac{1}{\rho}})}
+{(1+\beta^{\frac{1}{\rho}})}\right]^\frac{1}{\rho}\\
+\end{align*}
+Re-arranging to solve for \(c_0\):
+
+\begin{align*}
+c_{0}^{cp}=\frac{E[y]}{\Phi}\\
+\end{align*}
+where
+
+\begin{align*}
+\Phi=\left[1+(1+\beta^{\frac{1}{\rho}})
+\left[\frac{(\beta+\beta^{\frac{1}{\rho}})}{(1+\beta^\frac{1}{\rho})}\right]^{\frac{1}{\rho}}
+\right]\\
+\end{align*}
+This is certainly a complicated expression but we can see that when \(\beta=1\) the expression does yield the consumption smoothing optimum as we should expect.
+NOTE  SIMILARITY\ TO\ full commitment contract... can show that will always consume more in period zero when renegotiation proof \textbraceright
+
+ As is clear from the expressions above the period 1 self's best response depends only on the present value of consumption  
+\(\widehat{c}_{1}+\widehat{c}_{2}\) that period 0 self sends forward, not its division. We
+can think of this in either one of two ways.  In one interpretation period zero self sends forward a flat consumption \(\widehat{c}_{1}=\widehat{c}_{2}\) profile knowing full well that that his later self will renegotiate with the bank to c^{r}_{1}(\widehat{c}_1,\widehat{c}_2),  c^{r}_{2}(\widehat{c}_1,\widehat{c}_2)\), understanding also that his period 1 self will have to compensate the bank for its renegotiation cost. Alternatively, we can think of the sophisticated period 0 consumer straight away offering a contract 
+\subsubsection{The Role of $\beta$}
+
+As an aside note that with the expression above it is easy to demonstrate that (since \(\beta\) enters the definition of \overline{ u}\)  ) period zero consumption and hence also the size of period zero borrowing-cum-saving\ will generally be a non-monotonic function of the consumer's measure of present bias
+$\beta$. As $\beta$ drops from 1, two things happen: the consumer becomes
+willing to accept a smaller loan for any given repayment (participation
+constraint shifts down) but also becomes willing to pay more for larger loans
+than before (first-order condition rotates down).
+
+Figure 1 plots a representative equilibrium solution (intersection of the
+first-order condition and participation constraint) for $\beta=1$. The arrows
+indicate how the constraints would shift as $\beta$ drops, or the consumer
+becomes more present-biased. The borrower's participation constraint shifts
+down--as the consumer cares less about the future, he is willing to sacrifice
+more future consumption for a given loan today. The first-order condition
+rotates counterclockwise--for any consumption in the future, the consumer must
+receive a greater loan today to equalize discounted marginal utilities as
+$\beta$ drops.
+
+Since both constraints shift down relative to the initial equilibrium with
+$\beta=1$, $c_{1}^{mf}$ and $c_{2}^{mf}$ must unambiguously fall at a the new
+intersection as $\beta$ drops. On the other hand, $\bar{c}_{0}$ is not
+necessarily monotonic in $\beta$. As $\beta$ drops, the consumer is initially
+willing to pay substantially for slight increases in the loan size. As $\beta$
+continues to drop, repayment becomes less salient, so the bank can generate
+higher profits by lowering the loan size while continuing to raise repayment
+amounts. When facing a monopolist, hyperbolic discounters don't "over-borrow"
+in the obvious sense.
+
+FIGURE
+
+CRRA example:
+\\
+Plotted: $l$ as a function of $\beta\,$. Dotted line: $\delta=.9$. Solid line:
+$\delta=.5$. In both cases, as $\beta$ gets very small, bank can take from the
+future without giving much to the present. But for high $\delta$, initially
+$l$ rises as $\beta$ drops.
+\end{center}
+
+
+\
+
+\subsubsection{Loose ideas}
+\begin{itemize}
+\item We've analyzed commercial non-profits: in a sense the selfish reasons to behave nicely. But many people organize firms with a mission.  Moral or religious. Deep commitments.
+\item Governments?  Some of literature on non-profits (Tirole, Besley and Ghatak, Francois ...)
+
+\end{itemize}
+
+
+\end{document}
