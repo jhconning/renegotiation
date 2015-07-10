@@ -39,7 +39,7 @@ class Contract(object):
         return c[0] + np.sum(c[1:])
 
     def PVU(self,c, beta):
-        """discounted present utility value of any stream c"""  
+        """discounted present utility value of any stream c"""
         return  self.u(c[0]) + beta * sum([self.u(ct) for ct in c[1:]] )
 
     def profit(self,c,y):
@@ -137,11 +137,11 @@ class Competitive(Contract):                    # build on contract class
         return np.array([c0,c1,c2])
 
     def negPVU(self,c):
-        """0 self negative present utility value of 
+        """0 self negative present utility value of
         any stream c for minimization call"""
         return  - self.PVU(c, self.beta)
 
-    def reneg(self, c):
+    def renegC(self, c):
         """ Renegotiated contract offered to period-1-self
         c_0 is past but (c_1,c_2) now replaced by (cr_1, cr_2)"""
         PV =  c[1] + c[2] - self.kappa
@@ -150,80 +150,107 @@ class Competitive(Contract):                    # build on contract class
         cr1 = PV/(1+B)
         cr2 = B*cr1
         return np.array([c[0],cr1,cr2])
-
-    def reneg_proof_cons(self,c):
-        """ the renegotiation-proof constraint gain from renegotiation
-        cannot exceed its cost kappa"""
-        #return - (self.profit(self.reneg(c), self.y)
-        #          -  self.profit(c, self.y) - self.kappa)
         
-        # return  -(self.profit(self.reneg(c),self.y)
-        #           -  self.profit(c,self.y) - self.kappa)
+    def reneg(self,c):
+        """ Renegotiated contract offered to period-1-self
+        c_0 is past but (c_1,c_2) now replaced by (cr_1, cr_2)"""
+        PU =  self.u(c[1]) + self.beta*self.delta*self.u(c[2])
+        A  =  (PU *(1-self.rho) )**(1/(1-self.rho))
+        B = (1 + self.beta**(1/self.rho) * self.delta)**(1/(self.rho-1))
+        cr0 = c[0]
+        cr1 = A*B
+        cr2 = cr1 *(self.beta * self.delta *(1+self.r)  )**(1/self.rho)
+        return np.array([cr0,cr1,cr2])
+    
+
+    def reneg_proof_cons(self, c):
+        """ the renegotiation-proof constraint gain from renegotiation
+        cannot exceed cost kappa  (surplus goes to monopolist)
+        """
         cr = self.reneg(c)[1:]   #last two periods
-       # print("opt {} r{:4.5f} o{:4.5f} PU:{:4.6f}"
-       #     .format(c, self.PVU(cr,self.beta),
-       #                self.PVU(c[1:],self.beta),-self.PVU(c,cC.beta)) )
         return  -(self.PVU(cr,self.beta)
                   -  self.PVU(c[1:],self.beta))
-
+                  
+    def reneg_proof_consC(self, c):
+        """ the renegotiation-proof constraint when
+        surplus goes to customer
+        """
+        cr = self.renegC(c)[1:]   #last two periods
+        return  -(self.PVU(cr,self.beta)
+                  -  self.PVU(c[1:],self.beta))
 
     def participation_cons(self,c):
         return (self.PV(self.y) - self.PV(c))
 
-    def reneg_proof(self):
+    def reneg_proof(self, msurplus = True):
         """calculate renegotiation-proof contract that maxes 0-self's utility.
         supplies constraints to solver that bank can't profit too much
-        and period 0 borrower participation"""
-        cons = ({'type': 'ineq',
-                 'fun' : self.reneg_proof_cons },
-                {'type': 'ineq',
-                 'fun' : self.participation_cons })
+        and period 0 borrower participation
+        msurplus = True --> renegotiation surplus to monopolist        
+        """
+        if msurplus: 
+            cons = ({'type': 'ineq',
+                     'fun' : self.reneg_proof_cons },
+                     {'type': 'ineq',
+                      'fun' : self.participation_cons })
+        else:
+            cons = ({'type': 'ineq',
+                     'fun' : self.reneg_proof_consC },
+                     {'type': 'ineq',
+                      'fun' : self.participation_cons })
         res=minimize(self.negPVU, self.guess, method='COBYLA',
                      constraints = cons)
         return res
 
+
 if __name__ == "__main__":
-    
-    print("Base contract")
-    c = Contract(beta = 0.6)
-    c.y = [60, 120, 120]
-    c.print_params()
 
-    print("Monopoly contract")
-    
-    cM = Monopoly(beta = 0.6)
-    cM.y = [60, 120, 120]
-    cM.rho = 0.75
-    cM.print_params()
+     print("Base contract")
+     c = Contract(beta = 0.6)
+     c.y = [60, 120, 120]
+     c.print_params()
 
-    print("Competitive contract")
-    cC = Competitive(beta = 0.6)
-    cC.rho = 0.75
-    cC.y = [60, 120, 120]
-    cC.print_params()
+     print("Monopoly contract")
 
-    cCF = cC.fcommit()
-    cCr = cC.reneg(cCF)
-    cC.guess = cCr
-    cCRP = cC.reneg_proof().x
-    print(cCRP)
-     
+     cM = Monopoly(beta = 0.5)
+     cM.y = [80, 110, 110]
+     cM.rho = 0.95
+     cM.print_params()
 
-    cMF = cM.fcommit()
-    cMr = cM.reneg(cCF)
-    cM.guess = cMr
-    cMRP = cM.reneg_proof().x
-    
-   # Analytic closed forms competitive
-  #  A = cC.beta ** (1/cC.rho)
-   # cA0 = (sum(cC.y) - cC.kappa)/(1+2*cA)
-   # cCRPa = np.array([cA0, ])
+     print("Competitive contract")
+     cC = Competitive(beta = 0.5)
+     cC.rho = 0.95
+     cC.y = [80, 110, 110]
+     cC.print_params()
 
-    print("testing cCRP")
-    print(cCRP.sum())
-    print("reneg(cCRP):",cC.reneg(cCRP))
-    print("PVU(cCRP) :",cC.PVU(cCRP,cC.beta))
-    
-    print("PVU(cCRPa) :",cC.PVU(cCRPa,cC.beta))
-    print("PVU(cCF) :",cC.PVU(cCF,cC.beta))
-    
+     cCF = cC.fcommit()
+     cCr = cC.reneg(cCF)
+     cC.guess = cCr
+     cCRP = cC.reneg_proof().x
+     print(cCRP)
+
+
+     cMF = cM.fcommit()
+     cMr = cM.reneg(cCF)
+     cM.guess = cMr
+     cMRP = cM.reneg_proof().x
+
+    #Analytically calculated renegotiation proof when kappa=0
+     def ccrpa(C):
+         B = C.beta**(1/C.rho)
+         D = 1/(1+(1+B)*((C.beta+B)/(1+B))**(1/C.rho))
+         print("D is equal to",D)
+         c0 = sum(C.y)*D
+         c1 = (sum(C.y)-c0)/(1+B)
+         c2 = B* c1
+         return np.array([c0, c1, c2])
+
+     cCRPa = ccrpa(cC)
+     print("testing cCRP")
+     print(cCRP.sum())
+     print("reneg(cCRP):",cC.reneg(cCRP))
+     print("PVU(cCRP) :",cC.PVU(cCRP,cC.beta))
+
+     print("PVU(cCRPa) :",cC.PVU(cCRPa,cC.beta))
+     print("PVU(cCF) :",cC.PVU(cCF,cC.beta))
+
