@@ -39,7 +39,7 @@ class Contract(object):
         return c[0] + np.sum(c[1:])
 
     def PVU(self,c, beta):
-        """discounted present utility value of any stream c"""  
+        """discounted present utility value of any stream c"""
         return  self.u(c[0]) + beta * sum([self.u(ct) for ct in c[1:]] )
 
     def profit(self,c,y):
@@ -136,8 +136,22 @@ class Competitive(Contract):                    # build on contract class
         c2 = B * c0
         return np.array([c0,c1,c2])
 
+    def ownsmooth(self):
+        """contract if have to smooth by oneself without contract
+        from closed form solution for CRRA"""
+        b = self.beta
+        rho = self.rho
+        B = b**(1/rho)
+        PY = self.PV(self.y)
+        G = b*(1+b**((1-rho)/rho))/(1+B)
+        c0 = PY/(1+G**(1/rho)+(b*G)**(1/rho))
+        c1 = c0*G**(1/rho)
+        c2 = B * c1
+        print('G ={}'.format(G))
+        return np.array([c0,c1,c2])
+
     def negPVU(self,c):
-        """0 self negative present utility value of 
+        """0 self negative present utility value of
         any stream c for minimization call"""
         return  - self.PVU(c, self.beta)
 
@@ -146,11 +160,10 @@ class Competitive(Contract):                    # build on contract class
         c_0 is past but (c_1,c_2) now replaced by (cr_1, cr_2)"""
         PV =  c[1] + c[2] - self.kappa
         B  =  self.beta**(1/self.rho)
-        cr0 = c[0]
         cr1 = PV/(1+B)
         cr2 = B*cr1
         return np.array([c[0],cr1,cr2])
-        
+
     def reneg(self,c):
         """ Renegotiated contract offered to period-1-self
         c_0 is past but (c_1,c_2) now replaced by (cr_1, cr_2)"""
@@ -161,13 +174,13 @@ class Competitive(Contract):                    # build on contract class
         cr1 = A*B
         cr2 = cr1 *(self.beta * self.delta *(1+self.r)  )**(1/self.rho)
         return np.array([cr0,cr1,cr2])
-        
+
     def reneg_proof_cons(self,c):
         """ the renegotiation-proof constraint gain from renegotiation
         cannot exceed its cost kappa"""
         return  -(self.profit(self.reneg(c),self.y)
                   -  self.profit(c,self.y) - self.kappa)
-                  
+
     def reneg_proof_consC(self,c):
         """ renegotiation-proof constraint gain from renegotiation
         goes to customer """
@@ -196,18 +209,18 @@ class Competitive(Contract):                    # build on contract class
                  'fun' : self.participation_cons })
         res=minimize(self.negPVU, self.guess, method='COBYLA',
                      constraints = cons)
-                     
+
         return res
 
 if __name__ == "__main__":
-    
+
     print("Base contract")
     c = Contract(beta = 0.6)
     c.y = [60, 120, 120]
     c.print_params()
 
     print("Monopoly contract")
-    
+
     cM = Monopoly(beta = 0.5)
     cM.y = [80, 110, 110]
     cM.rho = 0.95
@@ -218,21 +231,21 @@ if __name__ == "__main__":
     cC.rho = 0.95
     cC.y = [80, 110, 110]
     cC.print_params()
-    
-    
+
+
 
     cCF = cC.fcommit()
     cCr = cC.reneg(cCF)
     cC.guess = cCr
     cCRP = cC.reneg_proof().x
     print(cCRP)
-     
+
 
     cMF = cM.fcommit()
     cMr = cM.reneg(cCF)
     cM.guess = cMr
     cMRP = cM.reneg_proof().x
-    
+
    # Analytic closed forms competitive
   #  A = cC.beta ** (1/cC.rho)
    # cA0 = (sum(cC.y) - cC.kappa)/(1+2*cA)
@@ -246,13 +259,12 @@ if __name__ == "__main__":
         c1 = (sum(C.y)-c0)/(1+B)
         c2 = B* c1
         return np.array([c0, c1, c2])
-    
+
     print("testing cCRP")
     print(cCRP.sum())
     print("reneg(cCRP):",cC.reneg(cCRP))
     print("PVU(cCRP) :",cC.PVU(cCRP,cC.beta))
-    
+
     cCRPa = ccrpa(cC)
     print("PVU(cCRPa) :",cC.PVU(cCRPa,cC.beta))
     print("PVU(cCF) :",cC.PVU(cCF,cC.beta))
-    
