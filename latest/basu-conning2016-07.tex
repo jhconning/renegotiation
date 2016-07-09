@@ -41,6 +41,7 @@
 \usepackage{babel}
   \providecommand{\lemmaname}{Lemma}
   \providecommand{\propositionname}{Proposition}
+\usepackage{amssymb}
 
 \begin{document}
 
@@ -475,21 +476,29 @@ To highlight the consequences of the absence of  self-control problem most clear
 The familiar first-order necessary conditions are: \begin{displaymath}
 u'\left(c_{0}\right)=\beta \delta (1+r) u'\left(c_{1}\right)=\beta \delta^2 (1+r)^2u'\left(c_{2}\right)
 \end{displaymath}
- These equations plus the binding budget constraint allow us to solve for $C^0$. Conceptually the equilibrium contract is given by the  tangency where the consumer has reached the highest feasible iso-utility surface  touching the hyper-plane defined by the budget. While a 3D visualization is cumbersome, insights into the problem can be had from the 2D contour plot diagrams below.         
+ These equations plus the binding budget constraint allow us to solve for $C^0$. Conceptually the equilibrium contract is given by the  tangency where the consumer has reached the highest feasible iso-utility surface  touching the hyper-plane defined by the budget. A 3D graphical analysis is cumbersome but the problem can be understood better with 2D contour projections.         
 
 With CRRA utility these three equations can be rewritten:
 \begin{equation} 
 c_1=[\beta\delta(1+r)]^\frac{1}{\rho}c_{0}   \label{eq:FOCc0c1}
 \end{equation}
 \begin{equation}
-c_2=[\delta(1+r)]^\frac{1}{\rho}c_{1} \label{eq:FOCc1c2}
+c_2=[\delta^{2}(1+r)^{2}]^\frac{1}{\rho}c_{1} \label{eq:FOCc1c2}
 \end{equation} 
-Combining this last equation and the budget constraint also gives:
+This last equation and the budget constraint can be combined to give:
 \begin{equation}
-c_1=\frac{\sum y -c_0}{1+\delta (1+r)} \label{eq:budgetplus}
+c_1=\frac{\sum y -c_0}{1+[\delta (1+r)]^\frac{2}{\rho}} \label{eq:budgetplus}
 \end{equation}
 
- If  we further limit assume    \(\delta=\frac{1}{1+r}\) then the above equations  are simply  \(c_1=\beta^\frac{1}{\rho}c_{0}_\), \(c_2=c_{1}_\) and $c_1 = (\sum y-c_0)/2 $ . In words: Zero self wants to bias or tilt consumption toward period zero consumption but then allocate consumption evenly across the remaining two periods. From the above a closed form solution for \(C_{0}\) is easily found: 
+Equations \ref{eq:FOCc0c1} and \ref{eq:budgetplus} can be used to solve for $c_0$ and consumption in the other periods.  The term $\delta (1+r)$ enters each of the above expressions and essentially `tilts' consumption to be more generally rising or falling over time as  $\delta \gtreqless 1/(1+r)$.  As this general tilt is not essential to our analysis (but the degree of present-bias $\beta$ will be), we shall for theu purposes of simplification and without loss of generality impose the assumption that  \(\delta=\frac{1}{1+r}\) for the remainder of the analysis. The above equations become simply
+
+\begin{equation}
+c_1=\beta^\frac{1}{\rho}c_{0} \text{,   }
+c_1=\beta^\frac{1}{\rho}c_{0} \text{ and }
+c_1 = \frac{\sum y-c_0}{2}  
+\end{equation}
+
+In words: Zero self wants to indulge her present bias to tilt consumption toward period zero consumption but to then allocate consumption evenly across the remaining two periods. From the above a closed form solution for \(C_{0}\) is easily found: 
 
 \begin{equation}
 c_0^F = \frac{\sum y}{1+2\beta^\frac{1}{\rho}} \\ \label{eq:CF}
