@@ -34,7 +34,7 @@
 \providecommand{\lemmaname}{Lemma}
   \providecommand{\propositionname}{Proposition}
 
-\date{July 8, 2016 (preliminary draft)}
+\date{July 12, 2016 (preliminary draft)}
 
 \makeatother
 
@@ -418,33 +418,29 @@ the period-$t$ self's discounted utility is:
 \begin{equation}
 U_{t}\left(C_{t}\right)\equiv u\left(c_{t}\right)+\beta\sum\limits _{i=t+1}^{2}\delta^{i-t}u\left(c_{i}\right)
 \end{equation}
-This describes quasi-hyperbolic preferences (\cite{laibson_golden_1997}), with a hyperbolic discount
+This describes quasi-hyperbolic preferences (\cite{laibson_golden_1997}) with a hyperbolic discount
 factor $\beta\in(0,1]$.
-In any period, the individual places greater relative weight on present-period
-gratification than her earlier selves would have liked. The consumer
-could be sophisticated or naive about the time-inconsistency of his
+In any period \(t\), the individual, or more accurately their period-t self, places greater relative weight on present-period
+gratification than her earlier selves would have done. The consumer
+could be sophisticated or naive about understanding the time-inconsistency of her
 preferences (\citet{odonoghue_choice_2001}).
 
-As the consumer's preferences are time-inconsistent it will be useful to distinguish between the consumer's different selves. We refer to the  period-zero consumer as the `Zero-self' and her  period-one incarnation as her `One-self'. 
+It will be useful to establish simple labels to distinguish the consumer's different selves. We refer to the  period-zero consumer as the `Zero-self' or simply `Zero' and her  period-one incarnation as her `One-self' or `One'. 
 
 
-\subsubsection{Consumption smoothing and the problem of  self-control}
+\subsubsection{Consumption smoothing with and without self-control}
 
 
 
 Zero-self begins with claims to an arbitrary
-income stream $Y^0=\left(y_{0},y_{1},y_{2}\right)$ over the three
-periods. Her objective is to rearrange this into a utility maximizing
-consumption stream. In the absence of  formal banking services she must rely
-on informal saving or  borrowing, if available. 
+income stream over the three periods, $Y^0=\left(y_{0},y_{1},y_{2}\right)$. Her objective will be to rearrange this into a utility maximizing
+consumption stream using what financial contracting savings and/or borrowing strategies are available.  A consumer with time-inconsistent
+preferences generally cannot trust her later selves to not disrupt her preferred long-term 
+consumption plans.  In this simple three period setting Zero self's particular concern is that her One self will want to divert to period 1 consumption resources that Zero self would prefer to earmark for period 2 consumption. 
 
-The amount of consumption smoothing the consumer is likely to  achieve under autarky will in general fall short of that that might be achievable with well functioning formal financial trade for a variety of reasons. If
-her income is back-heavy, borrowing constraints may limit her ability
-to smooth consumption, and in the absence of credit she must consume
-her income as it arrives.  If her income is front-heavy, the consumer may be able to construct a somewhat smoothed autarky
-stream with own savings strategies but technological and/or institutional restrictions  may limit the returns to saving \(   r\) to low or negative rates, with insecurity of storing cash at home being one obvious
-explanation.
 
+
+Zero self finds herself therefore in a  strategic contracting game with  her latter period self. The contracts she may demand, and that she may be offered, and therefore the consumption smoothing she can achieve  will be quite different compared to situations where this self-control problem can assumed away or resolved at low cost.  
 
   \begin{figure}[p!]
     \centering
@@ -454,18 +450,9 @@ explanation.
   \end{figure}
 
 
-\begin{figure}
-  \includegraphics[width=\textwidth]{fig_selfcontrol.pdf}
-  \caption{\label{fig:c1c2}Period 1 recontracting}
-\end{figure}
-
- More  central to our analysis, however, is  that
- a consumer with time-inconsistent
-preferences generally cannot trust her later selves to not disrupt her preferred long-term 
-consumption plans.  Zero  would like to control her later selves ability to change consumption plans but in the absence of such self-control she will find herself locked into a  strategic contracting game with  her latter self which will limit her to less than optimal consumption plans.  
-
-To highlight the consequences of the absence of  self-control problem most clearly let us temporarily assume the consumer has access to informal borrowing or saving at constant competitive interest rate \(  r\). First we establish the benchmark case where Zero can contract for an ideal optimal consumption smoothing contract as if she faced no self control problem. This is  a standard utility maximization problem subject to an  inter-temporal budget constraint
-(or, same thing, subject to a financial intermediary's zero-profit condition):\begin{displaymath}
+To establish a reference benchmark against which we can highlight the costly consequences of the absence of  self-control mechanisms let us start by assuming a simple situation where the consumer has access to informal borrowing or saving at constant competitive interest rate \(  r\). Suppose also that the consumer faced no self control problem: Zero self chooses a contract that costlessly commits her period-1 and period-2 selves to follow the consumption plan laid out by the contract. This is  a standard utility maximization problem subject to an   inter-temporal budget constraint
+(or, same thing, subject to a financial intermediary's zero-profit condition). Zero self chooses contract \(C^{0}\) to solve:
+\begin{displaymath}
  \max_{C^0} U_0(C^{0})
 \end{displaymath}
 \begin{displaymath}
@@ -474,7 +461,7 @@ To highlight the consequences of the absence of  self-control problem most clear
 The familiar first-order necessary conditions are: \begin{displaymath}
 u'\left(c_{0}\right)=\beta \delta (1+r) u'\left(c_{1}\right)=\beta \delta^2 (1+r)^2u'\left(c_{2}\right)
 \end{displaymath}
- These equations plus the binding budget constraint allow us to solve for $C^0$. Conceptually the equilibrium contract is given by the  tangency where the consumer has reached the highest feasible iso-utility surface  touching the hyper-plane defined by the budget. A 3D graphical analysis is cumbersome but the problem can be understood better with 2D contour projections.         
+ Along with a binding budget constraint these equations allow us to solve for the optimal  competitive `full-commitment' contract $C^{0F}$ so called because latter period selves are commited to not change it. Conceptually the equilibrium contract will be found at the tangency between the highest iso-utility surface  just touching the budget hyper-plane. A 3D graphical analysis is possible but cumbersome so draw insight from 2D contour projections instead.         
 
 With CRRA utility these three equations can be rewritten:
 \begin{equation} 
@@ -488,7 +475,7 @@ This last equation and the budget constraint can be combined to give:
 c_1=\frac{\sum y -c_0}{1+[\delta (1+r)]^\frac{2}{\rho}} \label{eq:budgetplus}
 \end{equation}
 
-Equations \ref{eq:FOCc0c1} and \ref{eq:budgetplus} allow us to solve for $c_0$ and then  the remaining periods.  The term $\delta (1+r)$ enters each expression above and essentially `tilts' consumption to be more generally rising or falling over time as  $\delta \gtreqless 1/(1+r)$.  As this general tilt is not essential to the analysis below (however the degree of present-bias $\beta$ will be)  we shall without loss of generality impose the assumption that  \(\delta=\frac{1}{1+r}\) to unclutter the math. The above equations then become simply
+Equations \ref{eq:FOCc0c1} and \ref{eq:budgetplus} allow us to solve for $c_0$ and then  the remaining periods.  The term $\delta (1+r)$ enters each expression above and an increase or decrease essentially `tilts' consumption to be more generally rising or falling over time as  $\delta \gtreqless 1/(1+r)$.  As this general tilt does not alter any of the key tradeoffs of interest (unlike the degree of present-bias $\beta$ which will)  without loss of generality we shall impose the assumption that  \(\delta=\frac{1}{1+r}\) for the remainder of the analysis, to greatly unclutter the math expressions. Equations \ref{eq:FOCc0c1} to \ref{eq:budgetplus} then collapse simply to
 
 \begin{equation}
 c_1=\beta^\frac{1}{\rho}c_{0} \text{,   }
@@ -496,7 +483,7 @@ c_2=c_{1} \text{ and }
 c_1 = \frac{\sum y-c_0}{2}  
 \end{equation}
 
-In words: Zero self wants to indulge her present bias to tilt consumption toward period zero consumption but to then allocate consumption evenly across the remaining two periods. From the above a closed form solution for \(C_{0}\) is easily found: 
+In words: Zero self wants to indulge her present bias to tilt consumption toward period zero consumption but to then allocate to assure even consumption across the remaining two periods. A closed form solution for \(C_{0}\) is easily found: 
 
 \begin{equation}
 c_0^{0F} = \frac{\sum y}{1+2\beta^\frac{1}{\rho}} \\ \label{eq:CF}
@@ -506,44 +493,46 @@ c_0^{0F} = \frac{\sum y}{1+2\beta^\frac{1}{\rho}} \\ \label{eq:CF}
 c_1^{0F} = c_2^{0F} = \beta^\frac{1}{\rho}c_0^{0F}
 \end{equation*}
 
-These relationships and the Zero's preferred contract solution be seen in the two-panel diagram of Figure \ref{fig:twoquad},  drawn for a consumer with $\beta = 0.5$ and $\rho=1$ and a present value of income \(y=300\) spread over the three periods (we are assuming \(r=0\)).\footnote{These parameter values are chosen for expositional simplicity. In particular  $\rho=1$ will imply that period zero consumption will  be the same under full commitment as in the case where self-control is not possible, This simplifies certain graphical interpretation of the self-control problem but the analysis readily extends to other values.} 
-The right hand panel is drawn in $c_0-c_1$ contract space.  Points along the ray OF satisfy first-order equation \ref{eq:FOCc0c1} while points along the ray MF satisfy  the second tangency equation \ref{eq:FOCc1c2}  and  the budget line (i.e. they satisfy equation  \ref{eq:budgetplus}).   The intersection at F identifies the coordinates $(c_0^F,c_1^F)$ of Zero's preferred contract, also given by equation \ref{eq:CF}. We've labeled this with subscript F to indicate it's essential similarity to the full-commitment contract that might be offered by a competitive bank.\footnote{This will be exactly the same full-commitment contract that a competitive bank intermediary would be led to offer if they faced an opportunity cost of funds  $r$ identical to what we have assumed here for the informal economy (normalized to $r=0$ for convenience only)\..   However since it is realistic to assume these rates will not be the same and  that in practice consumers in the informal economy may face lower, possibly negative rates of return on informal savings and higher rates (and/or constrained access to loans.} The left hand panel depicts the situation in $c_1-c_2$ space of the sliced plane  at $c_0=c_0^F$). Details of this last diagram can be seen (now rotated 90 degrees)  in Figure \ref{fig:c1c2}.  Points along ray OF satisfy the Euler equation \ref{eq:FOCc1c2}, while points along the line passing through DF satisfy the period 1 budget $c_1+c_2=\sum y - c_0^$ where $c_0=c_o^F$ in this case. Point F at the intersection of these lines identifies the coordinates $(c_1^F,c_2^F).$
+These relationships and Zero's preferred contract solution be seen in the two-panel diagram of Figure \ref{fig:twoquad},  drawn for a consumer with $\beta = 0.5$ and $\rho=1$ and a present value of income \(y=300\) spread over the three periods (we are assuming \(r=0\)).\footnote{These parameter values are chosen for expositional purposes. In particular  $\rho=1$ implies that period zero consumption will  remain the same with or without self-control which slightly simplifies the graphical exposition\ (by placing points F and P along the same first period budget line) but the analysis is easily adapted to other cases.} 
+The right hand panel is drawn in $c_0-c_1$ contract space.  Points along the ray OF satisfy first-order equation \ref{eq:FOCc0c1} while points along the ray MF satisfy  the second tangency equation \ref{eq:FOCc1c2}  and  the budget line (i.e. they satisfy equation  \ref{eq:budgetplus}).   The intersection at F identifies the coordinates $(c_0^F,c_1^F)$ of Zero's preferred contract, also given by equation \ref{eq:CF}. We've labeled this with subscript F to indicate it's essential similarity to the full-commitment contract that might be offered by a competitive bank.\footnote{This will be exactly the same full-commitment contract that a competitive bank intermediary would be led to offer if they faced an opportunity cost of funds  $r$ identical to what we have assumed here for the informal economy (normalized to $r=0$ for convenience only)\..   However since it is realistic to assume these rates will not be the same and  that in practice consumers in the informal economy may face lower, possibly negative rates of return on informal savings and higher rates (and/or constrained access to loans.} The left hand panel depicts the situation in $c_1-c_2$ space of the sliced plane  at $c_0=c_0^F$). Details of this last diagram can be seen (rotated 90 degrees to place \(c_{1}\) on the horizontal axis)  in Figure \ref{fig:c1c2}.  Points along ray OF satisfy the Euler equation \ref{eq:FOCc1c2}, while points along the line passing through DF satisfy the period 1 budget $c_1+c_2=\sum y - c_0^$ where as drawn $c_0=c_o$. Point F at the intersection of these lines identifies the coordinates $(c_1^F,c_2^F)$ of the optimal contract.
 
-For these  parameter values Zero's preferred contract
-is $(c_0^F,c_1^F,c_2^F)=(150, 75, 75)$. Whether the consumer saves or borrows in each period  depends on the value of her income in that period relative to their chosen consumption level.  If the consumer's total income of 300 were divided evenly as $Y_{0}=(100, 100, 100)$ then this  preferred consumption plan would be achieved by borrowing $c_0-y_0=50$ in period 0 and repaying  25 in each of periods 1 and 2 (recall \(r=0)\). If the  stream were instead $Y_{0}=(200, 50, 50)$ the same consumption plan could now be constructed by saving  50 in period 0 to be evenly allocated to raise consumption in periods 1 and 2. In both cases we have assumed that One self cannot alter the consumption plan.  
+\begin{figure}
+  \includegraphics[width=\textwidth]{fig_selfcontrol.pdf}
+  \caption{\label{fig:c1c2}Period 1 recontracting}
+\end{figure}
 
-Let us now analyze what happens when  the self-control problem  cannot be solved and  One self cannot be stopped from attempting to recontract.  One-self will want to indulge her new present-bias and therefore `over-consume' in period 1  relative to what Zero self had intended. We may think of this as One self      `raiding savings'  or `piling on new debt' in period 1 at the expense of  period 2 consumption. 
-Figure \ref{fig:c1c2} (which provides extra detail on a rotated version of the left panel of Figure \ref{fig:twoquad}) illustrates the problem. Assume for a moment that the consumer had (naively as it will turn out) accepted the contract \(C_0^F\) in period zero. At the start of period 1 this contract satisfies Zero self's optimality condition $u'(c_1^F)=u'(c_2^F)$ but from the standpoint of One self's preferences involves too little period 1 consumption as $u'(c_1^{0F})\geq \beta u'(c_2^{0F})$. At point F, Zero self's indifference curve is tangent to the budget line but One self's indifference curve is steeper than the budget line. One self can   gain by recontracting to any feasible tangency point along the $c_2=\beta^\frac{1}{\rho}c_1$ ray, above where that indifference curve cuts the line and and   below the budget line.\footnote{ We have assumed that One self has access to finance at the same interest rate $r$.  Figure \ref{fig:c1c2} also assumes $\rho=1$.  When $\rho \neq 1$ point P will not lie exactly on the budget line defined by $c_0+c_1=\sum y - c_o^F$ as $c_o^F \neq c_o^P$ but the analysis of Figure \ref{fig:twoquad} is readily adapted.}  A sophisticated    Zero self consumer anticipates such recontracting and how it would lower their inter-temporal utility. They can do not better  to limit the damage than to accept the contract at P (as any other contract that satisfies the budget constraint would be recontracted to P anyways).  This subgame-perfect renegotiation-proof contract will involve less net saving (or same thing, more net debt) in period 1 than Zero self would prefer ($u'(c_1^{P})<  u'(c_2^{P})$) and a lower Zero self welfare.
+Zero's preferred contract
+at these parameter values and income is $(c_0^F,c_1^F,c_2^F)=(150, 75, 75)$. Whether the consumer borrows or saves\ (or pays down debts)\  in a given period  depends on the value of her income in that period relative here chosen optimal consumption level.  If total income of 300 were divided evenly across the periods as $Y_{0}=(100, 100, 100)$ then this  preferred consumption plan would be achieved by borrowing $c_0-y_0=50$ in period 0 and repaying  25 in each of periods 1 and 2 (recall \(r=0)\). If the  stream were instead $Y_{0}=(200, 50, 50)$ the same consumption plan could now be constructed by saving  50 in period 0 to be evenly allocated to raise consumption in periods 1 and 2. Both cases under the maintained assumption that  One self is committed to not alter the consumption plan.  
+
+Let us now analyze what happens when  the self-control problem  cannot be assumed to be solved and  so One self cannot be committed to not recontract to a preferred consumption bundle.  One-self will want to indulge her newly developed present-bias and therefore will want to `over-consume' in period 1  relative to what Zero self had intended. One self      would appear to be `raiding savings,' or  `rolling over or piling on new debt' in period 1 at the expense of  period 2 consumption. 
+The nature of the problem can be seen in Figure \ref{fig:c1c2} and (same thing) the left panel of Figure. Assume for the sake of argument that the consumer had (naively as it will turn out) accepted the contract \(C_0^F\) in period zero. At the start of period 1 this contract satisfies Zero self's optimality condition $u'(c_1^F)=u'(c_2^F)$ but from the standpoint of One self's preferences involves too little period 1 consumption as $u'(c_1^{0F})\geq \beta u'(c_2^{0F})$. At point F, Zero self's indifference curve is tangent to the budget line but One self's indifference curve is steeper than the budget line. One self can   gain by recontracting to any feasible tangency point along the $c_2=\beta^\frac{1}{\rho}c_1$ ray, above where that indifference curve cuts the line and and   below the budget line.\footnote{ We have assumed that One self has access to finance at the same interest rate $r$.  Figure \ref{fig:c1c2} also assumes $\rho=1$.  When $\rho \neq 1$ point P will not lie exactly on the budget line defined by $c_0+c_1=\sum y - c_o^F$ as $c_o^F \neq c_o^P$ but the analysis of Figure \ref{fig:twoquad} is readily adapted.}  A sophisticated    Zero self consumer anticipates this  recontracting and how it lowers their inter-temporal welfare\footnote{A naive hyperbolic discounter, on the other hand, may believe she
+can achieve optimal utility though this will not be realized. See below.}. From the diagram it should be clear that Zero self can do no better  to limit the damage than to accept the contract at P (as any other contract that satisfies the budget constraint would be recontracted to P anyways).  This subgame-perfect `renegotiation-proof' contract will involve less net saving (or same thing, more net debt) in period 1 than Zero self would like (as can be seen by $u'(c_1^{P})<  u'(c_2^{P})$) and lower Zero self welfare compared to the full-commitment contract.
 
 
-A sophisticated hyperbolic discounter who fully anticipates her own future
-change of preferences finds herself locked into a strategic game with her latter self to try to limit the damage.\footnote{A naive hyperbolic discounter, on the other hand, may believe she
-can achieve optimal utility though this will not be realized. See below.} This has the structure of a Stackelberg game with Zero self moving to choose a contract first in anticipation of One self's best recontracting best response. }   
-To see this  consider One self's best response in any subgame defined by Zero self's choice of contract \(C^{0}=(c_0^0, c_1^0,c_2^0)  \). \ One self can either accept the remaining consumption plan  $(c_1^0,c_2^0)$ or exchange it for a new contract to solve
+Mathematically, this has the structure of a Stackelberg game with Zero self moving to choose a contract first in anticipation of One self's best recontracting best response. }   
+Consider One self's best response in a subgame defined by Zero self's choice of contract \(C^{0}=(c_0^0, c_1^0,c_2^0)  \). \ One self can either accept the remaining consumption plan  $(c_1^0,c_2^0)$ or exchange it for a new contract to solve
 \begin{displaymath}
  \max_{c_1,c_2}  u(c_1)+\beta u(c_2)
 \end{displaymath}       
-
 \begin{displaymath}
- s.t. c_1+c_2 \leq c_1^0 +c_2^0
+ s.t. \text{   } c_1+c_2 \leq c_1^0 +c_2^0
 \end{displaymath}       
 
-Since Zero self's budget constraint must bind at an optimum (otherwise consumption and utility could be increased) the period 1 budget can be rewritten
+As Zero self's budget constraint must bind at an optimum (otherwise consumption and utility could be increased) the period 1 budget can be rewritten
 \begin{equation}
  c_1+c_2 \leq \sum y -c_0^0
 \end{equation}
-From this it is  clear that all that One self needs to react to is zero self's choice of period zero consumption $c_0^0^$ which establishes the net remaining resources to be divided between period 1 and 2.  From the earlier equation \ref{eq:budgetplus} we know Zero self would like each extra unit of savings that it passes forward into period 1 to be, on the margin, equally shared between period 1 and period 2 consumption (i.e. slope of the line through MF is $\frac{dc_1}{dc_0}=-\frac{1}{2}$ when $\delta=\frac{1}{1+r}$).
+From which it is  clear that all that One self needs to react to is Zero's period zero consumption $c_0^0^$ which establishes the remaining resources to be divided between period 1 and 2.  From equation \ref{eq:budgetplus} we know that Zero wants each extra unit that it passes forward into period 1 to be, on the margin, shared equally between period 1 and period 2 consumption (i.e. the slope of the line through MF is $\frac{dc_1}{dc_0}=-\frac{1}{2}$).
 
-One self on the other hand wants to set $c_2=\beta^\frac{1}{\rho}c_1$ which substituted into a binding period one budget can be solved to give a best response function to Zero self's choice of period 0 consumption:
+One wants to instead set $c_2=\beta^\frac{1}{\rho}c_1$. Substituted this into the binding period one budget we can solve for One's best response or reaction function to Zero's period 0 consumption choice:
 \begin{equation}
 c_1^{1}(c_0^0)=\frac{\sum y - c_0^0}{1+\beta^\frac{1}{\rho}}  \label{eq:react1}
 \end{equation}
 \begin{equation}
 c_2^{1}(c_0^0)=\beta^\frac{1}{\rho}\frac{\sum y - c_0^0}{1+\beta^\frac{1}{\rho}}
 \end{equation}
-One's reaction function is given by the line passing through MP in the left quadrant of Figure \ref{fig:twoquad}.  As  long as $\beta\leq 1$, for any given level of consumption in period 0,  One self wants to consume more in period 1 and less in period 2 relative to what One self would prefer.
-
-The sophisticated Zero self anticipates her future self's reaction and therefore chooses $c_0^0$ strategically to solve:
+One's reaction function is depicted by the line passing through MP in the left quadrant of Figure \ref{fig:twoquad}.  As  long as $\beta< 1$,  line MP is everywhere steeper than line MF.  For any given period 0 consumption level, One wants to consume more in period 1 and less in period 2 compared to Zero's preferences.
+ As the sophisticated Zero anticipates her future self's reaction she  chooses $c_0^$ strategically to solve:
 \begin{displaymath}
 \max_{c_0} u(c_0)+\beta[u(c_1^{1}(c_0)+u(c_2^{1}(c_{0})]\\  
 \end{displaymath}
@@ -551,7 +540,7 @@ subject to
  \begin{displaymath}
  c_0+ c_1^{1}(c_0)+ c_2^{1}(c_0)= \sum y
 \end{displaymath}
-Using the fact that $c_2=\beta^\frac{1}{\rho}c_1$ and other substitutions the first-order condition for this problem can be written:
+From the fact that One will set $c_2^{1}=\beta^\frac{1}{\rho}c_1^{1}$ and other substitutions the first-order condition for this problem can be written:
 \begin{equation*}
 u'(c_0)=\Lambda u'(c_1)
 \end{equation*}
@@ -562,10 +551,19 @@ where
 \begin{equation}
 \Lambda=\frac{(\beta+\beta^\frac{1}{\rho})}{1+\beta^\frac{1}{\rho}}
 \end{equation}
-Analogously to the case of the classic Stackelberg Cournot duopoly game our Zero self wants to choose the consumption contract  on the highest iso-utility surface along her opponent's reaction function. This point is given  by contract \(P \text{ }\)which satisfies both equation \ref{eq:react1} (the line through MP) and equation \ref{eq:LambdaC0} (the line through OP). These two equations can be solved to give a closed-form solution to the optimal contract in the absence of self-control \begin{equation}
+Analagously to what happens in a classic Stackelberg Cournot duopoly game our Zero self wants to choose the consumption contract  that puts her on the highest iso-utility surface along One's reaction function. Contract \(P \text{ }\)in Figure satisfies both equation \ref{eq:react1} (the line through MP) and equation \ref{eq:LambdaC0} (the line through OP). These two equations can be solved to give a closed-form solution to the optimal contract in the absence of self-control \begin{equation}
 c_0^P = \frac{\sum y}{1+\Lambda^\frac{1}{\rho}(1+\beta^\frac{1}{\rho})} 
 \end{equation}
-with $c_1^P=\Lambda^\frac{1}{\rho}c_0^P$ and c_2^P=\beta^\frac{1}{\rho} \Lambda^\frac{1}{\rho}c_0^P$. As can be seen in Figure \ref{fig:c1c2}, Zero self has little choice but to accommodate to the fact One self will grab a fraction of any of the consumption resources that Zero self would have liked to have made available or period 2 consumption. For our earlier parameterization $\beta=0.5$ and $\rho=1$ the best contract in the absence of self-control will be $C_0^P=(150, 100, 50) $ which offers considerably less consumption smoothing in later periods compared to the contract with self-control $C_0^F=(150, 75, 75) $.  If the consumer has income stream $Y_0=(100, 100, 100)$ then we can think of the consumer with self-control as sticking to a balanced repayment program to keep consumption steady in the last two periods. Compared to this the consumer without self-control postpones rolls over rather than repays the portion of the debt that they would have paid off in period one, lowering period 2 consumption. If the consumer had had an income stream $Y_0=(200, 50, 50)$ then a consumer without self-control can be viewed as raiding   savings in period that an otherwise identical consumer with self-control would have earmarked to boost period 2 consumption. Put differently, `solving'   the self control problem  leads consumers to save more/borrow less in period 1 and consume more in period 2. 
+with $c_1^P=\Lambda^\frac{1}{\rho}c_0^P$ and c_2^P=\beta^\frac{1}{\rho} \Lambda^\frac{1}{\rho}c_0^P$. 
+
+As can be seen in Figure \ref{fig:c1c2}, Zero self has little choice but to accommodate to the fact One self will grab a fraction of any of the consumption resources that Zero self would have liked to have made available or period 2 consumption.  It is easy to show that for all $0<\beta < 1$ line $\Lambda^\frac{1}{\rho}>\beta^\frac{1}{\rho}$ and hence line OP is everywhere steeper  than line OF.  We can combine this  with the earlier observation that line MP
+is everywhere steeper than line MF
+to conclude that $c_1^P>c_1^F$ so the absence of self control leads to higher period one consumption compared to a situation where self-control can be exercised. 
+
+With a little extra algebra we can also show that c_0^P\gtreqless_0^F$ as $\rho \lesseqgtr 1$ for $0<\beta<1$ but also that c_2^P<c_2^F$.  When $\rho<1$
+Zero self responds to the self-control problem by reducing savings in period 0. When  $\rho>1$ she responds by increasing savings.  This increase in period 0  savings is however never enough to lead to a net increase in period 2 consumption. Indeed the changes in period 0 savings are very small relative to the decrease in net-savings in period 1.  In other words for Zero self can do little other than to  just largely accommodate to the pattern of consumption that One self wants to impose.  
+
+For our earlier parameterization $\beta=0.5$ and $\rho=1$ the best contract in the absence of self-control will be $C_0^P=(150, 100, 50) $ which offers considerably less consumption smoothing in later periods compared to the contract with self-control $C_0^F=(150, 75, 75) $.  If the consumer has income stream $Y_0=(100, 100, 100)$ then we can think of the consumer with self-control as sticking to a balanced repayment program to keep consumption steady in the last two periods. Compared to this the consumer without self-control postpones rolls over rather than repays the portion of the debt that they would have paid off in period one, lowering period 2 consumption. If the consumer had had an income stream $Y_0=(200, 50, 50)$ then a consumer without self-control can be viewed as raiding   savings in period that an otherwise identical consumer with self-control would have earmarked to boost period 2 consumption. Put differently, `solving'   the self control problem  leads consumers to save more/borrow less in period 1 and consume more in period 2. 
 
 For the diagram exposition we  focused on the special case where $\rho=1$ which implies an elasticity of inter-temporal substitution of $\sigma=\frac{1}{\rho}=1$.  This in turn implies that period zero consumption will be the same under self-control or its absence. It is possible to show that $c_0^P>c_0^F$ or $c_0^P<c_0^F$ as $\rho<1$ or $\rho>1$ respectively.  That is to say the consumer may raise or lower period 0 consumption as part of their effort to indirectly control their latter self's choices.  However the amount by which $c_0^P$ will differ from $c_0^F$ is  negligible to very small compared to the differences in period 1 and period 2 consumption for all parameters values in the range $0\leq \beta \leq 1$ and $0\leq \rho \leq \infty $. In practical terms this means that in the absence of self-control the Zero self can do very   little but to accommodate to One self's preferences in establishing the balance of consumption between period 1 and period 2. This relative lack of power in turn leads to the demand for commitment services from a financial intermediary, the topic which we turn to next.    
 
