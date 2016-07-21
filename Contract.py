@@ -21,8 +21,6 @@ class Contract(object):
             self.y = np.array([100,100,100])
         else:
             self.y = y
-        self.r     = 0.0                     # bank's opportunity cost of funds
-        self.delta = 1/(1+self.r)            # agent's psychic discount factor
 
     def print_params(self):
         """ print out parameters """
@@ -32,7 +30,10 @@ class Contract(object):
 
     def u(self,ct):
         """ utility function """
-        return  ( (1/(1-self.rho)) * ct**(1-self.rho)  )
+        if self.rho==1:
+            return np.log(ct)
+        else:
+            return  (ct**(1-self.rho))/(1-self.rho)
 
     def PV(self,c):
         """discounted present value of any stream c"""
@@ -49,9 +50,14 @@ class Contract(object):
     def indif(self, ubar, beta):
         """ returns u(c1, c2) for graphing indifference curves in c1-c2 space.
         if beta = 1, will describe self 0's preferences """
-        def idc(c1):
-            return np.array((((1-self.rho)/(beta*self.delta))
-                  *(ubar-self.u(c1)))**(1/(1-self.rho)))
+        if self.rho==1:
+            def idc(c1):
+                lnc2 = (ubar-np.log(c1))/beta
+                return np.exp(lnc2)
+        else:
+            def idc(c1):
+                return (((1-self.rho)/beta)*(ubar-self.u(c1)))**(1/(1-self.rho))
+
         return idc
 
     def isoprofit(self, prfbar, y):
@@ -61,6 +67,22 @@ class Contract(object):
             """isoprofit function isoprf(c1) """
             return np.array(y[1] + y[2] - prfbar) - c1
         return isoprf
+
+    def reneg(self,c):
+        """ Renegotiated monopoly contract offered to period-1-self if
+        c_0 is past but (c_1,c_2) now replaced by (cr_1, cr_2)"""
+        beta, rho = self.beta, self.rho
+        btr = beta**(1/rho)
+        if rho==1:
+            lncr1 = (np.log(c[1])+beta*np.log(c[2])-beta*np.log(beta))/(1+beta)
+            cr1 = np.exp(lncr1)
+        else:
+            pu =  self.u(c[1]) + beta*self.u(c[2])
+            a  =  (pu *(1-rho) )**(1/(1-rho))
+            b = (1 + btr)**(1/(rho-1))
+            cr1 = a*b
+        cr2 = cr1*btr
+        return np.array([c[0],cr1,cr2])
 
 
 class Monopoly(Contract):                    # build on contract class
@@ -73,28 +95,21 @@ class Monopoly(Contract):                    # build on contract class
     def fcommit(self):
         """monopolist optimal full commitment contractwith period0 self
         from closed form solution for CRRA"""
-        A = ((self.PVU(self.y,self.beta) * (1-self.rho) )**(1/(1-self.rho)) )
-        B = (1 + self.beta**(1/self.rho) * \
-            (self.delta + self.delta**2))**(1/(self.rho-1))
-        c0 = A*B
-        c1 = c0 *(self.beta * self.delta *(1+self.r)  )**(1/self.rho)
-        c2 = c0 *(self.beta * self.delta**2 *(1+self.r)**2  )**(1/self.rho)
-        return np.array([c0,c1,c2])
+        bt, rho = self.beta, self.rho
+        btr = bt**(1/rho)
+        pvu = self.PVU(self.y,bt)
+        if rho==1:
+            lnc0 = (pvu-2*bt*np.log(bt))/(1+2*bt)
+            c0 = np.exp(lnc0)
+        else:
+            a = ((pvu*(1-rho))**(1/(1-rho)) )
+            b = (1 + 2*btr)**(1/(rho-1))
+            c0 = a*b
+        return np.array([1,btr,btr])*c0
 
     def negprofit(self,c):
         """ Negative profits (for minimization)"""
         return  -(self.PV(self.y) - self.PV(c))
-
-    def reneg(self,c):
-        """ Renegotiated contract offered to period-1-self
-        c_0 is past but (c_1,c_2) now replaced by (cr_1, cr_2)"""
-        PU =  self.u(c[1]) + self.beta*self.delta*self.u(c[2])
-        A  =  (PU *(1-self.rho) )**(1/(1-self.rho))
-        B = (1 + self.beta**(1/self.rho) * self.delta)**(1/(self.rho-1))
-        cr0 = c[0]
-        cr1 = A*B
-        cr2 = cr1 *(self.beta * self.delta *(1+self.r)  )**(1/self.rho)
-        return np.array([cr0,cr1,cr2])
 
     def reneg_proof_cons(self,c):
         """ the renegotiation-proof constraint gain from renegotiation
@@ -128,27 +143,18 @@ class Competitive(Contract):                    # build on contract class
     def fcommit(self):
         """competitive optimal full commitment contractwith period0 self
         from closed form solution for CRRA"""
-        B = self.beta**(1/self.rho)
-        D = self.PV(self.y)
-        C = (1 + 2*B)
-        c0 = D/C
-        c1 = B * c0
-        c2 = B * c0
-        return np.array([c0,c1,c2])
+        btr = self.beta**(1/self.rho)
+        return np.array([1,btr,btr])*self.PV(self.y)/(1 + 2*btr)
 
     def ownsmooth(self):
         """contract if have to smooth by oneself without contract
-        from closed form solution for CRRA"""
-        b = self.beta
-        rho = self.rho
-        B = b**(1/rho)
-        PY = self.PV(self.y)
-        G = b*(1+b**((1-rho)/rho))/(1+B)
-        c0 = PY/(1+G**(1/rho)+(b*G)**(1/rho))
-        c1 = c0*G**(1/rho)
-        c2 = B * c1
-        print('G ={}'.format(G))
-        return np.array([c0,c1,c2])
+        from closed form solution for CRRA with kappa=0"""
+        beta, rho = self.beta, self.rho
+        btr = beta**(1/rho)
+        pvy = self.PV(self.y)
+        lam = (beta+btr)/(1+btr)
+        ltr = lam**(1/rho)
+        return np.array([1, ltr, btr*ltr])*pvy/(1+ltr*(1+btr))
 
     def negPVU(self,c):
         """0 self negative present utility value of
@@ -156,24 +162,16 @@ class Competitive(Contract):                    # build on contract class
         return  - self.PVU(c, self.beta)
 
     def renegC(self, c):
-        """ Renegotiated contract offered to period-1-self
-        c_0 is past but (c_1,c_2) now replaced by (cr_1, cr_2)"""
-        PV =  c[1] + c[2] - self.kappa
-        B  =  self.beta**(1/self.rho)
-        cr1 = PV/(1+B)
-        cr2 = B*cr1
+        """ Renegotiated Competitive contract offered to period-1-self
+        c_0 is past but (c_1,c_2) now replaced by (cr_1, cr_2)
+        We distinguish from .reneg (ex-post monopoly) l"""
+        beta, rho = self.beta, self.rho
+        btr  =  beta**(1/rho)
+        pv =  c[1] + c[2] - self.kappa
+        btr  =  beta**(1/rho)
+        cr1 = pv/(1+btr)
+        cr2 = btr*cr1
         return np.array([c[0],cr1,cr2])
-
-    def reneg(self,c):
-        """ Renegotiated contract offered to period-1-self
-        c_0 is past but (c_1,c_2) now replaced by (cr_1, cr_2)"""
-        PU =  self.u(c[1]) + self.beta*self.delta*self.u(c[2])
-        A  =  (PU *(1-self.rho) )**(1/(1-self.rho))
-        B = (1 + self.beta**(1/self.rho) * self.delta)**(1/(self.rho-1))
-        cr0 = c[0]
-        cr1 = A*B
-        cr2 = cr1 *(self.beta * self.delta *(1+self.r)  )**(1/self.rho)
-        return np.array([cr0,cr1,cr2])
 
     def reneg_proof_cons(self,c):
         """ the renegotiation-proof constraint gain from renegotiation
@@ -192,7 +190,7 @@ class Competitive(Contract):                    # build on contract class
     def participation_cons(self,c):
         return (self.PV(self.y) - self.PV(c))
 
-    def reneg_proof(self, monop_reg = True):
+    def reneg_proof(self, monop_reg = False):
         """calculate renegotiation-proof contract that maxes 0-self's utility.
         supplies constraints to solver that bank can't profit too much
         and period 0 borrower participation"""
@@ -202,7 +200,7 @@ class Competitive(Contract):                    # build on contract class
                 {'type': 'ineq',
                  'fun' : self.participation_cons })
         else:
-            print('reneg surplus to customer -- sensitive solns ')
+            #print('reneg surplus to customer -- sensitive solns ')
             cons = ({'type': 'ineq',
                  'fun' : self.reneg_proof_consC },
                 {'type': 'ineq',
@@ -214,8 +212,10 @@ class Competitive(Contract):                    # build on contract class
 
 if __name__ == "__main__":
 
+    RHO   =  0.95  # for testing different values
     print("Base contract")
-    c = Contract(beta = 0.6)
+    c = Contract(beta = 0.5)
+    c.rho = RHO
     c.y = [60, 120, 120]
     c.print_params()
 
@@ -223,22 +223,24 @@ if __name__ == "__main__":
 
     cM = Monopoly(beta = 0.5)
     cM.y = [80, 110, 110]
-    cM.rho = 0.95
+    cM.rho = RHO
     cM.print_params()
 
     print("Competitive contract")
     cC = Competitive(beta = 0.5)
-    cC.rho = 0.95
+    cC.rho = RHO
     cC.y = [80, 110, 110]
     cC.print_params()
 
 
-
     cCF = cC.fcommit()
+    print("cCF: ",cCF)
+
     cCr = cC.reneg(cCF)
+    print("cCF reneg: ",cCr)
     cC.guess = cCr
     cCRP = cC.reneg_proof().x
-    print(cCRP)
+    print("cCRP: ", cCRP)
 
 
     cMF = cM.fcommit()
