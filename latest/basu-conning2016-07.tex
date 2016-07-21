@@ -34,7 +34,7 @@
 \providecommand{\lemmaname}{Lemma}
   \providecommand{\propositionname}{Proposition}
 
-\date{July 12, 2016 (preliminary draft)}
+\date{July 21, 2016 draft)}
 
 \makeatother
 
@@ -75,7 +75,7 @@ D18
 
 
 
-Hyperbolic discounters -- consumers with present-biased preferences -- are those who struggle to stick to  their long-term asset accumulation or debt management plans and for that reason may benefit from
+Hyperbolic discounters -- consumers with present-biased preferences -- are those who struggle to stick to  their long-term asset accumulation or debt management plans and for this reason may benefit from
 the `commitment services'  or  designed restrictions that a financial intermediary may build into multi-period financial contracts.   Long-term consumption smoothing goals are more likely to be achieved where customers can enlist financial intermediaries to act as partners in resisting  temptations to raid savings and/or   increase debt in ways that could undermine  responsible long-term plans. The properties of \textit{costlessly}-enforced optimal
 commitment banking contracts have been examined in several theoretical papers
 (\cite{laibson_golden_1997}) and a number of randomized controlled trials and other empirical studies have   found quite large impacts from introducing new commitment service savings products (see for example \cite{Thaler_Benartzi_2004}, \cite{ashraf_tying_2006} and the studies mentioned in the survey by \cite{bryan_commitment_2010}). 
@@ -426,6 +426,9 @@ could be sophisticated or naive about understanding the time-inconsistency of he
 preferences (\citet{odonoghue_choice_2001}).
 
 It will be useful to establish simple labels to distinguish the consumer's different selves. We refer to the  period-zero consumer as the `Zero-self' or simply `Zero' and her  period-one incarnation as her `One-self' or `One'. 
+Zero-self starts with claims to an arbitrary
+income stream over the three periods, $Y^0=\left(y_{0},y_{1},y_{2}\right)$. Her objective will be to rearrange this into a utility maximizing
+consumption stream using what financial contracting savings and/or borrowing strategies are available. 
 
 The consumer has the option of contracting with one or many
 risk-neutral banks, depending on the market structure which could be monopolized or competitive. Each bank has
@@ -437,26 +440,20 @@ profits. Because the remainder of the analysis will be focused on contracts that
 
 
 
-\subsection{Self-control with costless full-commitment contracts  } 
-Zero-self begins with claims to an arbitrary
-income stream over the three periods, $Y^0=\left(y_{0},y_{1},y_{2}\right)$. Her objective will be to rearrange this into a utility maximizing
-consumption stream using what financial contracting savings and/or borrowing strategies are available.  A consumer with time-inconsistent
-preferences generally cannot trust her later selves to not disrupt her preferred long-term 
-consumption plans.  In this simple three period setting Zero self's particular concern is that her One self will want to divert to period 1 consumption resources that Zero self would prefer to earmark for period 2 consumption. 
-Zero self finds herself therefore in a  strategic contracting game with  her latter period self. A bank may be able to profitably act as a strategic partner to Zero by offering
+\subsection{Full-commitment contracts under Competition} 
+ A consumer with time-inconsistent preferences cannot trust her later selves to stick to her preferred consumption plans.  In this simple three-period setting Zero's  concern is that her later One self will try to divert resources earmarked for period 2 consumption to boost period 1 consumption instead. 
+Like a Stackelberg-Cournot game, Zero's stategic contracting choices are affected by her anticipation of One's best response. 
+A bank may be able to act as a strategic partner to Zero by offering
 contracts
 with commitment services
-that limit or otherwise control the customer's later self(ves) ability to recontract.  
+ to  help restrict or otherwise control the customer's later self(ves) recontracting possibilities.  
 
-In this section we contrast two initial polar opposite contracting situations under  conditions of competition and monopoly: (1)\ the full-commitment or full self-control case where we simply assume a bank can offer the Zero
+In this section we study the benchmark competitive full-commitment contract where we simply assume a bank can offer the Zero
 consumer
 a
-multi-period contract that \textit{costlessly} binds her latter self(ves) to not renegotiate its terms with the bank or others; and (2) the no self-control case where the bank cannot offer a contract that prevents the consumer's latter self from recontracting.\footnote{Or can do so only in the narrow sense of offering a renegotiation-proof contract that the latter self would recontract to anyways.}   The consumption smoothing that can be achieved in this latter case will in general fall short of  what can achieved in the former, hence the demand for commitment services in the market.
+multi-period contract that \textit{costlessly} binds the consumer's latter self(ves) to not renegotiate its terms with the same bank or other banks. Although we are not making the exact mechanisms explicit yet the bank's ability to credibly commit to not renegotiate such a contract -- even though \textit{ex-post} the consumer is willing to pay the bank to do so -- must rest on the assumption that the bank can credibly bond itself to incurring a high renegotiation penalty (call it $\kappa$) in the event of renegotiation that is sufficiently high to deter the bank.\footnote{We label this the costless full-commitment contract  but as this discussion suggests it rests upon the deterrence achieved by threatening very costly punishments to the bank.  When the severity of the punishments that can be credibly threatened are less severe the costs of contracting will rise as the bank and consumer have to distort the consumption smoothing contract to make no-renegotiation commitments self-enforcing. }  In the next and later sections of the paper we will examine what happens when  $\kappa$ falls to zero and exogenously sustained commitment contracts must be replaced by self-enforcing renegotiation-proof contracts. \ We then study intermediate scenarios where $\kappa$ may larger than zero but less than what is required to sustain full commitment. In later sections we delve deeper into what determines $\kappa$ and how it might be  endogenously determined via choices of bank ownership and governance forms, and shaped by the nature of the market structure. 
 
-This section therefore studies cases where self-control is either not possible (or prohibitively expensive)\ and cases where full self-control can be costlessly achived.  Once these benchmark cases are established we will then turn in the following section to the more interesting and realistic cases of where self-control
-can be achieved only via costly self-enforcing renegotiation-proof\ contracts that provide incentives to both the customer and the bank to keep their pledges to not renegotiate contracts. 
-\subsubsection{Competitive full-commitment contracts}
-\label{sec:own}
+
 
   \begin{figure}[p!]
     \centering
@@ -466,7 +463,7 @@ can be achieved only via costly self-enforcing renegotiation-proof\ contracts th
   \end{figure}
 
 
-Suppose also that the consumer faced no self control problem: Zero self chooses a contract that costlessly commits her period-1 and period-2 selves to follow the consumption plan laid out by the contract. This is  solved as a standard utility maximization problem subject to an   inter-temporal budget constraint
+With an exclusive full-commitment contract the consumer faces no self control problem. Zero chooses a  contract in period 0 that costlessly commits her period-1 and period-2 selves to follow the chosen consumption plan. This is  contract design problem is solved as a standard utility maximization problem subject to an   inter-temporal budget constraint
 (or, same thing, subject to a financial intermediary's zero-profit condition). Zero self chooses contract \(C^{0}\) to solve:
 \begin{displaymath}
  \max_{C^0} U_0(C^{0})
@@ -512,53 +509,35 @@ c_1^{0F} = c_2^{0F} = \beta^\frac{1}{\rho}c_0^{0F}
 \end{equation*}
 
 These relationships and Zero's preferred contract solution can be seen in the two-panel diagram of Figure \ref{fig:twoquad},  drawn for a consumer with $\beta = 0.5$ and $\rho=1$ and a present value of income \(y=300\) spread over the three periods (we are assuming \(r=0\)).\footnote{These parameter values are chosen for expositional purposes. In particular  $\rho=1$ implies that period zero consumption will  remain the same with or without self-control which slightly simplifies the graphical exposition\ (by placing points F and P along the same first period budget line) but the analysis is easily adapted to other cases.} 
-The right hand is drawn in $c_0-c_1$ contract space.  Points along the ray OF satisfy first-order equation \ref{eq:FOCc0c1} while points along the ray MF satisfy  the second tangency equation \ref{eq:FOCc1c2}  and  the budget line (i.e. they satisfy equation  \ref{eq:budgetplus}).\footnote{ A note on diagram interpretations may be helpful.  Points that satisfy the first-order conditions lie along a ray from the origin that extends in the $(1,\beta^\frac{1}{\rho},\beta^\frac{1}{\rho})$ direction in 3D space. The ray through OF in the right panel of Figure \ref{fig:twoquad} is the  projection of this ray in  $c_1-c_2$ space.  As contracts are consumption bundles over three periods an iso-utility surface associated with a particular level of inter-temporal utility level given by $u(c_0)+\beta[u(c_1)+u(c_2)]=\hat U$ . Projected onto   $c_0-c_1$ space this would be described by an entire family of contour lines, each contour line associated with a slice of the surface at a particular value of $c_2$. A contour line further from the origin in this   $c_0-c_1$ projection does no correspond to higher utility since every contour line in this projection is associated with the same level of utility.  The left hand panel of the figure --  shown in greater detail in Figure \ref{fig:c1c2} -- on the other hand depicts the particular subgame reached when  period 0 consumption was already set at $c_0=c_0^F$. The contour lines drawn in this figure are interpreted as conventional indifference curves with  higher levels of utility as we move further from the origin.  For example Zero's indifference curve $u(c_0^{F})+\beta[u(c_1)+u(c_2)]= U(C^F)$ is the locus of all points $(c_1,c_2)$ that yield the same level of utility to Zero as the full-commitment contract when $c_0=c_0^F$.  Zero's indifference curve passing through point P on the other hand also keeps  $c_0=c_0^F$ but offers an everywhere lower level of utility to Zero. The steeper indifference curves on the same diagram correspond to One's more present-biased preferences $u(c_0^{F})+ u(c_1)+\beta u(c_2)$}   The intersection at F identifies the coordinates $(c_0^F,c_1^F)$ of Zero's preferred contract, also given by equation \ref{eq:CF}. We've labeled this with subscript F to indicate it's essential similarity to the full-commitment contract that might be offered by a competitive bank.\footnote{This will be exactly the same full-commitment contract that a competitive bank intermediary would be led to offer if they faced an opportunity cost of funds  $r$ identical to what we have assumed here for the informal economy (normalized to $r=0$ for convenience only)\..   However since it is realistic to assume these rates will not be the same and  that in practice consumers in the informal economy may face lower, possibly negative rates of return on informal savings and higher rates (and/or constrained access to loans.} The left hand panel depicts the situation in $c_1-c_2$ space of the sliced plane  at $c_0=c_0^F$). Details of this last diagram can be seen (rotated 90 degrees to place \(c_{1}\) on the horizontal axis)  in Figure \ref{fig:c1c2}.  Points along ray OF satisfy the Euler equation \ref{eq:FOCc1c2}, while points along the line passing through DF satisfy the period 1 budget $c_1+c_2=\sum y - c_0^$ where as drawn $c_0=c_o$. Point F at the intersection of these lines identifies the coordinates $(c_1^F,c_2^F)$ of the optimal contract.
+The right hand is drawn in $c_0-c_1$ contract space.  Points along the ray OF satisfy first-order equation \ref{eq:FOCc0c1} while points along the ray YF satisfy  the second tangency equation \ref{eq:FOCc1c2}  and  the budget line (i.e. they satisfy equation  \ref{eq:budgetplus}).\footnote{ A note on diagram interpretations may be helpful.  Points that satisfy the first-order conditions lie along a ray from the origin that extends in the $(1,\beta^\frac{1}{\rho},\beta^\frac{1}{\rho})$ direction in 3D space. The ray through OF in the right panel of Figure \ref{fig:twoquad} is the  projection of this ray in  $c_1-c_2$ space.  As contracts are consumption bundles over three periods an iso-utility surface associated with a particular level of inter-temporal utility level given by $u(c_0)+\beta[u(c_1)+u(c_2)]=\hat U$ . Projected onto   $c_0-c_1$ space this would be described by an entire family of contour lines, each contour line associated with a slice of the surface at a particular value of $c_2$. A contour line further from the origin in this   $c_0-c_1$ projection does no correspond to higher utility since every contour line in this projection is associated with the same level of utility.  The left hand panel of the figure --  shown in greater detail in Figure \ref{fig:c1c2} -- on the other hand depicts the particular subgame reached when  period 0 consumption was already set at $c_0=c_0^F$. The contour lines drawn in this figure are interpreted as conventional indifference curves with  higher levels of utility as we move further from the origin.  For example Zero's indifference curve $u(c_0^{F})+\beta[u(c_1)+u(c_2)]= U(C^F)$ is the locus of all points $(c_1,c_2)$ that yield the same level of utility to Zero as the full-commitment contract when $c_0=c_0^F$.  Zero's indifference curve passing through point P on the other hand also keeps  $c_0=c_0^F$ but offers an everywhere lower level of utility to Zero. The steeper indifference curves on the same diagram correspond to One's more present-biased preferences $u(c_0^{F})+ u(c_1)+\beta u(c_2)$}   The intersection at F identifies the coordinates $(c_0^F,c_1^F)$ of Zero's preferred contract, also given by equation \ref{eq:CF}. We've labeled this with subscript F to indicate it's essential similarity to the full-commitment contract that might be offered by a competitive bank.\footnote{This will be exactly the same full-commitment contract that a competitive bank intermediary would be led to offer if they faced an opportunity cost of funds  $r$ identical to what we have assumed here for the informal economy (normalized to $r=0$ for convenience only)\..   However since it is realistic to assume these rates will not be the same and  that in practice consumers in the informal economy may face lower, possibly negative rates of return on informal savings and higher rates (and/or constrained access to loans.} The left hand panel depicts the situation in $c_1-c_2$ space of the sliced plane  at $c_0=c_0^F$). This last diagram can be seen, now rotated 90 degrees to place \(c_{1}\) on the horizontal axis, in Figure \ref{fig:c1c2}.  Points along ray OF satisfy the Euler equation \ref{eq:FOCc1c2}, while points along the line passing through DF satisfy the period 1 budget $c_1+c_2=\sum y - c_0^$ where as drawn $c_0=c_0^F$. Point F at the intersection of these lines identifies the coordinates $(c_1^F,c_2^F)$ of the optimal contract.
 
 \begin{figure}
   \includegraphics[width=\textwidth]{fig_selfcontrol.pdf}
-  \caption{\label{fig:c1c2}Full-commitment and renegotiation under competition (drawn for $c_0=c_0^F$)}
+  \caption{\label{fig:c1c2}Full-commitment and renegotiation-proof contracts under competition (drawn at $c_0=c_0^F, \beta=\frac{1}{2}, \rho=1, \kappa=0$)}
 \end{figure}
 
 Zero's preferred contract
-at these parameters is $(c_0^F,c_1^F,c_2^F)=(150, 75, 75)$. Whether the consumer borrows or saves\ (or pays down debts)\  in any given period  depends on the value of her income in that period relative here chosen optimal consumption level.  If total income of 300 were divided evenly across the periods as $Y_{0}=(100, 100, 100)$ then this  preferred consumption plan would be achieved by borrowing $c_0-y_0=50$ in period 0 and repaying  25 in each of periods 1 and 2 (recall \(r=0)\). If the  stream were instead $Y_{0}=(200, 50, 50)$ the same consumption plan could now be constructed by saving  50 in period 0 to be evenly allocated to raise consumption in periods 1 and 2. Both cases under the maintained assumption that  One self is committed to not alter the consumption plan. 
+at these parameters is $C_0^F=(150, 75, 75)$. How much the consumer borrows or saves\ (or pays down debts)\  in any given period  depends on the value of her income in that period relative the optimal consumption level in that period.   If total income of 300 were evenly divided across periods as $Y_{0}=(100, 100, 100)$ then this   consumption plan would be achieved by borrowing $c_0-y_0=50$ in period 0 and repaying  25 in each of periods 1 and 2 (recall \(r=0)\). If the  stream were instead $Y_{0}=(200, 50, 50)$ the same consumption plan would be constructed by saving  50 in period 0 to be evenly allocated to raise consumption in periods 1 and 2.  
 
-\subsubsection{Monopoly Full-commitment contracts}
-\label{sec:own}
-
- A monopolist bank aims to rearrange consumption in a way that extracts
-maximum surplus from the consumer, pressing the consumer up against her participation
-constraint (PC), i.e. leaving her no worse off than under autarky. The
-bank solves the following problem:
-\begin{align}
-\max_{C_0} & \; \Pi_{0}\left(C_{0};Y_{0}\right)\nonumber \\
-s.t. & \; U_{0}\left(C_{0}\right)\geq U_{0}^{A}\label{eq:PC}
-\end{align}
-where $U_{0}^{A}$ is the reservation utility the consumer would enjoy if they did not accept the contract.  For the moment we will adopt the simple assumption that without a bank contract the consumer has access to no good saving or borrowing opportunities and therefore has no choice but to consume their autarky income stream so  $U_{0}^{A}=u(y_0)+\beta[u(y_1)+u(y_2)]$. We will relax this assumption to explore how equilibrium contracts may change when the consumer has access to some consumption smoothing opportunities under autarky. 
-
-The first-order conditions  will be the same as the competitive case in expressions \ref{eq:FOC_comp}. With $\delta= 1/(1+r)$ these become
-\begin{equation}
-u'\left(c_{0}\right)=\beta u'\left(c_{1}\right)=\beta u'\left(c_{2}\right)
-\end{equation}and with CRRA utility simply $c_1=c_{2}=\beta^\frac{1}{\rho}c_{0}$.
-With the Zero's participation constraint -- which must bind at a monopoly optimum --
-these equations can be  solved for the optimum monopoly full-commitment contract $C_{0}^{mF}$ and corresponding bank profits $\Pi_{0}\left(C_{0}^{mF};Y_{0}\right)$. Closed form solutions for the CRRA utility case appear as appendix equations \ref{eq:c-mf} and \ref{eq:pi-mf}, respectively. Conceptually the optimum contract is found at the tangency point where the highest iso-profit plane still touches the iso-utility surface associated with Zero's reservation utility. 
-The Figure \ref{fig:renegotiation} depicts the equilibrium contract at point $mF $ in the $c_1-c_2$ sliced plane given by $c_0=c_0^{mF}$.
-
-The terms of the optimal monopoly contract, and hence also the level of bank
-profits achieved will be dependent on the consumer's autarky utility. $C_{0}^{mF}$
-rises and profits fall with $U_{0}^{A}$. The bank makes non-negative profits. 
 
 \subsection{The Renegotiation Problem}
 
 
-The contracts of the last section rested on the assumption that the customer's One self could be kept from changing the terms of the contract  either by refinancing/renegotiating with the same bank or with a different bank.  The latter could be prevented if the bank contract in period 0 could be made exclusive, which is to say that it could include enforceable clauses that effectively prevent the customer from contracting with a second bank. Whether exclusive contracts can be made enforceable will depend on details of the legal and institutional environment. For the moment let us maintain that exclusive contracts can be written and focus on what will be required to keep the bank's commitment to not renegotiate the contract in period 1 credible.  This is an important question since as can be easily demonstrated the customer's change of preferences in period 1 will mean that there will always be gains to trade to be split between the bank and/or period-1 self by breaking an earlier commitment, unless explicit or implicit costs have been built into the contract.     
-
-To see the problem most clearly, consider now the situation where  self-control cannot be simply assumed. When period 1 arrives One-self will want to indulge her present-bias and  `over-consume' in period 1  relative Zero's preferences. The nature of this problem can be seen in Figure \ref{fig:c1c2} and (same thing) the left panel of Figure \ref{fig:twoquad}. Let us assume for the sake of argument that the consumer had (naively as it will turn out) accepted the contract \(C_0^F\) in period zero. At the start of period 1 this contract satisfies Zero self's optimality condition $u'(c_1^F)=u'(c_2^F)$ but from the standpoint of One's preferences it involves too little period 1 consumption since $u'(c_1^{0F})\geq \beta u'(c_2^{0F})$. At point F, Zero self's indifference curve is tangent to the budget line but One self's indifference curve is steeper than the budget line. One self can   clearly gain by recontracting to any feasible tangency point along the $c_2=\beta^\frac{1}{\rho}c_1$ ray, above where that indifference curve cuts the line and and   below the budget line and can entice the bank by offering to share some of the surplus.\footnote{ Figure \ref{fig:c1c2} assumes $\rho=1$ which will imply that in equilibrium $c_0^{mF}=c_0^{mP}$.  When $\rho \neq 1$ point P will not lie exactly on the budget line defined by $c_0+c_1=\sum y - c_o^F$ as $c_o^F \neq c_o^P$ but the analysis is readily adapted.}  From Zero's point of view the bank would be pandering to One self's desire to `raid savings' or `roll over or piling on new debt' relative to Zero's plans. 
-
-A sophisticated    Zero self consumer anticipates this  recontracting and how it lowers their inter-temporal welfare\footnote{A naive hyperbolic discounter, on the other hand, may believe she
-can achieve optimal utility though this will not be realized. See below.}. From the diagram it should be clear that Zero self can do no better  to limit the damage than to accept the contract at P (since any other feasible preferred contract would be recontracted to P anyways).  This subgame-perfect `renegotiation-proof' contract will involve less net saving (or same thing, more net debt) in period 1 than Zero self would like (as can be seen by $u'(c_1^{P})<  u'(c_2^{P})$) and lower Zero self welfare compared to the full-commitment contract.
 
 
-Mathematically, this is like a Stackelberg game with Zero self moving first to choose a contract in anticipation of One self's best response recontracting. }   
+One would like  higher period 1 consumption than Zero's preferences built into the contract. This will mean that are potential gains to trade to be split between the bank the One self by breaking earlier commitments. In the last section we simply assumed there were  sufficiently high costlessly enforced penalties that  deterred he bank from breaking such commitments. 
+
+ 
+
+Consider now then a competitive situation where  there no penalties to the bank from breaking commitments    and/or a situation where non-exclusivity clauses cannot be enforced so nothing stops the consumer from refinancing with another bank, for example taking out a second loan. 
+
+When period 1 arrives One-self will want to indulge her present-bias and  increase period 1  consumption relative to Zero's preferences. This can be seen in Figure \ref{fig:c1c2}. Assume for the sake of argument that the consumer had (naively as it will turn out) accepted the contract \(C_0^F\) in period zero. At the start of period 1 this contract satisfies Zero self's optimality condition $u'(c_1^F)=u'(c_2^F)$ but from the standpoint of One's preferences it involves not enough period 1 consumption as $u'(c_1^{0F})\geq \beta u'(c_2^{0F})$. This can be seen at point F, where Zero self's indifference curve is tangent to the budget line but One self's indifference curve is steeper than the budget line. The One self can gain by recontracting to any new tangency point above where their indifference curve through F cuts the $c_2=\beta^\frac{1}{\rho}c_1$ ray (at point R  -- the point they'd be driven to if in period 1 they could only refinance with  a monopoly bank)\ and   below the budget line (at point P -- the point they'd recontract to with competiive choices).\footnote{ When $\rho=1$ (as is drawn in Figure \ref{fig:c1c2})   Zero will want to choose the same period 0 consumption level as the full-commitment contract. When $\rho \neq 1$ this will not be the case and the renegotiation-proof contract P will no longer lie exactly on the budget line defined by $c_0+c_1=\sum y - c_0^F$. The analysis is readily adapted.} As the gains to trade are positive One can entice the bank to refinance by offering to compensate the bank for any renegotiation costs $\kappa$ (at the moment assumed to be zero) less than that amount.  From Zero's standpoint the bank would be opportunistically profiting by pandering to One self's impulse to `raid savings' or `roll over or pile on new debt.'   
+
+As a sophisticate    Zero anticipates how any such  recontracting could   lower their inter-temporal welfare\footnote{A naive hyperbolic discounter, on the other hand, may believe she
+can achieve optimal utility though this will not be realized. See below.}. From the diagram it should be clear that Zero can do no better  to limit the damage than to accept the contract at P (as any other preferred contract is not subgame-perfect and would be recontracted to P anyways).  The subgame-perfect `renegotiation-proof' contract will involve less net saving (or same thing, more net debt) in period 1 than Zero self would like (as can be seen by $u'(c_1^{P})<  u'(c_2^{P})$) and lower Zero self welfare compared to the full-commitment contract.
+
+
+The problem is like a Stackelberg game with Zero self moving first to choose a contract in anticipation of One self's best response recontracting. }   
 Consider One self's best response in a subgame defined by Zero self's choice of contract \(C^{0}=(c_0^0, c_1^0,c_2^0)  \). \ One self can either accept the remaining consumption plan  $(c_1^0,c_2^0)$ or exchange it for a new contract to solve
 \begin{displaymath}
  \max_{c_1,c_2}  u(c_1)+\beta u(c_2)
@@ -567,25 +546,26 @@ Consider One self's best response in a subgame defined by Zero self's choice of 
  s.t. \text{   } c_1+c_2 \leq c_1^0 +c_2^0
 \end{displaymath}       
 
+
 As Zero self's budget constraint must bind at an optimum (otherwise consumption and utility could be increased) the period 1 budget can be rewritten
 \begin{equation}
  c_1+c_2 \leq \sum y -c_0^0
 \end{equation}
-From which it is  clear that all that One self needs to react to is Zero's period zero consumption $c_0^0^$ which establishes the remaining resources to be divided between period 1 and 2.  From equation \ref{eq:budgetplus} we know that Zero wants each extra unit that it passes forward into period 1 to be, on the margin, shared equally between period 1 and period 2 consumption (i.e. the slope of the line through MF is $\frac{dc_1}{dc_0}=-\frac{1}{2}$).
+From which it is  clear that all that One self needs to react to is Zero's period zero consumption $c_0^0^$ which establishes the remaining resources to be divided between period 1 and 2.  From equation \ref{eq:budgetplus} we know that Zero wants each extra unit that it passes forward into period 1 to be, on the margin, shared equally between period 1 and period 2 consumption (i.e. the slope of the line through YF is $\frac{dc_1}{dc_0}=-\frac{1}{2}$).
 
 One wants to instead set $c_2=\beta^\frac{1}{\rho}c_1$. Substituted this into the binding period one budget we can solve for One's best response or reaction function to Zero's period 0 consumption choice:
 \begin{equation}
 c_1^{1}(c_0^0)=\frac{\sum y - c_0^0}{1+\beta^\frac{1}{\rho}}  \label{eq:react1}
 \end{equation}
 \begin{equation}
-c_2^{1}(c_0^0)=\beta^\frac{1}{\rho}\frac{\sum y - c_0^0}{1+\beta^\frac{1}{\rho}}
+c_2^{1}(c_0^0)=\beta^\frac{1}{\rho}\frac{\sum y - c_0^0}{1+\beta^\frac{1}{\rho}}\label{eq:react2}
 \end{equation}
-One's reaction function is depicted by the line passing through MP in the left quadrant of Figure \ref{fig:twoquad}.  As  long as $\beta< 1$,  line MP is everywhere steeper than line MF.  For any given period 0 consumption level, One wants to consume more in period 1 and less in period 2 compared to Zero's preferences.
+One's reaction function is depicted by the line passing through YP in the left quadrant of Figure \ref{fig:twoquad}.  As  long as $\beta< 1$,  it is easy to establish that line YP is everywhere steeper than line MF.  For any given period 0 consumption level, One wants to consume  more in period 1 and less in period 2 compared to Zero's preferences.
  As the sophisticated Zero anticipates her future self's reaction she  chooses $c_0^$ strategically to solve:
 \begin{displaymath}
 \max_{c_0} u(c_0)+\beta[u(c_1^{1}(c_0)+u(c_2^{1}(c_{0})]\\  
 \end{displaymath}
-subject to 
+subject to the bank's period 0 participation or competitive zero-profit constraint. 
  \begin{displaymath}
  c_0+ c_1^{1}(c_0)+ c_2^{1}(c_0)= \sum y
 \end{displaymath}
@@ -601,28 +581,66 @@ where
 \Lambda=\frac{(\beta+\beta^\frac{1}{\rho})}{1+\beta^\frac{1}{\rho}}
 \end{equation}
 Similar to what happens in a classic Stackelberg Cournot duopoly game our Zero self chooses the consumption contract  that puts her on the highest iso-utility surface along One's reaction function. Equilibrium contract \(P \text{ }\)in Figure satisfies both equation \ref{eq:react1} (the line through MP) and equation \ref{eq:LambdaC0} (the line through OP). These two equations can be solved to give a closed-form solution to the optimal contract in the absence of self-control \begin{equation}
-c_0^P = \frac{\sum y}{1+\Lambda^\frac{1}{\rho}(1+\beta^\frac{1}{\rho})} 
+c_0^P = \frac{\sum y}{1+\Lambda^\frac{1}{\rho}(1+\beta^\frac{1}{\rho})}\label{eq:coP} 
 \end{equation}
 with $c_1^P=\Lambda^\frac{1}{\rho}c_0^P$ and c_2^P=\beta^\frac{1}{\rho} \Lambda^\frac{1}{\rho}c_0^P$. 
 
-As Figure \ref{fig:c1c2} makes clear, Zero self has little choice but to accommodate to the fact One will grab consumption resources that Zero self would have preferred to earmarked for period 2 consumption.  It is easy to see that for all $0<\beta < 1$ line $\Lambda^\frac{1}{\rho}>\beta^\frac{1}{\rho}$ and hence line OP is everywhere steeper  than line OF.   We can combine this  with the earlier observation that line MP
-is everywhere steeper than line MF
-to conclude that $c_1^P>c_1^F$ . In words, the absence of self control leads to higher period one consumption compared to a situation where self-control can be exercised. 
+As Figure \ref{fig:c1c2} makes clear, Zero self has little choice but to accommodate to the fact One will grab consumption resources that Zero self would have preferred to earmarked for period 2 consumption.  It is easy to verify that $\Lambda^\frac{1}{\rho}>\beta^\frac{1}{\rho}$ for all $0<\beta < 1$ and hence that line OP is everywhere steeper  than line OF.   We can combine this  with our earlier observation that line YP
+is everywhere steeper than line YF
+to conclude that $c_1^P>c_1^F$ . In words, the absence of self control always leads to higher period one consumption compared to a situation where self-control can be exercised. 
 
-With a little extra algebra we can also show that c_0^P\gtreqless_0^F$ as $\rho \lesseqgtr 1$ for $0<\beta<1$ but also that c_2^P<c_2^F$.  When $\rho<1$
-Zero self responds to the self-control problem by reducing savings in period 0. When  $\rho>1$ she responds by increasing savings.  This increase in period 0  savings is however never enough to lead to a net increase in period 2 consumption. Indeed the changes in period 0 savings are very small relative to the decrease in net-savings in period 1.  In other words for Zero self can do little other than to  just largely accommodate to the pattern of consumption that One self wants to impose.  
+With a little extra algebra we can also show that c_0^P\gtreqless_0^F$ as $\rho \lesseqgtr 1$ for $0<\beta<1$ but also that c_2^P<c_2^F$.  That is, when $\rho<1$
+Zero  responds to the self-control problem by reducing savings in period 0. When  $\rho>1$ she responds by increasing savings.  However any increase in period 0  savings is never enough to lead to a net increase in period 2 consumption. Indeed period 0 consumption adjustments are  small relative to the increase in period 1 consumption.  In other words even though they have a first-mover advantage, Zero can do little other than to  largely accommodate to the  consumption pattern that One self wants to impose. There is little Zero can do to ameliorate the self-control problem on their own -- hence her demand for commitment services from the bank.  
 
-For our earlier parameterization $\beta=0.5$ and $\rho=1$ the best contract in the absence of self-control will be $C_0^P=(150, 100, 50) $ which offers considerably less consumption smoothing in later periods compared to the contract with self-control $C_0^F=(150, 75, 75) $.  If the consumer has income stream $Y_0=(100, 100, 100)$ then we can think of the consumer with self-control as sticking to a balanced repayment program to keep consumption steady in the last two periods. Compared to this the consumer without self-control postpones rolls over rather than repays the portion of the debt that they would have paid off in period one, lowering period 2 consumption. If the consumer had had an income stream $Y_0=(200, 50, 50)$ then a consumer without self-control can be viewed as raiding   savings in period that an otherwise identical consumer with self-control would have earmarked to boost period 2 consumption. Put differently, `solving'   the self control problem  leads consumers to save more/borrow less in period 1 and consume more in period 2. 
+To illustrate, at our earlier parameterization $\beta=0.5$ and $\rho=1$ the best contract in the absence of self-control will be $C_0^P=(150, 100, 50) $ which offers considerably less consumption smoothing in later periods compared to the contract with self-control $C_0^F=(150, 75, 75) $.\footnote{For these parameters  expression \ref{eq:coP} becomes $c_{0}^P =\frac{\sum y}{1+2\beta}, c_1^P=\beta\cdot c_{0}^P \text{ and } $ c_1^P=\beta^2\cdot c_{0}^P }  If the consumer has income stream $Y_0=(100, 100, 100)$ then we can think of the consumer with self-control as sticking to a balanced repayment program to keep consumption steady in the last two periods. Compared to this the consumer without self-control  rolls over rather than repays the portion of the debt that they would have paid off in period one. The entire burden of repayment of the debt that Zero took out in period 0 now falls in period 2, whereas Zero would have preferred the burden to be shared equally between periods 1 and 2. If the consumer had instead had started with an income stream $Y_0=(200, 50, 50)$ then a consumer without self-control can be viewed as raiding   savings in period 1 that an otherwise identical consumer with self-control would have earmarked to boost period 2 consumption. In short, consumers who can solve   the self control problem  will save more/borrow less in period 1 and consume more in period 2. The inability to solve this self-control problem in the competitive case will lead to lower welfare for Zero.
 
-The diagrams  have focused on the special case where $\rho=1$ which implies an elasticity of inter-temporal substitution of $\sigma=\frac{1}{\rho}=1$.  This implies the consumer that period zero consumption will be the same under self-control or its absence. For $\rho\neq1$ it can be shown that $c_0^P>c_0^F$ as $\rho<1$ and or $c_0^P<c_0^F$ as $\rho>1$.  
-The consumer may raise or lower period 0 consumption as part of their effort to indirectly control their latter self's choices.  However the amount by which $c_0^P$ will differ from $c_0^F$ is  very small compared to the movement in period 1 and period 2 consumption, for all parameters values in the range $0\leq \beta \leq 1$ and $0\leq \rho \leq \infty $. In practical terms this means that, in the absence of self-control, Zero can do very   little but accommodate to One's preferences in establishing the balance of consumption between period 1 and period 2. This relative powerlessness  is what  creates the demand for commitment services from a financial intermediary.
+\subsubsection{The bank's no-renegotiation constraint} 
 
-?
+As we've pointed out there are potential gains to trade between the bank and the period 1 self consumer from renegotiating the contract.  The bank's commitment in period zero to not renegotiate the contract in period 1 is credible so long as any new profit from renegotiation (savings to the bank as it replaces the terms of the existing contract with new terms) is less than the explicit cost of renegotiation $\kappa$.
+
+\begin{equation}
+\Pi_{1}\left(C_{1}^{1}\left(C_{1}\right);C_{1}\right)\leq\kappa
+\end{equation}Or more simply, the bank will not renegotiate so long as the gains from replacing the remaining terms $(c_1,c_2)$ of the contract $C_0$
+by a lower-cost renegotiated contract $(c_1^1,c_2^1)$ do not exceed the costs of  renegotiating $\kappa$:  
+\begin{displaymath}
+c_1+c_2-(c_1^1+c_2^1)\leq \kappa
+\end{displaymath}
+In this competitive setting the renegotiated terms $(c_1^1,c_2^1)$ are given by the consumer's best reaction to $(c_1,c_2)$ described in equations \ref{eq:react1} and \ref{eq:react2} which in effect capture most of the gains to trade for the consumer. Under the monopoly scenario these gains to trade will be captured by the monopolist and $(c_1^1,c_2^1)$ will be  replaced by  $(c_1^{m1},c_2^{m2})$ described below.
+
+We did not make this no-renegotiation constraint explicit before only because under the full-commitment scenario we implicitly assume that $\kappa$ is sufficiently large as to make te constraint be satisfied at the optimum. Under the polar opposite competitive "no self-control" scenario without exclusivity banks renegotiate contracts at zero profit so with $\kappa=0$ the constraint is just satisfied.  
+
+The more interesting case to analyze is when $\kappa>0$ but is not so large as to allow the contract to be satisfied at the full-commitment optimum. The core of the remainder of the paper concentrates on this more interesting case.  Before we analyze this in more detail, we must first expand the framework to monopoly contracts.
+
+\subsection{Full-commitment contracts under Monopoly}
+\label{sec:own}
+
+ This is similar to the earlier competitive full-commitment contact but now the optimand and the participation constraints are reversed. A monopolist bank aims to rearrange consumption in a way that maximizes profits. This will require pressing the consumer up against her participation
+constraint (PC), leaving her no worse off than under autarky. The
+bank solves the following problem:
+\begin{align}
+\max_{C_0} & \; \Pi_{0}\left(C_{0};Y_{0}\right)\nonumber \\
+s.t. & \; U_{0}\left(C_{0}\right)\geq U_{0}^{A}\label{eq:PC}
+\end{align}
+where $U_{0}^{A}$ is the reservation utility the consumer would enjoy if they did not accept the contract.  For the moment we will adopt the simple assumption that without a bank contract the consumer has access to no good saving or borrowing opportunities and therefore has no choice but to consume their autarky income stream so  $U_{0}^{A}=u(y_0)+\beta[u(y_1)+u(y_2)]$. We will relax this assumption to explore how equilibrium contracts may change when the consumer has access to some consumption smoothing opportunities under autarky. The no-renegotiation constraint is assumed to be automatically satisfied because $\kappa$ is large enough.
+
+The first-order tangency conditions  are just as expressions \ref{eq:FOC_comp} from the competitive case. With $\delta= 1/(1+r)$ and $r=0$ these are just\begin{equation}
+u'\left(c_{0}\right)=\beta u'\left(c_{1}\right)=\beta u'\left(c_{2}\right)
+\end{equation}and with CRRA utility simply $c_1=c_{2}=\beta^\frac{1}{\rho}c_{0}$.
+With the Zero's participation constraint -- which must bind at a monopoly optimum --
+these equations can be  solved for the optimum monopoly full-commitment contract $C_{0}^{mF}$ and corresponding bank profits $\Pi_{0}\left(C_{0}^{mF};Y_{0}\right)$. Closed form solutions for the CRRA utility case appear as appendix equations \ref{eq:c-mf} and \ref{eq:pi-mf}, respectively. Conceptually the optimum contract is found at the tangency point where the highest iso-profit plane still touches the iso-utility surface associated with Zero's reservation utility. 
+The Figure \ref{fig:renegotiation} depicts the equilibrium contract at point $mF $ in the $c_1-c_2$ sliced plane given by $c_0=c_0^{mF}$.
+
+The terms of the optimal monopoly contract, and hence also the level of bank
+profits achieved will be dependent on the consumer's autarky utility. $C_{0}^{mF}$
+rises and profits fall with $U_{0}^{A}$. The bank makes non-negative profits. 
+
+
+\subsubsection{Renegotiation-proof monopoly contracts}
  
 
-Figure  \ref{fig:renegotiation} below depicts the self-control or renegotiation problem in period 1 for the monopoly case. As we did before, assume for the sake of argument only that Zero had agreed to the full-commitment contract indicated by point $mF$ in the figure. 
-At the start of period 1 this contract satisfies Zero self's optimality condition $u'(c_1^{mF})=u'(c_2^{mF})$ but from the standpoint of One self's preferences involves too little period 1 consumption as $u'(c_1^{mF})\geq \beta u'(c_2^{mF})$. Zero self's indifference curve is tangent to the bank's isoprofit line but One self's indifference curve is steeper than the budget line. The monopolist Bank can gain the most by offering to recontract to point R  along the $c_2=\beta^\frac{1}{\rho}c_1$ ray. The bank profits by pandering to One's present bias.  If such a recontracting did in fact take place the bank will have succeeded in extracting a new profits in period 1 in such a way that pushed Zero's intertemporal utility \textit{below} her reservation utility. A sophisticated customer will of course anticipate this happening and will only agree to renegotiation-proof contracts in period 0 that protect her against this type of opportunistic recontracting.
-The renegotiation-proof contract must therefore lie along the $c_2=\beta^\frac{1}{\rho}c_1$ ray (as Zero understands that One would otherwise try to renegotiate to a point on this ray anyway) at a point where the ray hits Zero's autarky iso-utility surface. The monopolist pays the price for his inability to commit to not renegotiating the contract as profits can only be lowered by displacing the equilibrium contract from the optimum at $mF$. 
+The  renegotiation-problem in the monopoly bank case is very similar but now the inability to solve the consumer's self-control problem -- the inability of the bank to credibly commit to not opportunistically renegotiate the contract -- is goint to cost the bank. To see this, assume again for the sake of argument that Zero had agreed to the full-commitment contract indicated by point $mF$ in the figure. 
+At the start of period 1 this contract satisfies Zero self's optimality condition $u'(c_1^{mF})=u'(c_2^{mF})$ but from the standpoint of One's preferences involves not enough period 1 consumption as $u'(c_1^{mF})\geq \beta u'(c_2^{mF})$. The monopolist Bank can gain  by pandering to One's present bias recontracting to point R  along the $c_2=\beta^\frac{1}{\rho}c_1$ ray. If such a recontracting took place the bank would have succeeded in actually pushing Zero's intertemporal utility \textit{below} her reservation utility (which is just met at F). A sophisticated customer of course anticipates this sort of opportunistic renegotiation and will only agree to `renegotiation-proof' contracts in period 0 that protect her against this type of opportunistic recontracting.
+The renegotiation-proof contract will lie along the $c_2=\beta^\frac{1}{\rho}c_1$ ray (as Zero understands that One would otherwise try to renegotiate to a point on this ray anyway) at a point where the ray hits Zero's autarky iso-utility surface. The monopolist pays the price for his inability to commit to not renegotiating the contract as profits can only have been lowered by displacing the equilibrium contract from the optimum at $mF$. 
 
 
 \begin{figure}
@@ -639,33 +657,33 @@ The renegotiation-proof contract must therefore lie along the $c_2=\beta^\frac{1
 
 
 
-More formally, consider the renegotiation problem at the start of a subgame in period 1. A customer who has agreed to contract $C_{0}$ in period 0 enters
+Consider the renegotiation problem at the start of a subgame in period 1. A customer who has agreed to contract $C_{0}$ in period 0 enters
 period 1 with claims to the remaining consumption stream $C_{1}$.
 This determines the new reservation utility. If profitable to the
 bank, the optimal renegotiated contract will be chosen in period 1
 to solve:
 \begin{align}
-\underset{C_{1}^{m,r}}{max} & \Pi_{1}\left(C_{1}^{m,r};C_{1}\right)\nonumber \\
+\max_{C_1^{m,r}} \text{ } & \Pi_{1}\left(C_{1}^{m,r};C_{1}\right)\nonumber \\
 s.t. & U_{1}\left(C_{1}^{r}\right)\geq U_{1}\left(C_{1}\right)\label{eq:pc-r}
 \end{align}
 
 
 The bank offers $C_{1}^{m,r}\left(C_{1}\right)\equiv\left(c_{1}^{m,r}\left(C_{1}\right),c_{2}^{m,r}\left(C_{1}\right)\right)$
-(equation \ref{eq:c-r}) to replace\footnote{The bank swaps net income stream $\left(y_{1}-c_{1},y_{2}-c_{2}\right)$
+(equation \ref{eq:c-r}) to replace\footnote{The bank in effect swaps net income stream $\left(y_{1}-c_{1},y_{2}-c_{2}\right)$
 for $(y_{1}-c_{1}^{r},y_{2}-c_{2}^{r})$.} the contractually agreed $C_{1}$. Since the first-order conditions
 imply $u^{\prime}\left(c_{1}^{m,r}\right)=\beta u^{\prime}\left(c_{2}^{m,r}\right)$,
 the contract will set $c_{1}^{m,r}>c_{2}^{m,r}$. This also determines
 the maximum possible profits from renegotiation, $\Pi_{1}\left(C_{1}^{m,r}\left(C_{1}\right);C_{1}\right)$
 (equation \ref{eq:pi-r}).
 
-The previously analyzed point R in Figure \ref{fig:renegotiation} is the renegotiated contract
-that would be offered in the very special case of a customer who,
-having sincerely believed the bank's promise to not renegotiate in
-period 1, had agreed to a full-commitment contract in period 0 only
+Point R in Figure \ref{fig:renegotiation} is the renegotiated contract
+that would be offered in the very special case of a customer who had agreed to a full-commitment contract in period 0 only
 to find herself genuinely and unexpectedly surprised to find the bank
-offering to renegotiate in period 1. Such promise-breaking will be
-weakly profitable for the bank as long as $\Pi_{1}\left(C_{1}^{m,r}\left(C_{1}\right);C_{1}\right)\geq\kappa$,
-where $\kappa$ are non-monetary renegotiation costs. In Figure 1,
+reneging on the promise by offering to renegotiate in period 1. Such commitment-breaking will be
+weakly profitable unless the contract satisfies the renegotiation-proof constraint 
+\begin{equation}
+\Pi_{1}\left(C_{1}^{m,r}\left(C_{1}\right);C_{1}\right)\leq\kappa
+\end{equation}where $\kappa$ are non-monetary renegotiation costs. In Figure 1,
 the bank will find it profitable to offer to renegotiate from the
 continuation of the full commitment contract depicted by point $F$
 to the new contract depicted by $R$ so long as profits gains $NQ$
@@ -674,18 +692,15 @@ on the diagram are greater than $\kappa$.
 We show in the appendix that, if the original contract offers full
 commitment ($c_{1}=c_{2}$), profits from renegotiation rise strictly
 in $C_{1}$. The larger the consumption in periods 1 and 2, the greater
-the scope for rearranging consumption profitably. Also, since $C_{1}^{m,fc}$
+the scope for rearranging consumption profitably. Also, since $C_{1}^{mF}$
 rises in $U_{0}^{A}$, full commitment becomes less sustainable if
 $U_{0}^{A}$ is sufficiently large. 
 
 
-\subsection{Competition}
+\subsubsection{Competitive renegotiation proof contracts with and without exclusivity}
 
-Consider the case where contracts are offered by competitive banks
-in period 0. The consequences of renegotiation in period 1 depend
-on the exclusivity of contracts. If contracts are exclusive, so that
-consumers can neither renegotiate existing contracts nor sign new
-ones in period 1, the analysis is identical to the monopoly case for
+We've analyzed competitive contracts but now make renegotiation costs explicit and allow for the possibility of non-exclusive contracts. The consequences of renegotiation in period 1 depend
+on the exclusivity of contracts. If contracts are exclusive consumers can be kept from contracting with other financial intermediaries in period 1. The analysis is then identical to the monopoly case for
 any given $C_{1}$. If contracts are non-exclusive, banks can again
 compete in period 1, so the renegotiated contract satisfies a fresh
 zero-profit constraint. If renegotiation is feasible, it satisfies:
@@ -706,7 +721,7 @@ additional profits of at least $\kappa$ to the bank offering the
 new contract. We can make two observations about these conditions.
 First, they apply identically whether contracts are exclusive or not.
 Second, since full-commitment contracts under competition do not vary
-with autarky utility, the survival of full-commitment too is independent
+with autarky utility, the survival of full-commitment is also independent
 of autarky utility (unlike under monopoly). So there will be some
 $\bar{\kappa}$ such that full-commitment contracts will not be renegotiated
 if and only if $\kappa\geq\bar{\kappa}$ (equation \ref{eq:max-kappa}).\footnote{We assume contracts are renegotiated only if strictly preferred by
@@ -1538,8 +1553,11 @@ is determined by the first-order condition and the consumer's participation
 constraint:
 \begin{align}
 C_{0}^{mF} & =\left(1,\beta^{\frac{1}{\rho}},\beta^{\frac{1}{\rho}}\right)
-\cdot \left(\frac{U_{0}^{A}\left(1-\rho\right)}{1+2\beta^{\frac{1}{\rho}}}\right)^{\frac{1}{1-\rho}}\\
-\Pi_{0}\left(C_{0}^{mF};Y_{0}\right) & =y-\left(U_{0}^{A}\left(1-\rho\right)\right)^{\frac{1}{1-\rho}}\left(1+2\beta^{\frac{1}{\rho}}\right)^{\frac{-\rho}{1-\rho}}\label{eq:pi-mf}
+\cdot \left(\frac{U_{0}^{A}\left(1-\rho\right)}{1+2\beta^{\frac{1}{\rho}}}\right)
+^{\frac{1}{1-\rho}} \label{eq:c-mf} \\ 
+\Pi_{0}\left(C_{0}^{mF};Y_{0}\right) & 
+=y-\left(U_{0}^{A}\left(1-\rho\right)\right)^{\frac{1}{1-\rho}}
+\left(1+2\beta^{\frac{1}{\rho}}\right)^{\frac{-\rho}{1-\rho}}\label{eq:pi-mf}
 \end{align}
 
 
