@@ -14,7 +14,6 @@
 \usepackage[authoryear]{natbib}
 \usepackage{pdfpages}
 \onehalfspacing
-
 \makeatletter
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
   \theoremstyle{plain}
@@ -34,7 +33,7 @@
 \providecommand{\lemmaname}{Lemma}
   \providecommand{\propositionname}{Proposition}
 
-\date{September 27, 2016}
+\date{DRAFT 9/27/16}
 
 \makeatother
 
@@ -66,6 +65,10 @@ When do financial intermediaries provide the commitment services to help present
  
 \end{abstract}
 
+\newpage
+  \tableofcontents
+\newpage
+
 \section{Introduction}
 
 
@@ -73,34 +76,35 @@ When do financial intermediaries provide the commitment services to help present
 Hyperbolic discounters -- consumers with present-biased preferences -- are those who struggle to stick to  their long-term asset accumulation or debt management plans and for this reason may benefit from
 the `commitment services'  or  designed restrictions that a financial intermediary may build into multi-period financial contracts.   Long-term consumption smoothing goals are more likely to be achieved where customers can enlist financial intermediaries to act as partners in resisting  temptations to raid savings and/or   increase debt in ways that could undermine  responsible long-term plans. The properties of \textit{costlessly}-enforced optimal
 commitment banking contracts have been examined in several theoretical papers
-(\cite{laibson_golden_1997}) and a number of randomized controlled trials and other empirical studies have   found quite large impacts from introducing new commitment service savings products (see for example \cite{Thaler_Benartzi_2004}, \cite{ashraf_tying_2006} and the studies mentioned in the survey by \cite{bryan_commitment_2010}). 
+\citep{laibson_golden_1997} and a number of randomized controlled trials and other empirical studies have   found quite large impacts from introducing new commitment service savings products (see for example \cite{Thaler_Benartzi_2004, ashraf_tying_2006} and the studies mentioned in the survey by \citet{bryan_commitment_2010}). 
 
 The assumption of costless commitment services is hard to sustain. Commitments can be broken and the same person that at first demanded a commitment
-contract from a bank may  later want to renegotiate its terms. A bank's ex-post profits may well be increased by pandering to such demands.   For example, a present-biased consumer who takes out a loan that  promises to balance repayments and expected consumption across future periods may
-at a later period find themselves unable to resist the temptation to refinance to take out an expensive (but at this later date attractive)\  additional consumption   loan that drives up present consumption but wrecks earlier laid consumption smoothing plans.    
+contract from a bank may  later want to renegotiate its terms. A bank's ex-post profits often increase by pandering to such demands.   For example, a present-biased consumer who takes out a loan that  promises to balance repayments and expected consumption across future periods may
+at a later period be unable to resist the temptation to refinance to take out an expensive (but at this later date attractive)\  additional consumption   loan that drives up immediate consumption but wrecks earlier laid consumption smoothing plans.    
 
 This type of problem raises obvious consumer protection concerns in the case of naive or partially naive present-biased consumers
-as these are consumers who, by definition, do not understand how their own future preferences will evolve to make them vulnerable to such opportunistic exploitation by a bank. In the absence of consumer protection a  bank could attempt to lure customers into contracts that it knows can  be later renegotiated for additional profit.  
+as these are consumers who, by definition, do not understand how their own future preferences will evolve to make them vulnerable to such opportunistic exploitation by a bank. In the absence of consumer protection a  bank could attempt to lure customers with attractive teaser contracts that it knows can  be later renegotiated for additional profit.  
  
-In the case of sophisticated present-biased consumers consumer protection issues also arise but take the less obvious and  harder to measure form of lost or reduced financial trade. \ Sophisticated consumers anticipate the possibility of opportunistic contract renegotiation and therefore will be cautious to minimize their vulnerability by insisting on renegotiation-proof contracts that must be endogenously enforced. But  imposing  any such additional constraints can only reduce the feasible financial contract space, reducing gains of trade and therefore lowering bank profits and/or consumer welfare or lost trade.
-\ The practical result in either case will be equilibria with less than optimal consumption smoothing  with consumes saving `too little' and/or borrowing `too much' (in the estimation of their earlier period selves) in some periods compared to situations where full-commitment contracts could be costlessly offered.
+Consumer protection issues also arise in the case of sophisticated present-biased consumers but take the less obvious and  harder to measure form of reduced or lost financial trade. \ Sophisticated consumers anticipate the possibility of opportunistic contract renegotiation and therefore will be cautious to minimize their vulnerability by insisting on renegotiation-proof contracts that must be endogenously enforced. But  imposing  any such additional constraints can only reduce the feasible financial contract space, reducing gains from trade and therefore lowering bank profits and/or consumer welfare or lost trade.
+\ The practical result in either case will be equilibria with less than optimal consumption smoothing  due to saving `too little' and/or borrowing `too much' (in the estimation of their earlier period selves) in some periods compared to situations where full-commitment contracts could be costlessly offered.
 
-Concerns over excessive refinancing and `over-indebtedness' have been raised repeatedly in recent years in both the developed and the developing world.    On the eve of the mortgage banking crisis in 2007, over 70 percent of new subprime mortgage loans were refinances
-of existing mortgages and approximately 84 percent of these were `cash out' refinances (\cite{demyanyk_understanding_2011}).  In the market for payday loans the  concern of many economists and regulatory observers is not so much that fees are high for one-time short-term loans (typical cost is 15\% of the amount borrowed on a 2 week loan) but rather that over 80 percent of payday loans are in fact `rolled over' or renewed rather than paid off, incurring new fees each time resulting in very high  total loan costs and  placing many people into  very difficult debt management situations (\cite{DeYoung_2015}.\footnote{Approximately half payday loans are rolled over in sequences lasting 7 or more turns}   
+Concerns about excessive refinancing and `over-indebtedness' have been raised  in the wake of recent financial crises in both the developed and the developing world.    On the eve of the mortgage banking crisis in 2007, over 70 percent of new subprime mortgage loans were refinances
+of existing mortgages and approximately 84 percent of these were `cash out' refinances \citep{demyanyk_understanding_2011}.  In the market for payday loans the concern of many economists and regulatory observers is often not so much that fees are high for one-time short-term loans (typical cost is 15\% of the amount borrowed on a 2 week loan) but rather that over 80 percent of payday loans are `rolled over' or renewed rather than paid off, incurring new fees each time resulting in very high  total loan costs and  placing many people into  very difficult debt management situations \citep{DeYoung_2015}.\footnote{Approximately half payday loans are rolled over in sequences lasting 7 or more turns}   
 
 Similar concerns have been raised in microfinance markets in developing countries but in such markets where  government  consumer protection laws are weak to non-existent, the issues
 take on an interesting extra dimension.
-To state our hypothesis briefly and bluntly:  microfinance markets around the world have been dominated by a mix of mission-driven and commercial non-profits and  `hybrid' firms -- for example for-profit firms  partly or entirely owned and controlled by not-for-profit foundations or governments (\cite{conning_microfinance_2011,cull_microfinance_2009}). We argue that this is because, compared to investor-led for-profit firms hybrid and non-profit firms can make more credible commitments to not engage in the type of opportunism described above, because their incentive to do so is muted by the fact that they cannot easily distribute any profits. This is a variation on Henry Hansmann's theory of commercial non-profits but set on new behavioral micro-foundations that we will model explicitly below. In the early stages of new microfinance markets one or more non-profit firms will dominate and successfully provide the commitment services in savings and credit contracts.  However as market competition intensifies the capturable advantages of strategic non-profit status are diminished and this can lead to a `commercialization' stage and the conversion of many commercial from non-profit to for-profit form. This will be associated with a rise of of the type of consumer protection issues identified above and  concomitant collapse of borrower and saver discipline. This helps make sense of the string of repayment crises in places as far flung as Morocco, Bosnia, Nicaragua, and Andra Pradesh in India where previously very successful microfinance markets followed similar trajectories 
+To state our hypothesis briefly and bluntly:  microfinance markets around the world have been dominated by a mix of mission-driven and commercial non-profits and  `hybrid' firms -- for example for-profit firms  partly or entirely owned and controlled by not-for-profit foundations or governments \citep{conning_microfinance_2011,cull_microfinance_2009}. We argue that this is because, compared to investor-led for-profit firms hybrid and non-profit firms can make more credible commitments to not engage in the type of opportunism described above, because their incentive to do so is muted by the fact that they cannot easily distribute any profits. This is a variation on Henry Hansmann's theory of commercial non-profits but set on new behavioral micro-foundations that we will model explicitly below. In the early stages of new microfinance markets one or more non-profit firms may dominate and successfully provide the commitment services in savings and credit contracts.  However new entry and intensified market competition  diminishes the capturable rents and hence the  strategic advantage of non-profit status  and this can lead to a `commercialization' stage and the conversion of many non-profits to for-profit forms. This will be associated with a rise of of the type of consumer protection issues identified above and  concomitant collapse of borrower and saver discipline. A string of over-indedtedness and repayment crises in places as far flung as Morocco, Bosnia, Nicaragua, and Andra Pradesh in India which previously had successful microfinance markets appear to have followed broadly similar story lines. 
    
 
  In this paper we view the provision of commitment as an important
 element of consumer protection in banking. Our goal is to provide a simple dynamic framework
 for analyzing real-world settings where commitment is demanded but
-cannot be credibly provided at zero cost. We work with a quite general three-period consumption smoothing model for a sophisticated present-biased consumer with quasi-hyperbolic preferences that allows for saving(repayment) or borrowing(dissaving) in each period. In each contracting scenario the consumer's period zero self (henceforth `Zero self')\ has a bias for present consumption but wants to smooth future consumption across periods one and two.  They correctly 
-anticipate that their later period-one `One self' will have a change of preferences that  will lead them to want to `raid savings' and/or take on new debt to drive up period one consumption at the expense of period two consumption, thereby undoing One self's early intent to balance consumption across the two periods. In every case the equilibrium contract will be the subgame Perfect
+cannot be credibly provided at zero cost. We work with a quite general three-period consumption smoothing model for a sophisticated present-biased consumer with quasi-hyperbolic preferences that allows for saving (repayment) or borrowing (dissaving) in each period. In each contracting scenario the consumer's period zero self (henceforth `Zero self')\ has a bias for present consumption but wants to smooth future consumption across periods one and two.  They correctly 
+anticipate that their later period-one `One self' will have a change of preferences that  will lead them to want to `raid savings' and/or take on new debt to drive up period one consumption at the expense of period two consumption, thereby undoing Zero's early intent to balance consumption across the two periods. In every case the equilibrium contract will be the subgame perfect
 Nash equilibrium of a game where Zero self chooses a contract  first anticipating One self's reactions, possibly limited by the Bank's exogenously or endogenously enforced commitment to agree to not renegotiate with One-self.   
 
-In the first part of the paper we characterize the contracts associated with three broad scenarios: (1)\ \textbf{`Own smoothing' contracts }where the consumer saves on their own without a bank that might offer commitment services; (2)\ \textbf{Full-commitment contracts} where we  assume the Zero self consumer can enter into multi-period contract that binds their One self to not renegotiate the contract terms under the assumption that this bank commitment can be costlessly enforced; and (3) \textbf{renegotiation-proof contracts} where the zero self consumer can enter into a multi-period  contract to  bind their One self to not renegotiate the contract terms but where the bank's commitment must be endogenously enforced by making sure that bank's ex-post profits from breaking their commitment fall short of any direct renegotiation costs to the bank summarized by a parameter $\kappa$. We describe the terms of renegotiation-proof contracts and the distribution of gains to trade between bank and consumer and how these are parameterized by $\kappa.$ At high enough values the bank can credibly commit to not profit from renegotiation and the first-best costless full-commitment contract can be achieved.  In the second part of the paper, described below, we explore how a bank might make costly strategic changes to its bank ownership and governance structures as another way to credibly commit to not renegotiate.    
+In the first part of the paper we characterize the contracts associated with three broad scenarios: (1) \textbf{Full-commitment contracts} where we  assume the Zero self consumer can enter into multi-period contract that binds their One self to not renegotiate the contract terms under the assumption that this bank commitment can be costlessly enforced; (2) \textbf{No-commitment renegotiation-proof contracts} where the sophisticated consumer chooses contract terms strategically in anticipation of  the fact that her later self will attempt to  refinance the contract and the initial bank (or some new bank) will  pander to that demand as their cost to recontracting $\kappa$ is zero; and  (3)  \textbf{Imperfect-commitment renegotiation-proof contracts} where the Zero self consumer can enter into a multi-period  contract that helps bind their One self to  contract terms but where the bank's commitment must be endogenously enforced.  This will be the case when the bank's ex-post gain in profits from breaking their commitment falls short of any direct renegotiation costs $\kappa$. We describe the terms of renegotiation-proof contracts and the distribution of gains to trade between bank and consumer and how these are parameterized by $\kappa.$ At high enough values the bank can credibly commit to not profit from renegotiation and the first-best costless full-commitment contract can be achieved.  The bank would like to credibly signal a high renegotiation cost $\kappa$ but in practice this will be costly.  
+In the second part of the paper we explore how a bank's costly strategic changes to its bank ownership and governance structures can be interpreted as a way to credibly commit to not renegotiate but the choice to use this mechanisms is governed by costly tradeoffs that will be shaped by the legal environment and market structure.    
 
 We are able to provide quite complete characterizations of optimal contracting scenarios under the assumption of monopoly or competition in the market for period-zero banking contracts with or  without the assumption of enforceable exclusive contracts in later periods. We can provide exact closed-form solutions for contract terms for  CRRA utility functions for most of these cases including renegotiation-proof contracts when $\kappa=0$.  For the   $\kappa>0 $ cases where closed form solutions cannot be directly obtained we can  nonetheless characterize some important contract properties and solve for contracts numerically. Separately we also characterize the terms of the contract that would be offered to a naive present-biased consumer by a bank that would strategically renegotiate the contract.  
 
@@ -186,7 +190,7 @@ to ongoing policy debates and is able to explain some stylized facts.
 \subsection{Context and Related Literature}
 
 
-\subsubsection{Commitment as Consumer Protection}
+\subsubsection{Commitment as a form of Consumer Protection}
 
 Problems of consumer protection are typically analyzed through two
 channels: naive or uneducated consumers and their failure to correctly
@@ -203,8 +207,8 @@ In recent years, especially in light of crises in consumer credit
 markets, there has been renewed emphasis on consumer protection and
 better governance and regulation in banking.\footnote{In the US, the Consumer Financial Protection Bureau was set up in
 2011 under the Dodd--Frank Wall Street Reform and Consumer Protection
-Act. In India, the far-reaching Micro Finance Institutions (Development
-and Regulation) Bill of 2012 was designed to increase government oversight
+Act. In India, the far-reaching Micro Finance Institutions Development
+and Regulation Bill of 2012 was designed to increase government oversight
 of MFIs in response to the credit crisis in the state of Andhra Pradesh,
 and the perception that lax consumer protection and aggressive lending
 practices had led to rising over-indebtedness and stress.} One particular outcome of concern has been borrower over-indebtedness,
@@ -214,7 +218,7 @@ as well as the 2008 mortgage lending crisis in the United States.
 In each of these cases the issue of refinancing or the taking of loans
 from multiple lenders emerges. For example, by value, more than two-thirds
 of the subprime mortgage loans outstanding in 2008 were made up of
-refinanced loans (\citet{demyanyk_understanding_2011}).
+refinanced loans \citep{demyanyk_understanding_2011}.
 
 Journalistic and scholarly analyses of such situations, including
 the recent mortgage crisis in the United States, have often framed
@@ -244,10 +248,9 @@ renegotiate the terms of existing loans to further defer debt repayment.
 If she is a saver, she will try to withdraw more rapidly in the future
 than she would have liked, or will deposit less than ideal. That such
 consumers should be and are willing to pay for commitment has been
-demonstrated in several theoretical and empirical papers (for examples
-of commitment, see \citet{ashraf_tying_2006}, \citet{carrillo_promises_2008},
-\citet{bryan_commitment_2010}, \citet{fischer_repayment_2010}, \citet{banerjee_poor_2011},
-and \citet{basu_hyperbolic_2011}). By entering into a contract that
+demonstrated in several theoretical and empirical papers \citep[for examples of commitment, see][]{ashraf_tying_2006,carrillo_promises_2008,
+bryan_commitment_2010, fischer_repayment_2010, banerjee_poor_2011,
+basu_hyperbolic_2011}. By entering into a contract that
 commits them to a specific time-path of repayments or deposits, the
 consumer attempts to ensure that future selves will not skew consumption
 patterns to privilege instant gratification in the following periods.
@@ -272,14 +275,12 @@ how commitment can be undone in related settings. \citet{gottlieb_competition_20
 shows how competition leads to inefficient outcomes in immediate rewards
 goods. \citet{heidhues_exploiting_2010} study the mistakes of partially
 naive borrowers in competitive credit markets. \citet{mendez_predatory_2012}
-analyzes predatory lending with naive consumers. Our emphasis is on
-the terms of any generic banking contract, analyzed broadly: under
-both competition and monopoly (the latter being particularly relevant
+analyzes predatory lending with naive consumers. Our framework is  encompassing, allowing us to study generic banking contracts with saving or borrowing: under both competition and monopoly (the latter being particularly relevant
 to informal banking in developing economies), for both sophisticated
 an naive consumers, and for multiple governance and ownership structures.
 
 
-\subsubsection{Commercial Nonprofits}
+\subsubsection{Commercial Non-profits in finance}
 
 The idea that firm ownership might be strategically chosen to solve
 or ameliorate `contract failure' problems dates back at least to \citet{arrow_uncertainty_1963}
@@ -315,8 +316,7 @@ related work.} In this view \textquotedbl{}{[}a{]} nonprofit organization is, in
 essence, an organization that is barred from distributing its net
 earnings, if any, to individuals who exercise control over it, such
 as members, officers, directors, or trustees.\textquotedblright \footnote{In practice, nonprofit firms also enjoy certain benefits that are
-denied to for-profit firms (see, for example, Cohen, 2015 {[}FIND
-CITATION{]}). But for the purposes of Hansmann's (and our) argument,
+denied to for-profit firms (see, for example, Cohen, 2015). But for the purposes of Hansmann's (and our) argument,
 it is the \textit{restrictions}, not benefits, that generate improved
 outcomes.} \citet{glaeser_not-for-profit_2001} have formalized Hansmann's central
 argument to show that when a firm cannot commit to maintaining high
@@ -338,7 +338,7 @@ agents. We believe this is an important element for understanding
 the development of consumer finance in developed countries historically
 as well as the current shape of microfinance today where non-profit
 and `hybrid' forms still dominate the sector in most developing countries
-(\citet{cull_microfinance_2009,conning_microfinance_2011}). Hybrid
+\citep{cull_microfinance_2009,conning_microfinance_2011}. Hybrid
 ownership forms include the many microfinance firms that, though technically
 incorporated as for-profit financial service providers, are in fact
 dominated by boards where, by design, social investors or client representatives
@@ -359,7 +359,7 @@ of thousands of clients, brought on by explosive growth of microfinance
 organizations . . .\textquotedblright{} fueled by the rapid inflow
 of directed private lending and new equity investors who, because
 they ``paid dearly for shares in {[}newly privatized{]} MFIs . .
-. needed fast growth to make their investments pay off (\citet{rhyne_microfinance:_2011})\textquotedblright{} 
+. needed fast growth to make their investments pay off \citep{rhyne_microfinance:_2011}\textquotedblright{} 
 
 She goes on to lay the blame
 on ``poor governance frameworks\textquotedblright\ for behaviors that included  ``loan officers [that] often sell loans to clients already indebted to other organizations.''{} In her view,
@@ -388,7 +388,7 @@ may survive better under monopoly than under competition.
 
 There are three periods, $t\in\left\{ 0,1,2\right\} $. In any period
 $t$ the consumer's instantaneous utility is given by a CRRA function
-defined over all nonnegative consumption: 
+defined over all positive consumption: 
 \begin{equation}
 u\left(c_{t}\right)=\begin{cases}
 \frac{c^{1-\rho}}{1-\rho} & \mbox{if \ensuremath{\rho>0\mbox{ and }\rho\neq1}}\\
@@ -408,7 +408,7 @@ could be sophisticated or naive about anticipating the time-inconsistency of her
 preferences (\citet{odonoghue_choice_2001}).
 
 Short labels names will help distinguish between the consumer's selves: we call the  period-zero consumer will be labeled her `Zero-self' or simply `Zero' and her  period-one incarnation as her `One-self' or `One'. 
-Zero-self begins  with and endowment of claims to an arbitrary
+Zero-self begins  with an endowment of claims to an arbitrary
 income stream over the three periods, $Y^0=\left(y_{0},y_{1},y_{2}\right)$. Her objective is to rearrange this into consumption stream $C_0$ to maximize \(U_{0}(C_0)\) in (\ref{eq:obj}) using whatever financial contracting savings and/or borrowing strategies that may be available. 
 
 The consumer has the option of contracting with one or many
@@ -428,10 +428,10 @@ contracts
 with commitment services
  to  help restrict or otherwise control the customer's later self(ves) recontracting possibilities.  
 
-In this section we study the benchmark competitive full-commitment contract where we simply assume a bank can offer the Zero
+In this section we study the benchmark competitive full-commitment contract where we simply assume a bank can \textit{costlessly} offer the Zero
 consumer
 a
-multi-period contract that \textit{costlessly} binds the consumer's latter self(ves) to not renegotiate its terms with the same bank or other banks. Although we are not making the exact mechanisms explicit yet the bank's ability to credibly commit to not renegotiate such a contract -- even though \textit{ex-post} the consumer is willing to pay the bank to do so -- must rest on the assumption that the bank can credibly bond itself to incurring a high renegotiation penalty (call it $\kappa$) in the event of renegotiation that is sufficiently high to deter the bank.\footnote{We label this the costless full-commitment contract  but as this discussion suggests it rests upon the deterrence achieved by threatening very costly punishments to the bank.  When the severity of the punishments that can be credibly threatened are less severe the costs of contracting will rise as the bank and consumer have to distort the consumption smoothing contract to make no-renegotiation commitments self-enforcing. }  In the next and later sections of the paper we will examine what happens when  $\kappa$ falls to zero and exogenously sustained commitment contracts must be replaced by self-enforcing renegotiation-proof contracts. \ We then study intermediate scenarios where $\kappa$ may larger than zero but less than what is required to sustain full commitment. In later sections we delve deeper into what determines $\kappa$ and how it might be  endogenously determined via choices of bank ownership and governance forms, and shaped by the nature of the market structure. 
+multi-period contract that  binds the consumer's latter self(ves) to not renegotiate its terms with the same bank or other banks. Although we are not making the exact mechanisms explicit yet the bank's ability to credibly commit to not renegotiate such a contract must rest on the assumption that the bank has credibly bonded itself to paying a high renegotiation penalty (call it $\kappa$) in the event of renegotiation and that this penalty is sufficiently high to deter the bank.\footnote{We label this the costless full-commitment contract  but as this discussion suggests it rests upon the deterrence achieved by threatening very costly punishments to the bank.  When the severity of the punishments that can be credibly threatened are less severe the costs of contracting will rise as the bank and consumer have to distort the consumption smoothing contract to make no-renegotiation commitments self-enforcing. }  In later sections of the paper we will examine what happens when  $\kappa$ falls to zero. Then exogenously sustained commitment contracts can no longer be sustained and must be replaced by second-best self-enforcing renegotiation-proof contracts. \ With that understanding we can then move to studying imperfect commitment contracts where $\kappa$ may be larger than zero but less than what is required to sustain full commitment. We can then delve deeper into what in  practice determines $\kappa$ and how it might be  endogenously determined via choices of bank ownership and governance forms, and shaped by the nature of the market structure. 
 
 
   \begin{figure}[p!]
@@ -499,12 +499,12 @@ Zero's preferred contract
 at these parameters is $C_0^F=(150, 75, 75)$. How much the consumer borrows or saves\ (or pays down debts)\  in any given period  depends on the value of her income in that period relative the optimal consumption level in that period.   If total income of 300 were evenly divided across periods as $Y_{0}=(100, 100, 100)$ then this   consumption plan would be achieved by borrowing $c_0-y_0=50$ in period 0 and repaying  25 in each of periods 1 and 2 (recall \(r=0)\). If the  stream were instead $Y_{0}=(200, 50, 50)$ the same consumption plan would be constructed by saving  50 in period 0 to be evenly allocated to raise consumption in periods 1 and 2.  
 
 
-\subsection{The Renegotiation Problem}
+\section{The Renegotiation Problem}
 
 
 
 
-One would like  higher period 1 consumption than Zero's preferences built into the contract. This will mean that are potential gains to trade to be split between the bank the One self by breaking earlier commitments. In the last section we simply assumed there were  sufficiently high costlessly enforced penalties that  deterred he bank from breaking such commitments. 
+One-self would like  higher period 1 consumption than Zero's preferences built into the contract. This will mean that are potential gains to trade to be split between the bank the One self by breaking earlier commitments. In the last section we simply assumed there were  sufficiently high costlessly enforced penalties that  deterred he bank from breaking such commitments. 
 
  
 
@@ -571,9 +571,9 @@ A little more algebra reveals that for all  $0<\beta<1$ we will have $c_0^P\gtre
 
 To illustrate, at our earlier parameterization $\beta=0.5$ and $\rho=1$ the full commitment contract will be $C_0^P=(150, 100, 50) $ which offers considerably less consumption smoothing in later periods compared to the contract with self-control $C_0^F=(150, 75, 75) $.\footnote{For these parameters  expression \ref{eq:coP} becomes $c_{0}^P =\frac{\sum y}{1+2\beta}, c_1^P=\beta\cdot c_{0}^P \text{ and } $ c_1^P=\beta^2\cdot c_{0}^P }  If the consumer's  initial income stream were $Y_0=(100, 100, 100)$ then we could think of the consumer with self-control as sticking to a balanced repayment program to keep consumption steady in the last two periods. Compared to this the consumer without self-control  rolls over debt rather than repay it in period one. The entire burden of repayment of the debt that Zero took out in period 0 now falls in period 2, whereas Zero would have preferred the burden to be shared equally between periods 1 and 2. If the income stream had instead been $Y_0=(200, 50, 50)$ then a consumer without self-control would be  viewed as raiding   savings in period 1 that an otherwise identical consumer with self-control would have earmarked for period 2 consumption. In short, consumers that can obtain full-commitment contracts will save/repay more or borrow less in period 1 and consume more in period 2 and the inability to do so leads to lower welfare for Zero in this competitive setting.
 
-\subsubsection{The Bank's no-renegotiation constraint} 
+\subsection{The Bank's no-renegotiation constraint} 
 
-There are potential gains to trade between the bank and the period 1 self consumer from renegotiating the contract.  The bank's promise in period zero to not renegotiate the contract in period 1 will be credible only as long as any such potential gains from replacing the remaining terms $(c_1,c_2)$ of the contract $C_0$
+There are potential gains to trade between the bank and the One self consumer from renegotiating the contract.  The bank's promise in period 0 to not renegotiate the contract in period 1 will be credible only as long as any such potential gains from replacing the remaining terms $(c_1,c_2)$ of the contract $C_0$
 by a lower-cost renegotiated contract $(c_1^1,c_2^1)$ do not exceed the costs of  renegotiating $\kappa$: 
 
 \begin{equation}
@@ -609,7 +609,7 @@ profits achieved will be dependent on the consumer's autarky utility. The bank m
 rises and profits fall with $U_{0}^{A}$. 
 
 
-\subsubsection{Renegotiation-proof monopoly monopoly contracts}
+\subsection{Renegotiation-proof monopoly contracts}
  
 
 The  renegotiation-problem in the monopoly bank case is very similar but now the inability of the bank to credibly commit to not opportunistically renegotiate the contract  will cost the bank. To see this, assume again for argument's sake that Zero had agreed to the full-commitment contract indicated by point $mF$ in the figure. 
@@ -668,7 +668,7 @@ rises in $U_{0}^{A}$, full commitment becomes less sustainable if
 $U_{0}^{A}$ is sufficiently large. 
 
 
-\subsubsection{Renegotiation with and without exclusivity}
+\subsection{When Full Commitment contracts fail}
 
 In the case just discussed we implicitly assumed that when the customer enters the subgame
 she recontracts with the same monopoly bank that she entered into contract with in period 0 and that bank again enjoyed a monopoly position.  In effect we assumed that the period 0 contract was enforceably exclusive. 
@@ -1334,10 +1334,9 @@ $U_{0}^{A}\leq\bar{U}$, with $\bar{U}$ as defined in Proposition
 2).
 \end{prop}
 
-\section{Discussion}
+\section{Discussion and Extensions}
 
 
-\subsection{Summary}
 
 The model above formalizes the renegotiation problem faced by banks
 that contract with hyperbolic discounters, and shows how the problem
@@ -1432,45 +1431,16 @@ left with autarky utility. Under competition, welfare is lower under
 renegotiation-proof contracts relative to full-commitment (when the
 constraint binds), and nonprofits serve to raise welfare.
 
-Finally, recall that our model assumes contracts can only be initiated
-in period 1. As a result, the consumer knows that the alternative
-to a period-0 contract is autarky, and the bank knows that if a contract
-isn't signed in period 0 there are no remaining opportunities to contract
-with the consumer. This determines participation constraints for both
-the consumer and the bank. The model could easily be extended to allow
-for contracts that are initiated in period 1. While this would alter
-participation constraints, the qualitative results of our model would
-continue to hold.
-
-Consider how participation constraints change if contracts could also
-be initiated in period 1. For the consumer, the possibility of a period
-1 contract could either tighten or loosen the participation constraint
-in period 0 (if the period 1 contract further skews consumption away
-from period 2, the constraint loosens; otherwise it tightens). For
-the bank, the possibility of a period 1 contract must weakly tighten
-its participation constraint. The problem can be analyzed in the same
-way as in our original model, but the parameter values under which
-a bank will switch from for-profit to nonprofit status will change.
-For example, consider the monopolist bank. If, as a for-profit, period
-0 profits are nearly 0, its decision about whether to switch to nonprofit
-status becomes more complicated--it could turn into a nonprofit and
-thereby earn higher profits in period 0, but it must also consider
-the possibility of remaining a for-profit and simply offering a contract
-in period 1 rather than in period 0.
-
-
-\subsubsection{Equilibria with period 1 contracts}
-
+\subsubsection{Equilibria allowing period 1 contracts}
 
 Our preceding analysis made the simplifying assumption that contracts
-between consumers and banks could only be initiated in period 0. This
-served to streamline the analysis, as the alternative to a period
-0 contract was autarky (for the consumer) and zero profits (for the
-bank). We now discuss how the problem changes when the contract space is enriched by allowing unbanked consumers
-to sign two-period contracts in period 1 (possibly without contracting in period 0).
+between consumers and banks could only be initiated in period 0. The alternative to a period
+0 contract was autarky for the consumer in the  monopoly case and zero profits for the
+bank under competition. This
+served to streamline the analysis. We now discuss how the interesting problem of how the contract space is enriched by allowing unbanked consumers
+to sign two-period contracts in period 1, possibly without contracting in period 0.\footnote{We thank Abhijit Banerjee for very helpful discussions about this point.} The main change will relate to the formulation of reservation values and
+their implications for the shape and feasibility of the period 0 contracts.  The main qualitative results of the paper go through but the discussion raises interesting questions about circumstances where consumers could be better off under an autarky economy compared  to one with a financial intermediary. 
 
-The main change relates to the formulation of reservation values and
-their implications for the shape and feasibility of the period 0 contracts.
 Consider the monopolist bank facing a sophisticated hyperbolic discounter.
 If a contract were not signed in period 0, they would meet again in
 period 1. In period 1, the contract must satisfy the One-self's participation
@@ -1478,8 +1448,8 @@ constraint, which would be determined by some unbanked consumption
 path $C_{1}^{A'}$. This can be stated formally. Given some autarky
 consumption path $C_{1}^{A'}$, the bank solves:
 \begin{align*}
-\underset{C_{1}}{max} & \Pi_{1}\left(C_{1};C_{1}^{A'}\right)\\
-\text{s.t.} & \text{\ensuremath{U_{1}\left(C_{1}\right)\geq U_{1}\left(C_{1}^{A'}\right)}}
+\underset{C_{1}}\max  \text{ }{ \Pi_{1}\left(C_{1};C_{1}^{A'}\right)}\\
+\text{s.t.  }  U_{1}\left(C_{1}\right)\geq U_{1}\left(C_{1}^{A'}\right)
 \end{align*}
 
 Let the solution be denoted $C_{1}^{m1}$. Two observations can be
