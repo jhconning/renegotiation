@@ -1,0 +1,111 @@
+%% LyX 2.2.0 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+% set fonts for nicer pdf view
+\IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+Our preceding analysis made a simplifying assumption that contracts
+between consumers and banks could only be initiated in period 0. This
+served to streamline the analysis, as the alternative to a period
+0 contract was autarky (for the consumer) and zero profits (for the
+bank). We now discuss how the problem changes if unbanked consumers
+are permitted to sign two-period contracts in period 1.
+
+The main change relates to the formulation of reservation values and
+their implications for the shape and feasibility of the period 0 contract.
+Consider the monopolist bank facing a sophisticated hyperbolic discounter.
+If a contract were not signed in period 0, they would meet again in
+period 1. In period 1, the contract must satisfy the One-self's participation
+constraint, which would be determined by some unbanked consumption
+path $C_{1}^{A'}$. This can be stated formally. Given some autarky
+consumption path $C_{1}^{A'}$, the bank solves:
+\begin{align*}
+\underset{C_{1}}{max} & \Pi_{1}\left(C_{1};C_{1}^{A'}\right)\\
+\text{s.t.} & \text{\ensuremath{U_{1}\left(C_{1}\right)\geq U_{1}\left(C_{1}^{A'}\right)}}
+\end{align*}
+
+Let the solution be denoted $C_{1}^{m1}$. Two observations can be
+made. First, the bank can always offer a period 1 contract that delivers
+nonnegative profits. This is because any contract will satisfy One-self's
+optimality condition, $u'\left(c_{1}^{m1}\right)=\beta u'\left(c_{2}^{m1}\right)$.
+So, except in the special case where the autarky consumption path
+satisfies this condition, the bank can make positive profits in period
+1. Second, the autarky consumption path $C_{1}^{A'}$ might differ
+from $C_{1}^{A}$, the consumer's autarky utility in the absence of
+banking. In other words, $C_{1}^{A}$ maximizes $U_{0}\left(C_{0}^{A}\right)$
+while $C_{1}^{A'}$ maximizes $U_{0}\left(c_{0}^{A'},c_{1}^{m1},c_{2}^{m2}\right)$.
+In the latter case, period 0 anticipates that consumption across periods
+1 and 2 is guaranteed to satisfy period 1's optimality condition.
+We can denote $C_{0}^{B}\equiv\left(c_{0}^{A'},c_{1}^{m1},c_{2}^{m2}\right)$,
+which corresponds to a Zero-self utility of $U_{0}^{B}$.
+
+In period 0, any contract must meet the Zero-self's reservation utility,
+$U_{0}^{B}$:
+\begin{align*}
+\underset{C_{0}}{max} & \Pi_{0}\left(C_{0};Y_{0}\right)\\
+\text{s.t.} & \text{\ensuremath{U_{0}\left(C_{0}\right)\geq U_{0}^{B}}}
+\end{align*}
+
+The maximization problem looks familiar, apart from the modified reservation
+utility. The Zero-self's discounted utility from such a contract is
+no longer monotonic in her full autarky utility, $U_{0}^{A}$. For
+example, consider two hypothetical consumers who in autarky must consume
+their income streams, which deliver the same autarky utility but through
+different consumption paths: consumer X has $c_{1}^{A}=c_{2}^{A}$
+while consumer Y has $c_{1}^{A}>c_{2}^{A}$ in a way that satisfies
+period 1's optimality condition. Then, for consumer X, $U_{0}^{B}<U_{0}^{A}$
+while for consumer Y, $U_{0}^{B}=U_{0}^{A}$. It follows that, since
+period 0 contracts depend on the distribution of future consumption,
+a consumer who fares relatively better in the absence of a bank may
+fare relatively worse under a banking contract.
+
+Given this benchmark full-commitment contract, the renegotiation-proof
+contract can be solved for by adding a no-renegotiation constraint
+to the above maximization problem. The constraint is the same as used
+previously, and again narrows the set of contracts that can be offered
+in period 0. As in Proposition 2 (parts a and c), the renegotiation-proof
+constraint results in lower profits and greater period 0 consumption
+relative to full-commitment. These results are independent of the
+period 0 reservation utility and therefore remain unchanged.
+
+A key difference here, however, is that a renegotiation-proof contract
+will be offered to all consumers (unlike before, where the bank was
+better off not contracting with consumers whose autarky utility left
+them close enough to the first-best). Intuitively, this is because
+the alternative to a period 0 contract is not autarky; rather, it
+is a period 1 contract that tilts consumption in period 1's favor.
+Since, in period 0, the bank can at least offer the consumer a consumption
+path of $C_{0}^{B}$, it ensures that a contract will be accepted.
+
+By opening up the possibility of period 1 contracts, we introduce
+an additional consideration\textendash the bank that offers commitment
+itself creates a need for it. By threatening to fully indulge the
+One-self's preferences, the bank is always able to induce the Zero-self
+to accept an offer of partial commitment, no matter how weak.
+
+Finally, observe that the bank's decision about whether to operate
+as a nonprofit is subject to the same tradeoff between improved commitment
+and reduced enjoyment of profits. However, the attractiveness of nonprofit
+status drops (relative to the case where period 1 contracts are disallowed)
+due to the fact that even the for-profit bank finds it profitable
+to offer contracts to consumers at all levels of autarky utility.
+
+Next, we turn to competition. In most cases, the possibility of period
+1 contracts leaves our previous analysis unaltered. This is because
+competitive contracts do not depend on autarky utility. The only modification
+to our previous results relates to Proposition 3 (part b). Now, the
+consumer will accept a period 0 renegotiation-proof contract at any
+autarky utility since not doing so exposes her to a period 1 contract
+that fully satisfies period 1's taste for imbalanced consumption.
+\end{document}
