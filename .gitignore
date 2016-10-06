@@ -20,3 +20,8 @@ latest/older/
 *.blg
 *.aux
 *.ddf
+.idea/
+.tex.Backup
+*.tmp
+monopoly_files/
+toss/
