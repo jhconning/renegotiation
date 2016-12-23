@@ -1,0 +1,469 @@
+%% LyX 2.2.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[11pt,english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.25in,bmargin=1.25in,lmargin=1.25in,rmargin=1.25in}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{wasysym}
+\usepackage[authoryear]{natbib}
+\onehalfspacing
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+  \theoremstyle{plain}
+  \newtheorem{prop}{\protect\propositionname}
+  \theoremstyle{plain}
+  \newtheorem{lem}{\protect\lemmaname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{babel}
+
+
+% set fonts for nicer pdf view
+\IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
+
+
+
+\usepackage{babel}
+\providecommand{\lemmaname}{Lemma}
+  \providecommand{\propositionname}{Proposition}
+
+\date{December 2016 draft}
+
+
+
+\usepackage{babel}
+\providecommand{\lemmaname}{Lemma}
+  \providecommand{\propositionname}{Proposition}
+\usepackage{varioref}
+
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
+\makeatother
+
+\usepackage{babel}
+  \providecommand{\lemmaname}{Lemma}
+  \providecommand{\propositionname}{Proposition}
+
+\begin{document}
+
+\title{Online Appendix for \\Breakable commitments: \\
+ present-bias, client protection and bank ownership forms}
+
+\author{Karna Basu \& Jonathan Connin
+
+\appendix
+%dummy comment inserted by tex2lyx to ensure that this paragraph is not empty
+
+\section{Online (longer) Appendix: CRRA Derivations and Proofs}
+
+\subsection{Full-Commitment}
+
+For the monopolist bank that offers full-commitment, the solution
+is determined by the first-order condition and the consumer's participation
+constraint: 
+\begin{align}
+C_{0}^{mF} & =\left(1,\beta^{\frac{1}{\rho}},\beta^{\frac{1}{\rho}}\right)\cdot\left(\frac{U_{0}^{A}\left(1-\rho\right)}{1+2\beta^{\frac{1}{\rho}}}\right)^{\frac{1}{1-\rho}}\label{eq:c-mf}\\
+\Pi_{0}\left(C_{0}^{mF};Y_{0}\right) & =y-\left(U_{0}^{A}\left(1-\rho\right)\right)^{\frac{1}{1-\rho}}\left(1+2\beta^{\frac{1}{\rho}}\right)^{\frac{-\rho}{1-\rho}}\label{eq:pi-mf}
+\end{align}
+
+For the competitive banks that offer full-commitment, the solutions
+is determined by the first-order condition and the bank's participation
+constraint: 
+\begin{equation}
+C_{0}^{F}=\left(1,\beta^{\frac{1}{\rho}},\beta^{\frac{1}{\rho}}\right)\cdot\left(\frac{y}{1+2\beta^{\frac{1}{\rho}}}\right)\label{eq:c-cf}
+\end{equation}
+
+
+\subsection{Renegotiation}
+
+Given an existing contract $C_{1}$, a monopolist bank that renegotiates
+in period 1 will offer the following new contract: 
+\begin{equation}
+C_{1}^{m1}\left(C_{1}\right)=\left(1,\beta^{\frac{1}{\rho}}\right)\cdot\left(\frac{c_{1}^{1-\rho}+\beta c_{2}^{1-\rho}}{1+\beta^{\frac{1}{\rho}}}\right)^{\frac{1}{1-\rho}}\label{eq:c-r}
+\end{equation}
+
+The corresponding profit gains from renegotiation are: 
+\begin{equation}
+\Pi_{1}\left(C_{1}^{m1}\left(C_{1}\right);C_{1}\right)=\left(c_{1}+c_{2}\right)-\left(c_{1}^{1-\rho}+\beta c_{2}^{1-\rho}\right)^{\frac{1}{1-\rho}}\left(1+\beta^{\frac{1}{\rho}}\right)^{\frac{-\rho}{1-\rho}}\label{eq:pi-r}
+\end{equation}
+
+An alternate way to restate the above is the following: Let $s$ and
+$\alpha$ be defined such that $c_{1}=\alpha s$ and $c_{2}=\left(1-\alpha\right)s$.
+Then: 
+\begin{equation}
+C_{1}^{m1}\left(C_{1}\right)=\left(s,s\beta^{\frac{1}{\rho}}\right)\cdot\left(\frac{\alpha^{1-\rho}+\beta\left(1-\alpha\right)^{1-\rho}}{1+\beta^{\frac{1}{\rho}}}\right)^{\frac{1}{1-\rho}}\label{eq:c-r-alpha}
+\end{equation}
+
+Profit gains from renegotiation become: 
+\begin{equation}
+\Pi_{1}\left(C_{1}^{m1}\left(C_{1}\right);C_{1}\right)=\left(s\right)\left(1-\left(\alpha^{1-\rho}+\beta\left(1-\alpha\right)^{1-\rho}\right)^{\frac{1}{1-\rho}}\left(1+\beta^{\frac{1}{\rho}}\right)^{\frac{-\rho}{1-\rho}}\right)\label{eq:renegotiation-profits}
+\end{equation}
+
+By construction, profits from renegotiation are strictly positive
+(and increasing in $s$), except in the special case where $C_{1}$
+is optimal from period 1's perspective ($\left(1-\alpha\right)=\beta^{\frac{1}{\rho}}\alpha$),
+in which case they are $0$. It can also easily be confirmed that
+profits from renegotiation fall in $\alpha$ as long as the allocation
+is such that period 1 would like a larger $\alpha$ than the current
+contract offers.
+
+\textbf{\textit{ALTERNATE Proof of Proposition 1:}} When we have the full-commitment contract under competition we can write the binding no-renegotiation constraint as: 
+\begin{equation}
+y-c_0^F-\kappa =(1+\beta^\frac{1}{\rho})c_1^1 \\
+\end{equation}
+where we have used the fact that $c_0^F+c_1^F+c_2^F=y$ and the fact that at any renegotiated contract $R$ we must have $c_1^2=\beta^\frac{1}{\rho}c_1^1$ and hence $c_1^1+c_2^1 =(1+\beta^\frac{1}{\rho})c_1^1$. So at a point like $R$ in the diagram
+\begin{equation*}
+c_1^1=\frac{y-c_0^F-\kappa}{1+\beta^\frac{1}{\rho}}$
+\end{equation}
+At $R$ we also have $u(c_1^F)+\beta u(c_2^F)=u(c_1^1)+\beta u(c_2^1)$ (i.e. on the indifference curve $FR$). Putting this all together and simplifying we can solve to find the $\bar \kappa$ at which the no-renegotiation constraint just binds:
+$$u(c_1^F)+\beta u(c_2^F)=u(c_1^1)+\beta u(c_2^1)$$
+$$u(\beta^\frac{1}{\rho} c_0^F)+\beta u(\beta^\frac{1}{\rho} c_0^F)=(1+\beta^\frac{1}{\rho})u(c_1^1)$$
+$$(1+\beta) \beta^\frac{1-\rho}{\rho} u(c_0^F)
+=(1+\beta^\frac{1}{\rho}) \cdot 
+u \left(\frac{y-c_0^F-\kappa}{1+\beta^\frac{1}{\rho}} \right)$$
+\begin{equation}
+\bar \kappa = y -(2+\beta^\frac{1}{\rho} )c_0^F
+\end{equation}
+If we substitute in our earlier solution for $c_0^F$ this becomes:
+\begin{equation}
+\bar \kappa = y -)\frac{(2+\beta^\frac{1}{\rho} }{1+2 \beta^\frac{1}{\rho} }
+\end{equation}
+
+
+T
+Substituting for $s$ from the competitive full-commitment contract,
+we can rewrite the above condition as: 
+\begin{equation}
+k\geq\frac{2\beta^{\frac{1}{\rho}}y}{1+2\beta^{\frac{1}{\rho}}}\left(1-\frac{1}{2}\left(1-\beta\right)^{\frac{1}{1-\rho}}\left(1+\beta^{\frac{1}{\rho}}\right)^{\frac{-\rho}{1-\rho}}\right)\equiv\bar{\kappa}\label{eq:max-kappa}
+\end{equation}
+Since in any full-commitment contract (monopoly and competition),
+$s$ will be no larger than $\frac{2\beta^{\frac{1}{\rho}}y}{1+2\beta^{\frac{1}{\rho}}}$,
+no full-commitment contract will be renegotiated if $\kappa\geq\bar{\kappa}$.
+
+(c) If $\kappa<\bar{\kappa}$, condition \ref{eq:max-kappa} fails,
+so the competitive full-commitment contract cannot survive.
+
+(b) The monopolist full-commitment contract will not survive if $s$
+is sufficiently large. Since $s^{mF}$ is exponentially increasing
+in $U_{0}^{A}$, there must be some $U^{m}$ such that the contract
+will not survive if and only if $U_{0}^{A}>U^{m}$. Since the contract
+cannot survive at $U_{0}^{F}$ (here, the contract is identical to
+the competitive contract) , $U^{m}<U_{0}^{F}$. $\Square$
+
+\subsection{Renegotiation-Proof Contracts}
+
+\subsubsection{Sophisticated Hyperbolic Discounters}
+
+When the renegotiation-proofness constraint binds, consumption in
+periods 1 and 2 must satisfy: 
+\begin{equation}
+\left(s\right)\left(1-\left(\alpha^{1-\rho}-\beta\left(1-\alpha\right)^{1-\rho}\right)^{\frac{1}{1-\rho}}\left(1+\beta^{\frac{1}{\rho}}\right)^{\frac{-\rho}{1-\rho}}\right)=\kappa\label{eq:rp-constraint}
+\end{equation}
+
+For any $s$, there may be two values of $\alpha$ that satisfy the
+constraint with equality\textendash one with too little consumption
+relative to period 1's optimal, one with too much consumption relative
+to period 1's optimal. The relevant value for us is the first. This
+defines a continuous function $\alpha\left(s\right)$. 
+\begin{equation}
+\alpha\left(s\right)=min\left\{ \alpha:\left(s\right)\left(1-\left(\alpha^{1-\rho}+\beta\left(1-\alpha\right)^{1-\rho}\right)^{\frac{1}{1-\rho}}\left(1+\beta^{\frac{1}{\rho}}\right)^{\frac{-\rho}{1-\rho}}\right)=\kappa\right\} \label{eq:alpha}
+\end{equation}
+
+As $s$ rises, to continue satisfying the constraint we must have
+$\alpha\left(s\right)$ rising too (if fractions stayed constant,
+profits from renegotiation would rise).
+
+We can also rewrite the first-order condition of the bank's maximization
+problem using the new notation. For any $s$ and $\alpha$, let $V\left(s,\alpha\right)=u\left(\alpha s\right)+u\left(\left(1-\alpha\right)s\right)$.
+This is the discounted utility over periods 1 and 2, from period 0's
+perspective. The solution, $C_{0}=$$\left(c_{0},\alpha s,\left(1-\alpha\right)s\right)$,
+must satisfy: 
+\begin{equation}
+\frac{du\left(c_{0}\right)}{dc_{0}}=\beta\frac{dV\left(s,\alpha\right)}{ds}\label{eq:du-dv}
+\end{equation}
+
+In other words, at the profit-maximizing contract the marginal dollar
+should be equally valuable whether consumed immediately or distributed
+across future periods.
+
+\textbf{\textit{Proof of Proposition 2:}} (a) Since the full-commitment
+profit-maximizing contract was uniquely determined, and since it does
+not satisfy the renegotiation-proofness constraint, the renegotiation-proof
+contract must yield lower profits than the full-commitment contract
+does.
+
+(b) Clearly, $\Pi_{0}\left(C_{0}^{mP};Y_{0}\right)$ falls strictly
+in $U_{0}^{A}$ (if autarky utility falls, the bank can always do
+better, at least by simply lowering $c_{0}$). Since at $U_{0}^{A}=U^{m}$,
+$\Pi_{0}\left(C_{0}^{mP};Y_{0}\right)=\Pi_{0}\left(C_{0}^{mF};Y_{0}\right)>0$
+and at $U_{0}^{A}=U_{0}^{F}$, $\Pi_{0}\left(C_{0}^{mP};Y_{0}\right)<\Pi_{0}\left(C_{0}^{mF};Y_{0}\right)=0$,
+there must be some intermediate autarky utility above which the bank's
+maximized profits will be negative.
+
+(c) consider any $c_{0}\leq c_{0}^{mF}$ and $s$ such that $U_{0}\left(c_{0},\frac{s}{2},\frac{s}{2}\right)=U_{0}^{A}$.
+We can find the corresponding $\bar{s}$ that, while satisfying the
+participation constraint, gives the same utility from period 0's perspective:
+
+\begin{align}
+V\left(s,\frac{1}{2}\right) & =\bar{V}\left(\bar{s},\alpha\left(\bar{s}\right)\right)\label{eq:v=00003D00003Dvbar1}\\
+\Rightarrow2\frac{\left(\frac{1}{2}s\right)^{1-\rho}}{1-\rho} & =\frac{\left(\alpha\left(\bar{s}\right)\bar{s}\right)^{1-\rho}}{1-\rho}+\frac{\left(\left(1-\alpha\left(\bar{s}\right)\right)\bar{s}\right)^{1-\rho}}{1-\rho}\label{eq:v-vbar2}\\
+\Rightarrow\bar{s} & =s\left(\frac{2\left(\frac{1}{2}\right)^{1-\rho}}{\alpha\left(\bar{s}\right)^{1-\rho}+\left(1-\alpha\left(\bar{s}\right)\right)^{1-\rho}}\right)^{\frac{1}{1-\rho}}\label{eq:v-vbar3}
+\end{align}
+
+From this, we get the following inequality: 
+\begin{align}
+\frac{dV\left(\bar{s},\alpha\left(\bar{s}\right)\right)}{ds} & =\bar{s}^{-\rho}\left(\alpha\left(\bar{s}\right)^{1-\rho}+\left(1-\alpha\left(s\right)\right)^{1-\rho}\right)+\frac{d\alpha\left(\bar{s}\right)}{ds}\bar{s}^{1-\rho}\left(\alpha\left(\bar{s}\right)^{-\rho}-\left(1-\alpha\right)^{-\rho}\right)\label{eq:dv-ds1}\\
+ & <\bar{s}^{-\rho}\left(\alpha\left(\bar{s}\right)^{1-\rho}+\left(1-\alpha\left(s\right)\right)^{1-\rho}\right)\label{eq:dv-ds2}\\
+ & =s^{-\rho}\left(2\left(\frac{1}{2}\right)^{1-\rho}\right)\left(\frac{2\left(\frac{1}{2}\right)^{1-\rho}}{\alpha\left(\bar{s}\right)^{1-\rho}+\left(1-\alpha\left(\bar{s}\right)\right)^{1-\rho}}\right)^{\frac{-1}{1-\rho}}\label{eq:dv-ds3}\\
+ & <s^{-\rho}\left(2\left(\frac{1}{2}\right)^{1-\rho}\right)=\frac{dV\left(s,\frac{1}{2}\right)}{ds}\label{eq:dv-ds4}
+\end{align}
+
+The first line above splits the effect of $s$ on $V$ into two\textendash the
+first term represents the change in utility holding $\alpha$ constant,
+and the second term represents the (negative) effect of the further
+skewing of consumption that results from a rise in $s$. The final
+inequality follows from the fact that, since $\bar{s}>s^{mF}$, the
+renegotiation constraint must bind so that $\alpha\left(\bar{s}\right)>\frac{1}{2}$.
+Finally, the following inequality holds: 
+\begin{align}
+\frac{du\left(c_{0}\right)}{dc_{0}} & \geq\frac{du\left(c_{0}^{mF}\right)}{dc_{0}}=\beta\frac{dV\left(s^{mF},\frac{1}{2}\right)}{ds}\label{eq:dudc-dvds1}\\
+ & \geq\beta\frac{dV\left(s,\frac{1}{2}\right)}{ds}>\beta\frac{dV\left(\bar{s},\alpha\left(\bar{s}\right)\right)}{ds}\label{eq:dudc-dvds2}
+\end{align}
+
+We have shown that at any $c_{0}\leq c_{0}^{mF}$, for a contract
+that satisfies the renegotiation-proofness constraint, the marginal
+utility of period 0 consumption will be higher than the discounted
+marginal utility of future consumption, so the bank could earn strictly
+higher profits by raising $c_{0}$ and lowering $s$ further. Therefore,
+in the renegotiation-proof contract, $c_{0}^{mP}>c_{0}^{mF}$. $\Square$
+
+\textbf{\emph{Proof of Proposition 3:}} (a) We know that $U_{0}\left(C_{0}^{F}\right)=U_{0}^{F}$.
+By assumption, since the renegotiation-proofness constraint is binding,
+the renegotiation-proof contract cannot offer the optimal consumption
+path. Therefore $U_{0}\left(C_{0}^{P}\right)<U_{0}\left(C_{0}^{F}\right)$.
+
+(b) Consider $\bar{U}$, as constructed in Proposition 2. If $U_{0}^{A}>\bar{U}$,
+it is impossible to construct a contract that earns nonnegative profits
+and gives the consumer at least autarky utility. Therefore, any contract
+that earns zero profits would give the period 0 consumer less than
+autarky utility. (As an aside, observe that $\bar{U}=U_{0}\left(C_{0}^{P}\right)$.)
+
+(c) At the full-commitment contract: 
+\begin{equation}
+\frac{du\left(c_{0}^{F}\right)}{dc}=\beta\frac{dV\left(s^{F},\frac{1}{2}\right)}{ds}=\left(s^{F}\right)^{-\rho}\left(2\left(\frac{1}{2}\right)^{1-\rho}\right)
+\end{equation}
+Consider a renegotiation-proof contract with $c_{0}=c_{0}^{F}$. To
+keep bank profits zero, this contract would also have $s=s^{F}$.
+But in the renegotiation-proof contract, $s$ must be divided according
+to the fraction $\alpha\left(s^{F}\right)$. So: 
+\begin{align}
+\frac{dV\left(s^{F},\alpha\left(s^{F}\right)\right)}{ds} & =\left(s^{F}\right)^{-\rho}\left(\alpha\left(s^{F}\right)^{1-\rho}+\left(1-\alpha\left(s^{F}\right)\right)^{1-\rho}\right)\nonumber \\
+ & +\frac{d\alpha\left(s^{F}\right)}{ds}\left(s^{F}\right)^{1-\rho}\left(\alpha\left(s^{F}\right)^{-\rho}-\left(1-\alpha\left(s^{F}\right)\right)^{-\rho}\right)\label{eq:dv-ds-comp}
+\end{align}
+The first term\textendash the direct effect of a change in $s$\textendash is
+weakly less than $\frac{dV\left(s^{F},\frac{1}{2}\right)}{ds}$ if
+$\rho\leq1$ and strictly greater if $\rho>1$. The second term\textendash the
+component of $\frac{dV}{ds}$ that is driven by the change in $\alpha$\textendash is
+strictly negative. Therefore, if $\rho<1$, $\frac{dV\left(s^{F},\alpha\left(s^{F}\right)\right)}{ds}<\frac{dV\left(s^{F},\frac{1}{2}\right)}{ds}=\frac{du\left(c_{0}^{F}\right)}{dc}$,
+so the renegotiation-proof contract must satisfy $c_{0}^{P}>c_{0}^{F}$.
+
+Next, we consider the case when $\rho>1$. We can make the following
+observations about $\alpha\left(s\right)$. First, $\underset{\kappa\rightarrow0}{lim}\alpha\left(s\right)=\frac{\beta^{\frac{-1}{\rho}}}{1+\beta^{\frac{-1}{\rho}}}$
+(this follows from the fact that at $\kappa=0$, the contract must
+satisfy $u'\left(c_{1}\right)=\beta u'\left(c_{2}\right)$). Second,
+implicitly differentiating equation \ref{eq:alpha} with respect to
+$s$, and combining it with the previous limit result, we get $\underset{\kappa\rightarrow0}{lim}\frac{d\alpha\left(s\right)}{ds}=0$.
+Therefore, if $\rho>1$ and $\kappa$ is small enough, the second
+term in Equation \ref{eq:dv-ds-comp} will be sufficiently small in
+magnitude that $\frac{dV\left(s^{F},\alpha\left(s^{F}\right)\right)}{ds}>\frac{dV\left(s^{F},\frac{1}{2}\right)}{ds}=\frac{du\left(c_{0}^{F}\right)}{dc}$.
+In this case, the renegotiation-proof contract must satisfy $c_{0}^{P}<c_{0}^{F}$.
+$\Square$
+
+If $\kappa=0$, the renegotiation-proof contracts can be explicitly
+derived since in any contract it must be true that $c_{2}=\beta^{\frac{1}{\rho}}c_{1}$.
+Solving the respective maximization problems, we get the following
+equilibrium contracts for monopoly and competition, respectively:
+\begin{align}
+C_{0}^{mP}= & \left(\left(\frac{U_{0}^{A}\left(1-\rho\right)}{1+\beta^{\frac{1}{\rho}}\left(\frac{\left(1+\beta^{\frac{1-\rho}{\rho}}\right)^{\frac{1}{\rho}}}{\left(1+\beta^{\frac{1}{\rho}}\right)^{\frac{1-\rho}{\rho}}}\right)}\right)^{\frac{1}{1-\rho}},\left(\frac{\beta+\beta^{\frac{1}{\rho}}}{1+\beta^{\frac{1}{\rho}}}\right)^{\frac{1}{\rho}}c_{0}^{mP},\beta^{\frac{1}{\rho}}\left(\frac{\beta+\beta^{\frac{1}{\rho}}}{1+\beta^{\frac{1}{\rho}}}\right)^{\frac{1}{\rho}}c_{0}^{mP}\right)\label{eq:zerokappa-monop}\\
+C_{0}^{P}= & \left(\frac{y}{1+\beta+\beta^{\frac{1}{\rho}}},\left(\frac{\beta+\beta^{\frac{1}{\rho}}}{1+\beta^{\frac{1}{\rho}}}\right)c_{0}^{P},\beta^{\frac{1}{\rho}}\left(\frac{\beta+\beta^{\frac{1}{\rho}}}{1+\beta^{\frac{1}{\rho}}}\right)c_{0}^{P}\right)\label{eq:zerokappa-comp}
+\end{align}
+
+It can easily be established that $c_{0}^{mP}>c_{0}^{mF}$, $c_{0}^{P}>c_{0}^{mF}$
+if $\rho>1$, and $c_{0}^{P}<c_{0}^{mF}$ if $\rho<1$.
+
+\subsubsection{Naive Hyperbolic Discounters}
+
+Suppose the monopolist intends to renegotiate the contract. The maximization
+problem, combined with the expression for $C_{1}^{m1}\left(C_{1}\right)$
+(\ref{eq:c-r-alpha}), simplifies to:
+
+\begin{align}
+\underset{c_{0},c_{1},c_{2}}{max} & y-c_{0}-\frac{\left(c_{1}^{1-\rho}+\beta c_{2}^{1-\rho}\right)^{\frac{1}{1-\rho}}}{\left(1+\beta^{\frac{1}{\rho}}\right)^{\frac{\rho}{1-\rho}}}-\kappa\\
+s.t. & \frac{c_{0}^{1-\rho}}{1-\rho}+\beta\frac{c_{1}^{1-\rho}}{1-\rho}+\beta\frac{c_{2}^{1-\rho}}{1-\rho}\geq U_{0}^{A}
+\end{align}
+
+The partial derivatives of the resulting Lagrangian are: 
+\begin{align}
+\frac{\partial\mathcal{L}}{\partial c_{0}} & =-1-\lambda c_{0}^{-\rho}\label{eq:L0}\\
+\frac{\partial\mathcal{L}}{\partial c_{1}} & =c_{1}^{-\rho}\left[-\left(\frac{c_{1}^{1-\rho}+\beta c_{2}^{1-\rho}}{1+\beta^{\frac{1}{\rho}}}\right)^{\frac{\rho}{1-\rho}}-\lambda\beta\right]\label{eq:L1}\\
+\frac{\partial\mathcal{L}}{\partial c_{2}} & =c_{2}^{-\rho}\left[-\beta\left(\frac{c_{1}^{1-\rho}+\beta c_{2}^{1-\rho}}{1+\beta^{\frac{1}{\rho}}}\right)^{\frac{\rho}{1-\rho}}-\lambda\beta\right]\label{eq:L2}
+\end{align}
+
+An interior solution, with $\frac{\partial\mathcal{L}}{\partial c_{1}}=0$
+and $\frac{\partial\mathcal{L}}{\partial c_{2}}=0$ does not exist
+(on a $c_{1}-c_{2}$ plot, the two first-order conditions do not intersect).
+If $\rho<1$, the Lagrangian is maximized at a corner solution with
+$c_{1}=0$. If $\rho>1$, the Lagrangian is maximized at the limit
+as $c_{2}$ approaches infinity. Using this, the maximization problem
+can be re-solved. If $\rho<1$: 
+\begin{equation}
+C_{0}^{mN}=\left(\left(\frac{U_{0}^{A}\left(1-\rho\right)}{2+\beta^{\frac{1}{\rho}}}\right)^{\frac{1}{1-\rho}},0,\left(\frac{1+\beta^{\frac{1}{\rho}}}{\beta}\right)^{\frac{1}{1-\rho}}\left(\frac{U_{0}^{A}\left(1-\rho\right)}{2+\beta^{\frac{1}{\rho}}}\right)^{\frac{1}{1-\rho}}\right)\label{eq:naive-monopolist-contract1}
+\end{equation}
+If $\rho>1$, the solution is undefined, but in the limit is given
+by: 
+\begin{equation}
+C_{0}^{mN}=\left(\left(\frac{U_{0}^{A}\left(1-\rho\right)}{1+\left(1+\beta^{\frac{1}{\rho}}\right)\beta^{\frac{1}{\rho}}}\right)^{\frac{1}{1-\rho}},\beta^{\frac{1}{\rho}}\left(1+\beta^{\frac{1}{\rho}}\right)^{\frac{1}{1-\rho}}\left(\frac{U_{0}^{A}\left(1-\rho\right)}{1+\left(1+\beta^{\frac{1}{\rho}}\right)\beta^{\frac{1}{\rho}}}\right)^{\frac{1}{1-\rho}},\infty\right)\label{eq:naive-monopolist-contract2}
+\end{equation}
+
+\textbf{\emph{Proof of Proposition 4:}} (a) At any autarky utility,
+the monopolist could at least offer the full-commitment contract.
+
+(b) The bank must choose between a renegotiation-proof contract and
+a renegotiable contract (\ref{eq:naive-monopolist-contract1}, \ref{eq:naive-monopolist-contract2}).
+By construction of $U^{m}$, the following must be true at any $U_{0}^{A}\geq U^{m}$:
+\begin{equation}
+\Pi_{0}\left(C_{0}^{mP};Y_{0}\right)\leq\Pi_{0}\left(C_{0}^{mF};Y_{0}\right)\leq\Pi_{0}\left(C_{0}^{mF};Y_{0}\right)+\Pi_{1}\left(C_{1}^{m1}\left(C_{1}^{mF}\right);C_{1}^{mF}\right)-\kappa
+\end{equation}
+
+Since $C_{0}^{mN}$ is uniquely determined and $C_{0}^{mN}\neq C_{0}^{mF}$,
+profits from the best renegotiable contract must be strictly higher
+than profits from the renegotiation-proof contract at any $U_{0}^{A}\geq U^{m}$.
+
+The following can be verified from the explicit derivations of $C_{0}^{mF}$
+and $C_{0}^{mN}$. First, if $U_{0}^{A}$ is sufficiently small, $\Pi_{0}\left(C_{0}^{mF};Y_{0}\right)>\Pi\left(C_{0}^{mN};Y_{0}\right)+\Pi_{1}\left(C_{1}^{m1}\left(C_{1}^{mN}\right);C_{1}^{mN}\right)-\kappa$.
+Second, 
+\begin{equation}
+\frac{d}{dU_{0}^{A}}\Pi_{0}\left(C_{0}^{mF};Y_{0}\right)>\frac{d}{dU_{0}^{A}}\left[\Pi\left(C_{0}^{mN};Y_{0}\right)+\Pi_{1}\left(C_{1}^{m1}\left(C_{1}^{mN}\right);C_{1}^{mN}\right)-\kappa\right]
+\end{equation}
+
+It follows that there is some $U^{N}<U^{m}$ such that if $U_{0}^{A}\leq U^{N}$,
+the naive agent will receive the monopoly full commitment contract,
+which will be renegotiation-proof.
+
+(c) This can be confirmed from the explicit formulations of $C_{0}^{mF}$
+(\ref{eq:c-mf}) and $C_{0}^{mN}$ (\ref{eq:naive-monopolist-contract1},
+\ref{eq:naive-monopolist-contract2}). $\Square$
+
+We now derive equilibrium contracts for naive consumers under perfect
+competition. Suppose contracts are exclusive. Then, a contract that
+is renegotiated satisfies: 
+\begin{align}
+\underset{c_{0},c_{1},c_{2}}{max} & \frac{c_{0}^{1-\rho}}{1-\rho}+\beta\frac{c_{1}^{1-\rho}}{1-\rho}+\beta\frac{c_{2}^{1-\rho}}{1-\rho}\\
+s.t. & y-c_{0}-\frac{\left(c_{1}^{1-\rho}+\beta c_{2}^{1-\rho}\right)^{\frac{1}{1-\rho}}}{\left(1+\beta^{\frac{1}{\rho}}\right)^{\frac{\rho}{1-\rho}}}-\kappa\geq0
+\end{align}
+
+The first-order conditions are the same as under monopoly (\ref{eq:L0},
+\ref{eq:L1}, \ref{eq:L2}). Combining these with the zero-profit
+constraint, we get the following solution. If $\rho<1$: 
+\begin{equation}
+C_{0}^{N}=\left(\frac{y-\kappa}{2+\beta^{\frac{1}{\rho}}},0,\left(\frac{1+\beta^{\frac{1}{\rho}}}{\beta}\right)^{\frac{1}{1-\rho}}\left(\frac{y-\kappa}{2+\beta^{\frac{1}{\rho}}}\right)\right)\label{eq:naive-comp-contract1}
+\end{equation}
+
+If $\rho>1$, the solution is undefined, but in the limit is given
+by: 
+\begin{equation}
+C_{0}^{N}=\left(\frac{y-\kappa}{1+\beta^{\frac{1}{\rho}}\left(1+\beta^{\frac{1}{\rho}}\right)},\beta^{\frac{1}{\rho}}\left(1+\beta^{\frac{1}{\rho}}\right)^{\frac{1}{1-\rho}}\left(\frac{y-\kappa}{1+\beta^{\frac{1}{\rho}}\left(1+\beta^{\frac{1}{\rho}}\right)}\right),\infty\right)\label{eq:naive-comp-contract2}
+\end{equation}
+
+\textbf{\emph{Proof of Proposition 5:}} (a) Banks can at least offer
+the consumer the full-commitment contract, so a contract is feasible
+at any autarky utility. Since, from the consumer's perspective, any
+renegotiation-proof contract is strictly dominated by the full-commitment
+contract (which will be renegotiated), in equilibrium she will be
+offered a contract that will be renegotiated.
+
+(b) Under non-exclusive contracts, firms offering period 0 contracts
+do not benefit from renegotiation (profits from renegotiation will
+equal $\kappa$). So the equilibrium contract is identical to the
+full-commitment contract.
+
+(c) Suppose $\rho<1$. Comparing $C_{0}^{F}$ (\ref{eq:c-cf}) to
+$C_{0}^{N}$ (\ref{eq:naive-comp-contract1}), it is clear that $c_{0}^{N}<c_{0}^{F}$.
+Suppose $\rho>1$. If $\kappa$ is small enough, $c_{0}^{N}>c_{0}^{F}$.
+$\Square$
+
+\subsection{Nonprofits}
+\begin{lem}
+$\Pi_{0}\left(C_{0}^{mP};Y_{0}\right)$ and $\bar{\alpha}\Pi_{0}\left(C_{0}^{m\alpha};Y_{0}\right)$
+are continuously decreasing in $U_{0}^{A}$. 
+\end{lem}
+\textbf{\emph{Proof of Lemma 1: }}We prove the above for renegotiation-proof
+contracts of for-profit banks. The same argument applies to nonprofit
+banks. First, it is clear that profits are strictly decreasing in
+$U_{0}^{A}$: If autarky utility drops from $U_{0}^{A}=U$ to $\bar{U_{0}^{A}=U}$,
+at $\bar{U}$ the bank can always do better than offering the contract
+it offered at $U$.
+
+Next, we prove right-continuity at any $U_{0}^{A}=U$. Let the maximized
+profits at $U$ be $\Pi_{0}\left(C_{0};Y_{0}\right)$, where $C_{0}=\left(c_{0},c_{1},c_{2}\right)$.
+This contract must satisfy $U_{0}\left(C_{0}\right)=U$. For any $\bar{U}>U$,
+profits must be lower, and bounded below by $\Pi_{0}\left(\bar{C}_{0};Y_{0}\right)$,
+with the contract defined as $\bar{C}_{0}=\left(c_{0}+x,c_{1},c_{2}\right)$
+where $x$ satisfies $U_{0}\left(\bar{C}_{0}\right)=\bar{U}$. Since
+$\underset{\bar{U}\rightarrow U^{+}}{lim}\Pi_{0}\left(\bar{C}_{0};Y_{0}\right)=\Pi_{0}\left(C_{0};Y_{0}\right)$,
+the profit function is right-continuous.
+
+Finally, we prove left-continuity at at any $U_{0}^{A}=U$. For any
+$\bar{U}<U$, denote maximized profits $\Pi_{0}\left(\bar{C}_{0};Y_{0}\right)$,
+where $\bar{C}_{0}=\left(\bar{c}_{0},\bar{c}_{1},\bar{c}_{2}\right)$.
+These contracts must satisfy $U_{0}\left(\bar{C}_{0}\right)=\bar{U}$.
+At $U$, profits must be lower, and bounded below by $\Pi_{0}\left(C_{0};Y_{0}\right)$,
+with the contract defined as $C_{0}=\left(\bar{c}_{0}+x,\bar{c}_{1},\bar{c}_{2}\right)$
+where $x$ satisfies $U_{0}\left(C_{0}\right)=U$. Since $\underset{\bar{U}\rightarrow U^{-}}{lim}\Pi_{0}\left(\bar{C}_{0};Y_{0}\right)=\Pi_{0}\left(C_{0};Y_{0}\right)$,
+the profit function is left-continuous. $\Square$
+
+\textbf{\emph{Proof of Proposition 6: }}Let $\eta\left(\bar{\alpha}\right)=\kappa$,
+to minimize the attractiveness of the nonprofit. Consider $U_{0}^{A}=\bar{U}$.
+Since the for-profit's renegotiation-proofness binds and leaves the
+firm with zero profits, and since the non-profit's renegotiation-proofness
+constraint is looser than the for-profit's, we know that $\bar{\alpha}\Pi\left(C_{0}^{m\alpha};Y_{0}\right)>0=\Pi\left(C_{0}^{mP};Y_{0}\right)$.
+Since profits must be continuously decreasing in $U_{0}^{A}$, and
+since $\bar{\alpha}\Pi\left(C_{0}^{m\alpha};Y_{0}\right)<\Pi\left(C_{0}^{mP},;Y\right)$
+at $U_{0}^{A}=U^{m}$ (where the for-profit's renegotiation-proofness
+constraint no longer binds) and $\bar{\alpha}\Pi\left(C_{0}^{m\alpha};Y_{0}\right)\leq0$
+at $U_{0}^{A}=U_{0}^{F}$, there must exist autarky utility values
+as described in the proposition statement such that, if $U_{0}^{A}>\underline{U}^{\alpha}$
+the bank strictly prefers to operate as a nonprofit relative to a
+for-profit, and if $U_{0}^{A}\geq\bar{U}^{\alpha}$ it weakly prefers
+to not offer a contract. $\Square$
+
+\textbf{\emph{Proof of Proposition 7: }}(a) Suppose all firms are
+for-profit. There is some $\varepsilon_{1}$ and $\varepsilon_{2}$
+satisfying $0<\varepsilon_{2}<\varepsilon_{1}$ and a corresponding
+$\hat{C}_{0}=\left(c_{0}^{\alpha},c_{1}^{\alpha}-\varepsilon_{1},c_{2}^{\alpha}+\varepsilon_{2}\right)$
+such that $U_{0}\left(C_{0}^{\alpha}\right)=U_{0}\left(\hat{C}_{0}\right)$
+and $\Pi_{0}(C_{1}^{m1}\left(\hat{C}_{1}\right);\hat{C}_{1})\leq\kappa(\mbox{\ensuremath{\bar{\alpha}}})<\kappa\left(1\right)$.
+So, any firm can make positive profits by operating as a non-profit.
+Therefore, in equilibrium, consumers will borrow only from non-profit
+firms. Given the construction of $\bar{U}^{\alpha}$, firms can make
+nonnegative profits while satisfying the participation constraint
+only if $U_{0}^{A}\leq\bar{U}^{\alpha}$.
+
+(b) If all firms are nonprofit, an individual firm has a strict incentive
+to switch to for-profit status, and make profits in period 1. Therefore,
+there must be for-profits in equilibrium, and equilibrium contracts
+will be constrained by their presence. $\Square$
+
+\bibliographystyle{authordate1}
+\bibliography{renegotiation}
+
+\end{document}
