@@ -201,6 +201,7 @@ class Competitive(Contract):                    # build on contract class
                  'fun' : self.participation_cons })
         else:
             #print('reneg surplus to customer -- sensitive solns ')
+            self.guess = self.ownsmooth()  #works best kappa=0
             cons = ({'type': 'ineq',
                  'fun' : self.reneg_proof_consC },
                 {'type': 'ineq',
