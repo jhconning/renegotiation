@@ -746,7 +746,7 @@ the competitive full commitment contract $C^{F}$:
 
 \begin{align}
 c_{0}^{F} & =\frac{y}{1+2\beta^{\frac{1}{\rho}}}\label{eq:CF}\\
-c_{1}^{F} & =c_{2}^{F}=\beta^{\frac{1}{\rho}}c_{0}^{F}
+c_{1}^{F} & =c_{2}^{F}=\beta^{\frac{1}{\rho}}c_{0}^{F}\label{eq:CF1}
 \end{align}
 
 In words: Zero-self wants to indulge her present bias to tilt consumption
@@ -934,31 +934,47 @@ Here too, when renegotiation costs $\kappa$ are sufficiently large the the monop
 
 \subsection{When do Full Commitment contracts survive?}
 
-What  is the minimum renegotiation cost $\bar \kappa$ that insures the survival of full-commitment contracts by deterring renegotiation?
+What  is the minimum renegotiation cost $\bar \kappa$ the survival of full-commitment contracts by deterring renegotiation?
 The question can be studied graphically and mathematically. Suppose that $F$ in Figure 2 is the continuation $C_1^F$ of a full commitment  competitive contract from period 0. The cost to the bank of continuing to honor the contract is 
-$c_1^{F}+c_2^{F}=2c_1^F$ or distance $ON$ on the diagram (measured in period 1 units).  Renegotiation under monopoly in period 1 would be to  $R$ which lower cost  $OQ$, for a gain in profits $QN$.  With $\kappa=0$ and competition for period 1 contracts One-self would be able to recontract to $P$.  
-With competition and $\kappa$ positive but not large enough to sustain $F$, renegotiation would be to a point along the segment $RP$ (to satisfy  the FOC\ $u'(c_1^1)=\beta u'(c_2^1))$ that lowers the contract cost to the bank by just enough to entice it to participate and cover its renegotiation costs $\kappa$. To  dissuade renegotiation from a full-commitment contract we need to find the coordinates at $R$ or $C_1^R}=(c_1^1(C_{1}^{F}),c_2^1(C_{1}^{F}))$ and  associated renegotiated continuation contract cost 
-$c_1^R+c_2^R$ or length $ON$ in the figure. The renegotiation cost $\bar \kappa$ that just deters renegotiation must be just larger than the potential gain in profits to renegotiation:\begin{equation}
-\bar \kappa=2c_{1}^{F}}-(c_1^R+c_2^R)\label{kbar}
-\end{equation} or distance $QN$ on the figure. Since we have already derived $C_0^F$ and $(c_1^R,c_2^R)=C_1^R(C_1^F)$ we can also arrive at a closed form solution for $\bar \kappa$. The closed form solution for the CRRA case is in the appendix.  Notice next that we would be led to the same expression for $\bar \kappa$ if the market for period 1 contracts had been monopolized. That's because what really matters is that $\kappa$ be larger than the gains to trade in the period 1 subgame.  Note finally that the minimum level of renegotiation cost $\bar \kappa^m$ to sustain the monopoly full-commitment contract is given by a formula similar to \ref{kbar} except that we would substitute $c_1^{mF}$ and $(c_1^{mR},c_2^{mR})=C_1^{R}(C_1^{mF})$ and into the formula.   However it is easy to establish that $\bar \kappa^m \le \bar \kappa$ since 
+$c_1^{F}+c_2^{F}=2c_1^F$ or distance $ON$ on the diagram (measured in period 1 units).  Under monopoly in period 1 and   $\kappa=0$ renegotiation would be to  $R$ which lower the bank's costs from $ON$ to $OQ$, for a gain in profits $QN$. The bank would renegotiatiate to the same point so long as the renegotiation cost $\kappa$ is smaller than $QN$. If on the other hand we had competition for period 1 contracts, with $\kappa=0$ One-self would be able to recontract to $P$.  
+With competition and $\kappa$ positive but not large enough to sustain $F$, renegotiation would be to a point along the segment $RP$ (to satisfy  the FOC\ $u'(c_1^1)=\beta u'(c_2^1))$ that lowers the contract cost to the bank by just enough to entice it to participate and cover its renegotiation costs $\kappa$. In summary, to   dissuade renegotiation from a full-commitment contract under either competition or monopoly for period 1 contracts we need to find the coordinates at $R$ or $C_1^R}=(c_1^1(C_{1}^{F}),c_2^1(C_{1}^{F}))$ and  associated renegotiated continuation contract cost 
+$c_1^R+c_2^R$ or length $ON$ in the figure. 
 
-XXXXXX     
+The renegotiation cost $\bar \kappa$ that just deters renegotiation must be large to exceed the gains to trade so we must have the bank earning non-positive profits:
+\begin{equation}
+  2c_{1}^{F}}-(1+\beta^\frac{1}{\rho})c_1^R \le \bar \kappa \label{eq:noreg_kbar}
+\end{equation} 
+and the One-self consumer must have non-positive welfare gain from renegotiation   
+\begin{equation}
+(1+\beta)u(c_1^F)\ge (1+\beta^\frac{1}{\rho})u(c_1^R) 
+\end{equation}
+and one of these inequalities must be strict to be sure at least one of the parties will reject the renegotiation. In the above expressions we've used the fact that under full-commitment $c_1^F =c_2^F$ and that a renegotiated contract will have $c_2^R=\beta^\frac{1}{\rho}c_1^R$. We'll adopt the convention that in such threshold cases it's always the bank's constraint that will hold with strict equality so that we refer to this as the `no-renegotiation' constraint throughout the analysis. 
 
-Similar reasoning applies to finding the threshold level of renegotiation costs to sustain the period 0 monopoly  full commitment contract $c_2^{mF}$ but as demonstrated in the appendix renegotiation costs large enough to  deter renegotiation of period 0 competitive   full commitment contracts also deter renegotiation of period 0 monopoly full-commitment contracts.  
-
-Since full-commitment contracts under competition do not vary with
-autarky utility (the period 0 bank zero profit condition binds), the survival of full-commitment is also independent
+ From \ref{eq:noreg_kbar} we have
+ $c_1^R=\frac{2c_1^F-\kappa}{1+\beta^\frac{1}{\rho}}$ which allows us to solve
+\begin{equation}
+ \bar \kappa=c_1^F \cdot 
+ \left[
+ 2-(1+\beta^\frac{1}{\rho})
+ \left[ 
+  \frac{1+\beta}{1+\beta^\frac{1}{\rho}}
+ \right]^\frac{1}{1-\rho}
+ \right]\label{eq:kbar}
+\end{equation}
+Since we  already know (from \ref{eq:CF1}) that $c_1^F={y}/({1+2\beta^\frac{1}{\rho}})$ this value depends only on $y,\beta$ and $\rho$. This means that the survival of full-commitment under competition is independent
 of autarky utility.
- Monopoly full-commitment contracts depend on autarky utility\textendash the
-higher $U_{0}^{A}$, the higher is $C_{0}^{mF}$. We show in the appendix
+
+In the case of period 0 full-commitment contracts under monopoly, by identical reasoning  we are led to a cutoff $\bar \kappa^{M}$ given by formula \ref{eq:kbar} but with $c_1^{mF}$ (given by \ref{eq:c-mf}) replacing $c_1^F$. Monopoly full-commitment contracts depend on autarky utility\textendash the
+higher $U_{0}^{A}$, the higher is $c_{1}^{mF}$. Since $c_1^F \ge c_1^{mF}$ we must have $\bar \kappa^m \le \bar \kappa$. We show in the appendix
 that, the greater the consumption under a contract, the greater is
 the scope for rearranging consumption profitably in period 1.
-Together, this indicates that, if renegotiation costs lie above some
-cutoff, full commitment contracts will be credible; and if renegotiation
-costs lie below the cutoff, the survival of full-commitment will depend
+Together, this indicates that, if renegotiation costs lie above cutoff $\bar \kappa$, full commitment contracts will be credible; and if renegotiation
+costs lie below this cutoff, the survival of full-commitment will depend
 on market structure and autarky utility. 
+
+
 \begin{prop}
-Consider $\bar{\kappa}$ as defined in appendix equation \ref{eq:max-kappa}.
+Consider $\bar{\kappa}$ as defined in \ref{eq:kbar}.
 If $\kappa\geq\bar{\kappa}$, then full-commitment contracts survive
 under both monopoly and competition. If $\kappa<\bar{\kappa}$, then:
 
@@ -1963,7 +1979,10 @@ For the monopolist bank that offers full-commitment, the solution
 is determined by the first-order condition and the consumer's participation
 constraint: 
 \begin{align}
-C_{0}^{mF} & =\left(1,\beta^{\frac{1}{\rho}},\beta^{\frac{1}{\rho}}\right)\cdot\left(\frac{U_{0}^{A}\left(1-\rho\right)}{1+2\beta^{\frac{1}{\rho}}}\right)^{\frac{1}{1-\rho}}\label{eq:c-mf}\\
+C_{0}^{mF} & =\left(1,\beta^{\frac{1}{\rho}},\beta^{\frac{1}{\rho}}\right)
+  \cdot\left(
+     \frac{U_{0}^{A}\left(1-\rho\right)}{1+2\beta^{\frac{1}{\rho}}}
+     \right)^{\frac{1}{1-\rho}}\label{eq:c-mf}\\
 \Pi_{0}\left(C_{0}^{mF};Y_{0}\right) & =y-\left(U_{0}^{A}\left(1-\rho\right)\right)^{\frac{1}{1-\rho}}\left(1+2\beta^{\frac{1}{\rho}}\right)^{\frac{-\rho}{1-\rho}}\label{eq:pi-mf}
 \end{align}
 
