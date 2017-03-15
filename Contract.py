@@ -22,6 +22,9 @@ class Contract(object):
         else:
             self.y = y
 
+    def __repr__(self):
+        return 'Contract(beta=%s, y=%s)' % (self.beta, self.y)
+
     def print_params(self):
         """ print out parameters """
         params = vars(self)
@@ -92,6 +95,9 @@ class Monopoly(Contract):                    # build on contract class
         self.kappa  = 0                        # cost of renegotiation
         self.guess  = self.y                   # initial guess for solver
 
+    def __repr__(self):
+        return 'Monopoly(beta=%s, y=%s)' % (self.beta, self.y)
+
     def fcommit(self):
         """monopolist optimal full commitment contractwith period0 self
         from closed form solution for CRRA"""
@@ -140,6 +146,9 @@ class Competitive(Contract):                    # build on contract class
         self.kappa  = 0                         # cost of renegotiation
         self.guess  = self.y                    # initial guess for solver
 
+    def __repr__(self):
+        return 'Competitive(beta=%s, y=%s)' % (self.beta, self.y)
+
     def fcommit(self):
         """competitive optimal full commitment contractwith period0 self
         from closed form solution for CRRA"""
@@ -168,7 +177,6 @@ class Competitive(Contract):                    # build on contract class
         beta, rho = self.beta, self.rho
         btr  =  beta**(1/rho)
         pv =  c[1] + c[2] - self.kappa
-        btr  =  beta**(1/rho)
         cr1 = pv/(1+btr)
         cr2 = btr*cr1
         return np.array([c[0],cr1,cr2])
@@ -234,7 +242,7 @@ if __name__ == "__main__":
     cC.print_params()
 
 
-    cCF = cC.fcommit()
+    cCF = cC.fcommit
     print("cCF: ",cCF)
 
     cCr = cC.reneg(cCF)
