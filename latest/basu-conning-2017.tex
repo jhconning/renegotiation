@@ -21,7 +21,6 @@
   \newtheorem{prop}{\protect\propositionname}
   \theoremstyle{plain}
   \newtheorem{lem}{\protect\lemmaname}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \usepackage{babel}
 
@@ -30,13 +29,11 @@
 \IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
 
 
-
 \usepackage{babel}
 \providecommand{\lemmaname}{Lemma}
   \providecommand{\propositionname}{Proposition}
 
-\date{January 23, 2017}
-
+\date{March 15, 2017}
 
 
 \usepackage{babel}
@@ -70,30 +67,29 @@ and NEUDC; and seminar participants at Michigan State University,
 IIES Stockholm, Delhi School of Economics, Queens College, Indian
 School of Business, Hunter College, and Florida Atlantic University.
 Kwabena Donkor provided excellent early research assistance. The most
-recent version of this  paper may be found at: \protect\url{https://goo.gl/2h4YUb}.
+recent version of this  paper can be found at: \protect\url{https://goo.gl/2h4YUb}.
 Supporting code and materials to generate figures and simulations
 at: \protect\url{https://github.com/jhconning/renegotiation}.}}
 \maketitle
 \begin{abstract}
 When do financial intermediaries provide the commitment services to
 help present-biased consumers stick to long-term savings accumulation
-and/or debt management plans? When do they instead opportunistically
-pander to consumer biases and by how much might financial trade be
-reduced by consumer fears that this could happen? We study a consumer
+and/or debt management plans and when  do they instead opportunistically
+pander to consumer biases. By how much might financial trade be
+reduced by consumer fears that the latter could happen? We study a consumer
 protection problem that survives even when consumers are sophisticated
-and fully informed. The consumer would like to commit her future selves
-to a balanced path of saving accumulation/debt repayment via a commitment
+and fully informed. The consumer would like her future selves
+to be held to a balanced path of saving accumulation/debt repayment via a commitment
 contract, but her future selves can be tempted to raid savings or
-take on new debt. Investor-owned banks may find it costly to credibly
+take on more debt. Investor-owned banks may find it costly to credibly
 commit to refrain from such opportunistic exploitation, leading to
-lower ex-ante bank profits and/or consumer welfare, and lost trade.
-In such contexts strategic adjustments to bank ownership and governance
-forms may lower the cost of credible (or renegotiation-proof) commitment
-contracts because explicit limitations on profit distribution signal
-weaker contract renegotiation incentives. This leads to a theory of
+lost trade and lower ex-ante bank profits and/or consumer welfare.
+In such contexts strategic choices in bank ownership and governance
+forms may lower the cost of making credible (or renegotiation-proof) commitment
+contracts because explicit limitations on profit distribution and socially minded owners weaken the contract renegotiation incentives. This leads to a theory of
 commercial non-profits and endogenous client protection similar to
 \citet{hansmann_ownership_1996} but on new behavioral micro-foundations.
-The model helps understand the evolution of ownership and contract
+The model helps understand the structure and evolution of ownership and contract
 forms in consumer banking, microfinance, and mortgage and payday lending,
 and frames debates over proposed consumer protection measures against
 excessive refinancing and `overindebtedness' in these sectors. JEL
@@ -402,8 +398,7 @@ who have limited financial literacy skills and are naive about their
 self-control problems. Informed by such interpretations, new regulations
 introduced in the wake of these crises have swung toward restricting
 the terms of allowable contracts, for example by setting maximum interest
-rates, and the use of coercive loan recovery methods.\footnote{The Consumer Financial Protection Bureau has a recent (2016) proposal
-to protect consumers of payday loans, available at \url{http://files.consumerfinance.gov/f/documents/CFPB_Proposes_Rule_End_Payday_Debt_Traps.pdf}.}
+rates and limiting the use of coercive loan recovery methods.
 
 We place consumers' struggles with intertemporal self-control issues
 at the center of the analysis, but argue that borrowers may be more
@@ -415,7 +410,7 @@ quotes, but about offering excessive flexibility and refinancing of
 financial contracts in ways that limit or undermine the commitments
 to long term consumption and debt management paths that borrowers
 themselves may be attempting to put in place.\footnote{\citet{bond_predatory_2009} discuss evidence of predatory lending
-in the context of mortgages.}
+in the context of mortgages.  In 2016 the Consumer Financial Protection Bureau put forth a proposal to protect consumers of payday loans with an emphasis on limiting the number and frequency of reborrowings, available at \url{http://files.consumerfinance.gov/f/documents/CFPB_Proposes_Rule_End_Payday_Debt_Traps.pdf}.}
 
 A sophisticated hyperbolic discounter understands that her `future
 selves' will attempt to take out new loans on top of old ones, or
@@ -851,8 +846,14 @@ C_1^1(C_1^0)= \arg \max_{C} \ U(C)
 \end{equation} 
 or in more detail: 
 
-$$(c_1^{1},c_2^{1})= \arg \max_{c_1,c_2}  \ u(c_1)+\beta u(c_2) $$
-$$  c_1 +c_2  + \kappa \le c_1^0 +c_2^0$$
+\begin{equation}
+(c_1^{1},c_2^{1})= \arg \max_{c_1,c_2}  \ u(c_1)+\beta u(c_2) 
+\end{equation}
+$$   c_1^0 +c_2^0 -(c_1 +c_2) \ge \kappa$
+This can be solved for $C_1^1(C_1^0)$ in the CRRA case:  
+\begin{equation}
+(c_1^1, c_2^1) = (1,\beta^\frac{1}{\rho})\cdot \frac{c_1^0 +c_2^0-\kappa}{1+\beta^\frac{1}{\rho}}
+\end{equation}
 
 If instead the bank finds itself in a monopoly position in period 1 then it will renegotiate existing contract $C_1^0$ to a new contract $C_1^{m1}(C_1^{0})$ to increase profits by offering the smallest possible enticement for One to accept the renegotiated contract. The bank must be able to cover renegotiation costs if a contract is to be offered at all. 
 
@@ -865,7 +866,7 @@ C_1^{1m}(C_1)= \arg \max_{C} \ \Pi_{1}(C;C_1^0)
 \begin{equation}
   \Pi_{1}(C;C_1^0) \ge  \kappa  \label{PiGain}
 \end{equation} 
-Closed form solutions for $ C_1^{1}(C_1^0)$ and $C_1^{1m}(C_1^0)$ for the CRRA utility case are derived in the appendix. 
+Closed form solutions for $ C_1^{1m}(C_1^0)$ is derived in the appendix for the CRRA utility case. 
 
 The fraught nature of this potential renegotiation problem is  depicted in Figure \ref{fig:c1c2}, for a case where renegotiation costs are set to $\kappa = 0$.  Assume -- just for the sake of argument  now  -- that the consumer had (naively as it will turn out) accepted
 the competitive full commitment contract $C_{0}^{F}$ in period zero, indicated as point $F$ in the figure. 
@@ -893,9 +894,11 @@ and will seek to protect herself by only agreeing to contracts that satisfy a pe
 \Pi_{1}(C_1^{0};C_1^{1}(C_1^{0})) \le \kappa 
 \label{eq:no_reneg}
 \end{equation}
-Here  we will abuse notation slightly for a moment to allow $C_1^1$ to represent the outcome in either the competitive or the monopoly subgame (i.e. in the latter case $C_1^{1}(C_{1}^{0})$ is  $C_1^{m1}(C_{1}^{0})$) replaces $C_1^1(C_{1}^{0})$. Notice that in our earlier statement of the competitive renegotiated contract  $C_1^1(C_{1}^{0})$ condition \ref{PiGain} was added to make sure the bank could earn enough from renegotiation to cover renegotiation costs and entice it to participate.  This no-renegotiation constraint now replaces that constraint to make sure bank gains from renegotiation fall just short of costs to make sure the bank cannot profit from renegotiation. Unless the parties in period 0 can take actions to increase renegotiation costs $\kappa$ (explored later in the paper) an effect of this constraint will be that equilibrium contracts now `tilt' more toward One-self's preferences as a strategy to reduce the remaining potential gains to trade to recontracting below renegotiation costs.     
+In the case of a period 1 monopoly subgame the constraint which change slightly with $C_1^{m1}(C_{1}^{0})$ replacing $C_1^1(C_{1}^{0})$ in the expression above. To be clear, when we solved for   $C_1^1(C_{1}^{0})$ in the last section we included condition \ref{PiGain} (which looks similar to \ref{eq:no_reneg} but with the inequality reversed)\ to entice the bank to participate by making sure that the bank earned enough from renegotiation to cover renegotiation costs. We imposed this to identify contracts the bank would \emph{not reject} to renegotiate.
  
-We can now describe the design problem for period 0 contracts with sophisticated consumers who anticipate the renegotiation problem.  When the market for period 0 contracts is competitive the optimal (imperfect) commitment contract $C_0^{0} (\kappa)$ depends on available exogenous renegotiation costs $\kappa$ and solves:  
+In this section our focus is instead on searching amongst the best contracts the bank would \textit{reject}  renegotiating.  Thus the no-renegotiation constraint \ref{eq:no_reneg} is to makes sure the bank \textit{cannot} profit from renegotiation. If this constraint binds a full-commitment contract cannot be credibly implemented and the equilibrium contracts will instead now `tilt' more toward One-self's preferences as a strategy to reduce the potential gains to trade in period 1 that might tempt renegotiation.     
+ 
+The design problem for period 0 contracts with sophisticated consumers who anticipate the renegotiation problem can now be described.  When the market for period 0 contracts is competitive the optimal (imperfect) commitment contract $C_0^{0} (\kappa)$ depends on available exogenous renegotiation costs $\kappa$ and solves:  
 
 \begin{equation}
 C_0 ^{0}(\kappa)= \arg \max_{C_0} U_{0}(C_{0})
@@ -908,14 +911,14 @@ C_0 ^{0}(\kappa)= \arg \max_{C_0} U_{0}(C_{0})
 \begin{equation}
 \Pi_1(C_1^{1}(C_1^{0}),C_1^{0})\le\kappa
 \end{equation}
-where $C_1^{0}$ is the `best response' contract from the period 1 subgame as previously described. 
-When renegotiation costs $\kappa$ are sufficiently large, that is larger than some threshold $\bar \kappa$ the renegotiation-proof constraint will not bind and the full-commitment competitive contract $C_0 ^{0}(\kappa)=C_0^F$ can be achieved.
- When  renegotiation costs $\kappa$ are less than this threshold only a second-best `imperfect commitment' contract can be attained, at the expense of Zero-self's utility, as described below.
+where $C_1^{0}$ is the `best response' or renegotiated contract from the period 1 subgame as previously described. 
+When renegotiation costs $\kappa$ are sufficiently large -- larger than some threshold $\bar \kappa$ described below -- the renegotiation-proof constraint will not bind and the full-commitment competitive contract $C_0 ^{0}(\kappa)=C_0^F$ can be implemented as a subgame-perfect Nash equilibrium\ (SPNE).
+ When  renegotiation costs $\kappa$ are less than this threshold only a second-best `imperfect commitment' contract can be implemented as a SPNE, at the expense of Zero-self's utility, as described below.
 
-If instead the period 0 market is monopolized then the optimal (imperfect) commitment contract $C_0^{0} (\kappa)$ solves:
+If instead the period 0 market had been monopolized then the optimal (imperfect) commitment contract $C_0^{m0} (\kappa)$ solves:
 
 \begin{displaymath}
-C_0 ^{0}(\kappa)= \arg \max_{C_0} \Pi_{0}(C_{0};Y_{0})
+C_0 ^{m0}(\kappa)= \arg \max_{C_0} \Pi_{0}(C_{0};Y_{0})
 \end{displaymath}
 
 
@@ -932,15 +935,16 @@ Here too, when renegotiation costs $\kappa$ are sufficiently large the the monop
 
 
 
-\subsection{When do Full Commitment contracts survive?}
+\subsection{When are full-commitment contracts credible?}
 
-What  is the minimum renegotiation cost $\bar \kappa$ the survival of full-commitment contracts by deterring renegotiation?
-The question can be studied graphically and mathematically. Suppose that $F$ in Figure 2 is the continuation $C_1^F$ of a full commitment  competitive contract from period 0. The cost to the bank of continuing to honor the contract is 
-$c_1^{F}+c_2^{F}=2c_1^F$ or distance $ON$ on the diagram (measured in period 1 units).  Under monopoly in period 1 and   $\kappa=0$ renegotiation would be to  $R$ which lower the bank's costs from $ON$ to $OQ$, for a gain in profits $QN$. The bank would renegotiatiate to the same point so long as the renegotiation cost $\kappa$ is smaller than $QN$. If on the other hand we had competition for period 1 contracts, with $\kappa=0$ One-self would be able to recontract to $P$.  
-With competition and $\kappa$ positive but not large enough to sustain $F$, renegotiation would be to a point along the segment $RP$ (to satisfy  the FOC\ $u'(c_1^1)=\beta u'(c_2^1))$ that lowers the contract cost to the bank by just enough to entice it to participate and cover its renegotiation costs $\kappa$. In summary, to   dissuade renegotiation from a full-commitment contract under either competition or monopoly for period 1 contracts we need to find the coordinates at $R$ or $C_1^R}=(c_1^1(C_{1}^{F}),c_2^1(C_{1}^{F}))$ and  associated renegotiated continuation contract cost 
-$c_1^R+c_2^R$ or length $ON$ in the figure. 
+What  minimum renegotiation cost $\bar \kappa$ is sufficient to deter the renegotiation of  full-commitment contracts?
+We study the question graphically and mathematically. Suppose that $F$ in Figure 2 is the continuation $C_1^F$ of a full commitment  competitive contract offered in period 0. The cost to the bank of continuing to honor the contract is 
+$c_1^{F}+c_2^{F}=2c_1^F$ or the distance $ON$ on the diagram (measured in period 1 units).  Under monopoly in period 1 and   $\kappa=0$ renegotiation to  $R$ would lower the bank's costs from $ON$ to $OQ$, for a profit gain $QN$. In fact the bank will find it profitable to renegotiate to point $R$ at any renegotiation cost $\kappa$ smaller than $QN$. If instead the   market for period 1 refinance contracts were competitive and $\kappa=0$, One-self would capture the new gains to trade by recontracting to $P$.  
+With competition and $\kappa$ positive but not large enough to sustain  $F$, renegotiation would be to a point along the segment $RP$ (where the FOC\ $u'(c_1^1)=\beta u'(c_2^1)$ is satisfied) that just entices the bank to refinance and cover its renegotiation costs $\kappa$.  In summary, under either competition or monopoly for period 1 contracts renegotiation away from $F$ is deterred whenever renegotiation cost $\kappa$  exceeds the gains to trade $QN$ from renegotiation. 
 
-The renegotiation cost $\bar \kappa$ that just deters renegotiation must be large to exceed the gains to trade so we must have the bank earning non-positive profits:
+To calculate the gross gains to trade $QN$ we need to first find the coordinates at $R$ or $C_1^R}=(c_1^1(C_{1}^{F}),c_2^1(C_{1}^{F}))$ and  associated renegotiated continuation contract cost 
+$c_1^R+c_2^R=(1+\beta^\frac{1}{\rho})c_1^R $ or length $OQ$ in the figure and subtract this quantity from continuation contract cost at $F$ or the distance $ON$ calculated above. 
+The renegotiation cost $\bar \kappa$ that just prevents renegotiation must therefore satisfy the condition that the bank earns non-positive profit from renegotiation:
 \begin{equation}
   2c_{1}^{F}}-(1+\beta^\frac{1}{\rho})c_1^R \le \bar \kappa \label{eq:noreg_kbar}
 \end{equation} 
@@ -948,10 +952,10 @@ and the One-self consumer must have non-positive welfare gain from renegotiation
 \begin{equation}
 (1+\beta)u(c_1^F)\ge (1+\beta^\frac{1}{\rho})u(c_1^R) 
 \end{equation}
-and one of these inequalities must be strict to be sure at least one of the parties will reject the renegotiation. In the above expressions we've used the fact that under full-commitment $c_1^F =c_2^F$ and that a renegotiated contract will have $c_2^R=\beta^\frac{1}{\rho}c_1^R$. We'll adopt the convention that in such threshold cases it's always the bank's constraint that will hold with strict equality so that we refer to this as the `no-renegotiation' constraint throughout the analysis. 
+and one of these inequalities must be strictly met to make sure that at least one of the parties will reject renegotiation. In what follows, and without loss of generality,  we'll adopt the convention that it's always the bank's constraint that will hold with strict equality so we refer to  \ref{eq:noreg_kbar} as the `no-renegotiation' constraint throughout the analysis. 
 
- From \ref{eq:noreg_kbar} we have
- $c_1^R=\frac{2c_1^F-\kappa}{1+\beta^\frac{1}{\rho}}$ which allows us to solve
+ From this constraint we have
+ $c_1^R=\frac{2c_1^F-\kappa}{1+\beta^\frac{1}{\rho}}$ which allows us to solve for the minimum deterrent 
 \begin{equation}
  \bar \kappa=c_1^F \cdot 
  \left[
@@ -961,10 +965,10 @@ and one of these inequalities must be strict to be sure at least one of the part
  \right]^\frac{1}{1-\rho}
  \right]\label{eq:kbar}
 \end{equation}
-Since we  already know (from \ref{eq:CF1}) that $c_1^F={y}/({1+2\beta^\frac{1}{\rho}})$ this value depends only on $y,\beta$ and $\rho$. This means that the survival of full-commitment under competition is independent
+The value of $c_1^F$ will differ depending on whether the period 0 market for full-commitment contracts is competitive or monopolized.  Under competition we know from \ref{eq:CF1} that $c_1^F={y}/({1+2\beta^\frac{1}{\rho}})$ so $\bar \kappa$ depends only on $y,\beta$ and $\rho$. This means also that the survival of full-commitment under competition is independent
 of autarky utility.
 
-In the case of period 0 full-commitment contracts under monopoly, by identical reasoning  we are led to a cutoff $\bar \kappa^{M}$ given by formula \ref{eq:kbar} but with $c_1^{mF}$ (given by \ref{eq:c-mf}) replacing $c_1^F$. Monopoly full-commitment contracts depend on autarky utility\textendash the
+In the case of period 0 full-commitment contracts under monopoly we are led to a cutoff $\bar \kappa^{M}$ given by formula \ref{eq:kbar} but with $c_1^{mF}$ (given by \ref{eq:c-mf}) replacing $c_1^F$. Monopoly full-commitment contracts now depend on autarky utility\textendash the
 higher $U_{0}^{A}$, the higher is $c_{1}^{mF}$. Since $c_1^F \ge c_1^{mF}$ we must have $\bar \kappa^m \le \bar \kappa$. We show in the appendix
 that, the greater the consumption under a contract, the greater is
 the scope for rearranging consumption profitably in period 1.
@@ -1006,9 +1010,9 @@ by renegotiating in period 1.
 
 \label{sec:imperfectK}
 
-Having characterized the renegotiation problem and conditions for
-the survival of full commitment contracts, we turn to the cases where
-the renegotiation-proof constraint \ref{eq:no_reneg} binds. We call
+Having now characterized the renegotiation problem and conditions for
+the survival of full commitment contracts, we turn to the more interesting case where
+ renegotiation-proof constraint \ref{eq:no_reneg} binds. We call
 these imperfect commitment contracts. For sophisticated hyperbolic
 discounters, contracts will be informed by their ability to anticipate
 possible renegotiation (Sections 4.2 and 4.3). For naifs, banks will
