@@ -772,14 +772,13 @@ through $F'Q$ represents the period 1 budget constraint $c_{1}+c_{2}=y-c_{0}^{F}
 Point $F'$ at the intersection of these lines identifies the coordinates
 $(c_{1}^{F},c_{2}^{F})$ of the optimal contract.
 
-At these parameters, Zero's preferred contract is $C_{0}^{F}=(150,75,75)$.
-Whether the consumer borrows or saves (or pays down debts) in a given
+To illustrate, at these parameters, Zero's preferred contract is $C_{0}^{F}=(150,75,75)$.
+Whether the consumer borrows or saves (or pays down debts) in any given
 period depends on how this consumption stream matches her autarky
-consumption stream. For example if the total income of 300 arrives evenly divided
-across periods as $Y_{0}=(100,100,100)$ then this consumption plan
-would involve borrowing $c_{0}-y_{0}=50$ in period 0 and repaying
+consumption stream. If, for example,  the total income of 300 arrives evenly across periods as $Y_{0}=(100,100,100)$ then this consumption plan
+would imply borrowing $c_{0}-y_{0}=50$ in period 0 to be repaid as installments of
 25 in each of periods 1 and 2. If the stream had instead been $Y_{0}=(200,50,50)$
-the consumer would be seen as saving 50 in period 0 to evenly raise consumption by 25 in each of periods 1 and 2.\footnote{These parameter values are chosen for expositional purposes. In particular
+the consumer would be seen as saving 50 in period 0 to  raise consumption by 25 in each of periods 1 and 2.\footnote{These parameter values are chosen for expositional purposes. In particular
 $\rho=1$ implies that period zero consumption will be the same with
 or without self-control (which slightly simplifies the graphical
 exposition in Figure 1b by placing points F and P along the same first
@@ -793,18 +792,17 @@ If there is monopoly instead of competition for banking services in period 0, an
 The bank solves:
 \begin{align}
 \max_{C_{0}} & \;\Pi_{0}\left(C_{0};Y_{0}\right)\nonumber \\
-s.t. & \;U_{0}\left(C_{0}\right)\geq U_{0}^{A}\label{eq:PC}
+s.t. & \;U_{0}\left(C_{0}\right)\geq U_{0}^{A}(Y_0)\label{eq:PC}
 \end{align}
 where $U_{0}^{A}$ is the reservation utility the consumer would enjoy
 if she did not accept the contract.
 
-The first-order tangency conditions are just as expressions \ref{eq:FOC_comp}
-from the competitive case. Under the maintained assumption that $\delta=1/(1+r)$
+The first-order tangency conditions are  the same as competitive case given by  expressions \ref{eq:FOC_comp}. Under the maintained assumption that $\delta=1/(1+r)$
 and $r=0$ these are:
 \begin{equation}
 u'\left(c_{0}\right)=\beta u'\left(c_{1}\right)=\beta u'\left(c_{2}\right)
 \end{equation}
-which with CRRA utility are simply $c_{1}=c_{2}=\beta^{\frac{1}{\rho}}c_{0}$.
+which for CRRA utility imply $c_{1}=c_{2}=\beta^{\frac{1}{\rho}}c_{0}$.
 Along with the fact that Zero's participation constraint
 must bind at a monopoly optimum these equations allow us to solve for the optimum
 monopoly full-commitment contract $C_{0}^{mF}$ and corresponding
@@ -813,17 +811,17 @@ solutions for the CRRA utility case appear as appendix equations \ref{eq:c-mf}
 and \ref{eq:pi-mf}, respectively. Conceptually, the optimum contract
 will be at the tangency point where the highest iso-profit plane still
 touches the iso-utility surface associated with Zero's reservation
-utility.
+utility. 
 
 The terms of the optimal monopoly contract, and hence also the level
 of bank profits achieved will be dependent on the consumer's autarky
-utility. The present value of $C_{0}^{mF}$ rises and profits fall
-with $U_{0}^{A}$. Since the monopolist retains the gains from trade,
-consumption in each period will be strictly lower than under competition,
-except in the extreme case where autarky utility is optimal ($U_{0}^{A}=U_{0}^{F}$),
+utility $U_{0}^{A}(Y_0)$. The present value of $C_{0}^{mF}$ rises and profits fall
+with $U_{0}^{A}$. Since the monopolist retains the gains from trade and consumer iso-utility (or indifference) surfaces do not cross,
+consumption in each period under monopoly will be strictly lower than under competition  at all $Y_0$ except in the extreme case where autarky utility is already optimal ($U_{0}^{A}=U_{0}^{F}$),
 in which case the monopolist will trivially offer the utility maximizing
 contract to the consumer and will make zero profits.
 
+ 
 
 \section{The Renegotiation Problem}
 
@@ -935,7 +933,7 @@ Here too, when renegotiation costs $\kappa$ are sufficiently large the the monop
 
 
 
-\subsection{When are full-commitment contracts credible?}
+\subsection{At what cost are full-commitment contracts kept credible?}
 
 What  minimum renegotiation cost $\bar \kappa$ is sufficient to deter the renegotiation of  full-commitment contracts?
 We study the question graphically and mathematically. Suppose that $F$ in Figure 2 is the continuation $C_1^F$ of a full commitment  competitive contract offered in period 0. The cost to the bank of continuing to honor the contract is 
@@ -965,11 +963,11 @@ and one of these inequalities must be strictly met to make sure that at least on
  \right]^\frac{1}{1-\rho}
  \right]\label{eq:kbar}
 \end{equation}
-The value of $c_1^F$ will differ depending on whether the period 0 market for full-commitment contracts is competitive or monopolized.  Under competition we know from \ref{eq:CF1} that $c_1^F={y}/({1+2\beta^\frac{1}{\rho}})$ so $\bar \kappa$ depends only on $y,\beta$ and $\rho$. This means also that the survival of full-commitment under competition is independent
+The value of $c_1^F$ in the expression will differ depending on whether the period 0 market for full-commitment contracts is competitive or monopolized.  Under competition we know from \ref{eq:CF1} that $c_1^F={y}/({1+2\beta^\frac{1}{\rho}})$ so $\bar \kappa$ depends only on $y,\beta$ and $\rho$. This means also that the survival of full-commitment under competition is independent
 of autarky utility.
 
-In the case of period 0 full-commitment contracts under monopoly we are led to a cutoff $\bar \kappa^{M}$ given by formula \ref{eq:kbar} but with $c_1^{mF}$ (given by \ref{eq:c-mf}) replacing $c_1^F$. Monopoly full-commitment contracts now depend on autarky utility\textendash the
-higher $U_{0}^{A}$, the higher is $c_{1}^{mF}$. Since $c_1^F \ge c_1^{mF}$ we must have $\bar \kappa^m \le \bar \kappa$. We show in the appendix
+In the case of period 0 full-commitment contracts under monopoly we are led to a cutoff $\bar \kappa^{M}$ given by formula \ref{eq:kbar} but with $c_1^{mF}$ (given by \ref{eq:c-mf}) replacing $c_1^F$. Monopoly full-commitment contracts now depend on autarky utility \textendash  the
+higher $U_{0}^{A}(Y_0)$, the higher is $c_{1}^{mF}$. Since $c_1^F \ge c_1^{mF}$ for all $Y_0$ it will always be the case that  $\bar \kappa^m \le \bar \kappa$. We show in the appendix
 that, the greater the consumption under a contract, the greater is
 the scope for rearranging consumption profitably in period 1.
 Together, this indicates that, if renegotiation costs lie above cutoff $\bar \kappa$, full commitment contracts will be credible; and if renegotiation
@@ -978,41 +976,28 @@ on market structure and autarky utility.
 
 
 \begin{prop}
-Consider $\bar{\kappa}$ as defined in \ref{eq:kbar}.
+Consider $\bar{\kappa}$ as defined in \ref{eq:kbar}.\footnote{All proofs are in the appendix.}
 If $\kappa\geq\bar{\kappa}$, then full-commitment contracts survive
 under both monopoly and competition. If $\kappa<\bar{\kappa}$, then:
 
-(a) There is some $U^{m}<U_{0}^{F}$ such that the monopolist full
+(a) The competitive full commitment contract $C_{0}^{F}$ will be
+renegotiated at any $U_{0}^{A}$.
+
+(b) There is some $U^{m}<U_{0}^{F}$ such that the monopolist full
 commitment contract $C_{0}^{mF}$ will be renegotiated if and only
 if $U_{0}^{A}>U^{m}$.
-
-(b) The competitive full commitment contract $C_{0}^{F}$ will be
-renegotiated at any $U_{0}^{A}$.\footnote{All proofs are in the appendix.} 
+ 
 \end{prop}
-An implication is that, under monopoly, consumers with already relatively
-smooth consumption are less likely to get full-commitment contracts
-that can be sustained. The comparison between monopoly and competition
-is perhaps more subtle than it appears. Intuitively, one might expect
-monopoly to sustain commitment better than competition because of
-differential abilities to commit\textendash the monopolist can promise
-not to renegotiate while no such promise is possible under competition.
-In the language of our model, this would be equivalent to competitive
-firms facing a lower $\kappa$ than the monopolist. That may indeed
-be the case, but our result points to another mechanism that survives
-even when the costs of renegotiation are identical across market structures.
-Here, the monopolist's superior ability to commit comes from the fact
-that its commitment contract is itself less susceptible to renegotiation.
-Having, at the outset, offered the consumer a contract with the lowest
-possible consumption, there is relatively less for the firm to gain
-by renegotiating in period 1.
-
+Note that the monopolist's ability to commit at lower (threatened renegotiation cost) comes from the fact that its commitment contract is less susceptible to renegotiation. That is because, having, at the outset, extracted surplus by offering the consumer a contract with the lowest possible consumption, there is relatively less for the firm to capture via renegotiating in period 1 (from the derivation of \ref{eq:kbar} it is clear that the gains to renegotiation are proportional to the cost of the continuation full-commitment contract and we know $c_1^F \ge c_1^{mF}$   ).
+A further implication is that, under monopoly, consumers with already relatively
+smooth consumption  are less likely to get full-commitment contracts
+that can be sustained. 
 \section{Imperfect Commitment Contracts $(0\leq\kappa<\bar{\kappa})$}
 
 \label{sec:imperfectK}
 
-Having now characterized the renegotiation problem and conditions for
-the survival of full commitment contracts, we turn to the more interesting case where
- renegotiation-proof constraint \ref{eq:no_reneg} binds. We call
+We turn now to the more interesting case where
+ full-commitment contracts cannot be sustained and the feasible contract set will be constrained by the fact that renegotiation-proof constraint \ref{eq:no_reneg} binds. We call
 these imperfect commitment contracts. For sophisticated hyperbolic
 discounters, contracts will be informed by their ability to anticipate
 possible renegotiation (Sections 4.2 and 4.3). For naifs, banks will
