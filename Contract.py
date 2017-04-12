@@ -9,7 +9,7 @@ For a paper by Karna Basu and Jonathan Conning
 @author: Jonathan Conning
 """
 import numpy as np
-from scipy.optimize import minimize
+from scipy.optimize import minimize, brentq, fsolve
 
 
 class Contract(object):
@@ -117,6 +117,41 @@ class Monopoly(Contract):                    # build on contract class
         """ Negative profits (for minimization)"""
         return  -(self.PV(self.y) - self.PV(c))
 
+    def bestreneg(self, c0):
+        '''return period 1 consumption of reneg-proof contract.
+        Assumes '''
+        beta, rho = self.beta, self.rho
+        Y = np.sum(self.y)
+        c1F = (Y - c0) / 2     # for lower bound
+        btr = beta ** (1 / rho)
+        c1P = (Y - c0 - self.kappa) / (1 + btr)   #for upper bound
+        ub = (1 + btr) * self.u(c1P)
+
+        def U1(c1):
+            return self.u(c1) + beta * self.u(Y - c0 - c1)
+
+        def f(c1):
+            return U1(c1) - ub
+
+        return brentq(f, c1F, c1P)
+
+    def reneg_proof(self):
+        """Find period 0 monopoly best renegotiation-proof contract by searching over
+        subgame perfect responses """
+
+        guess = self.fcommit()[0]
+        Y = np.sum(self.y)
+
+        def f(c0):
+            c1 = self.bestreneg(c0)
+            return -(self.u(c0) + self.beta * (self.u(c1) + self.u(Y - c0 - c1)))
+
+        c0rp = minimize(f, guess, method='Nelder-Mead').x[0]
+        c1rp = self.bestreneg(c0rp)
+        c2rp = Y - c0rp - c1rp
+
+        return np.array([c0rp, c1rp, c2rp])
+
     def reneg_proof_cons(self,c):
         """ the renegotiation-proof constraint gain from renegotiation
         cannot exceed its cost kappa"""
@@ -126,7 +161,7 @@ class Monopoly(Contract):                    # build on contract class
     def participation_cons(self,c):
         return (self.PVU(c,self.beta)  - self.PVU(self.y,self.beta))
 
-    def reneg_proof(self):
+    def reneg_proof2(self):
         """calculate renegotiation-proof contract
         supplies constraints to solver that bank can't profit too much
         and period 0 borrower participation"""
@@ -138,6 +173,7 @@ class Monopoly(Contract):                    # build on contract class
         res = minimize(self.negprofit, self.guess, method='COBYLA',
                      constraints = cons)
         return res
+
 
 class Competitive(Contract):                    # build on contract class
     """ Class for solving competitive equilibrium contracts  """
@@ -170,6 +206,39 @@ class Competitive(Contract):                    # build on contract class
         any stream c for minimization call"""
         return  - self.PVU(c, self.beta)
 
+    def kbar(self):
+        '''Renegotiation cost necessaru to sustain full commitment competitive contract'''
+        rho = self.rho
+        if (rho == 1):
+            rho = 0.999  # cheap trick to deal with special case
+        btr = self.beta ** (1 / rho)
+        c1F = np.sum(self.y) * btr / (1 + 2 * btr)
+        A = (2 - (1 + btr) * ((1 + self.beta) / (1 + btr)) ** (1 / (1 - rho)))
+        return A * c1F
+
+    def bestreneg(self, c0):
+        '''return period 1 consumption of reneg-proof contract.
+        Assumes '''
+        beta, rho = self.beta, self.rho
+        Y = np.sum(self.y)
+        c1F = (Y - c0) / 2     # for lower bound
+        btr = beta ** (1 / rho)
+        c1P = (Y - c0 - self.kappa) / (1 + btr)   #for upper bound
+        ub = (1 + btr) * self.u(c1P)
+
+        if self.kappa == 0:
+            return c1P
+
+        def U1(c1):
+            return self.u(c1) + beta * self.u(Y - c0 - c1)
+
+        def f(c1):
+            return U1(c1) - ub
+
+        guess = (c1F+c1P)/2
+        return fsolve(f,guess )
+
+
     def renegC(self, c):
         """ Renegotiated Competitive contract offered to period-1-self
         c_0 is past but (c_1,c_2) now replaced by (cr_1, cr_2)
@@ -198,10 +267,11 @@ class Competitive(Contract):                    # build on contract class
     def participation_cons(self,c):
         return (self.PV(self.y) - self.PV(c))
 
-    def reneg_proof(self, monop_reg = False):
-        """calculate renegotiation-proof contract that maxes 0-self's utility.
-        supplies constraints to solver that bank can't profit too much
-        and period 0 borrower participation"""
+    def reneg_proof2(self, monop_reg = False):
+        """Alternative method: calculate renegotiation-proof contract that maxes 0-self's utility.
+        supplies constraints to solver that bank can't profit too much and period 0 borrower participation
+        the reneg_proof method incorporates the constraints into objective and is closer to the
+        methods for finding contracts that are described in the paper"""
         if monop_reg:
             cons = ({'type': 'ineq',
                  'fun' : self.reneg_proof_cons },
@@ -209,15 +279,33 @@ class Competitive(Contract):                    # build on contract class
                  'fun' : self.participation_cons })
         else:
             #print('reneg surplus to customer -- sensitive solns ')
-            self.guess = self.ownsmooth()  #works best kappa=0
             cons = ({'type': 'ineq',
                  'fun' : self.reneg_proof_consC },
                 {'type': 'ineq',
                  'fun' : self.participation_cons })
+        self.guess = self.ownsmooth()  # works best kappa=0
         res=minimize(self.negPVU, self.guess, method='COBYLA',
                      constraints = cons)
 
-        return res
+        return res.x
+
+    def reneg_proof(self):
+        """Find best renegotiation-proof contract by searching over
+        subgame perfect responses """
+
+        guess = self.reneg_proof2()[0]
+        Y = np.sum(self.y)
+
+        def f(c0):
+            c1 = self.bestreneg(c0)
+            return -(self.u(c0) + self.beta * (self.u(c1) + self.u(Y-c0-c1)))
+
+        c0rp = minimize(f, guess, method='Nelder-Mead').x[0]
+        c1rp = self.bestreneg(c0rp)
+        c2rp = Y - c0rp - c1rp
+
+        return np.array([c0rp, c1rp, c2rp])
+
 
 if __name__ == "__main__":
 
@@ -242,20 +330,20 @@ if __name__ == "__main__":
     cC.print_params()
 
 
-    cCF = cC.fcommit
+    cCF = cC.fcommit()
     print("cCF: ",cCF)
 
     cCr = cC.reneg(cCF)
     print("cCF reneg: ",cCr)
     cC.guess = cCr
-    cCRP = cC.reneg_proof().x
+    cCRP = cC.reneg_proof()
     print("cCRP: ", cCRP)
 
 
     cMF = cM.fcommit()
     cMr = cM.reneg(cCF)
     cM.guess = cMr
-    cMRP = cM.reneg_proof().x
+    cMRP = cM.reneg_proof()
 
    # Analytic closed forms competitive
   #  A = cC.beta ** (1/cC.rho)
