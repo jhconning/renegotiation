@@ -4,6 +4,7 @@ Python module to solve for and analyze full commitment and renegotiation-proof
 contracts.  See https://github.com/jhconning/renegotiation
 Note: code originally had delta and r... but some formulas assume delta=1/(1+r)
 
+
 For a paper by Karna Basu and Jonathan Conning
 
 @author: Jonathan Conning
@@ -51,8 +52,8 @@ class Contract(object):
         return  self.PV(y)-self.PV(c)
 
     def indif(self, ubar, beta):
-        """ returns u(c1, c2) for graphing indifference curves in c1-c2 space.
-        if beta = 1, will describe self 0's preferences """
+        """ returns idc(c1) function from  u(c1, c2) =ubar for graphing indifference 
+        curves in c1-c2 space. If beta = 1, will describe self 0's preferences """
         if self.rho==1:
             def idc(c1):
                 lnc2 = (ubar-np.log(c1))/beta
@@ -113,27 +114,43 @@ class Monopoly(Contract):                    # build on contract class
             c0 = a*b
         return np.array([1,btr,btr])*c0
 
+    def kbar(self):
+        '''Renegotiation cost necessaru to sustain full commitment competitive contract'''
+        rho = self.rho
+        if (rho == 1):
+            rho = 0.999  # cheap trick to deal with special case
+        btr = self.beta ** (1 / rho)
+        c1F = self.fcommit()[1]
+        A = (2 - (1 + btr) * ((1 + self.beta) / (1 + btr)) ** (1 / (1 - rho)))
+        return A * c1F
+
     def negprofit(self,c):
         """ Negative profits (for minimization)"""
         return  -(self.PV(self.y) - self.PV(c))
 
     def bestreneg(self, c0):
-        '''return period 1 consumption of reneg-proof contract.
-        Assumes '''
+        '''TODO: NEEDS REWRITE FOR MONOPOLY
+        return period 1 consumption of reneg-proof contract.
+        input: C0= a'''
         beta, rho = self.beta, self.rho
-        Y = np.sum(self.y)
-        c1F = (Y - c0) / 2     # for lower bound
+        Uaut = self.PVU(self.y, 1)
+        # for lower bound guess where Zero indif hits c1=c2
+        c1LO = self.fcommit()[1]
         btr = beta ** (1 / rho)
-        c1P = (Y - c0 - self.kappa) / (1 + btr)   #for upper bound
-        ub = (1 + btr) * self.u(c1P)
+        c1HI = 2*c1LO / (1 + btr)   #for upper bound
 
-        def U1(c1):
-            return self.u(c1) + beta * self.u(Y - c0 - c1)
+        def c2(c1):
+            return ( ( (1/beta)*(Uaut-self.u(c0)) -self.u(c1))*(1-rho) ) **(1/(1-rho))
+        print('C2(C1)', c2(c1LO), c2(c1HI))
+        def URP(c1):
+            return (self.u(c1) + beta * self.u(c2(c1)) ) \
+                   - (1+btr)*self.u((c1+c2(c1)-self.kappa)/(1+btr))
 
         def f(c1):
-            return U1(c1) - ub
+            return URP(c1)
+        print('BESTRENEG:', c2(c1LO), c2(c1HI))
 
-        return brentq(f, c1F, c1P)
+        return brentq(f, c1LO, c1HI)
 
     def reneg_proof(self):
         """Find period 0 monopoly best renegotiation-proof contract by searching over
@@ -143,10 +160,12 @@ class Monopoly(Contract):                    # build on contract class
         Y = np.sum(self.y)
 
         def f(c0):
+
             c1 = self.bestreneg(c0)
             return -(self.u(c0) + self.beta * (self.u(c1) + self.u(Y - c0 - c1)))
 
         c0rp = minimize(f, guess, method='Nelder-Mead').x[0]
+        print(c0rp)
         c1rp = self.bestreneg(c0rp)
         c2rp = Y - c0rp - c1rp
 
@@ -161,18 +180,19 @@ class Monopoly(Contract):                    # build on contract class
     def participation_cons(self,c):
         return (self.PVU(c,self.beta)  - self.PVU(self.y,self.beta))
 
-    def reneg_proof2(self):
+    def reneg_proof2(self, guess = None):
         """calculate renegotiation-proof contract
         supplies constraints to solver that bank can't profit too much
         and period 0 borrower participation"""
-
+        if not guess:
+            guess = self.guess
         cons = ({'type': 'ineq',
                  'fun' : self.reneg_proof_cons },
                 {'type': 'ineq',
                  'fun' : self.participation_cons })
         res = minimize(self.negprofit, self.guess, method='COBYLA',
                      constraints = cons)
-        return res
+        return res.x
 
 
 class Competitive(Contract):                    # build on contract class
