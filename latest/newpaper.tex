@@ -1,0 +1,265 @@
+%&latex
+\documentclass[11pt,english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.25in,bmargin=1.25in,lmargin=1.25in,rmargin=1.25in}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{wasysym}
+\usepackage[authoryear]{natbib}
+\usepackage{hyperref}
+\onehalfspacing
+
+\makeatletter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+  \theoremstyle{plain}
+  \newtheorem{prop}{\protect\propositionname}
+  \theoremstyle{plain}
+% \newtheorem{cor}{\protect\corollaryname}
+ \newtheorem{cor}{Corollary}
+
+  \theoremstyle{plain}
+  \newtheorem{lem}{\protect\lemmaname}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{babel}
+
+
+% set fonts for nicer pdf view
+\IfFileExists{lmodern.sty}{\usepackage{lmodern}}{}
+
+
+\usepackage{babel}
+\providecommand{\lemmaname}{Lemma}
+  \providecommand{\propositionname}{Proposition}
+
+\date{August 21, 2017}
+
+
+\usepackage{babel}
+\providecommand{\lemmaname}{Lemma}
+  \providecommand{\propositionname}{Proposition}
+\usepackage{varioref}
+
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
+\makeatother
+
+\usepackage{babel}
+  \providecommand{\lemmaname}{Lemma}
+  \providecommand{\propositionname}{Proposition}
+
+\begin{document}
+
+%+Title
+\title{A simple exposition of present-bias}
+\author{Karna Basu \& Jonathan Conning}
+\date{\today}
+\maketitle
+%-Title
+
+%+Abstract
+\begin{abstract}
+    Simple graphical exposition of intertemporal choice and commitment issues for sophisticated and naive present-biased consumers with exact solutions for the CRRA utility case.
+\end{abstract}
+%-Abstract
+
+%+Contents
+\tableofcontents
+%-Contents
+
+\section{Introduction}
+ 
+
+\section{Model}
+
+
+\subsection{Full-commitment contracts}
+
+We first establish the benchmark `full-commitment' contracts under
+perfect competition and monopoly, respectively. To characterize these
+familiar commitment contracts, we assume a bank can \textit{costlessly}
+offer Zero-self a multi-period contract that binds the consumer's
+latter self(ves) to not renegotiate its terms with the same bank or
+other banks. Although we are not making the exact mechanisms explicit
+yet the bank's ability to credibly commit to not renegotiate such
+a contract must rest on the assumption that the bank has credibly
+bonded itself to paying a renegotiation penalty ($\kappa$) in the
+event of renegotiation and that this penalty is sufficiently high
+to deter the bank. In later sections of the paper we will examine
+what happens when $\kappa$ is small. Then exogenously sustained commitment
+contracts can no longer be sustained and must be replaced by second-best
+self-enforcing renegotiation-proof contracts. We can then delve deeper
+into what in practice determines $\kappa$ and how it might be endogenously
+determined via choices of bank ownership and governance forms, and
+shaped by the nature of the market structure.
+
+\subsubsection{Full-commitment contracts under Competition}
+
+\label{sec-FCC} A consumer with time-inconsistent preferences cannot
+trust her later selves to stick to her preferred consumption plans.
+In this simple three-period setting Zero's concern is that her later
+One-self will try to divert resources earmarked for period 2 consumption
+to boost period 1 consumption instead. Like a Stackelberg-leader in
+a Cournot game, Zero's strategic saving/borrowing choices are affected
+by her anticipation of One's best response. A bank may be able to
+act as a strategic partner to Zero by offering contracts with commitment
+services to help restrict or otherwise control the consumer's later
+self(ves)'s best responses.
+
+With an exclusive full-commitment contract the consumer faces no self-control
+problem. Zero chooses a contract that commits her One- and Two- selves
+to follow the chosen consumption plan. This contract design problem
+is solved as a standard utility maximization problem subject to an
+inter-temporal budget constraint (or subject to a financial intermediary's
+zero-profit condition). Zero-self chooses contract $C_{0}$ to solve:
+\begin{equation}
+\max_{C_{0}}U_{0}(C_{0})\label{eq:cobj0}
+\end{equation}
+
+\begin{equation}
+s.t.\quad\Pi_{0}(C_{0};Y_{0})\geq0\label{eq:BPC0}
+\end{equation}
+The familiar first-order necessary conditions are: 
+\begin{equation}
+u'\left(c_{0}\right)=\beta\delta(1+r)u'\left(c_{1}\right)=\beta\delta^{2}(1+r)^{2}\\ u'\left(c_{2}\right)
+\end{equation}
+
+An increase or decrease to the term $\delta(1+r),$ which enters each
+expression above, essentially `tilts' consumption to be more generally
+rising or falling over time as $\delta\gtreqless1/(1+r)$. As this
+across-the-board level of tilt will not alter key tradeoffs of interest
+(unlike the degree of present-bias $\beta$ parameter which does)
+we shall impose the assumption that $\delta=\frac{1}{1+r}$ for the
+remainder of the analysis. This is without loss of generality but
+will greatly unclutter the math. The simplified first-order conditions
+are: 
+\begin{equation}
+u'\left(c_{0}\right)=\beta u'\left(c_{1}\right)=\beta u'\left(c_{2}\right)\label{eq:FOC_comp}
+\end{equation}
+
+Along with a binding budget constraint the first-order conditions
+allow us to solve for the optimal competitive `full-commitment' contract
+$C_{0}^{F}$, so called because latter period selves are committed
+to not change it. Conceptually the equilibrium contract will be found
+at the tangency between the highest iso-utility surface just touching
+the budget hyper-plane. With CRRA utility, a closed form solution
+for $C_{0}$ is easily found which we label the competitive full commitment
+contract $C_{0}^{F}$.\footnote{All CRRA derivations and closed-form solutions are in the appendix.}
+This contract has the property: 
+\[
+c_{1}^{F}=c_{2}^{F}=\beta^{\frac{1}{\rho}}c_{0}^{F}
+\]
+Substituting this into the bank's zero profit constraint
+we can solve to find:
+
+\begin{equation}
+c_{0}^{F} & =\frac{y}{1+2\beta^{\frac{1}{\rho}}}\label{eq:CF}
+\end{equation}
+Zero-self wants to indulge her present bias (by tilting consumption
+toward herself) and then allocate remaining resources evenly across
+the remaining two periods.
+
+This solution can be seen graphically in Figure 1a drawn for a consumer
+with $\beta=0.5,$ $\rho=1$ and an intertemporal budget constraint
+from endowment income with a present value of income $y=\sum y_{t}=300$.
+The figure consists of two panels. The left panel depicts the $\left(c_{1},c_{2}\right)$
+contract choice, conditional on $c_{0}=c_{0}^{F}$. The allocation
+across periods 1 and 2 is determined by a budget constraint (the line
+through $QF'$, satisfying $c_{1}+c_{2}=y-c_{0}$) and an optimal
+`division rule' which in this case is $c_{1}=c_{2}$ (the line through
+$OF'$). This division rule is attainable because full-commitment,
+by definition, allows Zero-self to force One-self to respect the first-order
+conditions of the maximization problem (\ref{eq:cobj0}).
+
+\begin{figure}
+\vspace*{-5cm}
+\subfloat[Full-commitment]{
+\includegraphics[scale=0.5]{Figure1a.pdf}
+}
+
+\subfloat[Renegotiation-proof with $\kappa=0$]{
+\includegraphics[scale=0.5]{Figure1b.pdf}
+}
+
+\caption{Full-commitment and renegotiation-proof contracts under competition}
+
+\label{fig:twoquad} 
+\end{figure}
+
+
+The right panel depicts the $\left(c_{0},c_{1}\right)$choice conditional
+on the division rule being followed in period 1. The budget constraint
+(\ref{eq:budgetplus}) is the line going through $yF$ and the first-order
+condition (\ref{eq:FOCc0c1}) is the line going through $0F$.
+
+The optimal contract $C_{0}^{F}$ lies at the intersections $F$ and
+$F'$. To illustrate, at these parameters, Zero's preferred contract
+is $C_{0}^{F}=(150,75,75)$. Whether the consumer borrows or saves
+(or pays down debts) in any given period depends on how this consumption
+stream matches her autarky consumption stream. If, for example, the
+total income of $300$ arrives evenly across periods as $Y_{0}=(100,100,100)$
+then this consumption plan would imply borrowing $c_{0}-y_{0}=50$
+in period 0 to be repaid as installments of 25 in each of periods
+1 and 2. If the stream had instead been $Y_{0}=(200,50,50)$ the consumer
+would be seen as saving 50 in period 0 to raise consumption by 25
+in each of periods 1 and 2.\footnote{These parameter values are chosen for expositional purposes. In particular
+$\rho=1$ implies that period zero consumption will be the same with
+or without self-control but the analysis can be easily adapted to
+other cases.}
+
+This approach will be useful for further analyzing situations where
+Zero-self loses control over the division rule (i.e. loses commitment).
+
+\subsubsection{Full-commitment contracts under Monopoly}
+
+\label{sec:own}
+
+If there is monopoly instead of competition for banking services in
+period 0, the analysis is similar except that now we solve for the
+optimum full-commitment contract by maximizing bank profits subject
+to a consumer participation constraint. The bank solves: 
+\begin{align}
+\max_{C_{0}} & \;\Pi_{0}\left(C_{0};Y_{0}\right)\label{eq:monop-obj}\\
+s.t. & \;U_{0}\left(C_{0}\right)\geq U_{0}^{A}(Y_{0})\label{eq:CPC0}
+\end{align}
+
+The first-order tangency conditions are the same as competitive case
+given by expressions \ref{eq:FOC_comp}, which for CRRA utility again
+implies $c_{1}=c_{2}=\beta^{\frac{1}{\rho}}c_{0}$. Along with the
+fact that Zero's participation constraint must bind at a monopoly
+optimum these equations allow us to solve for the contract $C_{0}^{mF}$
+and corresponding bank profits $\Pi_{0}\left(C_{0}^{mF};Y_{0}\right)$.
+Closed form solutions for the CRRA utility case appear as appendix
+equations A\ref{eq:c-mf} and A\ref{eq:pi-mf}, respectively. Conceptually,
+the optimum contract will be at the tangency point where the highest
+iso-profit plane still touches the iso-utility surface associated
+with Zero's reservation utility.
+
+The terms of the optimal monopoly contract, and hence also the level
+of bank profits achieved will be dependent on the consumer's autarky
+utility $U_{0}^{A}(Y_{0})$. The present value of $C_{0}^{mF}$ rises
+and profits fall with $U_{0}^{A}$. Since the monopolist retains the
+gains from trade and consumer iso-utility (or indifference) surfaces
+do not cross, consumption in each period under monopoly will be strictly
+lower than under competition at all $Y_{0}$ except in the extreme
+case where autarky utility is already optimal ($U_{0}^{A}=U_{0}^{F}$),
+in which case the monopolist will trivially offer the utility maximizing
+contract to the consumer and will make zero profits.
+ 
+ 
+%+Bibliography
+\begin{thebibliography}{99}
+\bibitem{Label1} ...
+\bibitem{Label2} ...
+\end{thebibliography}
+%-Bibliography
+
+\end{document}
+
+

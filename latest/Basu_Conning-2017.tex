@@ -38,7 +38,7 @@
 \providecommand{\lemmaname}{Lemma}
   \providecommand{\propositionname}{Proposition}
 
-\date{July 19, 2017}
+\date{August 21, 2017}
 
 
 \usepackage{babel}
@@ -80,7 +80,7 @@ other supplemental materials at: \protect\protect\url{https://github.com/jhconni
 When do financial intermediaries provide commitment services to
 help present-biased consumers stick to long-term savings accumulation
 and debt management plans. When instead do they opportunistically
-pander to their consumers' biases? How is trade  reduced by consumer fears that could happen? We study
+pander to their consumers' biases? How much is financial trade  distorted by fears this might happen? We study
 a consumer protection problem that survives even when consumers are
 sophisticated and fully informed. The consumer would like her future
 selves to be held to a balanced path of saving accumulation/debt repayment
@@ -678,22 +678,6 @@ act as a strategic partner to Zero by offering contracts with commitment
 services to help restrict or otherwise control the consumer's later
 self(ves)'s best responses.
 
-\begin{figure}
-\vspace*{-5cm}
-
-\subfloat[Full-commitment]{\includegraphics[clip,width=1\textwidth,bb = 0 0 200 100, draft, type=eps]{Figure1a.pdf}
-
-}
-
-\subfloat[Renegotiation-proof with $\kappa=0$]{\includegraphics[width=1\textwidth,bb = 0 0 200 100, draft, type=eps]{Figure1b.pdf}
-
-}
-
-\caption{Full-commitment and renegotiation-proof contracts under competition}
-
-\label{fig:twoquad} 
-\end{figure}
-
 With an exclusive full-commitment contract the consumer faces no self-control
 problem. Zero chooses a contract that commits her One- and Two- selves
 to follow the chosen consumption plan. This contract design problem
@@ -703,12 +687,13 @@ zero-profit condition). Zero-self chooses contract $C_{0}$ to solve:
 \begin{equation}
 \max_{C_{0}}U_{0}(C_{0})\label{eq:cobj0}
 \end{equation}
+
 \begin{equation}
 s.t.\quad\Pi_{0}(C_{0};Y_{0})\geq0\label{eq:BPC0}
 \end{equation}
 The familiar first-order necessary conditions are: 
 \begin{equation}
-u'\left(c_{0}\right)=\beta\delta(1+r)u'\left(c_{1}\right)=\beta\delta^{2}(1+r)^{2}u'\left(c_{2}\right)
+u'\left(c_{0}\right)=\beta\delta(1+r)u'\left(c_{1}\right)=\beta\delta^{2}(1+r)^{2}\\ u'\left(c_{2}\right)
 \end{equation}
 
 An increase or decrease to the term $\delta(1+r),$ which enters each
@@ -736,7 +721,12 @@ This contract has the property:
 \[
 c_{1}^{F}=c_{2}^{F}=\beta^{\frac{1}{\rho}}c_{0}^{F}
 \]
+Substituting this into the bank's zero profit constraint
+we can solve to find:
 
+\begin{equation}
+c_{0}^{F} & =\frac{y}{1+2\beta^{\frac{1}{\rho}}}\label{eq:CF}
+\end{equation}
 Zero-self wants to indulge her present bias (by tilting consumption
 toward herself) and then allocate remaining resources evenly across
 the remaining two periods.
@@ -752,6 +742,22 @@ through $QF'$, satisfying $c_{1}+c_{2}=y-c_{0}$) and an optimal
 $OF'$). This division rule is attainable because full-commitment,
 by definition, allows Zero-self to force One-self to respect the first-order
 conditions of the maximization problem (\ref{eq:cobj0}).
+
+\begin{figure}
+\vspace*{-5cm}
+\subfloat[Full-commitment]{
+\includegraphics[scale=0.5]{Figure1a.pdf}
+}
+
+\subfloat[Renegotiation-proof with $\kappa=0$]{
+\includegraphics[scale=0.5]{Figure1b.pdf}
+}
+
+\caption{Full-commitment and renegotiation-proof contracts under competition}
+
+\label{fig:twoquad} 
+\end{figure}
+
 
 The right panel depicts the $\left(c_{0},c_{1}\right)$choice conditional
 on the division rule being followed in period 1. The budget constraint
@@ -796,7 +802,7 @@ fact that Zero's participation constraint must bind at a monopoly
 optimum these equations allow us to solve for the contract $C_{0}^{mF}$
 and corresponding bank profits $\Pi_{0}\left(C_{0}^{mF};Y_{0}\right)$.
 Closed form solutions for the CRRA utility case appear as appendix
-equations \ref{eq:c-mf} and \ref{eq:pi-mf}, respectively. Conceptually,
+equations A\ref{eq:c-mf} and A\ref{eq:pi-mf}, respectively. Conceptually,
 the optimum contract will be at the tangency point where the highest
 iso-profit plane still touches the iso-utility surface associated
 with Zero's reservation utility.
@@ -851,8 +857,7 @@ $F$.
 
 \begin{figure}
 \includegraphics[width=\textwidth]{fig_selfcontrol.pdf}
-\caption[Full-commitment and renegotiation-proof contracts under competition]{Full-commitment and renegotiation possibilities in period 1 (drawn
-for \protect \\
+\caption[Full-commitment and renegotiation-proof contracts under competition]{Full-commitment and renegotiation possibilities in period 1 (for \protect \\
  $c_{0}=c_{0}^{F},\beta=\frac{1}{2},\rho=1,\kappa=0$)}
 
 \label{fig:c1c2} 
@@ -911,12 +916,13 @@ U(C_{1})\geq U(C_{1}^{0})\label{eq:ugain}
 \end{equation}
 Solving for an interior solution using first-order conditions and
 the binding condition \ref{UGain}, the CRRA case yields a closed
-form solution (\ref{eq:m-r}). In figure ?? contract $C_{1}^{0}$
+form solution (A\ref{eq:m-r}). In figure ?? contract $C_{1}^{0}$
 at \textbf{P} would be renegotiated to point \textbf{$R^{m}$} where
 the ray $c_{2}^{1}=\beta^{\frac{1}{\rho}}c_{1}^{1}$ intersects One-self's
 participation constraint \ref{eq:PiGain}. As drawn the bank gains. 
 
 \subsection{The `no-renegotiation' condition}
+\label{sec-no-reneg-cond}
 
 Under what conditions would the original contract \textit{not} be
 renegotiated in period 1? Assuming a tie-breaking rule in favor of
@@ -968,51 +974,47 @@ if:
 \end{equation}
 where 
 \begin{equation}
-\Upsilon=\left(2-\left(\frac{1+\beta}{\left(1+\beta\right)^{\rho}}\right)^{\frac{1}{1-\rho}}\right)
+\Upsilon =\left [2-
+\left [ \frac{(1+\beta)}{(1+\beta^\frac{1}{\rho})^\rho} \right ]
+^\frac{1}{1-\rho}
+\right] 
 \end{equation}
-$\bar{\kappa}$ and $\bar{\kappa}^{m}$ are the minimum renegotiation
+$\bar{\kappa}$ and $\bar{\kappa}^{m}$ are the threshold or minimum renegotiation
 costs required for the survival of full-commitment contracts. These
 conditions tell us that, the greater the consumption levels in a full-commitment
 contract, the harder it will be to avoid renegotiation (i.e. the greater
 is the scope for rearranging consumption profitably in period 1.)
 
-The value of $c_{1}^{0}$ in the expression will be different depending
-on whether the period 0 market for full-commitment contracts is competitive
-or monopolized. Under competition from \ref{eq:CF} and \ref{eq:CF1}
-we know that $c_{1}^{F}=\frac{\beta^{\frac{1}{\rho}}y}{1+2\beta^{\frac{1}{\rho}}}$.
-Since this does not depend on autarky utility (given a fixed value
-of $y$), $\bar{\kappa}$ too does not depend on how close or far
-to optimal consumption smoothing the consumer is in autarky.
-
-If the market for period 0 full-commitment contracts is monopolized
-we are led to a cutoff $\bar{\kappa}^{m}$ that now depends on autarky
-utility. The higher is $U_{0}^{A}(Y_{0})$ the higher will be $c_{1}^{mF}$.
-Since $c_{1}^{F}\ge c_{1}^{mF}$ for any initial $Y_{0}$ it must
-be the case that $\bar{\kappa}^{m}\le\bar{\kappa}$.
+Under competition we know from 
+\ref{eq:c-cf} that $c_{1}^{F}=\frac{\beta^{\frac{1}{\rho}}y}{1+2\beta^{\frac{1}{\rho}}}$.
+Since this is independent of autarky utility (given a fixed value
+of $y$), $\bar{\kappa}$ does not depend on how close or far
+from optimal consumption smoothing the consumer is in autarky.
+When the period 0 market is monopolized
+we have a threshold $\bar{\kappa}^{m}$ that rises linearly with  $c_{1}^{mF}$ which in turn is non-decreasing in  autarky
+utility $U_{0}^{A}(Y_{0})$ (see A\ref{eq:pi-mf}). Since  $c_{1}^{F}\ge c_{1}^{mF}$ for any initial $Y_{0}$ we must also always have $\bar{\kappa}^{m}\le\bar{\kappa}$.
 
 Together, this indicates that, if renegotiation costs lie above cutoff
 $\bar{\kappa}$, full commitment contracts will be credible; and if
 renegotiation costs lie below this cutoff, the survival of full-commitment
 will depend on market structure and autarky utility. Proposition 1
-summarizes the results.
+summarizes:
 \begin{prop}\label{Prop:full-commit}
-Consider renegotiation costs $\bar{\kappa}$ and $\bar{\kappa}^{m}$
+Given threshold renegotiation costs $\bar{\kappa}$ and $\bar{\kappa}^{m}$
 as defined in Conditions \ref{eq:kbar} and \ref{eq:kbarM}. 
 \begin{description}
 \item [{(a)}] The competitive full commitment contract survives if and
 only if $\kappa\geq$$\bar{\kappa}$. 
 \item [{(b)}] The monopolistic full commitment contract survives if and
-only if $\kappa\geq$$\bar{\kappa}^{m}$. $\bar{\kappa}^{m}$ is strictly
+only if $\kappa\geq$$\bar{\kappa}^{m}$. $\bar{\\ \kappa}^{m}$ is strictly
 rising in the consumer's autarky utility. 
 \item [{(c)}] $\bar{\kappa}^{m}\leq\bar{\kappa}$. 
 \end{description}
 \end{prop}
-Note that the monopolist's ability to commit at lower threatened renegotiation
-cost ($\bar{\kappa}^{M}\le\bar{\kappa}$) comes from the fact that
-its commitment contract is less susceptible to renegotiation. That
-is because, having, at the outset, extracted surplus by offering the
+The lower threshold renegotiation
+cost for monopoly ($\bar{\kappa}^{M}\le\bar{\kappa}$) comes from the fact that having at the outset extracted surplus by offering the
 consumer a contract with the lowest possible consumption, there is
-relatively less for the firm to capture via renegotiation in period
+relatively less surplus left to be captured via renegotiation in period
 1. This stands in contrast to the intuitive notion that a monopolist
 might offer better commitment because it faces greater costs of breaking
 promises than a competitive firm does. Our result shows that even
@@ -1034,40 +1036,32 @@ the monopolist full commitment contract survives if and only if $U_{0}^{A}\leq U
 
 \label{sec:imperfectK}
 
-We turn now to the multi-period contract design problem between a
-consumer and a bank in period 0 when bank renegotiation costs are
-not sufficient to sustain full-commitment contracts. So long as One-self's
-consumption tradeoffs differ from Zero's, renegotiation can only harm
-(or, at best, not improve) Zero-self's inter-temporal welfare. In
+We turn now to contract design problem when bank renegotiation costs are
+not sufficient to sustain full-commitment contracts. Since One-self preferences over period 1 and period 2 consumption differs from Zero's, any renegotiation that One-self would agree to can only harm
+(or at best not improve) Zero-self's inter-temporal welfare. In
 the case of naifs, banks will capitalize on the consumer's failure
 to anticipate harmful renegotiation (Section 4.4). In the case of
-sophisticates, the Zero-self consumer will seek to avoid entering
-into multi-period contracts that are vulnerable to such harmful renegotiations.
-They will limit their choice to contracts that are renegotiation-proof
-or subgame-perfect (Sections 4.2 and 4.3). If renegotiation-proof
-constraint \ref{eq:no-reg-monop} binds at an optimum the resulting
-optimal contract will offer less consumption smoothing than the full-commitment
-contract. The absence of a sufficiently tough external deterrent to
-renegotiation leads the parties to build what commitment they can
-by tilting the terms of the period 1 continuation contract closer
-to One-self's preferences so as a way to reduce the scope for renegotiation.
-We call these `imperfect smoothing commitment' contracts. These are
-still commitment contracts \textendash{} renegotiation is avoided
-in equilibrium\textendash{} but at the cost of now less than perfect
-consumption smoothing for Zero. Below, we describe how these contracts
-are constructed and present some results about how the contract terms
-compare to full smoothing commitment.
+sophisticates, the Zero-self consumer will only agree to contracts that are renegotiation-proof
+or subgame-perfect (Sections 4.2 and 4.3) but any constrained-optimal contract where renegotiation-proof
+constraint \ref{eq:no-reg-monop} binds must offer less consumption smoothing than the full-commitment
+contract. The absence of a sufficiently tough external renegotiation deterrent leads the parties to adopt the costly endogenous deterrence strategy of tilting the terms of the period 1 continuation contract closer
+to One-self's preferred choice, as a way to reduce the scope for renegotiation.
+We label these `imperfect smoothing commitment' contracts. These are
+still `full commitment' contracts in the sense that renegotiation is avoided
+in equilibrium but they offer less than perfect
+or efficient consumption smoothing for Zero. 
 
+Below, we describe how these contracts
+are constructed and their properties
+compared to full smoothing commitment.
 For the rest of the paper we assume that $(0\leq\kappa<\bar{\kappa})$.
 
 \subsection{Competition}
 
 \subsubsection{Constructing the contract}
 
-If the period 0 market is competitive the optimum contract will solve
-the following problem:\footnote{A similar analysis could be conducted even if the costs of renegotiating
-another bank's contract are different from $\kappa$, the costs of
-renegotiating one's own contract}
+If the market is competitive in period 0 the optimum contract will solve
+the  problem:
 
 \begin{align}
  & \max_{C_{0}}\ U_{0}\left(C_{0}\right)\tag{\ref{eq:cobj0}}\\
@@ -1075,45 +1069,19 @@ renegotiating one's own contract}
  & \ \ \Pi_{1}\left(C_{1}^{1}\left(C_{1}^{0}\right);C_{1}^{0}\right)\leq\kappa\tag{\ref{eq:no-reg-monop}}
 \end{align}
 
-.Note from Section 3 that the no-renegotiation condition does not
-depend on whether the market for renegotiation is competitive or a
-monopoly. As mentioned earlier, under competition, the terms of a
-renegotiated contract depend on exclusivity but the no-renegotiation
-constraint does not.
+Though the no-renegotiation constraint appears to be stating that the bank
+must  not be able to profit from renegotiation in period 1, as noted in section \ref{sec-no-reneg-cond},     the condition boils down to requiring that the gains-to-trade from renegotiation fall short of bank renegotiation costs (see also A\ref{eq:no-renegotiation}). Even if new banks could enter and competed  to offer part or or all of the surplus from renegotiation to One-self in period 1 the constraint deters renegotiation as long as those banks also face renegotiation cost $\kappa$.\footnote{We later examine the case where competing banks can enter in period 1 and offer to renegotiate at zero cost (or other renegotiation costs lower than $\kappa$, the costs of renegotiating one's own contract).} 
 
-Similar to a Stackelberg leader choosing the most favorable of possible
-market outcomes along their opponents reaction function in a Cournot
-duopoly game, Zero-self will choose the contract $C_{0}^{0}$ that
-offers the highest welfare considering the strategic game play between
-the bank and One-self in the period 1 subgame $\zeta(C_{1}^{0},\kappa)$.
+Like a Stackelberg leader, Zero-self will want to choose the contract $C_{0}^{0}$ that achieves the highest welfare considering the sub-game perfect equilibrium reactions  of One-self and the bank in period 1 subgames $\zeta(C_{1}^{0},\kappa)$.
 
-Figure \ref{fig:compRP}\ is useful for understanding expected game
-play in for different subgames $\zeta(C_{1}^{0},\kappa)$ in period
-1. The figure is zoomed in around the contract space of interest to
-make the relationships clearer. Suppose Zero-self has chosen a candidate
-level of period 0 consumption $c_{0}^{0}$. For this to be part of
-an optimum contract Zero must insure that its continuation contract
-$C_{1}^{0}=(c_{1}^{0},c_{2}^{0})$ lies on the bank's binding period
-0 zero profit condition (or else Zero-self can raise her welfare).
-This is equivalent to stating that the continuation contract will
+Figure \ref{fig:compRP}\  offers a (zoomed) view of the contract space of interest. Suppose Zero-self has chosen a candidate
+period 0 level of consumption $c_{0}^{0}$. If this to be part of
+an optimum contract Zero must insure that the continuation contract
+represented by point $P$ lies on the bank's binding period
+0 zero profit condition (otherwise Zero-self can raise her welfare and still meet the constraints).
+This means the continuation contract will
 lie along the period 1 budget line $c_{1}^{0}+c_{2}^{0}=y-c_{0}^{0}$
 drawn running through point $R(0)$ in the figure.
-
-Note that a bank will only accept to renegotiate away from a contract
-on this budget line if the renegotiated contract $(c_{1},c_{2})$
-lies on or below iso-cost line $c_{1}+c_{2}=y-c_{0}^{0}-\kappa$ because
-by design any contract above this line cannot offer sufficient cost
-savings (i.e. profit gains) to cover renegotiation cost $\kappa$.
-We also know from our earlier analysis of best renegotiation offers
-(recall our derivation of $C_{1}^{1}(C_{1}^{0})$ and $C_{1}^{m1}(C_{1}^{0})$
-) that candidate renegotiation contracts must satisfy One's first
-order condition $u'(c_{1})=\beta u'(c_{2})$ \textendash{} otherwise
-the gains to trade from renegotiation could be increased to make these
-renegotiation more attractive. The unique contract that just satisfies
-these two conditions \textendash{} the most attractive renegotiation
-that is just rejected \textendash{} is represented by $R(\kappa)$.\footnote{With period 0 is competitive we'll have $c_{1}^{0}+c_{2}^{0}=y-c_{0}^{0}$
-and can therefore identify this point from $u'(c_{1})=\beta u'(y-c_{0}^{0}-\kappa-c_{1})$.
-For the CRRA case $c_{1}=(y-c_{0}^{0}-\kappa)/(1+\beta^{\frac{1}{\rho}})$}
 
 \begin{figure}
 \includegraphics[width=1\textwidth]{CompetitiveRP}
@@ -1122,22 +1090,34 @@ For the CRRA case $c_{1}=(y-c_{0}^{0}-\kappa)/(1+\beta^{\frac{1}{\rho}})$}
 \label{fig:compRP} 
 \end{figure}
 
+A bank will only renegotiate away from a contract
+on this budget line if the renegotiated contract $(c_{1},c_{2})$
+lies on or below iso-cost line $c_{1}+c_{2}=y-c_{0}^{0}-\kappa$ because,
+by design, any contract above this line does not offer sufficient cost
+savings (i.e. profit gains) to cover renegotiation cost $\kappa$.
+ Candidate renegotiation contracts must satisfy One's first
+order condition $u'(c_{1})=\beta u'(c_{2})$ \textendash{} otherwise
+the gains to trade from renegotiation could be increased to make these
+renegotiation more attractive. The contract that just satisfies
+these two conditions is represented by point $R(\kappa)$.\footnote{With period 0 is competitive we'll have $c_{1}^{0}+c_{2}^{0}=y-c_{0}^{0}$
+and can therefore identify this point from $u'(c_{1})=\beta u'(y-c_{0}^{0}-\kappa-c_{1})$.
+For the CRRA case $c_{1}=(y-c_{0}^{0}-\kappa)/(1+\beta^{\frac{1}{\rho}})$}  
+
 Now draw an indifference curve for One-self's preferences through
-this point. All points on the period 1 budget line $c_{1}^{0}+c_{2}^{0}=y-c_{0}^{0}$
+this point. All points along the period 1 budget line $c_{1}^{0}+c_{2}^{0}=y-c_{0}^{0}$
 that also lie above this indifference curve will be renegotiation-proof
-contracts. \ To see this consider any contract $P'$ on this segment.
+contracts. \ To see this consider any contract $P'$ along this segment.
 One-self will only accept renegotiation away from this contract if
 it moves One-self to an indifference curve just above the one running
 through $P'$ but, by construction, any such contracts clearly lie
 above the bank's no-renegotiation and hence would be rejected. By
 similar reasoning any contract along the budget line outside of this
-segment would be renegotiated. Zero-self's welfare rises as we move
-to more balanced consumption bundles along this line so Zero's preferred
-renegotiation-proof contract will be the contract labeled $P$ in
-the diagram. For all $\kappa<\bar{\kappa}$ the so chosen optimal
-renegotiation-proof contract will offer less consumption smoothing
+segment would be renegotiated. As Zero-self's welfare rises as we move
+toward a more balanced consumption bundles, Zero's preferred
+renegotiation-proof contract will be the contract labeled $P$. Since \kappa<\bar{\kappa}$ the this preferred
+renegotiation-proof contract offers less consumption smoothing
 and hence lower welfare compared to the full commitment contract (reached
-at $\kappa=\bar{\kappa}$).
+at $\kappa\ge \bar{\kappa}$).
 
 Mathematically, for $c_{0}^{0}$ given the best continuation contract
 is found using three equations. Bank no-renegotiation condition $c_{1}^{1}+c_{2}^{1}=y-c_{0}^{0}-\kappa$
@@ -1196,18 +1176,32 @@ depend on the no-renegotiation constraint in some subtle ways.
 
 \subsubsection{Properties of the contract}
 
-Suppose the maximization problem \ref{eq:cobj0} yields a contract
-$C_{0}^{P}$. Given our assumption that $\kappa<\bar{\kappa}$, the
-renegotiation-proofness constraint (\ref{eq:no-reg-monop}) binds
-at any autarky utility. The properties of the equilibrium contract
-are summarized in Propostion 2.
+Suppose contract $C_{0}^{P}$ is the solution to the maximization problem described  by \ref{eq:cobj0}, \ref{eq:BPC0} and \ref{eq:no-reg-monop}. The following summarizes  properties of the equilibrium contract.
 
-First, the additional constraint results in a contract that cannot
-deliver the optimal utility to the period 0 consumer. In other words,
-full smoothing cannot be achieved. 
+\begin{prop}
+Suppose $\kappa<\bar{\kappa}$ and the consumer is sophisticated. 
+\begin{description}
+\item [{(a)}] Under competition, full commitment is infeasible so the consumer
+is offered the renegotiation-proof contract $C_{0}^{P}$ with the
+following properties. 
+\begin{description}
+\item [{(i)}] $U_{0}\left(C_{0}^{P}\right)<U_{0}\left(C_{0}^{F}\right)$. 
+\item [{(ii)}] There is some $\bar{U}<$$U^{F}$ such that, if $U_{0}^{A}>\bar{U}$,
+the Zero-self would do worse than in autarky and therefore will not
+accept the contract. 
+\item [{(iii)}] The relationship between $c_{0}^{P}$ and $c_{0}^{F}$
+is ambiguous. There is some $\hat{\rho}$ such that: if $\rho\leq\hat{\rho}$,
+then $c_{0}^{P}>c_{0}^{F}$; if $\rho>\hat{\rho}$, then there are
+parameter values under which $c_{0}^{P}<c_{0}^{F}$. 
+\end{description}
 
-Second, if the consumer's autarky utility is high, there cannot be
-renegotiation-proof contracts in equilibrium since the consumer could
+
+\end{description}
+\end{prop}
+
+
+Since  $\kappa<\bar{\kappa}$ means the new renegotiation-proofness constraint (\ref{eq:no-reg-monop}) binds full smoothing cannot be achieved and the consumer's welfare must be lowered. 
+[JHC: **(a-ii)NOT\ CLEAR depends on definition of autarky...if consumer is like bank with $\kappa=0$ then bank would improve]\\textit{\textit{ Second, if consumer autarky utility is high enough, no renegotiation-proof contract will be possible in equilibrium as the consumer could
 do better on her own. If the bank were able to provide full commitment,
 it could offer a utility-increasing contract to any individual with
 even minimal smoothing needs. Now however, for individuals whose autarky
@@ -1217,11 +1211,12 @@ therefore no such contract would be acceptable to the consumer. This
 is because the renegotiation-proofness constraint may require even
 greater imbalance in consumption across periods 1 and 2 than under
 autarky.
+}}
 
-Third, we can compare the terms of the contract to full smoothing
-commitment. We show that period 0 consumption under renegotiation-proof
-contracts could, depending on parameter values, be bigger or smaller
-than under full-commitment. The proof in the appendix uses some additional
+Will the period 0 self increase or decrease period 0 consumption -- or same thing decrease or increase net resources passed into period 1 and 2 -- with imperfect smoothing renegotiation-proof
+contracts compared to when they have access to full-commitment?
+ The proposition is that consumption could be bigger or smaller
+than under full-commitment depending on parameter values, in particular the intertemporal elasticity of substitution $\frac{1}{\rho}$.  The proof in the appendix uses some additional
 simplifying notation which we describe intuitively here.
 
 Any imperfect-smoothing commitment contract $C$ can be fully described
@@ -1578,7 +1573,7 @@ and will be renegotiated in period 1.
 \end{prop}
 
 
-\section{Nonprofit and `hybrid' ownership forms}
+\section{Non-profit and hybrid ownership forms}
 
 Consider next the case of a firm that, in a pre-contract stage, has the possibility of choosing its ownership structure say by incorporating as a legal non-profit or, more broadly, by choosing  a degree of `hybrid' ownership, for example by retaining for-profit status but  allowing social investors to establish considerable ownership stakes and managerial control.
 
@@ -2006,93 +2001,60 @@ sought after on both sides of the market?
 
 
 \appendix
-%dummy comment inserted by tex2lyx to ensure that this paragraph is not empty
+ 
 
-\section{Appendix: CRRA Derivations and Proofs}
+\section{Appendix }
 
 \subsection{Introduction}
 
-Below, we present proofs and closed-form expressions to the extent
-possible under CRRA utility. The sub-sections of the appendix are
-numbered to coincide with corresponding sections in the meain text.
+Here we present proofs and, where useful, closed-form solutions  under CRRA utility. Appendix sub-sections are
+numbered to match corresponding sections in the main text.
 
 \subsection{Full-commitment Contracts}
 
 \subsubsection{Competition}
-
-The first-order conditions are:
-
-\begin{equation}
-c_{1}=\beta{}^{\frac{1}{\rho}}c_{0}\label{eq:FOCc0c1}
-\end{equation}
+The perfect consumption smoothing full-commitment contract that was solved for in the text (\ref{eq:CF}) can be compactly rewritten as:
 
 \begin{equation}
-c_{2}=c_{1}\label{eq:FOCc1c2}
+C_{0}^{F}=\left(1,\beta^{\frac{1}{\rho}},\beta^{\frac{1}{\rho}}\right)\\ \cdot\left(\frac{y}{1+2\beta^{\frac{1}{\rho}}}\right)\label{eq:c-cf}
 \end{equation}
-
-Combined with the bank's zero-profit constraint (XX), the competitive
-full commitment contract $C_{0}^{F}$ is given by:
-
-\begin{align}
-c_{0}^{F} & =\frac{y}{1+2\beta^{\frac{1}{\rho}}}\label{eq:CF}\\
-c_{1}^{F} & =c_{2}^{F}=\beta^{\frac{1}{\rho}}c_{0}^{F}\label{eq:CF1}
-\end{align}
-Or, compactly on a single line:
-
-\begin{equation}
-C_{0}^{F}=\left(1,\beta^{\frac{1}{\rho}},\beta^{\frac{1}{\rho}}\right)\cdot\left(\frac{y}{1+2\beta^{\frac{1}{\rho}}}\right)\label{eq:c-cf}
-\end{equation}
-
-By construction, the bank's profits from the competitive contract
-are: 
-\[
-\Pi_{0}\left(C_{0}^{F};Y_{0}\right)=0
-\]
-
-And the Zero-self attains the highest possible discounted utility:
+By construction, the bank's profits from the competitive contract are 
+\( \Pi_{0}\left(C_{0}^{F};Y_{0}\right)=0 \)
+and Zero-self attains the highest possible discounted utility:
 \[
 U_{0}\left(C_{0}^{F}\right)=\frac{y^{1-\rho}}{1-\rho}\left(1+2\beta^{\frac{1}{\rho}}\right)^{\rho}\equiv U^{F}
 \]
 
-
 \subsubsection{Monopoly}
 
-For the monopolist bank that offers full-commitment, the solution
-is determined by the first-order conditions (same as \ref{eq:FOCc0c1}
-and \ref{eq:FOCc1c2}) and the consumer's participation constraint
-(XX): 
+For a monopoly bank that offers full-commitment, the solution
+is determined by substituting first-order conditions \ref{eq:FOC_comp} into the consumer's participation constraint \ref{eq:CPC0}. Solving we get: 
 \begin{equation}
-C_{0}^{mF}=\left(1,\beta^{\frac{1}{\rho}},\beta^{\frac{1}{\rho}}\right)\cdot\left(\frac{U_{0}^{A}\left(1-\rho\right)}{1+2\beta^{\frac{1}{\rho}}}\right)^{\frac{1}{1-\rho}}\label{eq:c-mf}
+C_{0}^{mF}=\left(1,\beta^{\frac{1}{\rho}},\beta^{\frac{1}{\rho}}\right)
+\cdot\left(\frac{U_{0}^{A}\left(1-\rho\right)}{1+2\beta^{\frac{1}{\rho}}}\right)^{\frac{1}{1-\rho}}
+\label{eq:c-mf}
 \end{equation}
-
-The resulting profits are: 
+Resulting monopoly profits are: 
 \begin{equation}
 \Pi_{0}\left(C_{0}^{mF};Y_{0}\right)=y-\left(U_{0}^{A}\left(1-\rho\right)\right)^{\frac{1}{1-\rho}}\left(1+2\beta^{\frac{1}{\rho}}\right)^{\frac{-\rho}{1-\rho}}\label{eq:pi-mf}
 \end{equation}
-
-And Zero-self's utility is: 
-\[
-U_{0}\left(C_{0}^{mF}\right)=U_{0}^{A}
-\]
+And Zero-self is kept at their autarky utility: $U_{0}\left(C_{0}^{mF}\right)=U_{0}^{A}$
 
 
 \subsection{The Renegotiation Problem}
 
 \subsubsection{Renegotiated Contracts}
 
-Given an existing continuation contract $C_{1}^{0}$, assuming the
-contract is renegotiated, the competitively renegotiated contract
+If the continuation contract  at the start of period 1 is $C_{1}^{0}$ and the contract is renegotiated, the competitively renegotiated contract
 will be: 
 \begin{equation}
 C_{1}^{1}\left(C_{1}^{0}\right)=\left(1,\beta^{\frac{1}{\rho}}\right)\cdot\left(\frac{c_{1}^{0}+c_{2}^{0}-\kappa}{1+\beta^{\frac{1}{\rho}}}\right)\label{eq:c-r}
 \end{equation}
-
-And under monopoly, the renegotiated contract will be: 
+If instead there is monopoly in period 1, the  renegotiated contract will instead be: 
 \begin{equation}
 C_{1}^{m1}\left(C_{1}^{0}\right)=\left(1,\beta^{\frac{1}{\rho}}\right)\cdot\left(\frac{(c_{1}^{0})^{1-\rho}+\beta(c_{2}^{0})^{1-\rho}}{1+\beta^{\frac{1}{\rho}}}\right)^{\frac{1}{1-\rho}}\label{eq:m-r}
 \end{equation}
-
-The corresponding profit gains from renegotiation in the monopoly
+The profit gains from renegotiation in this monopoly
 case are: 
 \begin{equation}
 \Pi_{1}\left(C_{1}^{m1}\left(C_{1}^{0}\right);C_{1}^{0}\right)=\left(c_{1}^{0}+c_{2}^{0}\right)-\left((c_{1}^{0})^{1-\rho}+\beta(c_{2}^{0})^{1-\rho}\right)^{\frac{1}{1-\rho}}\left(1+\beta^{\frac{1}{\rho}}\right)^{\frac{-\rho}{1-\rho}}\label{eq:pi-r}
@@ -2101,23 +2063,26 @@ case are:
 
 \subsubsection{No-renegotiation Constraint}
 
-Each no-renegotiation condition, \ref{eq:no-reg-comp} and \ref{eq:no-reg-monop},
-combined with \ref{eq:c-r} and \ref{eq:pi-r}, yields the following
+Substituting expressions \ref{eq:m-r} into the consumer's (\ref{eq:no-reg-comp}) no-renegotiation constraint or instead substituting \ref{eq:pi-r} into the bank's no-renegotiation constraint (\ref{eq:no-reg-monop}) yields the same following
 closed form no-renegotiation condition: 
 \begin{equation}
-\kappa\geq\left(c_{1}^{0}+c_{2}^{0}\right)-\left((c_{1}^{0})^{1-\rho}+\beta(c_{2}^{0})^{1-\rho}\right)^{\frac{1}{1-\rho}}\left(1+\beta^{\frac{1}{\rho}}\right)^{\frac{-\rho}{1-\rho}}\label{eq:no-renegotiation}
+\kappa\geq\left(c_{1}^{0}+c_{2}^{0}\right)-\left((c_{1}^{0})^{1-\rho}+\beta(c_{2}^{0})^{1-\rho}\right)^{\frac{1}{1-\rho}}\left(1+\beta^{\frac{1}{\rho}}\right)^{\frac{-\rho}{1-\rho}}
+\label{eq:no-renegotiation}
 \end{equation}
+In words:\ renegotiation costs must exceed the gains-to-trade from renegotiation the continuation contract $C_{1}^{0}$.
 
 When the initial contract satisfies $c_{1}^{0}=c_{2}^{0}$ (as under
 $C_{0}^{F}$ and $C_{0}^{mF}$), the no-renegotiation condition simplifies
 to: 
 \begin{equation}
-\kappa\geq c_{1}^{0}\left(2-\left(\frac{1+\beta}{\left(1+\beta\right)^{\rho}}\right)^{\frac{1}{1-\rho}}\right)\label{eq:no-renegotiation-fullcomm}
+\kappa\geq c_{1}^{0}\left(2-
+\left(\frac{1+\beta}{\left(1+\beta\right)^{\rho}}\right)^{\frac{1}{1-\rho}}\right)
+\label{eq:no-renegotiation-fullcomm}
 \end{equation}
 
 \textbf{\textit{Proof of Proposition 1: }}\textbf{(a)} Proved by construction.
 
-\textbf{(b)} Since $\frac{dc_{1}^{mF}}{dU_{0}^{A}}>0$ (from Equation
+\textbf{(b)} Since $\frac{dc_{1}^{mF}}{dU_{0}^{A}}>0$ (from 
 \ref{eq:c-mf}), $\bar{\kappa}^{m}$ must strictly rise in the consumer's
 autarky utility.
 
