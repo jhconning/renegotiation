@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-Python module to solve for and analyze full commitment and renegotiation-proof
+Solve for and analyze full commitment and renegotiation-proof
 contracts.  See https://github.com/jhconning/renegotiation
-Note: code originally had delta and r... but some formulas assume delta=1/(1+r)
+Note: code originally had delta and r... but
+now assume delta=1/(1+r)
 
 
 For a paper by Karna Basu and Jonathan Conning
@@ -15,9 +16,9 @@ from scipy.optimize import minimize, brentq, fsolve
 
 class Contract(object):
     """ Base Class for defining contracts  """
-    def __init__(self,beta,y=None):         # constructor method to set default params.
-        self.beta  = beta                   # present bias in β-δ framework
-        self.rho   = 0.95                   # 1/rho = elasticity of substitution
+    def __init__(self,beta,y=None):         # constructor default params.
+        self.beta  = beta                   # β-δ framework
+        self.rho   = 0.95                   # 1/rho = elast of substn
         if y is None:
             self.y = np.array([100,100,100])
         else:
@@ -52,15 +53,17 @@ class Contract(object):
         return  self.PV(y)-self.PV(c)
 
     def indif(self, ubar, beta):
-        """ returns idc(c1) function from  u(c1, c2) =ubar for graphing indifference 
-        curves in c1-c2 space. If beta = 1, will describe self 0's preferences """
+        """ returns idc(c1) function from  u(c1, c2) =ubar for graphing
+        indifference curves in c1-c2 space. If beta = 1, will describe
+        self 0's preferences """
         if self.rho==1:
             def idc(c1):
                 lnc2 = (ubar-np.log(c1))/beta
                 return np.exp(lnc2)
         else:
             def idc(c1):
-                return (((1-self.rho)/beta)*(ubar-self.u(c1)))**(1/(1-self.rho))
+                return (((1-self.rho)/beta)*(ubar-self.u(c1)))\
+                       **(1/(1-self.rho))
 
         return idc
 
@@ -78,7 +81,8 @@ class Contract(object):
         beta, rho = self.beta, self.rho
         btr = beta**(1/rho)
         if rho==1:
-            lncr1 = (np.log(c[1])+beta*np.log(c[2])-beta*np.log(beta))/(1+beta)
+            lncr1 = (np.log(c[1])+beta*np.log(c[2])
+                     -beta*np.log(beta))/(1+beta)
             cr1 = np.exp(lncr1)
         else:
             pu =  self.u(c[1]) + beta*self.u(c[2])
@@ -115,13 +119,15 @@ class Monopoly(Contract):                    # build on contract class
         return np.array([1,btr,btr])*c0
 
     def kbar(self):
-        '''Renegotiation cost necessaru to sustain full commitment competitive contract'''
+        '''Renegotiation cost necessaru to sustain full commitment
+        competitive contract'''
         rho = self.rho
         if (rho == 1):
             rho = 0.999  # cheap trick to deal with special case
         btr = self.beta ** (1 / rho)
         c1F = self.fcommit()[1]
-        A = (2 - (1 + btr) * ((1 + self.beta) / (1 + btr)) ** (1 / (1 - rho)))
+        A = (2 - (1 + btr) * ((1 + self.beta)
+                              / (1 + btr)) ** (1 / (1 - rho)))
         return A * c1F
 
     def negprofit(self,c):
@@ -140,7 +146,8 @@ class Monopoly(Contract):                    # build on contract class
         c1HI = 2*c1LO / (1 + btr)   #for upper bound
 
         def c2(c1):
-            return ( ( (1/beta)*(Uaut-self.u(c0)) -self.u(c1))*(1-rho) ) **(1/(1-rho))
+            return ( ( (1/beta)*(Uaut-self.u(c0))
+                       - self.u(c1))*(1-rho) ) **(1/(1-rho))
         print('C2(C1)', c2(c1LO), c2(c1HI))
         def URP(c1):
             return (self.u(c1) + beta * self.u(c2(c1)) ) \
@@ -153,8 +160,8 @@ class Monopoly(Contract):                    # build on contract class
         return brentq(f, c1LO, c1HI)
 
     def reneg_proof(self):
-        """Find period 0 monopoly best renegotiation-proof contract by searching over
-        subgame perfect responses """
+        """Find period 0 monopoly best renegotiation-proof contract
+        by searching over subgame perfect responses """
 
         guess = self.fcommit()[0]
         Y = np.sum(self.y)
@@ -227,13 +234,15 @@ class Competitive(Contract):                    # build on contract class
         return  - self.PVU(c, self.beta)
 
     def kbar(self):
-        '''Renegotiation cost necessaru to sustain full commitment competitive contract'''
+        '''Renegotiation cost necessaru to sustain full commitment
+        competitive contract'''
         rho = self.rho
         if (rho == 1):
             rho = 0.999  # cheap trick to deal with special case
         btr = self.beta ** (1 / rho)
         c1F = np.sum(self.y) * btr / (1 + 2 * btr)
-        A = (2 - (1 + btr) * ((1 + self.beta) / (1 + btr)) ** (1 / (1 - rho)))
+        A = (2 - (1 + btr) * ((1 + self.beta) / (1 + btr))
+             ** (1 / (1 - rho)))
         return A * c1F
 
     def bestreneg(self, c0):
@@ -253,7 +262,7 @@ class Competitive(Contract):                    # build on contract class
             return self.u(c1) + beta * self.u(Y - c0 - c1)
 
         def f(c1):
-            return U1(c1) - ub
+            return self.u(c1) + beta * self.u(Y - c0 - c1) - ub
 
         guess = (c1F+c1P)/2
         return fsolve(f,guess )
@@ -288,10 +297,12 @@ class Competitive(Contract):                    # build on contract class
         return (self.PV(self.y) - self.PV(c))
 
     def reneg_proof2(self, monop_reg = False):
-        """Alternative method: calculate renegotiation-proof contract that maxes 0-self's utility.
-        supplies constraints to solver that bank can't profit too much and period 0 borrower participation
-        the reneg_proof method incorporates the constraints into objective and is closer to the
-        methods for finding contracts that are described in the paper"""
+        """Alternative method: calculate renegotiation-proof contract
+        that maxes 0-self's utility. supplies constraints to solver that
+        bank can't profit too much and period 0 borrower participation
+        the reneg_proof method incorporates the constraints into objective
+        and is closer to the methods for finding contracts that
+        are described in the paper"""
         if monop_reg:
             cons = ({'type': 'ineq',
                  'fun' : self.reneg_proof_cons },
@@ -318,7 +329,8 @@ class Competitive(Contract):                    # build on contract class
 
         def f(c0):
             c1 = self.bestreneg(c0)
-            return -(self.u(c0) + self.beta * (self.u(c1) + self.u(Y-c0-c1)))
+            return -(self.u(c0)
+                     + self.beta * (self.u(c1) + self.u(Y-c0-c1)))
 
         c0rp = minimize(f, guess, method='Nelder-Mead').x[0]
         c1rp = self.bestreneg(c0rp)
