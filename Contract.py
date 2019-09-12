@@ -2,9 +2,11 @@
 """
 Solve for and analyze full commitment and renegotiation-proof
 contracts.  See https://github.com/jhconning/renegotiation
-Note: code originally had delta and r... but
-now assume delta=1/(1+r)
 
+Code originally had delta and r... but now assume delta=1/(1+r)
+
+There is a base Contract class and then Competitive and Monopoly
+with own version of methods to solve for contracts.
 
 For a paper by Karna Basu and Jonathan Conning
 
@@ -107,14 +109,11 @@ class Contract(object):
                 - (1+btr) * self.u( (c[1]+c[2]-self.kappa)/(1+btr)) )
 
 
-
-
 class Competitive(Contract):                    # build on contract class
     """ Class for solving competitive equilibrium contracts  """
     def __init__(self, beta):
-        super(Competitive,self).__init__(beta)  # inherits parent class properties
+        super(Competitive,self).__init__(beta)  # inherits Contract properties
         self.kappa  = 0                         # cost of renegotiation
-        self.guess  = self.y                    # initial guess for solver
 
     def __repr__(self):
         return 'Competitive(beta=%s, y=%s)' % (self.beta, self.y)
@@ -149,13 +148,13 @@ class Competitive(Contract):                    # build on contract class
         c1 = (Y-c0)/(1+btr)
         return np.array( [c0, c1, btr*c1])
     
-    
     def bankPC(self,c):
         return (self.PV(self.y) - self.PV(c))
 
 
     def opt(self):
-        """contract for any kappa"""
+        """Optimum renegotiation-proof contract for any kappa
+        Solved for analytically if kappa=0, numerically otherwise"""
         if self.kappa >= self.kbar():
             return self.fcommit()
         elif self.kappa ==0.0:
@@ -175,7 +174,6 @@ class Monopoly(Contract):                    # build on contract class
     def __init__(self,beta):
         super(Monopoly,self).__init__(beta)    # inherit parent class properties
         self.kappa  = 0                        # cost of renegotiation
-        self.guess  = self.y                   # initial guess for solver
 
     def __repr__(self):
         return 'Monopoly(beta=%s, y=%s)' % (self.beta, self.y)
@@ -247,14 +245,13 @@ class Monopoly(Contract):                    # build on contract class
     def reneg_proof(self):
         """Find period 0 monopoly best renegotiation-proof contract
         by searching over subgame perfect responses """
-
         guess = self.fcommit()[0]
         Y = np.sum(self.y)
 
         def f(c0):
-
             c1 = self.bestreneg(c0)
-            return -(self.u(c0) + self.beta * (self.u(c1) + self.u(Y - c0 - c1)))
+            return -(self.u(c0) 
+                     + self.beta * (self.u(c1) + self.u(Y - c0 - c1)))
 
         c0rp = minimize(f, guess, method='Nelder-Mead').x[0]
         print(c0rp)
@@ -263,38 +260,30 @@ class Monopoly(Contract):                    # build on contract class
 
         return np.array([c0rp, c1rp, c2rp])
 
- 
-
 if __name__ == "__main__":
 
+    print('Test Block')
     RHO   =  0.95  # for testing different values
-    print("Base contract")
-    c = Contract(beta = 0.5)
-    c.rho = RHO
-    c.y = [60, 120, 120]
-    c.print_params()
-
-    print("Competitive contract")
+    print("Competitive contracts:")
     cC = Competitive(beta = 0.5)
     cC.rho = RHO
     cC.y = [80, 110, 110]
     cC.print_params()
 
-
     cCF = cC.fcommit()
     print("cCF: ",cCF)
 
     cCr = cC.reneg(cCF)
-    print("cCF reneg: ",cCr)
-    cC.guess = cCr
-    
+    print(f'kbar = {cC.kbar():.3f}')
+    print("reneg from cCF: ",cCr)  
+
     cC.kappa = 0
     print('kappa=0', cC.opt())
-
     cC.kappa = 1
     print('kappa=1', cC.opt())    
     
-    print("Monopoly contract")
+    print()
+    print("Monopoly contracts:")
 
     cM = Monopoly(beta = 0.5)
     cM.y = [80, 110, 110]
@@ -305,5 +294,12 @@ if __name__ == "__main__":
     print("cMF: ",cMF)
     
     cMr = cM.reneg(cMF)
-    print("cMF reneg: ",cMr)
-  
+    print(f'kbar = {cM.kbar():.3f}')
+    print("reneg from cMF: ",cMr)
+    cM.kappa = 0
+    print('kappa=0', cM.opt())
+
+    cM.kappa = 1
+    print('kappa=5', cM.opt())    
+    print()
+    
